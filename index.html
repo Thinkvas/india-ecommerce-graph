@@ -668,7 +668,7 @@ const DRV_COLOR=t=>({festival:"--t-festival",season:"--t-season",academic:"--t-p
 const drvType=d=>d.type==="signal"?d.stype:d.type;
 const drvGroup=d=>d.type==="festival"?"Festivals":d.type==="season"?"Seasons":(SIGTYPE[d.stype]||"Signals");
 let flowKey=null;
-function flowActive(){ return view==="net"&&!!month&&(!selected||byId.get(selected).type==="state"); }
+function flowActive(){ return false; }   // previous version: no flow diagram
 function drawFlow(){
   const on=flowActive(); svg.classed("flowmode",on);
   const key=on?(selected||"board")+"|"+month:null;
