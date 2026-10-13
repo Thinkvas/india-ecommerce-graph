@@ -4,6 +4,10 @@ Interactive 3D demand map of Indian e-commerce: 36 states and UTs, 343 festivals
 
 Live: https://thinkvas.github.io/india-ecommerce-graph/
 
+Views: **3D map** (each state rises with its opportunity for the chosen month; click a festival or product to see where it matters), network, year wheel and 3D graph.
+
+Map boundaries: [Datameet](https://github.com/datameet/maps) state boundaries (States/Admin2), simplified by `data/geo_build.py`.
+
 ## Data: FalkorDB is the master
 
 All research lives in a FalkorDB graph (`india_ecom`). The page is an export of that graph.
