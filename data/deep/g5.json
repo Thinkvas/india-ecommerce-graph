@@ -1,0 +1,2253 @@
+{
+ "group": "g5",
+ "states": [
+  {
+   "id": "cg",
+   "name": "Chhattisgarh",
+   "languages": [
+    "Hindi",
+    "Chhattisgarhi",
+    "Halbi",
+    "Gondi"
+   ],
+   "top_cities": [
+    "Raipur",
+    "Bhilai-Durg",
+    "Bilaspur",
+    "Korba",
+    "Rajnandgaon"
+   ],
+   "culture": "Agrarian, tribal-majority south; farm-cycle festivals (Hareli, Pola) and big Dhanteras/Diwali spend centred on Raipur.",
+   "ecommerce": "Raipur among fastest-growing tier-2 order hubs (+32.8%, Delhivery 2024); tier-3 = 50.7% of Diwali 2025 shipments nationally (ClickPost).",
+   "ecommerce_sources": [
+    "https://www.siasat.com/non-metro-cities-leading-in-orders-on-e-commerce-platforms-in-india-report-3095516/amp/",
+    "https://indianretailer.com/article/technology-e-commerce/digital-trends/2025-festive-e-commerce-sees-record-engagement-quick",
+    "https://www.thehitavada.com/Encyc/2022/10/23/Chhattisgarh-markets-boom-on-Dhanteras.html"
+   ],
+   "festivals": [
+    {
+     "name": "Chherchhera",
+     "local_name": "Cherchera Punni",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-03",
+     "date_2027": "2027-01-22",
+     "significance": "Paush Purnima post-paddy-harvest festival; children collect paddy door to door",
+     "buys": "rice, sweets (aarsa), new clothes",
+     "categories": [
+      "grocery",
+      "sweets",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Rural, cash-in-hand harvest moment; little online pull",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/",
+      "https://vajiramandravi.com/current-affairs/festivals-of-chhattisgarh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Makar Sankranti",
+     "local_name": "",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14",
+     "date_2027": "2027-01-15",
+     "significance": "Solar transition; til-gud, river fairs",
+     "buys": "til laddoo, jaggery, kites, new clothes",
+     "categories": [
+      "grocery",
+      "sweets",
+      "toys"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly offline staples",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Rajim Kumbh Kalp",
+     "local_name": "Rajim Maghi Punni Mela",
+     "kind": "fair",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-01..2026-02-15",
+     "date_2027": "2027-02-20..2027-03-06",
+     "significance": "State-run fair at Mahanadi-Pairi-Sondur sangam, Magh Purnima to Shivratri",
+     "buys": "puja items, utensils, toys, bangles, travel",
+     "categories": [
+      "puja",
+      "travel",
+      "toys",
+      "kitchen"
+     ],
+     "impact": "low",
+     "impact_reason": "Large footfall but mela-led offline buying; travel bookings rise",
+     "sources": [
+      "https://www.incredibleindia.gov.in/en/festivals-and-events/chhattisgarh/rajim-kumbh-kalp",
+      "https://vajiramandravi.com/current-affairs/festivals-of-chhattisgarh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Maha Shivaratri",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-15",
+     "date_2027": "2027-03-06",
+     "significance": "Shiva festival; temple fairs (Bhoramdeo, Rajim)",
+     "buys": "puja samagri, fruits, fasting foods",
+     "categories": [
+      "puja",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Puja kits only",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Holi",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-03..2026-03-04",
+     "date_2027": "2027-03-21..2027-03-22",
+     "significance": "Festival of colours, with Holi Bhai Dooj in CG",
+     "buys": "colours, pichkari, white kurtas, sweets, snacks",
+     "categories": [
+      "fashion",
+      "toys",
+      "grocery",
+      "sweets",
+      "beauty"
+     ],
+     "impact": "medium",
+     "impact_reason": "Pre-Holi online sale for colours, kurtas, skin/hair care",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Chaitra Navratri",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-19..2026-03-27",
+     "date_2027": "2027-04-07..2027-04-15",
+     "significance": "Jyoti kalash at Dongargarh, Ratanpur, Danteshwari shrines; Ram Navami",
+     "buys": "puja items, red chunri, fasting foods, jyoti kalash",
+     "categories": [
+      "puja",
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "medium",
+     "impact_reason": "Puja/vrat food demand; quick commerce in Raipur/Bilaspur",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Akti (Akshaya Tritiya)",
+     "local_name": "Akti",
+     "kind": "religious",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-19",
+     "date_2027": "2027-05-09",
+     "significance": "Auspicious day; doll weddings (putra-putri biyah), new farm year, weddings",
+     "buys": "gold, clay dolls, wedding goods, seeds",
+     "categories": [
+      "jewellery",
+      "wedding",
+      "toys",
+      "agri"
+     ],
+     "impact": "medium",
+     "impact_reason": "Gold and wedding-season buying; mass weddings peak",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Rath Yatra",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-16",
+     "date_2027": "2027-07-05",
+     "significance": "Jagannath chariot festival, big in Raipur and Odisha-border districts",
+     "buys": "puja items, sweets",
+     "categories": [
+      "puja",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Hareli",
+     "local_name": "Hareli Tihar",
+     "kind": "harvest",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-12",
+     "date_2027": "2027-08-01",
+     "significance": "First agri festival (Shravan Amavasya); worship of farm tools, gedi stilts; state holiday",
+     "buys": "farm tools, neem, gedi, local dishes (cheela)",
+     "categories": [
+      "agri",
+      "grocery",
+      "toys"
+     ],
+     "impact": "low",
+     "impact_reason": "Rural ritual; agri inputs bought offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/",
+      "https://vajiramandravi.com/current-affairs/festivals-of-chhattisgarh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Raksha Bandhan",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-28",
+     "date_2027": "2027-08-17",
+     "significance": "Sibling festival",
+     "buys": "rakhis, sweets, gifts, chocolates",
+     "categories": [
+      "gifting",
+      "sweets",
+      "fashion",
+      "personal"
+     ],
+     "impact": "high",
+     "impact_reason": "Rakhi orders rise on Meesho/Flipkart; non-metro led national +36% Rakhi orders (Meesho 2026)",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://yourstory.com/2026/08/meesho-sees-rise-rakhi-orders-non-metro-india-festive-shopping"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Pola",
+     "local_name": "Bail Pola",
+     "kind": "harvest",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-10",
+     "date_2027": "2027-08-31",
+     "significance": "Bullock worship on Bhadrapada Amavasya; children play with clay bulls",
+     "buys": "clay bullocks, toys, thethri-khurmi sweets, cattle decor",
+     "categories": [
+      "toys",
+      "sweets",
+      "agri",
+      "kitchen"
+     ],
+     "impact": "low",
+     "impact_reason": "Local festival goods; minimal online",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/",
+      "https://vajiramandravi.com/current-affairs/festivals-of-chhattisgarh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Teeja (Hartalika Teej)",
+     "local_name": "Teeja",
+     "kind": "religious",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": "2027-09-03",
+     "significance": "Married women return to maternal home and fast for husbands",
+     "buys": "sarees, bangles, sindoor, mehndi, cosmetics",
+     "categories": [
+      "ethnic",
+      "beauty",
+      "jewellery",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "Saree and cosmetics buying; gifting from parents' home",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ganesh Chaturthi",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": "2027-09-04",
+     "significance": "Pandal festival in Raipur, Bilaspur, Durg-Bhilai",
+     "buys": "idols, decor, sweets, lights",
+     "categories": [
+      "puja",
+      "homedecor",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Decor/lights online; idols offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Nawakhai",
+     "local_name": "Nawakhai",
+     "kind": "harvest",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-18",
+     "date_2027": "2027-09-05",
+     "significance": "New rice offering, esp. in Odisha-border districts",
+     "buys": "new rice, new clothes, sweets",
+     "categories": [
+      "grocery",
+      "ethnic",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Small regional; clothing bought offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Bastar Dussehra",
+     "local_name": "",
+     "kind": "tribal",
+     "months": [
+      8,
+      9,
+      10
+     ],
+     "date_2026": "2026-08-12..2026-10-23",
+     "date_2027": "2027-08-01..2027-10-12",
+     "significance": "75-day Danteshwari festival in Jagdalpur, no Ravana dahan; Muria Darbar",
+     "buys": "puja items, tribal crafts, travel",
+     "categories": [
+      "puja",
+      "travel",
+      "homedecor"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism and craft demand; Bastar has low online reach",
+     "sources": [
+      "https://www.incredibleindia.gov.in/en/festivals-and-events/chhattisgarh/bastar-dussehra",
+      "https://vajiramandravi.com/current-affairs/festivals-of-chhattisgarh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Navratri & Dussehra",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-11..2026-10-20",
+     "date_2027": "2027-09-30..2027-10-09",
+     "significance": "Durga pandals, garba in Raipur/Bhilai, Ravan dahan",
+     "buys": "ethnic wear, chaniya choli, puja items, vehicles, electronics",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "puja",
+      "vehicles",
+      "electronics",
+      "phones"
+     ],
+     "impact": "high",
+     "impact_reason": "Coincides with Amazon/Flipkart festive sales; Raipur order growth 32.8% (Delhivery 2024)",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.siasat.com/non-metro-cities-leading-in-orders-on-e-commerce-platforms-in-india-report-3095516/amp/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Karwa Chauth",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-29",
+     "date_2027": "2027-10-18",
+     "significance": "Married women's fast, popular in urban CG",
+     "buys": "sarees, cosmetics, mehndi, jewellery, gifts",
+     "categories": [
+      "ethnic",
+      "beauty",
+      "jewellery",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Beauty/fashion and gifting online in cities",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Dhanteras",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-06",
+     "date_2027": "2027-10-27",
+     "significance": "Auspicious buying day",
+     "buys": "gold, utensils, vehicles, appliances, electronics",
+     "categories": [
+      "jewellery",
+      "kitchen",
+      "vehicles",
+      "appliances",
+      "electronics",
+      "tv"
+     ],
+     "impact": "high",
+     "impact_reason": "Raipur leads CG Dhanteras tally across autos, jewellery, electronics",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027",
+      "https://www.thehitavada.com/Encyc/2022/10/23/Chhattisgarh-markets-boom-on-Dhanteras.html"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Diwali",
+     "local_name": "Devari",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Biggest shopping festival; Lakshmi puja",
+     "buys": "lights, decor, sweets, gifts, clothes, phones, appliances",
+     "categories": [
+      "homedecor",
+      "sweets",
+      "gifting",
+      "fashion",
+      "phones",
+      "appliances",
+      "electronics",
+      "puja"
+     ],
+     "impact": "high",
+     "impact_reason": "Peak of national festive e-commerce sales",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027",
+      "https://indianretailer.com/article/technology-e-commerce/digital-trends/2025-festive-e-commerce-sees-record-engagement-quick"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Govardhan Puja & Raut Nacha",
+     "local_name": "Gaura-Gauri",
+     "kind": "cultural",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-09",
+     "date_2027": "2027-10-30",
+     "significance": "Yadav Raut Nacha dance, cattle worship, Gaura-Gauri processions",
+     "buys": "costumes, cattle decor, sweets",
+     "categories": [
+      "ethnic",
+      "agri",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Community/rural; offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Madai",
+     "local_name": "Madai",
+     "kind": "tribal",
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Travelling tribal fairs post-harvest across Bastar, Kanker, Narayanpur",
+     "buys": "utensils, cloth, jewellery, local food",
+     "categories": [
+      "kitchen",
+      "jewellery",
+      "fashion"
+     ],
+     "impact": "low",
+     "impact_reason": "Haat-led offline commerce",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-chhattisgarh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Guru Ghasidas Jayanti",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-18",
+     "date_2027": "2027-12-18",
+     "significance": "Satnami community founder's birth anniversary; Giraudpuri mela",
+     "buys": "white clothes, flags, puja items",
+     "categories": [
+      "fashion",
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Community observance, offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-chhattisgarh/holidays/2026/"
+     ],
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "id": "jharkhand",
+   "name": "Jharkhand",
+   "languages": [
+    "Hindi",
+    "Santali",
+    "Khortha",
+    "Nagpuri",
+    "Bengali",
+    "Ho",
+    "Kurukh"
+   ],
+   "top_cities": [
+    "Ranchi",
+    "Jamshedpur",
+    "Dhanbad",
+    "Bokaro",
+    "Deoghar"
+   ],
+   "culture": "Mix of Adivasi (Sarhul, Karma, Sohrai) and Bihari-Bengali festival cultures; Chhath and Durga Puja dominate spend.",
+   "ecommerce": "No state-specific platform data found; non-metros >50% of festive transactions and Flipkart new small-town users 2.6X (2025).",
+   "ecommerce_sources": [
+    "https://indianretailer.com/article/technology-e-commerce/digital-trends/2025-festive-e-commerce-sees-record-engagement-quick",
+    "https://www.storyboard18.com/digital/flipkarts-big-billion-days-top-metro-cities-drive-demand-tier-2-cities-show-promise-43511.htm"
+   ],
+   "festivals": [
+    {
+     "name": "Sohrai (Santhal, January)",
+     "local_name": "Sohrai",
+     "kind": "tribal",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-12..2026-01-13",
+     "date_2027": "2027-01-12..2027-01-13",
+     "significance": "Santhal harvest/cattle festival; Khuntaw day; state holidays",
+     "buys": "new clothes, handia/rice, cattle decor, utensils",
+     "categories": [
+      "ethnic",
+      "grocery",
+      "kitchen",
+      "agri"
+     ],
+     "impact": "low",
+     "impact_reason": "Rural tribal spend, offline haats",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/jharkhand"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Tusu Parab / Makar",
+     "local_name": "Tusu",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14",
+     "date_2027": "2027-01-15",
+     "significance": "Kurmi/Mahato harvest festival; Tusu chaudal floats, river melas",
+     "buys": "pitha, til, chaudal paper, new clothes",
+     "categories": [
+      "grocery",
+      "sweets",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Mela-centric",
+     "sources": [
+      "https://www.jharkhand.gov.in/home/AboutFestivals",
+      "https://www.keka.com/compliance/public-holiday/jharkhand"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Maha Shivaratri (Baidyanath Dham)",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-15",
+     "date_2027": "2027-03-06",
+     "significance": "Huge pilgrimage at Deoghar",
+     "buys": "puja items, travel",
+     "categories": [
+      "puja",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Pilgrim travel; offline puja buys",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-jharkhand/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Holi",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-03..2026-03-04",
+     "date_2027": "2027-03-21..2027-03-22",
+     "significance": "Festival of colours, large Bihar-origin population",
+     "buys": "colours, kurtas, sweets, snacks",
+     "categories": [
+      "fashion",
+      "toys",
+      "grocery",
+      "sweets",
+      "beauty"
+     ],
+     "impact": "medium",
+     "impact_reason": "Pre-Holi online sales for apparel and colours",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-jharkhand/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Sarhul",
+     "local_name": "Sarhul",
+     "kind": "tribal",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-21..2026-03-22",
+     "date_2027": "2027-04-09",
+     "significance": "Sal-tree worship, tribal new year; Ranchi shobha yatra",
+     "buys": "red-white sarees (lal paad), dhol/mandar, new clothes",
+     "categories": [
+      "ethnic",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "Matching red-bordered sarees/dhotis drive local and online apparel buys",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/jharkhand",
+      "https://www.jharkhand.gov.in/home/AboutFestivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid al-Fitr",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "~14% Muslim population; Ramzan shopping",
+     "buys": "kurtas, attar, dry fruits, sewaiyan, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery",
+      "beauty",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Ramzan apparel and grocery demand",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-jharkhand/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ram Navami",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-26",
+     "date_2027": "2027-04-15",
+     "significance": "Massive akhara processions in Ranchi, Hazaribagh",
+     "buys": "flags, saffron wear, puja items",
+     "categories": [
+      "puja",
+      "fashion"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly offline merchandise",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-jharkhand/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Rath Yatra (Jagannathpur, Ranchi)",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-16",
+     "date_2027": "2027-07-05",
+     "significance": "Rath Yatra and mela at Jagannathpur, Ranchi",
+     "buys": "utensils, toys, puja items",
+     "categories": [
+      "kitchen",
+      "toys",
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Fair-based buying",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Hul Diwas",
+     "local_name": "",
+     "kind": "cultural",
+     "months": [
+      6
+     ],
+     "date_2026": "2026-06-30",
+     "date_2027": "2027-06-30",
+     "significance": "Santhal rebellion day (1855); state holiday",
+     "buys": "none significant",
+     "categories": [
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Commemorative",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/jharkhand"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Shravani Mela",
+     "local_name": "",
+     "kind": "fair",
+     "months": [
+      7,
+      8
+     ],
+     "date_2026": "2026-07-30..2026-08-28",
+     "date_2027": "2027-07-19..2027-08-17",
+     "significance": "Month-long kanwar yatra to Baidyanath Dham, Deoghar",
+     "buys": "saffron clothes, kanwar, footwear, rainwear",
+     "categories": [
+      "puja",
+      "fashion",
+      "footwear",
+      "rainwear",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Pilgrim trade offline; travel bookings",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Raksha Bandhan",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-28",
+     "date_2027": "2027-08-17",
+     "significance": "Sibling festival",
+     "buys": "rakhis, sweets, gifts",
+     "categories": [
+      "gifting",
+      "sweets",
+      "fashion"
+     ],
+     "impact": "high",
+     "impact_reason": "Rakhi orders rose 36% led by non-metros (Meesho 2026)",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://yourstory.com/2026/08/meesho-sees-rise-rakhi-orders-non-metro-india-festive-shopping"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Janmashtami",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-04",
+     "date_2027": "2027-08-25",
+     "significance": "Krishna birth",
+     "buys": "puja items, kids costumes, sweets",
+     "categories": [
+      "puja",
+      "toys",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Small online decor/costume demand",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-jharkhand/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Karma Puja",
+     "local_name": "Karam",
+     "kind": "tribal",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-22..2026-09-23",
+     "date_2027": "2027-09-12",
+     "significance": "Karam tree worship for prosperity and siblings; group dances",
+     "buys": "new clothes, dhol/mandar, fruits, sweets",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Major tribal festival; clothing bought locally and online",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/jharkhand",
+      "https://www.jharkhand.gov.in/home/AboutFestivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Jitiya",
+     "local_name": "Jivitputrika",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-03",
+     "date_2027": "2027-09-22",
+     "significance": "Mothers' nirjala fast for children",
+     "buys": "puja items, fruits, sweets, threads",
+     "categories": [
+      "puja",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Puja goods offline",
+     "sources": [
+      "https://www.drikpanchang.com/vrats/jivitputrika/jivitputrika-vrat-date-time.html?year=2026"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Durga Puja / Dussehra",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-17..2026-10-21",
+     "date_2027": "2027-10-05..2027-10-09",
+     "significance": "Pandal festival (Bengali influence in Jamshedpur, Dhanbad, Ranchi)",
+     "buys": "new clothes, ethnic wear, footwear, makeup",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "footwear",
+      "beauty",
+      "puja"
+     ],
+     "impact": "high",
+     "impact_reason": "Overlaps Big Billion Days/GIF; tier-3 = 50.7% of Diwali orders (ClickPost 2025)",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-jharkhand/holidays/2026/",
+      "https://indianretailer.com/article/technology-e-commerce/digital-trends/2025-festive-e-commerce-sees-record-engagement-quick"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Dhanteras",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-06",
+     "date_2027": "2027-10-27",
+     "significance": "Auspicious buying day",
+     "buys": "gold, utensils, vehicles, appliances",
+     "categories": [
+      "jewellery",
+      "kitchen",
+      "vehicles",
+      "appliances",
+      "electronics"
+     ],
+     "impact": "high",
+     "impact_reason": "Durables and phones on EMI",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Diwali / Kali Puja",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Lakshmi puja; Kali puja in Bengali areas",
+     "buys": "lights, decor, sweets, gifts, phones, appliances",
+     "categories": [
+      "homedecor",
+      "sweets",
+      "gifting",
+      "phones",
+      "appliances",
+      "electronics",
+      "puja"
+     ],
+     "impact": "high",
+     "impact_reason": "National festive peak",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/jharkhand",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Sohrai / Bandna (Kartik)",
+     "local_name": "Bandna",
+     "kind": "tribal",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-09..2026-11-10",
+     "date_2027": "2027-10-30..2027-10-31",
+     "significance": "Cattle festival right after Diwali; Sohrai wall art",
+     "buys": "cattle decor, earthen lamps, paints, new clothes",
+     "categories": [
+      "agri",
+      "homedecor",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Rural, offline",
+     "sources": [
+      "https://www.jharkhand.gov.in/home/AboutFestivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Chhath Puja",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-14..2026-11-16",
+     "date_2027": "2027-11-03..2027-11-05",
+     "significance": "Sun worship; biggest family return-home festival",
+     "buys": "soop, fruits, sugarcane, new sarees, dhoti, puja items",
+     "categories": [
+      "puja",
+      "grocery",
+      "ethnic",
+      "travel"
+     ],
+     "impact": "high",
+     "impact_reason": "Travel, sarees and puja kits; quick commerce in cities",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/jharkhand",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Jharkhand Foundation Day / Birsa Munda Jayanti",
+     "local_name": "",
+     "kind": "national",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-15",
+     "date_2027": "2027-11-15",
+     "significance": "State formation (2000) and Birsa Munda birth anniversary",
+     "buys": "none specific",
+     "categories": [
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Commemorative",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/jharkhand"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Christmas",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Sizeable tribal Christian population (Ranchi, Gumla, Simdega)",
+     "buys": "cakes, decor, gifts, new clothes",
+     "categories": [
+      "sweets",
+      "homedecor",
+      "gifting",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end sales plus Christmas gifting",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-jharkhand/holidays/2026/"
+     ],
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "id": "odisha",
+   "name": "Odisha",
+   "languages": [
+    "Odia",
+    "Santali",
+    "Sambalpuri/Kosli",
+    "Ho"
+   ],
+   "top_cities": [
+    "Bhubaneswar",
+    "Cuttack",
+    "Rourkela",
+    "Berhampur",
+    "Sambalpur"
+   ],
+   "culture": "Jagannath-centred calendar; women-centric festivals (Raja, Kumar Purnima, Savitri) drive apparel/cosmetics; strong handloom pride.",
+   "ecommerce": "Women's internet use in Odisha doubled to 51.8% (NFHS-6); Puri in Flipkart top tier-3 lists; Sambalpuri weavers sell via Flipkart.",
+   "ecommerce_sources": [
+    "https://www.etvbharat.com/en/state/internet-use-among-odisha-women-doubles-in-three-years-nfhs-6-enn26053003144",
+    "https://stories.flipkart.com/handloom-sarees-odisha-weaver/",
+    "https://indianretailer.com/article/technology-e-commerce/digital-trends/2025-festive-e-commerce-sees-record-engagement-quick"
+   ],
+   "festivals": [
+    {
+     "name": "Makar Sankranti / Makar Mela",
+     "local_name": "Makara Sankranti",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14",
+     "date_2027": "2027-01-15",
+     "significance": "Makar chaula offering; Makar Mela in western/tribal Odisha",
+     "buys": "new rice, chhena, jaggery, til, kites",
+     "categories": [
+      "grocery",
+      "sweets",
+      "toys"
+     ],
+     "impact": "low",
+     "impact_reason": "Staples offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Dhanu Jatra",
+     "local_name": "Dhanu Jatra",
+     "kind": "fair",
+     "months": [
+      12,
+      1
+     ],
+     "date_2026": "2025-12-24..2026-01-03",
+     "date_2027": "2027-01-12..2027-01-22",
+     "significance": "11-day open-air theatre fair in Bargarh",
+     "buys": "handicrafts, toys, utensils, travel",
+     "categories": [
+      "toys",
+      "kitchen",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Mela commerce",
+     "sources": [
+      "https://odishabytes.com/11-day-dhanu-yatra-to-begin-in-odishas-bargarh-from-december-24/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Saraswati Puja",
+     "local_name": "Basanta Panchami",
+     "kind": "religious",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-23",
+     "date_2027": "2027-02-11",
+     "significance": "Huge student festival; school/college pandals",
+     "buys": "sarees for girls, stationery, puja items, idols",
+     "categories": [
+      "ethnic",
+      "stationery",
+      "puja",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "First-saree buying for teens, stationery",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Maha Shivaratri",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-15",
+     "date_2027": "2027-03-06",
+     "significance": "Lingaraj, Lokanath temple vigils",
+     "buys": "puja items, fruits",
+     "categories": [
+      "puja",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Dola Purnima & Holi",
+     "local_name": "Dola Jatra",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-03..2026-03-04",
+     "date_2027": "2027-03-22",
+     "significance": "Dola melana of deities, colours",
+     "buys": "abira, colours, sweets, new clothes",
+     "categories": [
+      "puja",
+      "toys",
+      "sweets",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "Holi apparel/colour sales",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Utkal Divas",
+     "local_name": "",
+     "kind": "cultural",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-01",
+     "date_2027": "2027-04-01",
+     "significance": "Odisha formation day (1936)",
+     "buys": "Odia handloom, gifts",
+     "categories": [
+      "ethnic",
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Pride campaigns for Odisha handlooms",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Pana Sankranti (Odia New Year)",
+     "local_name": "Maha Bishuba Sankranti",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-14",
+     "date_2027": "2027-04-14",
+     "significance": "Odia new year; pana drink, Jhamu Jatra",
+     "buys": "pana ingredients, new clothes, panjika, chhatua",
+     "categories": [
+      "grocery",
+      "ethnic",
+      "kitchen"
+     ],
+     "impact": "medium",
+     "impact_reason": "New year apparel and summer appliances",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Akshaya Tritiya",
+     "local_name": "Akhaya Trutiya",
+     "kind": "religious",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-19",
+     "date_2027": "2027-05-09",
+     "significance": "Farmers' first sowing (Akhi Muthi), Chandan Yatra, wedding season",
+     "buys": "gold, seeds, wedding goods",
+     "categories": [
+      "jewellery",
+      "agri",
+      "wedding"
+     ],
+     "impact": "medium",
+     "impact_reason": "Gold buying, wedding season",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Savitri Brata",
+     "local_name": "Sabitri Amabasya",
+     "kind": "religious",
+     "months": [
+      5
+     ],
+     "date_2026": "2026-05-16",
+     "date_2027": "2027-06-04",
+     "significance": "Married women's fast for husbands' long life",
+     "buys": "sarees, bangles, sindoor, fruits",
+     "categories": [
+      "ethnic",
+      "beauty",
+      "jewellery",
+      "puja"
+     ],
+     "impact": "medium",
+     "impact_reason": "New sarees/cosmetics for married women",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Raja Parba",
+     "local_name": "Raja",
+     "kind": "harvest",
+     "months": [
+      6
+     ],
+     "date_2026": "2026-06-14..2026-06-16",
+     "date_2027": "2027-06-14..2027-06-16",
+     "significance": "3-day earth/womanhood festival at monsoon onset; swings, pitha",
+     "buys": "new dresses, cosmetics, perfumes, bangles, alta, paan, pitha",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "beauty",
+      "jewellery",
+      "sweets",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Women's fashion/cosmetics spree; malls decorate; Raja Sankranti state holiday",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://www.orissapost.com/temple-city-bracing-for-raja-festival/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Rath Yatra",
+     "local_name": "Ratha Jatra",
+     "kind": "religious",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-16",
+     "date_2027": "2027-07-05",
+     "significance": "Jagannath chariot festival at Puri; biggest Odia festival",
+     "buys": "puja items, sweets, new clothes, travel",
+     "categories": [
+      "puja",
+      "travel",
+      "sweets",
+      "ethnic"
+     ],
+     "impact": "medium",
+     "impact_reason": "Travel to Puri; new clothes; online darshan/merch",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Raksha Bandhan / Gamha Purnima",
+     "local_name": "Gamha Purnima",
+     "kind": "religious",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-28",
+     "date_2027": "2027-08-17",
+     "significance": "Rakhi plus cattle worship (Gamha) and Jhulan",
+     "buys": "rakhis, sweets, gifts",
+     "categories": [
+      "gifting",
+      "sweets"
+     ],
+     "impact": "high",
+     "impact_reason": "Rakhi gifting online",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ganesh Puja",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": "2027-09-04",
+     "significance": "Ganesh puja in schools/markets",
+     "buys": "idols, decor, stationery",
+     "categories": [
+      "puja",
+      "homedecor",
+      "stationery"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Nuakhai",
+     "local_name": "Nuakhai Juhar",
+     "kind": "harvest",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-15",
+     "date_2027": "2027-09-05",
+     "significance": "Western Odisha new-rice festival, family reunions (Sambalpur, Bargarh, Balangir)",
+     "buys": "new clothes, Sambalpuri sarees, gifts, sweets, travel",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "gifting",
+      "sweets",
+      "travel"
+     ],
+     "impact": "medium",
+     "impact_reason": "New clothes mandatory; Sambalpuri handloom sells online too",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://stories.flipkart.com/handloom-sarees-odisha-weaver/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Durga Puja (Cuttack)",
+     "local_name": "Dussehra",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-17..2026-10-20",
+     "date_2027": "2027-10-05..2027-10-09",
+     "significance": "Silver-filigree pandals in Cuttack; 4-day puja",
+     "buys": "new clothes, sarees, footwear, makeup, electronics",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "footwear",
+      "beauty",
+      "electronics",
+      "phones"
+     ],
+     "impact": "high",
+     "impact_reason": "Overlaps national festive sales; Puri in Flipkart top tier-3 lists",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://indianretailer.com/article/technology-e-commerce/digital-trends/2025-festive-e-commerce-sees-record-engagement-quick"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kumar Purnima",
+     "local_name": "Kumara Purnima",
+     "kind": "cultural",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-25",
+     "date_2027": "2027-10-14",
+     "significance": "Unmarried girls' festival; new clothes, swings, Gajalaxmi puja in Dhenkanal",
+     "buys": "new dresses, cosmetics, sweets",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "beauty",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Young women's apparel/cosmetics",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Diwali & Kali Puja",
+     "local_name": "Dipabali",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Badabadua daka ancestral ritual; Kali puja",
+     "buys": "lamps, crackers, decor, sweets, phones, appliances",
+     "categories": [
+      "homedecor",
+      "sweets",
+      "puja",
+      "phones",
+      "appliances",
+      "electronics"
+     ],
+     "impact": "high",
+     "impact_reason": "National festive peak",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Dhanteras",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-06",
+     "date_2027": "2027-10-27",
+     "significance": "Auspicious buying day",
+     "buys": "gold, utensils, vehicles, appliances",
+     "categories": [
+      "jewellery",
+      "kitchen",
+      "vehicles",
+      "appliances"
+     ],
+     "impact": "high",
+     "impact_reason": "Durables/gold",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kartika Masa & Boita Bandana",
+     "local_name": "Boita Bandana",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-24",
+     "date_2027": "2027-11-14",
+     "significance": "Kartik month of habisha (veg); maritime boat-floating ritual on Kartik Purnima",
+     "buys": "puja items, banana-stem boats, veg groceries",
+     "categories": [
+      "puja",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Seasonal veg grocery; quick commerce",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Bali Jatra",
+     "local_name": "Bali Jatra",
+     "kind": "fair",
+     "months": [
+      11,
+      12
+     ],
+     "date_2026": "2026-11-24..2026-12-01",
+     "date_2027": "2027-11-14..2027-11-21",
+     "significance": "Asia's large open trade fair at Cuttack, Mahanadi bank",
+     "buys": "handicrafts, food, furniture, toys, appliances",
+     "categories": [
+      "homedecor",
+      "furniture",
+      "toys",
+      "kitchen",
+      "appliances"
+     ],
+     "impact": "low",
+     "impact_reason": "Big offline trade fair; diverts spend from online",
+     "sources": [
+      "https://odishabytes.com/kataka-bali-jatra-2026-dates-announced-check-plans-for-venue/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Manabasa Gurubar",
+     "local_name": "Manabasa Gurubara",
+     "kind": "religious",
+     "months": [
+      11,
+      12
+     ],
+     "date_2026": "2026-11-26..2026-12-24",
+     "date_2027": "2027-11-18..2027-12-16",
+     "significance": "Thursdays of Margashira for Goddess Lakshmi; homes decorated with jhoti",
+     "buys": "puja items, rice, decor, utensils",
+     "categories": [
+      "puja",
+      "homedecor",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Puja goods; quick commerce",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Christmas & Year End",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Christian population in Kandhamal, Sundargarh, Gajapati; year-end sales",
+     "buys": "cakes, gifts, winterwear",
+     "categories": [
+      "sweets",
+      "gifting",
+      "winter"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end online sales",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/"
+     ],
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "id": "wb",
+   "name": "West Bengal",
+   "languages": [
+    "Bengali",
+    "Hindi",
+    "Urdu",
+    "Santali",
+    "Nepali"
+   ],
+   "top_cities": [
+    "Kolkata",
+    "Howrah",
+    "Siliguri",
+    "Durgapur",
+    "Asansol"
+   ],
+   "culture": "Durga Puja is the year's spending peak (new clothes for every day of Puja); Chaitra sale before Poila Boishakh; strong gifting (Bhai Phonta, Jamai Sasthi).",
+   "ecommerce": "Durga Puja economy Rs 46-50k cr in 2025 (+10-15%); Kolkata a top BBD 2024 metro; Medinipur, Bankura, Berhampore, Haldia flagged for growth.",
+   "ecommerce_sources": [
+    "https://thefederal.com/category/states/east/west-bengal/durga-puja-festivities-economy-rebounds-up-to-by-fifteen-per-cent-209324",
+    "https://www.storyboard18.com/digital/flipkarts-big-billion-days-top-metro-cities-drive-demand-tier-2-cities-show-promise-43511.htm",
+    "https://indianretailer.com/article/technology-e-commerce/digital-trends/2025-festive-e-commerce-sees-record-engagement-quick"
+   ],
+   "festivals": [
+    {
+     "name": "Gangasagar Mela / Poush Sankranti",
+     "local_name": "Poush Parbon",
+     "kind": "fair",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14",
+     "date_2027": "2027-01-15",
+     "significance": "Pilgrims at Sagar Island; pithe-puli harvest sweets",
+     "buys": "nolen gur, pithe ingredients, winterwear, travel",
+     "categories": [
+      "sweets",
+      "grocery",
+      "winter",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Mela and kitchen staples; nolen gur online",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Saraswati Puja",
+     "local_name": "Basanta Panchami",
+     "kind": "religious",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-23",
+     "date_2027": "2027-02-11",
+     "significance": "Students' festival; Bengali 'Valentine's day'; girls' first saree",
+     "buys": "basanti sarees, panjabi, stationery, idols",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "stationery",
+      "puja",
+      "beauty"
+     ],
+     "impact": "high",
+     "impact_reason": "Yellow saree/panjabi spike online",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-west-bengal/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Dol Jatra / Holi",
+     "local_name": "Dol Purnima",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-03",
+     "date_2027": "2027-03-22",
+     "significance": "Basanta Utsav (Shantiniketan), colours",
+     "buys": "abir, white kurta/saree, sweets",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "toys",
+      "sweets",
+      "beauty"
+     ],
+     "impact": "medium",
+     "impact_reason": "Kurtas, colours, skin care",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-west-bengal/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Eid al-Fitr",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "~27% Muslim population; Ramzan bazaars (Zakaria St)",
+     "buys": "kurtas, ethnic wear, attar, dry fruits, sewaiyan, footwear",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "footwear",
+      "grocery",
+      "beauty",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Large Ramzan apparel/grocery spend; online fashion sales",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-west-bengal/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Chaitra Sale & Poila Boishakh",
+     "local_name": "Nababarsha",
+     "kind": "new_year",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-15..2026-04-15",
+     "date_2027": "2027-03-15..2027-04-15",
+     "significance": "Bengali New Year; Haal Khata account books; month-long Chaitra sale",
+     "buys": "sarees, panjabi, sweets, gold, new ledgers, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "sweets",
+      "jewellery",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Chaitra discount season plus new-year clothes",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-west-bengal/holidays/2026/",
+      "https://newsonair.gov.in/poila-boishakh-celebrated-across-bengal-with-traditional-fervour-devotion/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Akshaya Tritiya",
+     "local_name": "Akshay Tritiya",
+     "kind": "religious",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-19",
+     "date_2027": "2027-05-09",
+     "significance": "Gold buying, Haal Khata in some trades",
+     "buys": "gold, silver",
+     "categories": [
+      "jewellery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Gold coins online, jewellers offline",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid al-Adha",
+     "local_name": "Bakri Eid",
+     "kind": "religious",
+     "months": [
+      5
+     ],
+     "date_2026": "2026-05-28",
+     "date_2027": "2027-05-17",
+     "significance": "Muslim festival of sacrifice",
+     "buys": "clothes, meat, spices, gifts",
+     "categories": [
+      "ethnic",
+      "grocery",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Grocery and clothing",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-west-bengal/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Jamai Sasthi",
+     "local_name": "Jamai Shashthi",
+     "kind": "cultural",
+     "months": [
+      6
+     ],
+     "date_2026": "2026-06-20",
+     "date_2027": "2027-06-09",
+     "significance": "Sons-in-law feted by in-laws",
+     "buys": "gifts, panjabi, fish, sweets, mangoes",
+     "categories": [
+      "gifting",
+      "ethnic",
+      "sweets",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Gifting and food orders; Bengal-specific",
+     "sources": [
+      "https://www.prabhatkhabar.com/religion/jamai-sasthi-2026-date-significance-and-traditions"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Rath Yatra (Mahesh, ISKCON)",
+     "local_name": "Rathayatra",
+     "kind": "religious",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-16",
+     "date_2027": "2027-07-05",
+     "significance": "Chariot festivals; pandal construction 'khunti puja' begins",
+     "buys": "toy raths, papad, jilipi",
+     "categories": [
+      "toys",
+      "sweets",
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Offline fairs",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Raksha Bandhan",
+     "local_name": "Rakhi Purnima",
+     "kind": "religious",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-28",
+     "date_2027": "2027-08-17",
+     "significance": "Sibling festival",
+     "buys": "rakhis, sweets, gifts",
+     "categories": [
+      "gifting",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Rakhi gifting online",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Vishwakarma Puja",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-17",
+     "date_2027": "2027-09-17",
+     "significance": "Worship of tools/machines in factories; kite flying",
+     "buys": "kites, puja items, tools",
+     "categories": [
+      "puja",
+      "toys",
+      "homeimprove"
+     ],
+     "impact": "low",
+     "impact_reason": "B2B/offline",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Mahalaya",
+     "local_name": "Mahalaya",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-10",
+     "date_2027": "2027-09-29",
+     "significance": "Start of Devi Paksha; Puja shopping peaks",
+     "buys": "new clothes, puja items",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "puja"
+     ],
+     "impact": "medium",
+     "impact_reason": "Final pre-Puja shopping week; fashion orders +14.3% pre-Puja week (ClickPost)",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-west-bengal/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Durga Puja",
+     "local_name": "Durgotsab",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-17..2026-10-21",
+     "date_2027": "2027-10-05..2027-10-09",
+     "significance": "Biggest festival (UNESCO heritage); ~Rs 46-50k cr economy 2025",
+     "buys": "sarees, panjabi, footwear, makeup, jewellery, phones, electronics, food",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "footwear",
+      "beauty",
+      "jewellery",
+      "phones",
+      "electronics",
+      "tv",
+      "gifting",
+      "puja"
+     ],
+     "impact": "high",
+     "impact_reason": "Puja economy up 10-15% in 2025; mall apparel +22%, footwear +20%, jewellery +25%",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-west-bengal/holidays/2026/",
+      "https://thefederal.com/category/states/east/west-bengal/durga-puja-festivities-economy-rebounds-up-to-by-fifteen-per-cent-209324",
+      "https://www.storyboard18.com/digital/flipkarts-big-billion-days-top-metro-cities-drive-demand-tier-2-cities-show-promise-43511.htm"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kojagori Lakshmi Puja",
+     "local_name": "Lokkhi Pujo",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-25",
+     "date_2027": "2027-10-14",
+     "significance": "Home Lakshmi worship on Sharad Purnima",
+     "buys": "puja items, alpona, sweets, naru",
+     "categories": [
+      "puja",
+      "sweets",
+      "homedecor"
+     ],
+     "impact": "medium",
+     "impact_reason": "Puja kits; quick commerce (bigbasket puja essentials +128% 2025)",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.impactonnet.com/more-from-impact/bigbasket-reports-increased-festive-sales-during-durga-puja-and-dussehra-2025-12056.html"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Dhanteras",
+     "local_name": "Dhanteras",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-06",
+     "date_2027": "2027-10-27",
+     "significance": "Rising gold/utensil buying day in Bengal",
+     "buys": "gold, utensils, appliances",
+     "categories": [
+      "jewellery",
+      "kitchen",
+      "appliances"
+     ],
+     "impact": "medium",
+     "impact_reason": "Growing, but Puja is bigger for Bengal",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kali Puja & Diwali",
+     "local_name": "Kali Pujo",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Kali worship night; lamps, Bhoot Chaturdashi day before",
+     "buys": "lights, diyas, decor, crackers, sweets",
+     "categories": [
+      "homedecor",
+      "puja",
+      "sweets",
+      "electronics"
+     ],
+     "impact": "high",
+     "impact_reason": "Decor/lights and electronics in national sale window",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-west-bengal/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Bhai Phonta",
+     "local_name": "Bhratri Dwitiya",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-11",
+     "date_2027": "2027-10-31",
+     "significance": "Sisters bless brothers; gifts exchanged",
+     "buys": "gifts, clothes, sweets, gadgets",
+     "categories": [
+      "gifting",
+      "fashion",
+      "sweets",
+      "phones"
+     ],
+     "impact": "high",
+     "impact_reason": "Strong gifting occasion; state holiday",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-west-bengal/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Jagaddhatri Puja",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-18",
+     "date_2027": "2027-11-08",
+     "significance": "Grand pujas in Chandannagar, Krishnanagar; light displays",
+     "buys": "new clothes, lights, puja items",
+     "categories": [
+      "ethnic",
+      "homedecor",
+      "puja"
+     ],
+     "impact": "medium",
+     "impact_reason": "Regional mini-Puja shopping",
+     "sources": [
+      "https://www.drikpanchang.com/festivals/jagaddhatri-puja/jagaddhatri-puja-date-time.html?year=2026"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Chhath Puja",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-15",
+     "date_2027": "2027-11-04",
+     "significance": "Large Hindi-speaking population in Kolkata/Howrah",
+     "buys": "soop, fruits, sarees, puja items",
+     "categories": [
+      "puja",
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "medium",
+     "impact_reason": "Puja kits, sarees",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Nabanna",
+     "local_name": "Nobanno",
+     "kind": "harvest",
+     "months": [
+      11,
+      12
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "New-rice harvest feast in Agrahayan",
+     "buys": "new rice, nolen gur, sweets",
+     "categories": [
+      "grocery",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Rural; offline",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Poush Mela",
+     "local_name": "Poush Mela",
+     "kind": "fair",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-23..2026-12-25",
+     "date_2027": "2027-12-23..2027-12-25",
+     "significance": "Shantiniketan crafts fair from 7 Poush",
+     "buys": "handicrafts, kantha, leather, baul music items",
+     "categories": [
+      "homedecor",
+      "ethnic",
+      "gifting",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Craft fair; offline",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Christmas & Bodin (Park Street)",
+     "local_name": "Bodo Din",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Kolkata's Bodo Din; Park Street lights, cakes",
+     "buys": "plum cakes, decor, gifts, winterwear",
+     "categories": [
+      "sweets",
+      "gifting",
+      "homedecor",
+      "winter",
+      "fashion"
+     ],
+     "impact": "high",
+     "impact_reason": "Year-end online sales, winterwear, cake orders",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-west-bengal/holidays/2026/"
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ ]
+}

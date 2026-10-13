@@ -1,0 +1,2175 @@
+{
+ "group": "g6",
+ "states": [
+  {
+   "id": "ap",
+   "name": "Andhra Pradesh",
+   "languages": [
+    "Telugu",
+    "Urdu"
+   ],
+   "top_cities": [
+    "Visakhapatnam",
+    "Vijayawada",
+    "Guntur",
+    "Tirupati",
+    "Nellore"
+   ],
+   "culture": "Strong gold and silk-saree buying culture; Sankranti homecoming from Hyderabad/Bengaluru drives huge seasonal spend; temple tourism (Tirumala, Srisailam).",
+   "ecommerce": "Mostly tier-2/3 demand; nationally >60% of Flipkart BBD Day-1 orders and >80% of Meesho sale orders came from non-metros (2025). Flipkart added Telugu UI in 2020 after research incl. Visakhapatnam. No state-level GMV published.",
+   "ecommerce_sources": [
+    "https://www.outlookbusiness.com/corporate/non-metros-drive-flipkarts-the-big-billion-days-sale-on-day-1-with-60-pc-of-orders",
+    "https://www.thenewsminute.com/atom/flipkart-enables-support-tamil-telugu-and-kannada-its-platform-127232",
+    "https://www.storyboard18.com/amp/brand-marketing/festive-ecomm-sales-to-hit-rs-1-2-lakh-crore-amazon-flipkart-bet-big-on-tier-2-cities-81104.htm"
+   ],
+   "festivals": [
+    {
+     "name": "Makar Sankranti (Bhogi, Sankranti, Kanuma)",
+     "local_name": "Sankranti / Pedda Panduga",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14..2026-01-16",
+     "date_2027": "2027-01-14..2027-01-16",
+     "significance": "Biggest festival of AP; 3-4 day harvest festival, family homecoming, rangoli, kites, cockfights",
+     "buys": "new clothes, pattu sarees, gold, rangoli colours, sweets (ariselu), kites, vehicles, home appliances, travel tickets",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "sweets",
+      "grocery",
+      "homedecor",
+      "vehicles",
+      "appliances",
+      "tv",
+      "travel",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Largest annual spend event in AP; lakhs travel Hyderabad->AP (70,000 vehicles in 12 hrs at Pantangi, Jan 2026); Sankranti sales on platforms",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://thesouthfirst.com/andhrapradesh/sankranti-exodus-brings-vehicle-traffic-to-a-crawl-on-hyderabad-vijayawada-national-highway/",
+      "https://www.etvbharat.com/en/state/andhra-pradesh-ablaze-with-sankranthi-joy-cockfights-bullock-races-and-festive-thrills-enn26011602598"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Maha Shivaratri",
+     "local_name": "Maha Shivaratri",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-02-15",
+     "date_2027": "2027-03-06",
+     "significance": "Night of Shiva; fasting and temple vigils; big fairs at Srisailam, Kotappakonda",
+     "buys": "puja items, fruits, fasting foods, travel",
+     "categories": [
+      "puja",
+      "grocery",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly temple/offline; some puja and travel bookings",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ugadi",
+     "local_name": "Ugadi",
+     "kind": "new_year",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-19",
+     "date_2027": "2027-04-07",
+     "significance": "Telugu/Kannada New Year (Chaitra Shukla Pratipada)",
+     "buys": "new clothes, gold, ugadi pachadi ingredients, mango leaves, vehicles, appliances",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "grocery",
+      "puja",
+      "vehicles",
+      "appliances",
+      "homedecor"
+     ],
+     "impact": "high",
+     "impact_reason": "Regional new-year sales; Flipkart has run dedicated Ugadi stores for KA/AP/TG; auspicious for vehicle & gold buys",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://hindupad.com/hindu-festivals-2027/",
+      "https://campaignsoftheworld.com/?p=32389"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Sri Rama Navami",
+     "local_name": "Sri Rama Navami",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-27",
+     "date_2027": "2027-04-15",
+     "significance": "Birth of Lord Rama; Vontimitta Kalyanam is state function",
+     "buys": "panakam ingredients, puja items, new clothes, flowers",
+     "categories": [
+      "puja",
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly temple-centred; small puja/grocery uplift",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid ul-Fitr (Ramzan)",
+     "local_name": "Ramzan",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "End of Ramadan fasting month",
+     "buys": "new clothes, attar, dry fruits, dates, footwear, bangles, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "footwear",
+      "beauty",
+      "grocery",
+      "gifting",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Month-long Ramadan shopping for apparel, beauty and groceries; dates moon-dependent",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Akshaya Tritiya",
+     "local_name": "Akshaya Tritiya",
+     "kind": "religious",
+     "months": [
+      4,
+      5
+     ],
+     "date_2026": "2026-04-19",
+     "date_2027": "2027-05-09",
+     "significance": "Auspicious day for buying gold and new beginnings",
+     "buys": "gold coins, jewellery, silver, appliances",
+     "categories": [
+      "jewellery",
+      "premium",
+      "appliances"
+     ],
+     "impact": "medium",
+     "impact_reason": "South India leads gold buying on this day; online gold coins/digital gold offers; ~20 t sold nationally (2025, trade est.)",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://www.wionews.com/business-economy/gold-and-silver-sales-hit-18-billion-on-akshaya-tritiya-despite-record-prices-9020614",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid al-Adha (Bakrid)",
+     "local_name": "Bakrid",
+     "kind": "religious",
+     "months": [
+      5
+     ],
+     "date_2026": "2026-05-28",
+     "date_2027": "2027-05-17",
+     "significance": "Festival of sacrifice",
+     "buys": "new clothes, meat, spices, kitchenware, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery",
+      "kitchen"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly offline (livestock, meat); modest apparel uplift",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Godavari Pushkaralu",
+     "local_name": "Godavari Pushkaralu",
+     "kind": "fair",
+     "months": [
+      6,
+      7
+     ],
+     "date_2026": null,
+     "date_2027": "2027-06-26..2027-07-07",
+     "significance": "Once-in-12-years holy dip festival on the Godavari; Rajamahendravaram main ghats",
+     "buys": "travel, puja items, new clothes, hotel stays, food",
+     "categories": [
+      "travel",
+      "puja",
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "AP expects ~10 crore devotees in 2027; big travel/puja demand; one district page gives Jul 23-Aug 3 instead",
+     "sources": [
+      "https://telanganatoday.com/ap-plans-high-tech-arrangements-for-godavari-pushkaralu-expects-10-crore-devotees",
+      "https://eastgodavari.ap.gov.in/?p=229767"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Varalakshmi Vratham",
+     "local_name": "Varalakshmi Vratham",
+     "kind": "religious",
+     "months": [
+      7,
+      8
+     ],
+     "date_2026": "2026-08-21",
+     "date_2027": "2027-08-13",
+     "significance": "Married women worship Goddess Lakshmi on Friday before Shravana Purnima",
+     "buys": "silk sarees, gold jewellery, kalasam, puja items, flowers, bangles, sweets",
+     "categories": [
+      "ethnic",
+      "jewellery",
+      "puja",
+      "beauty",
+      "sweets",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Jewellery brands (CaratLane, Indriya, GIVA) run South-focused campaigns; saree + gold demand spikes",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://hindutone.com/sravana-masam/varalakshmi-vratam-andhra-pradesh-telangana-2026/",
+      "https://www.caratlane.com/blog/varalakshmi-vratham/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Raksha Bandhan",
+     "local_name": "Rakhi Purnima",
+     "kind": "religious",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-28",
+     "date_2027": "2027-08-17",
+     "significance": "Sibling bond festival",
+     "buys": "rakhis, gift hampers, chocolates, sweets",
+     "categories": [
+      "gifting",
+      "sweets",
+      "personal"
+     ],
+     "impact": "medium",
+     "impact_reason": "Online rakhi + gift delivery is a well-established category, growing in south metros",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Krishna Janmashtami",
+     "local_name": "Krishnashtami",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-04",
+     "date_2027": "2027-08-25",
+     "significance": "Birth of Lord Krishna; uttiyadi (pot breaking)",
+     "buys": "kids' Krishna costumes, puja items, butter/sweets, flute toys",
+     "categories": [
+      "puja",
+      "toys",
+      "baby",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Kids' costume and puja buys online; modest",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ganesh Chaturthi",
+     "local_name": "Vinayaka Chavithi",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": "2027-09-04",
+     "significance": "Birth of Lord Ganesha; idols, pandals, immersion",
+     "buys": "clay idols, puja items, flowers, fruits, sweets, new clothes, decor",
+     "categories": [
+      "puja",
+      "homedecor",
+      "sweets",
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Puja kits/decor and early festive-sale build-up; mostly offline idol buying",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Tirumala Srivari Brahmotsavam",
+     "local_name": "Brahmotsavam",
+     "kind": "religious",
+     "months": [
+      9,
+      10
+     ],
+     "date_2026": "2026-09-15..2026-09-23",
+     "date_2027": null,
+     "significance": "Annual 9-day festival of Lord Venkateswara; 2026 adhika year had a second Navaratri Brahmotsavam Oct 12-20",
+     "buys": "travel, puja items, silk sarees, prasadam",
+     "categories": [
+      "travel",
+      "puja",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Pilgrimage/travel driven, little online retail uplift",
+     "sources": [
+      "https://hindutone.com/tirumala/tirumala-brahmotsavam-2026-dates-schedule-vahana-sevas/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Dasara / Navaratri (Vijayawada Kanaka Durga)",
+     "local_name": "Dasara",
+     "kind": "religious",
+     "months": [
+      9,
+      10
+     ],
+     "date_2026": "2026-10-11..2026-10-20",
+     "date_2027": "2027-09-30..2027-10-09",
+     "significance": "Navaratri ending Vijayadashami; Indrakeeladri Durga festival, Ayudha puja",
+     "buys": "new clothes, silk sarees, gold, vehicles, electronics, puja items, sweets",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "vehicles",
+      "electronics",
+      "phones",
+      "appliances",
+      "puja",
+      "sweets",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Coincides with main e-com festive sales; vehicle/appliance buying on Vijayadashami",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://calendarific.com/holidays/2027/IN",
+      "https://www.storyboard18.com/amp/brand-marketing/festive-ecomm-sales-to-hit-rs-1-2-lakh-crore-amazon-flipkart-bet-big-on-tier-2-cities-81104.htm"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "AP Formation Day",
+     "local_name": "Andhra Pradesh Avatarana Dinotsavam",
+     "kind": "national",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-01",
+     "date_2027": "2027-11-01",
+     "significance": "State formation day",
+     "buys": "flags, event goods",
+     "categories": [
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Official observance; negligible retail impact",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Diwali",
+     "local_name": "Deepavali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-06..2026-11-08",
+     "date_2027": "2027-10-27..2027-10-29",
+     "significance": "Festival of lights; Dhanteras to Naraka Chaturdashi/Deepavali",
+     "buys": "crackers, gold, new clothes, sweets, diyas, appliances, phones, gift hampers",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "sweets",
+      "gifting",
+      "homedecor",
+      "electronics",
+      "phones",
+      "appliances",
+      "tv",
+      "puja"
+     ],
+     "impact": "high",
+     "impact_reason": "Peak of festive sale season (Big Billion Days/GIF); national festive e-com GMV forecast ~Rs1.15-1.2 lakh cr in 2025",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/",
+      "https://calendarific.com/holidays/2027/IN",
+      "https://www.storyboard18.com/amp/brand-marketing/festive-ecomm-sales-to-hit-rs-1-2-lakh-crore-amazon-flipkart-bet-big-on-tier-2-cities-81104.htm"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Karthika Masam & Karthika Purnima",
+     "local_name": "Karthika Pournami",
+     "kind": "religious",
+     "months": [
+      10,
+      11,
+      12
+     ],
+     "date_2026": "2026-11-24",
+     "date_2027": "2027-11-14",
+     "significance": "Holy month of Shiva; lamps, river baths, Nagula Chavithi, vanabhojanalu",
+     "buys": "diyas, ghee, puja items, brass lamps, picnic supplies",
+     "categories": [
+      "puja",
+      "homedecor",
+      "grocery",
+      "kitchen"
+     ],
+     "impact": "low",
+     "impact_reason": "Puja/lamp category uplift; largely offline",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Christmas",
+     "local_name": null,
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Birth of Jesus; year-end festive and holiday season",
+     "buys": "cakes, decor, stars, gifts, new clothes, toys",
+     "categories": [
+      "gifting",
+      "homedecor",
+      "toys",
+      "fashion",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end sales, gifting and decor demand in cities",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/andhra-pradesh/"
+     ],
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "id": "telangana",
+   "name": "Telangana",
+   "languages": [
+    "Telugu",
+    "Urdu",
+    "Hindi"
+   ],
+   "top_cities": [
+    "Hyderabad",
+    "Warangal",
+    "Karimnagar",
+    "Nizamabad",
+    "Khammam"
+   ],
+   "culture": "Hyderabad is a top-3 metro for online shoppers; Deccani Muslim culture makes Ramzan a major retail season; Bonalu/Bathukamma drive saree, puja and gold buying.",
+   "ecommerce": "Flipkart reported highest BBD shopper counts from Bangalore, Delhi and Hyderabad; Hyderabad among top metros in Amazon GIF 2023. Telangana ~13% of quick-commerce jobs. Ramzan haleem trade est. Rs1,000 cr (2026).",
+   "ecommerce_sources": [
+    "https://www.dtnext.in/lifestyle/technology/non-metros-dominate-online-festival-sale-across-amazon-meesho-flipkart-741204",
+    "https://www.outlookbusiness.com/start-up/news/amazon-flipkart-meesho-unicommerce",
+    "https://www.etvbharat.com/en/state/with-ramadan-approaching-aroma-of-haleem-starts-wafting-across-hyderabad-streets-enn26020702578"
+   ],
+   "festivals": [
+    {
+     "name": "Numaish (All India Industrial Exhibition)",
+     "local_name": "Numaish",
+     "kind": "fair",
+     "months": [
+      1,
+      2
+     ],
+     "date_2026": "2026-01-01..2026-02-15",
+     "date_2027": "2027-01-01..2027-02-15",
+     "significance": "46-day annual consumer exhibition at Nampally, Hyderabad; ~20 lakh visitors/yr",
+     "buys": "handicrafts, apparel, footwear, home furnishings, electronics, jewellery",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "footwear",
+      "homedecor",
+      "electronics",
+      "jewellery",
+      "kitchen"
+     ],
+     "impact": "low",
+     "impact_reason": "1,000+ offline stalls; competes with online rather than lifting it",
+     "sources": [
+      "https://www.siasat.com/numaish-opens-in-hyderabad-over-1000-vendors-set-up-stalls-3319774/",
+      "https://www.siasat.com/hyderabads-numaish-to-end-today-heres-your-last-day-guide-3349464/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Makar Sankranti (Bhogi, Sankranti, Kanuma)",
+     "local_name": "Sankranti",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14..2026-01-16",
+     "date_2027": "2027-01-14..2027-01-16",
+     "significance": "Harvest festival; Hyderabad kite flying, rangoli, homecoming",
+     "buys": "kites, manja, new clothes, sweets, rangoli colours, travel, gold",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "sweets",
+      "toys",
+      "homedecor",
+      "travel",
+      "jewellery",
+      "grocery"
+     ],
+     "impact": "high",
+     "impact_reason": "Kite and festive apparel demand; mass travel out of Hyderabad to AP (NH-65 jams Jan 2026)",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://thesouthfirst.com/andhrapradesh/sankranti-exodus-brings-vehicle-traffic-to-a-crawl-on-hyderabad-vijayawada-national-highway/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Medaram Sammakka Saralamma Jatara",
+     "local_name": "Medaram Jatara",
+     "kind": "tribal",
+     "months": [
+      1,
+      2
+     ],
+     "date_2026": "2026-01-28..2026-01-31",
+     "date_2027": null,
+     "significance": "Biennial Koya tribal fair in Mulugu dist; among largest tribal gatherings; next 2028",
+     "buys": "jaggery (bangaram), coconuts, saris, travel",
+     "categories": [
+      "puja",
+      "grocery",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Massive footfall but rural/offline; jaggery offerings and bus travel",
+     "sources": [
+      "https://www.siasat.com/sammakka-saralamma-jatara-to-be-held-from-jan-28-to-31-3241136/",
+      "https://hindupad.com/medaram-sammakka-sarakka-jatara/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Maha Shivaratri",
+     "local_name": "Maha Shivaratri",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-02-15",
+     "date_2027": "2027-03-06",
+     "significance": "Night of Shiva; fasting and temple vigils; Vemulawada, Keesaragutta fairs",
+     "buys": "puja items, fruits, fasting foods, travel",
+     "categories": [
+      "puja",
+      "grocery",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly temple/offline; some puja and travel bookings",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid ul-Fitr (Ramzan)",
+     "local_name": "Ramzan",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "End of Ramadan fasting month",
+     "buys": "new clothes, attar, dry fruits, dates, footwear, bangles, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "footwear",
+      "beauty",
+      "grocery",
+      "gifting",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Month-long Ramadan shopping for apparel, beauty and groceries; dates moon-dependent",
+     "sources": [
+      "https://www.etvbharat.com/en/state/ramadan-fever-grips-hyderabad-haleem-craze-peaks-queues-get-longer-every-evening-enn26031806996",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ugadi",
+     "local_name": "Ugadi",
+     "kind": "new_year",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-19",
+     "date_2027": "2027-04-07",
+     "significance": "Telugu/Kannada New Year (Chaitra Shukla Pratipada)",
+     "buys": "new clothes, gold, ugadi pachadi ingredients, mango leaves, vehicles, appliances",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "grocery",
+      "puja",
+      "vehicles",
+      "appliances",
+      "homedecor"
+     ],
+     "impact": "high",
+     "impact_reason": "Regional new-year sales; Flipkart has run dedicated Ugadi stores for KA/AP/TG; auspicious for vehicle & gold buys",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://hindupad.com/hindu-festivals-2027/",
+      "https://campaignsoftheworld.com/?p=32389"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Sri Rama Navami",
+     "local_name": "Sri Rama Navami",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-27",
+     "date_2027": "2027-04-15",
+     "significance": "Birth of Lord Rama; Bhadrachalam Sitarama Kalyanam",
+     "buys": "panakam ingredients, puja items, new clothes, flowers",
+     "categories": [
+      "puja",
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly temple-centred; small puja/grocery uplift",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Akshaya Tritiya",
+     "local_name": "Akshaya Tritiya",
+     "kind": "religious",
+     "months": [
+      4,
+      5
+     ],
+     "date_2026": "2026-04-19",
+     "date_2027": "2027-05-09",
+     "significance": "Auspicious day for buying gold and new beginnings",
+     "buys": "gold coins, jewellery, silver, appliances",
+     "categories": [
+      "jewellery",
+      "premium",
+      "appliances"
+     ],
+     "impact": "medium",
+     "impact_reason": "South India leads gold buying on this day; online gold coins/digital gold offers; ~20 t sold nationally (2025, trade est.)",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://www.wionews.com/business-economy/gold-and-silver-sales-hit-18-billion-on-akshaya-tritiya-despite-record-prices-9020614",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid al-Adha (Bakrid)",
+     "local_name": "Bakrid",
+     "kind": "religious",
+     "months": [
+      5
+     ],
+     "date_2026": "2026-05-28",
+     "date_2027": "2027-05-17",
+     "significance": "Festival of sacrifice",
+     "buys": "new clothes, meat, spices, kitchenware, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery",
+      "kitchen"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly offline (livestock, meat); modest apparel uplift",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Telangana Formation Day",
+     "local_name": "Telangana Avatarana Dinotsavam",
+     "kind": "national",
+     "months": [
+      6
+     ],
+     "date_2026": "2026-06-02",
+     "date_2027": "2027-06-02",
+     "significance": "State formation day",
+     "buys": "flags, event goods",
+     "categories": [
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Official celebration; negligible retail impact",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Bonalu",
+     "local_name": "Ashada Bonalu",
+     "kind": "religious",
+     "months": [
+      7,
+      8
+     ],
+     "date_2026": "2026-07-16..2026-08-10",
+     "date_2027": null,
+     "significance": "Month-long Ashada offerings to Mahakali (Golconda, Ujjaini Mahankali, Lal Darwaza); state festival",
+     "buys": "new sarees, bangles, pots (bonam), turmeric, kumkum, neem, puja items, meat, liquor",
+     "categories": [
+      "ethnic",
+      "puja",
+      "beauty",
+      "grocery",
+      "kitchen"
+     ],
+     "impact": "medium",
+     "impact_reason": "Major Hyderabad festival; saree/puja demand mostly offline, some online ethnic uplift",
+     "sources": [
+      "https://telanganatoday.com/hyderabad-bonalu-festival-2026-begins-at-golconda-temple-on-july-16",
+      "https://www.sakshipost.com/news/hyderabad/bonalu-2026-hyderabad-full-schedule-and-dates-481079"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Varalakshmi Vratham",
+     "local_name": "Varalakshmi Vratham",
+     "kind": "religious",
+     "months": [
+      7,
+      8
+     ],
+     "date_2026": "2026-08-21",
+     "date_2027": "2027-08-13",
+     "significance": "Married women worship Goddess Lakshmi on Friday before Shravana Purnima",
+     "buys": "silk sarees, gold jewellery, kalasam, puja items, flowers, bangles, sweets",
+     "categories": [
+      "ethnic",
+      "jewellery",
+      "puja",
+      "beauty",
+      "sweets",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Jewellery brands (CaratLane, Indriya, GIVA) run South-focused campaigns; saree + gold demand spikes",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://hindutone.com/sravana-masam/varalakshmi-vratam-andhra-pradesh-telangana-2026/",
+      "https://www.caratlane.com/blog/varalakshmi-vratham/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Raksha Bandhan",
+     "local_name": "Rakhi Purnima",
+     "kind": "religious",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-28",
+     "date_2027": "2027-08-17",
+     "significance": "Sibling bond festival",
+     "buys": "rakhis, gift hampers, chocolates, sweets",
+     "categories": [
+      "gifting",
+      "sweets",
+      "personal"
+     ],
+     "impact": "medium",
+     "impact_reason": "Online rakhi + gift delivery is a well-established category, growing in south metros",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Krishna Janmashtami",
+     "local_name": "Krishnashtami",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-04",
+     "date_2027": "2027-08-25",
+     "significance": "Birth of Lord Krishna",
+     "buys": "kids' costumes, puja items, sweets",
+     "categories": [
+      "puja",
+      "toys",
+      "baby",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Modest online costume/puja buys",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Ganesh Chaturthi",
+     "local_name": "Vinayaka Chavithi",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": "2027-09-04",
+     "significance": "Birth of Lord Ganesha; idols, pandals, immersion",
+     "buys": "clay idols, puja items, flowers, fruits, sweets, new clothes, decor",
+     "categories": [
+      "puja",
+      "homedecor",
+      "sweets",
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Puja kits/decor and early festive-sale build-up; mostly offline idol buying",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Bathukamma",
+     "local_name": "Bathukamma",
+     "kind": "cultural",
+     "months": [
+      9,
+      10
+     ],
+     "date_2026": "2026-10-10..2026-10-18",
+     "date_2027": "2027-09-29..2027-10-07",
+     "significance": "9-day women's floral festival, state festival of Telangana; Engili Pula to Saddula Bathukamma",
+     "buys": "sarees (state also distributes), flowers, gold, bangles, cosmetics, sweets",
+     "categories": [
+      "ethnic",
+      "beauty",
+      "jewellery",
+      "fashion",
+      "puja",
+      "sweets"
+     ],
+     "impact": "high",
+     "impact_reason": "Overlaps Dasara sales; strong saree/beauty demand among women; 2027 dates derived from Mahalaya Amavasya",
+     "sources": [
+      "https://blog.wego.com/bathukamma/",
+      "https://hindutone.com/festivals/bathukamma-2026-dates-engili-pula-to-saddula/",
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Dasara",
+     "local_name": "Dasara / Vijayadashami",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-20",
+     "date_2027": "2027-10-09",
+     "significance": "Biggest Telangana festival with Bathukamma; Jammi tree puja, Alai Balai",
+     "buys": "new clothes, gold, vehicles, electronics, meat, sweets, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "vehicles",
+      "electronics",
+      "phones",
+      "appliances",
+      "tv",
+      "sweets",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Coincides with Big Billion Days/GIF; Hyderabad a top-3 shopper city for Flipkart BBD",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://calendarific.com/holidays/2027/IN",
+      "https://www.dtnext.in/lifestyle/technology/non-metros-dominate-online-festival-sale-across-amazon-meesho-flipkart-741204"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Diwali",
+     "local_name": "Deepavali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-06..2026-11-08",
+     "date_2027": "2027-10-27..2027-10-29",
+     "significance": "Festival of lights; Dhanteras to Naraka Chaturdashi/Deepavali",
+     "buys": "crackers, gold, new clothes, sweets, diyas, appliances, phones, gift hampers",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "sweets",
+      "gifting",
+      "homedecor",
+      "electronics",
+      "phones",
+      "appliances",
+      "tv",
+      "puja"
+     ],
+     "impact": "high",
+     "impact_reason": "Peak of festive sale season (Big Billion Days/GIF); national festive e-com GMV forecast ~Rs1.15-1.2 lakh cr in 2025",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://calendarific.com/holidays/2027/IN",
+      "https://www.storyboard18.com/amp/brand-marketing/festive-ecomm-sales-to-hit-rs-1-2-lakh-crore-amazon-flipkart-bet-big-on-tier-2-cities-81104.htm"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Karthika Purnima",
+     "local_name": "Karthika Pournami",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-24",
+     "date_2027": "2027-11-14",
+     "significance": "Holy Karthika month culmination; lamp lighting",
+     "buys": "diyas, ghee, puja items",
+     "categories": [
+      "puja",
+      "homedecor"
+     ],
+     "impact": "low",
+     "impact_reason": "Small puja/lamp uplift",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Christmas",
+     "local_name": null,
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Birth of Jesus; year-end festive and holiday season",
+     "buys": "cakes, decor, stars, gifts, new clothes, toys",
+     "categories": [
+      "gifting",
+      "homedecor",
+      "toys",
+      "fashion",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end sales, gifting and decor demand in cities",
+     "sources": [
+      "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays"
+     ],
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "id": "karnataka",
+   "name": "Karnataka",
+   "languages": [
+    "Kannada",
+    "Tulu",
+    "Konkani",
+    "Urdu",
+    "Kodava"
+   ],
+   "top_cities": [
+    "Bengaluru",
+    "Mysuru",
+    "Mangaluru",
+    "Hubballi-Dharwad",
+    "Belagavi"
+   ],
+   "culture": "Bengaluru is India's most digitally-native shopping city; Mysuru Dasara, Varamahalakshmi and Gowri-Ganesha drive silk-saree, gold and puja spend; coastal/Kodagu harvest traditions.",
+   "ecommerce": "Bengaluru topped Flipkart BBD shopper counts (with Delhi, Hyderabad) and led Amazon GIF 2023 metro demand; Karnataka ~20% of quick-commerce jobs; 1,500+ Meesho lakhpati sellers from KA (2022).",
+   "ecommerce_sources": [
+    "https://www.dtnext.in/lifestyle/technology/non-metros-dominate-online-festival-sale-across-amazon-meesho-flipkart-741204",
+    "https://www.magzter.com/nl/stories/newspaper/The-New-Indian-Express-Nagapattinam/KTAKA-MAHA-TGANA-HUBS-FOR-QUICK-COMMERCE-JOBS",
+    "https://udayavani.com/?p=1400701"
+   ],
+   "festivals": [
+    {
+     "name": "Makara Sankranti",
+     "local_name": "Sankranti / Ellu Birodhu",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-15",
+     "date_2027": "2027-01-15",
+     "significance": "Harvest festival; ellu-bella exchange, cattle decoration",
+     "buys": "ellu-bella (sesame-jaggery), sugarcane, new clothes, gifts, rangoli",
+     "categories": [
+      "grocery",
+      "sweets",
+      "ethnic",
+      "gifting",
+      "homedecor"
+     ],
+     "impact": "medium",
+     "impact_reason": "Ethnic wear and gifting; quick-commerce ellu-bella demand in Bengaluru",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Hampi Utsava",
+     "local_name": "Hampi Utsava",
+     "kind": "cultural",
+     "months": [
+      2,
+      11
+     ],
+     "date_2026": "2026-02-13..2026-02-15",
+     "date_2027": null,
+     "significance": "State cultural festival at Hampi; reportedly moving to fixed Nov 3-5 slot",
+     "buys": "travel, handicrafts",
+     "categories": [
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism event; minimal online retail",
+     "sources": [
+      "https://karnatakatourism.org/en/events/hampi-utsav/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Maha Shivaratri",
+     "local_name": "Shivaratri",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-02-15",
+     "date_2027": "2027-03-06",
+     "significance": "Night of Shiva; fasting and temple vigils",
+     "buys": "puja items, fruits, fasting foods, travel",
+     "categories": [
+      "puja",
+      "grocery",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly temple/offline; some puja and travel bookings",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ugadi",
+     "local_name": "Yugadi",
+     "kind": "new_year",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-19",
+     "date_2027": "2027-04-07",
+     "significance": "Telugu/Kannada New Year (Chaitra Shukla Pratipada)",
+     "buys": "new clothes, gold, ugadi pachadi ingredients, mango leaves, vehicles, appliances",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "grocery",
+      "puja",
+      "vehicles",
+      "appliances",
+      "homedecor"
+     ],
+     "impact": "high",
+     "impact_reason": "Regional new-year sales; Flipkart has run dedicated Ugadi stores for KA/AP/TG; auspicious for vehicle & gold buys",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://hindupad.com/hindu-festivals-2027/",
+      "https://campaignsoftheworld.com/?p=32389"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Eid ul-Fitr (Ramzan)",
+     "local_name": "Ramzan",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "End of Ramadan fasting month",
+     "buys": "new clothes, attar, dry fruits, dates, footwear, bangles, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "footwear",
+      "beauty",
+      "grocery",
+      "gifting",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Month-long Ramadan shopping for apparel, beauty and groceries; dates moon-dependent",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Bengaluru Karaga",
+     "local_name": "Karaga",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-26..2026-04-01",
+     "date_2027": null,
+     "significance": "Centuries-old Thigala community Draupadi festival, Dharmaraya temple, Chaitra Purnima",
+     "buys": "jasmine, puja items, food",
+     "categories": [
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Large Bengaluru procession, offline",
+     "sources": [
+      "https://karnatakatourism.org/experiences/bengaluru-karaga/",
+      "https://www.etvbharat.com/en/state/bengaluru-karaga-festival-ends-with-devotion-and-harmony-lakhs-witness-sacred-tradition-enn26040205876"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Sri Rama Navami",
+     "local_name": "Sri Rama Navami",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-27",
+     "date_2027": "2027-04-15",
+     "significance": "Birth of Lord Rama",
+     "buys": "panakam ingredients, puja items, new clothes, flowers",
+     "categories": [
+      "puja",
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly temple-centred; small puja/grocery uplift",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Basava Jayanti / Akshaya Tritiya",
+     "local_name": "Akshaya Tritiya",
+     "kind": "religious",
+     "months": [
+      4,
+      5
+     ],
+     "date_2026": "2026-04-20",
+     "date_2027": "2027-05-09",
+     "significance": "Auspicious day for buying gold and new beginnings",
+     "buys": "gold coins, jewellery, silver, appliances",
+     "categories": [
+      "jewellery",
+      "premium",
+      "appliances"
+     ],
+     "impact": "medium",
+     "impact_reason": "South India leads gold buying on this day; online gold coins/digital gold offers; ~20 t sold nationally (2025, trade est.)",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://www.wionews.com/business-economy/gold-and-silver-sales-hit-18-billion-on-akshaya-tritiya-despite-record-prices-9020614",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid al-Adha (Bakrid)",
+     "local_name": "Bakrid",
+     "kind": "religious",
+     "months": [
+      5
+     ],
+     "date_2026": "2026-05-28",
+     "date_2027": "2027-05-17",
+     "significance": "Festival of sacrifice",
+     "buys": "new clothes, meat, spices, kitchenware, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery",
+      "kitchen"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly offline (livestock, meat); modest apparel uplift",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Varalakshmi Vratham",
+     "local_name": "Varamahalakshmi Vrata",
+     "kind": "religious",
+     "months": [
+      7,
+      8
+     ],
+     "date_2026": "2026-08-21",
+     "date_2027": "2027-08-13",
+     "significance": "Married women worship Goddess Lakshmi on Friday before Shravana Purnima",
+     "buys": "silk sarees, gold jewellery, kalasam, puja items, flowers, bangles, sweets",
+     "categories": [
+      "ethnic",
+      "jewellery",
+      "puja",
+      "beauty",
+      "sweets",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Jewellery brands (CaratLane, Indriya, GIVA) run South-focused campaigns; saree + gold demand spikes",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://hindutone.com/sravana-masam/varalakshmi-vratam-andhra-pradesh-telangana-2026/",
+      "https://www.caratlane.com/blog/varalakshmi-vratham/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Raksha Bandhan",
+     "local_name": "Rakhi Purnima",
+     "kind": "religious",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-28",
+     "date_2027": "2027-08-17",
+     "significance": "Sibling bond festival",
+     "buys": "rakhis, gift hampers, chocolates, sweets",
+     "categories": [
+      "gifting",
+      "sweets",
+      "personal"
+     ],
+     "impact": "medium",
+     "impact_reason": "Online rakhi + gift delivery is a well-established category, growing in south metros",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Krishna Janmashtami (Udupi)",
+     "local_name": "Gokulashtami",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-04",
+     "date_2027": "2027-08-25",
+     "significance": "Krishna's birth; Udupi Vittal Pindi, kids dressed as Krishna",
+     "buys": "kids' Krishna costumes, chakkuli/unde snacks, puja items",
+     "categories": [
+      "puja",
+      "toys",
+      "baby",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Kids costumes ordered online in Bengaluru; modest",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Gowri-Ganesha Habba",
+     "local_name": "Gowri Ganesha Habba",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": "2027-09-04",
+     "significance": "Swarna Gowri Vrata and Ganesh Chaturthi, Karnataka's big home festival",
+     "buys": "clay idols, bagina items, sarees, bangles, puja kits, sweets, decor",
+     "categories": [
+      "puja",
+      "ethnic",
+      "beauty",
+      "homedecor",
+      "sweets",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Puja kits, decor and ethnic wear spike on q-commerce/e-com in Bengaluru",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Mysuru Dasara / Navaratri",
+     "local_name": "Nada Habba Dasara",
+     "kind": "religious",
+     "months": [
+      9,
+      10
+     ],
+     "date_2026": "2026-10-11..2026-10-20",
+     "date_2027": "2027-09-30..2027-10-09",
+     "significance": "State festival (Nada Habba); Jamboo Savari; Bombe Habba doll displays; Ayudha puje",
+     "buys": "Mysore silk sarees, gold, dolls (bombe), vehicles, electronics, sweets",
+     "categories": [
+      "ethnic",
+      "jewellery",
+      "toys",
+      "homedecor",
+      "vehicles",
+      "electronics",
+      "phones",
+      "appliances",
+      "puja",
+      "sweets"
+     ],
+     "impact": "high",
+     "impact_reason": "Aligns with flagship e-com festive sales; vehicle/electronics buying for Ayudha puje & Vijayadashami",
+     "sources": [
+      "https://www.siasat.com/mysuru-dasara-2026-from-october-11-jumbo-savari-on-october-21-3505227/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kaveri Sankramana / Tula Sankramana",
+     "local_name": "Tula Sankramana",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-18",
+     "date_2027": null,
+     "significance": "Kaveri's emergence at Talakaveri; Kodagu festival",
+     "buys": "puja items, travel",
+     "categories": [
+      "puja",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Regional (Kodagu); offline",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Kannada Rajyotsava",
+     "local_name": "Karnataka Rajyotsava",
+     "kind": "national",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-01",
+     "date_2027": "2027-11-01",
+     "significance": "Formation of Karnataka state; month of Kannada pride events",
+     "buys": "red-yellow flags, apparel, Kannada merch",
+     "categories": [
+      "fashion",
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Some brands run Rajyotsava offers; small online impact",
+     "sources": [
+      "https://www.pockethrms.com/holiday-list-2026/karnataka/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Diwali",
+     "local_name": "Deepavali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-06..2026-11-08",
+     "date_2027": "2027-10-27..2027-10-29",
+     "significance": "Festival of lights; Dhanteras to Naraka Chaturdashi/Deepavali",
+     "buys": "crackers, gold, new clothes, sweets, diyas, appliances, phones, gift hampers",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "sweets",
+      "gifting",
+      "homedecor",
+      "electronics",
+      "phones",
+      "appliances",
+      "tv",
+      "puja"
+     ],
+     "impact": "high",
+     "impact_reason": "Peak of festive sale season (Big Billion Days/GIF); national festive e-com GMV forecast ~Rs1.15-1.2 lakh cr in 2025",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
+      "https://calendarific.com/holidays/2027/IN",
+      "https://www.storyboard18.com/amp/brand-marketing/festive-ecomm-sales-to-hit-rs-1-2-lakh-crore-amazon-flipkart-bet-big-on-tier-2-cities-81104.htm"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kadalekai Parishe",
+     "local_name": "Kadalekai Parishe",
+     "kind": "fair",
+     "months": [
+      11,
+      12
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Basavanagudi groundnut fair at Bull Temple, last Monday of Karthika (2025: Nov 17-21)",
+     "buys": "groundnuts, street food, toys, handicrafts",
+     "categories": [
+      "grocery",
+      "toys"
+     ],
+     "impact": "low",
+     "impact_reason": "Offline farmer fair",
+     "sources": [
+      "https://karnatakatourism.org/kadlekai-parishe/",
+      "https://thefederal.com/category/states/south/karnataka/kadalekayi-parishe-bengaluru-groundnut-fair-217779"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Huttari",
+     "local_name": "Puthari",
+     "kind": "harvest",
+     "months": [
+      11,
+      12
+     ],
+     "date_2026": "2026-11-26",
+     "date_2027": null,
+     "significance": "Kodava rice harvest festival of Kodagu",
+     "buys": "traditional Kodava attire, food, firecrackers",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Small community, offline",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Kambala",
+     "local_name": "Kambala",
+     "kind": "cultural",
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Buffalo race season in coastal Dakshina Kannada/Udupi",
+     "buys": "travel, food",
+     "categories": [
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Rural event; negligible online demand",
+     "sources": [
+      "https://karnatakatourism.org/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Christmas",
+     "local_name": null,
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Birth of Jesus; year-end festive and holiday season",
+     "buys": "cakes, decor, stars, gifts, new clothes, toys",
+     "categories": [
+      "gifting",
+      "homedecor",
+      "toys",
+      "fashion",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end sales, gifting and decor demand in cities",
+     "sources": [
+      "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced"
+     ],
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "id": "puducherry",
+   "name": "Puducherry",
+   "languages": [
+    "Tamil",
+    "French",
+    "Telugu",
+    "Malayalam",
+    "English"
+   ],
+   "top_cities": [
+    "Puducherry",
+    "Karaikal",
+    "Mahe",
+    "Yanam"
+   ],
+   "culture": "Four non-contiguous regions follow Tamil (Pondy, Karaikal), Malayali (Mahe) and Telugu (Yanam) festival calendars; French heritage and tourism shape Christmas/Bastille Day.",
+   "ecommerce": "Small UT market; no reliable UT-level e-commerce figures found. Consumption tracks Tamil Nadu festival calendar (Pongal, Deepavali) and tourism.",
+   "ecommerce_sources": [
+    "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/"
+   ],
+   "festivals": [
+    {
+     "name": "International Yoga Festival",
+     "local_name": "Yoga Festival",
+     "kind": "cultural",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-04..2026-01-07",
+     "date_2027": "2027-01-04..2027-01-07",
+     "significance": "Govt-run annual yoga festival (31st edition 2026)",
+     "buys": "yoga mats, activewear, travel",
+     "categories": [
+      "sports",
+      "travel",
+      "health"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism event; small sports/wellness demand",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-puducherry/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Pongal",
+     "local_name": "Thai Pongal",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14..2026-01-16",
+     "date_2027": "2027-01-14..2027-01-16",
+     "significance": "Tamil harvest festival; Bhogi, Pongal, Mattu Pongal (Kanuma in Yanam)",
+     "buys": "new clothes, sugarcane, pongal pots, rice, jaggery, kolam colours, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery",
+      "kitchen",
+      "sweets",
+      "homedecor",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Biggest local festival; ethnic wear and grocery spike",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Auroville Birthday",
+     "local_name": "Auroville Day",
+     "kind": "cultural",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-28",
+     "date_2027": "2027-02-28",
+     "significance": "Founding of Auroville (1968), bonfire at Matrimandir",
+     "buys": "travel",
+     "categories": [
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism only",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-puducherry/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Maha Shivaratri",
+     "local_name": "Maha Shivaratri",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-02-15",
+     "date_2027": "2027-03-06",
+     "significance": "Night of Shiva; fasting and temple vigils",
+     "buys": "puja items, fruits, fasting foods, travel",
+     "categories": [
+      "puja",
+      "grocery",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly temple/offline; some puja and travel bookings",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Masi Magam",
+     "local_name": "Masi Magam",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-03-02",
+     "date_2027": null,
+     "significance": "Deities from temples taken for sea bath at Vaithikuppam beach",
+     "buys": "puja items, flowers, food",
+     "categories": [
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Offline temple festival",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ugadi (Yanam)",
+     "local_name": "Ugadi",
+     "kind": "new_year",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-19",
+     "date_2027": "2027-04-07",
+     "significance": "Telugu New Year in Yanam region",
+     "buys": "new clothes, puja items",
+     "categories": [
+      "ethnic",
+      "puja",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Small Telugu enclave",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/",
+      "https://hindupad.com/hindu-festivals-2027/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid ul-Fitr (Ramzan)",
+     "local_name": "Ramzan",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "End of Ramadan fasting month",
+     "buys": "new clothes, attar, dry fruits, dates, footwear, bangles, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "footwear",
+      "beauty",
+      "grocery",
+      "gifting",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Month-long Ramadan shopping for apparel, beauty and groceries; dates moon-dependent",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Tamil New Year / Vishu",
+     "local_name": "Puthandu / Vishu",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-14",
+     "date_2027": "2027-04-14",
+     "significance": "Tamil New Year; Vishu in Mahe",
+     "buys": "new clothes, gold, kani items, sweets",
+     "categories": [
+      "ethnic",
+      "jewellery",
+      "grocery",
+      "puja",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Regional new-year shopping",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Villianur Temple Car Festival",
+     "local_name": "Villianur Ther",
+     "kind": "religious",
+     "months": [
+      5,
+      6
+     ],
+     "date_2026": "2026-05-28",
+     "date_2027": null,
+     "significance": "Chariot festival of Thirukameswarar temple, Villianur",
+     "buys": "puja items, toys, fair goods",
+     "categories": [
+      "puja",
+      "toys"
+     ],
+     "impact": "low",
+     "impact_reason": "Local fair",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid al-Adha (Bakrid)",
+     "local_name": "Bakrid",
+     "kind": "religious",
+     "months": [
+      5
+     ],
+     "date_2026": "2026-05-28",
+     "date_2027": "2027-05-17",
+     "significance": "Festival of sacrifice",
+     "buys": "new clothes, meat, spices, kitchenware, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery",
+      "kitchen"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly offline (livestock, meat); modest apparel uplift",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Mangani (Mango) Festival, Karaikal",
+     "local_name": "Mangani Thiruvizha",
+     "kind": "religious",
+     "months": [
+      6,
+      7
+     ],
+     "date_2026": "2026-06-29",
+     "date_2027": null,
+     "significance": "Karaikal Ammaiyar mango festival, Aani Pournami",
+     "buys": "mangoes, puja items",
+     "categories": [
+      "grocery",
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Local; date from unofficial calendar",
+     "sources": [
+      "https://www.utsav.gov.in/view-event/mangani-festival"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Bastille Day",
+     "local_name": "Quatorze Juillet",
+     "kind": "cultural",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-14",
+     "date_2027": "2027-07-14",
+     "significance": "French National Day observed by French community, parades",
+     "buys": "dining, travel",
+     "categories": [
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Heritage/tourism event",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-puducherry/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "De Jure Transfer Day",
+     "local_name": "De Jure Day",
+     "kind": "national",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-16",
+     "date_2027": "2027-08-16",
+     "significance": "Legal transfer of Puducherry from France to India (1962)",
+     "buys": "flags",
+     "categories": [
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Holiday only",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Onam (Mahe)",
+     "local_name": "Onam",
+     "kind": "harvest",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-08-26",
+     "date_2027": "2027-09-12",
+     "significance": "Kerala harvest festival in Mahe region",
+     "buys": "kasavu sarees, sadya groceries, gold",
+     "categories": [
+      "ethnic",
+      "grocery",
+      "jewellery"
+     ],
+     "impact": "low",
+     "impact_reason": "Small Mahe population",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ganesh Chaturthi",
+     "local_name": "Vinayagar Chathurthi",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": "2027-09-04",
+     "significance": "Birth of Lord Ganesha; idols, pandals, immersion",
+     "buys": "clay idols, puja items, flowers, fruits, sweets, new clothes, decor",
+     "categories": [
+      "puja",
+      "homedecor",
+      "sweets",
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Puja kits/decor and early festive-sale build-up; mostly offline idol buying",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Navaratri / Saraswathi-Ayudha Pooja",
+     "local_name": "Ayudha Pooja",
+     "kind": "religious",
+     "months": [
+      9,
+      10
+     ],
+     "date_2026": "2026-10-19",
+     "date_2027": "2027-10-08",
+     "significance": "Golu displays, worship of tools/vehicles/books",
+     "buys": "golu dolls, puja items, vehicle decor, sweets, new clothes",
+     "categories": [
+      "puja",
+      "toys",
+      "homedecor",
+      "sweets",
+      "ethnic",
+      "stationery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Golu dolls and puja kits; precedes Deepavali sales",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Puducherry Liberation Day",
+     "local_name": "De Facto Day",
+     "kind": "national",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-01",
+     "date_2027": "2027-11-01",
+     "significance": "De facto merger with India (1954)",
+     "buys": "flags",
+     "categories": [
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Holiday only",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Diwali",
+     "local_name": "Deepavali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-06..2026-11-08",
+     "date_2027": "2027-10-27..2027-10-29",
+     "significance": "Festival of lights; Dhanteras to Naraka Chaturdashi/Deepavali",
+     "buys": "crackers, gold, new clothes, sweets, diyas, appliances, phones, gift hampers",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "sweets",
+      "gifting",
+      "homedecor",
+      "electronics",
+      "phones",
+      "appliances",
+      "tv",
+      "puja"
+     ],
+     "impact": "high",
+     "impact_reason": "Peak of festive sale season (Big Billion Days/GIF); national festive e-com GMV forecast ~Rs1.15-1.2 lakh cr in 2025",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/",
+      "https://calendarific.com/holidays/2027/IN",
+      "https://www.storyboard18.com/amp/brand-marketing/festive-ecomm-sales-to-hit-rs-1-2-lakh-crore-amazon-flipkart-bet-big-on-tier-2-cities-81104.htm"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Karthigai Deepam",
+     "local_name": "Karthigai Deepam",
+     "kind": "religious",
+     "months": [
+      11,
+      12
+     ],
+     "date_2026": "2026-11-24",
+     "date_2027": null,
+     "significance": "Festival of lamps in Karthigai month",
+     "buys": "clay lamps, ghee, puja items",
+     "categories": [
+      "puja",
+      "homedecor"
+     ],
+     "impact": "low",
+     "impact_reason": "Lamp/puja uplift, offline-led",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Christmas",
+     "local_name": null,
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Birth of Jesus; year-end festive and holiday season",
+     "buys": "cakes, decor, stars, gifts, new clothes, toys",
+     "categories": [
+      "gifting",
+      "homedecor",
+      "toys",
+      "fashion",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end sales, gifting and decor demand in cities",
+     "sources": [
+      "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/"
+     ],
+     "confidence": "high"
+    }
+   ]
+  }
+ ]
+}

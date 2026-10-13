@@ -1,0 +1,1768 @@
+{
+ "group": "g8",
+ "states": [
+  {
+   "id": "assam",
+   "name": "Assam",
+   "languages": [
+    "Assamese",
+    "Bengali",
+    "Bodo",
+    "Hindi"
+   ],
+   "top_cities": [
+    "Guwahati",
+    "Dibrugarh",
+    "Silchar",
+    "Jorhat",
+    "Tezpur"
+   ],
+   "culture": "Bihu-centric calendar; strong demand for mekhela sador, gamosa, gold and Durga Puja/Diwali apparel; Fancy Bazaar is the trade hub.",
+   "ecommerce": "Gateway of NE; Flipkart NE growth 35-40% YoY, 6 lakh sq ft warehousing in Guwahati, 1 lakh+ Assam sellers (2025). Amazon: home decor +35%, furniture +50% in festive 2024, 10,000+ sellers.",
+   "ecommerce_sources": [
+    "https://www.indianretailer.com/news/flipkart-expands-warehouses-and-seller-network-northeast-festive-growth",
+    "https://www.theweek.in/wire-updates/business/2024/10/04/ccm3-biz-as-amazon-growth.html"
+   ],
+   "festivals": [
+    {
+     "name": "Bohag Bihu",
+     "local_name": "Rongali Bihu",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-14..2026-04-16",
+     "date_2027": "2027-04-14..2027-04-16",
+     "significance": "Assamese New Year and spring festival; biggest cultural event of Assam",
+     "buys": "mekhela sador, gamosa, new clothes, jaapi, pitha ingredients, gifts, dhol/pepa",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "gifting",
+      "grocery",
+      "sweets",
+      "jewellery",
+      "phones",
+      "electronics"
+     ],
+     "impact": "high",
+     "impact_reason": "Top new-clothes and gifting occasion for Assamese households; drives ethnic wear and gifting online and offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/",
+      "https://assamtribune.com/enthusiastic-bihu-shoppers-thronging-markets-fairs"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Magh Bihu",
+     "local_name": "Bhogali Bihu",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14..2026-01-15",
+     "date_2027": "2027-01-14..2027-01-15",
+     "significance": "Harvest feast festival with Uruka night community feasts and Meji bonfires",
+     "buys": "pitha/laru ingredients, rice, fish, meat, sweets, shawls, winter clothing",
+     "categories": [
+      "grocery",
+      "sweets",
+      "winter",
+      "kitchen",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Food-led festival; grocery/quick-commerce spikes, plus winter wear; Guwahati alcohol sales ~Rs 12.5 cr over 2 days",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/",
+      "https://sentinelassam.com/cities/guwahati-city/citizens-spent-rs-125-crore-on-alcohol-on-magh-bihu-in-guwahati"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kati Bihu",
+     "local_name": "Kongali Bihu",
+     "kind": "harvest",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-18",
+     "date_2027": "2027-10-18",
+     "significance": "Lean-season Bihu; lamps lit in paddy fields and at tulsi plant",
+     "buys": "earthen lamps, diyas, puja items",
+     "categories": [
+      "puja",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Austere observance; small puja-goods demand, overlaps Durga Puja season",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Durga Puja",
+     "local_name": "Durga Puja",
+     "kind": "religious",
+     "months": [
+      9,
+      10
+     ],
+     "date_2026": "2026-10-17..2026-10-21",
+     "date_2027": "2027-10-05..2027-10-09",
+     "significance": "Largest Hindu festival in Assam with thousands of pandals",
+     "buys": "new clothes, sarees, footwear, cosmetics, phones, electronics, jewellery, home decor",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "footwear",
+      "beauty",
+      "phones",
+      "electronics",
+      "jewellery",
+      "homedecor",
+      "appliances"
+     ],
+     "impact": "high",
+     "impact_reason": "Coincides with Flipkart/Amazon festive sales; Flipkart reports NE growing 35-40% YoY in festive season",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/",
+      "https://www.indianretailer.com/news/flipkart-expands-warehouses-and-seller-network-northeast-festive-growth",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kali Puja and Diwali",
+     "local_name": "Dipawali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Festival of lights; Kali Puja widely observed by Bengali and Assamese Hindus",
+     "buys": "diyas, lights, sweets, gifts, gold, appliances, home decor, crackers",
+     "categories": [
+      "homedecor",
+      "gifting",
+      "sweets",
+      "jewellery",
+      "appliances",
+      "electronics",
+      "kitchen",
+      "puja",
+      "furniture"
+     ],
+     "impact": "high",
+     "impact_reason": "Peak festive-sale window; Amazon saw 30-35% home decor and 50% furniture growth in Assam in festive 2024",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/",
+      "https://www.theweek.in/wire-updates/business/2024/10/04/ccm3-biz-as-amazon-growth.html"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Ambubachi Mela",
+     "local_name": "Ambubachi",
+     "kind": "fair",
+     "months": [
+      6
+     ],
+     "date_2026": "2026-06-22..2026-06-26",
+     "date_2027": "2027-06-22..2027-06-26",
+     "significance": "Annual Kamakhya Temple fair in Guwahati drawing lakhs of pilgrims",
+     "buys": "puja items, red cloth, travel, rainwear",
+     "categories": [
+      "puja",
+      "travel",
+      "rainwear"
+     ],
+     "impact": "low",
+     "impact_reason": "Large pilgrim inflow boosts local hospitality/travel; limited online retail impact",
+     "sources": [
+      "https://www.freepressjournal.in/lifestyle/assams-kamakhya-temple-closes-for-ambubachi-mela-doors-to-reopen-on-june-26"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Dol Jatra (Holi)",
+     "local_name": "Doul Utsav",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-03",
+     "date_2027": "2027-03-22",
+     "significance": "Spring colour festival, celebrated at Barpeta Satra with great fervour",
+     "buys": "colours, pichkari, sweets, white clothes",
+     "categories": [
+      "grocery",
+      "sweets",
+      "fashion",
+      "toys"
+     ],
+     "impact": "medium",
+     "impact_reason": "Colours, snacks and festive wear sell online; strong in Barpeta and Guwahati",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Me-Dam-Me-Phi",
+     "local_name": "Me-Dam-Me-Phi",
+     "kind": "tribal",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-31",
+     "date_2027": "2027-01-31",
+     "significance": "Tai Ahom ancestor-worship festival",
+     "buys": "puja items, traditional food, ethnic attire",
+     "categories": [
+      "puja",
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Community ritual; minimal online purchase lift",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Bwisagu",
+     "local_name": "Bwisagu",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-14",
+     "date_2027": "2027-04-14",
+     "significance": "Bodo New Year, coinciding with Bohag Bihu",
+     "buys": "dokhona, aronai, new clothes, food",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Adds Bodoland demand for ethnic textiles and clothes in the Bihu window",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Id-ul-Fitr",
+     "local_name": "Eid",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "End of Ramzan; Assam has ~34% Muslim population",
+     "buys": "new clothes, attar, dates, vermicelli, footwear, gifts",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "footwear",
+      "grocery",
+      "sweets",
+      "gifting",
+      "beauty"
+     ],
+     "impact": "medium",
+     "impact_reason": "Large Muslim population in Lower Assam/Barak drives apparel and grocery demand",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Id-ul-Zuha",
+     "local_name": "Bakrid",
+     "kind": "religious",
+     "months": [
+      5
+     ],
+     "date_2026": "2026-05-27",
+     "date_2027": "2027-05-17",
+     "significance": "Festival of sacrifice",
+     "buys": "new clothes, meat, spices, gifts",
+     "categories": [
+      "fashion",
+      "grocery",
+      "kitchen"
+     ],
+     "impact": "low",
+     "impact_reason": "Mainly offline livestock and food spend",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Christmas and New Year",
+     "local_name": "Christmas",
+     "kind": "religious",
+     "months": [
+      12,
+      1
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Celebrated by Christians and widely in Guwahati as a party season",
+     "buys": "cakes, decorations, gifts, party wear, winter clothes",
+     "categories": [
+      "gifting",
+      "homedecor",
+      "fashion",
+      "winter",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end sales and winter wear demand in urban Assam",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Raas Mahotsav",
+     "local_name": "Raas Leela",
+     "kind": "cultural",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-23..2026-11-25",
+     "date_2027": "2027-11-13..2027-11-15",
+     "significance": "Vaishnavite Raas performances, famously in Majuli satras around Kartik Purnima",
+     "buys": "puja items, travel, ethnic wear",
+     "categories": [
+      "puja",
+      "travel",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism and local fairs; little online lift",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Vishwakarma Puja",
+     "local_name": "Vishwakarma Puja",
+     "kind": "religious",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-17",
+     "date_2027": "2027-09-17",
+     "significance": "Worship of tools/machines; popular in tea gardens, workshops, transport",
+     "buys": "puja items, tools, vehicle accessories",
+     "categories": [
+      "puja",
+      "vehicles",
+      "homeimprove"
+     ],
+     "impact": "low",
+     "impact_reason": "Small spike in tools/vehicle accessories",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Janmotsav of Srimanta Sankardeva",
+     "local_name": "Sankardeva Tithi",
+     "kind": "religious",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-21",
+     "date_2027": "2027-09-21",
+     "significance": "Birth anniversary of the Vaishnava saint-reformer; Naamghar prayers",
+     "buys": "puja items, gamosa, prasad",
+     "categories": [
+      "puja",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Observance-focused; minor gamosa/puja purchases",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Raksha Bandhan",
+     "local_name": "Rakhi",
+     "kind": "religious",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-28",
+     "date_2027": "2027-08-17",
+     "significance": "Sibling festival popular in urban Assam",
+     "buys": "rakhis, sweets, gifts, chocolates",
+     "categories": [
+      "gifting",
+      "sweets",
+      "personal"
+     ],
+     "impact": "medium",
+     "impact_reason": "Online rakhi and gift delivery common for out-of-state family",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Chhath Puja",
+     "local_name": "Chhath",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-15",
+     "date_2027": "2027-11-04",
+     "significance": "Observed by Hindi-speaking Bihari/Marwari communities in Assam",
+     "buys": "fruits, soop, puja items, new clothes",
+     "categories": [
+      "puja",
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Community-specific; mostly offline",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Karam Puja",
+     "local_name": "Karam",
+     "kind": "tribal",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-22",
+     "date_2027": null,
+     "significance": "Tea-tribe (Adivasi) harvest and nature festival",
+     "buys": "new clothes, sweets, puja items",
+     "categories": [
+      "puja",
+      "fashion",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Important for tea garden communities; limited online access",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Asom Divas",
+     "local_name": "Sukapha Divas",
+     "kind": "cultural",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-02",
+     "date_2027": "2027-12-02",
+     "significance": "Commemorates Ahom founder Chaolung Sukapha",
+     "buys": "cultural programmes, ethnic attire",
+     "categories": [
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Commemorative; negligible e-commerce lift",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-assam/holidays/2026/"
+     ],
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "id": "arunachal",
+   "name": "Arunachal Pradesh",
+   "languages": [
+    "English",
+    "Hindi",
+    "Nyishi",
+    "Adi",
+    "Galo",
+    "Monpa"
+   ],
+   "top_cities": [
+    "Itanagar",
+    "Naharlagun",
+    "Pasighat",
+    "Tawang",
+    "Ziro"
+   ],
+   "culture": "26 major tribes each with own fixed-date festival; spend centres on traditional attire, food and community feasts; Christian and Buddhist pockets.",
+   "ecommerce": "Sparse logistics and terrain limit reach; served largely via Assam hubs. Flipkart sources farm produce from Bomdila. NE region growing 35-40% YoY for Flipkart.",
+   "ecommerce_sources": [
+    "https://www.indianretailer.com/news/flipkart-expands-warehouses-and-seller-network-northeast-festive-growth"
+   ],
+   "festivals": [
+    {
+     "name": "Losar",
+     "local_name": "Losar",
+     "kind": "new_year",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-18..2026-02-20",
+     "date_2027": "2027-02-07",
+     "significance": "Monpa/Sherdukpen Tibetan Buddhist New Year in Tawang and West Kameng",
+     "buys": "new clothes, home cleaning goods, food, butter lamps, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery",
+      "puja",
+      "gifting",
+      "homedecor",
+      "winter"
+     ],
+     "impact": "medium",
+     "impact_reason": "Main shopping occasion for Tawang/West Kameng; winter and festive apparel",
+     "sources": [
+      "https://bankbazaar.com/indian-holiday/losar.html",
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/",
+      "https://nenow.in/north-east-news/arunachal-pradesh/arunachal-monpa-tribe-celebrates-losar-festival-in-tawang-with-fanfare.html"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Nyokum",
+     "local_name": "Nyokum Yullo",
+     "kind": "tribal",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-26",
+     "date_2027": "2027-02-26",
+     "significance": "Nyishi festival for prosperity and harvest; Nyishi is the largest tribe",
+     "buys": "traditional attire, ornaments, food, rice beer",
+     "categories": [
+      "ethnic",
+      "jewellery",
+      "grocery",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "Largest tribe (Itanagar/Papum Pare); festive attire and food spend",
+     "sources": [
+      "https://arunachalpradesh.gov.in/calendar.php",
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Solung",
+     "local_name": "Solung",
+     "kind": "harvest",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-01",
+     "date_2027": "2027-09-01",
+     "significance": "Adi agricultural festival; Pasighat and Siang belt",
+     "buys": "traditional attire, food, livestock, gifts",
+     "categories": [
+      "ethnic",
+      "grocery",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Main Adi festival; local apparel and food demand",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Mopin",
+     "local_name": "Mopin",
+     "kind": "harvest",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-05",
+     "date_2027": "2027-04-05",
+     "significance": "Galo festival for prosperity; white attire and Popir dance in Aalo/Basar",
+     "buys": "white traditional attire, rice powder, food",
+     "categories": [
+      "ethnic",
+      "grocery",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "Galo heartland festive clothing and food spend",
+     "sources": [
+      "https://arunachalpradesh.gov.in/calendar.php",
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Dree",
+     "local_name": "Dree",
+     "kind": "harvest",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-05",
+     "date_2027": "2027-07-05",
+     "significance": "Apatani crop-protection festival in Ziro valley",
+     "buys": "food, attire, rice beer",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Small Apatani population; mainly local spend",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Si-Donyi",
+     "local_name": "Si-Donyi",
+     "kind": "tribal",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-06",
+     "date_2027": "2027-01-06",
+     "significance": "Tagin festival worshipping earth and sun",
+     "buys": "food, attire",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Localized to Upper Subansiri",
+     "sources": [
+      "https://arunachalpradesh.gov.in/calendar.php",
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Reh",
+     "local_name": "Reh",
+     "kind": "tribal",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-01",
+     "date_2027": "2027-02-01",
+     "significance": "Idu Mishmi prosperity festival in Dibang valley",
+     "buys": "food, attire, gifts",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Localized; limited online lift",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Boori Boot Yullo",
+     "local_name": "Boori Boot",
+     "kind": "tribal",
+     "months": [
+      2
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Hill Miri/Nyishi community festival in February",
+     "buys": "food, attire",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Localized community event",
+     "sources": [
+      "https://arunachalgovernor.gov.in/pr/2025/250205_Governor_extends_Boori_Boot_Yullo_Festival_greetings.pdf",
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Sangken",
+     "local_name": "Sangken",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-14..2026-04-16",
+     "date_2027": "2027-04-14..2027-04-16",
+     "significance": "Tai Khampti Buddhist New Year water festival in Namsai",
+     "buys": "new clothes, water guns, Buddha puja items, food",
+     "categories": [
+      "ethnic",
+      "puja",
+      "grocery",
+      "toys"
+     ],
+     "impact": "low",
+     "impact_reason": "Namsai-focused; small online effect",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Bohag Bihu",
+     "local_name": "Bahag Bihu",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-15",
+     "date_2027": "2027-04-15",
+     "significance": "State holiday; celebrated in foothill districts bordering Assam",
+     "buys": "gamosa, new clothes, food",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Assamese and plains population in Namsai/Lohit/Changlang shop for Bihu",
+     "sources": [
+      "https://arunachalpradesh.gov.in/calendar.php"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Chalo Loku",
+     "local_name": "Chalo Loku",
+     "kind": "harvest",
+     "months": [
+      11
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Nocte post-harvest festival in Tirap",
+     "buys": "food, attire",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Localized",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Torgya",
+     "local_name": "Torgya",
+     "kind": "religious",
+     "months": [
+      1
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Monastic masked-dance festival at Tawang Monastery",
+     "buys": "puja items, travel",
+     "categories": [
+      "puja",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism-driven; little online retail",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ziro Festival of Music",
+     "local_name": "Ziro Festival",
+     "kind": "cultural",
+     "months": [
+      9
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Outdoor indie music festival in Ziro valley",
+     "buys": "camping gear, rainwear, travel",
+     "categories": [
+      "travel",
+      "rainwear",
+      "sports"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourist event; niche outdoor-gear demand",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-arunachal-pradesh/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Durga Puja and Dussehra",
+     "local_name": "Dussehra",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-18..2026-10-20",
+     "date_2027": "2027-10-08..2027-10-09",
+     "significance": "Two state holidays; celebrated in Itanagar and plains towns",
+     "buys": "new clothes, electronics, phones, gifts",
+     "categories": [
+      "fashion",
+      "phones",
+      "electronics",
+      "gifting",
+      "appliances"
+     ],
+     "impact": "high",
+     "impact_reason": "Overlaps national festive sales; NE among fastest-growing regions for Flipkart",
+     "sources": [
+      "https://arunachalpradesh.gov.in/calendar.php",
+      "https://www.indianretailer.com/news/flipkart-expands-warehouses-and-seller-network-northeast-festive-growth"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Diwali",
+     "local_name": "Deepavali",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Festival of lights, state holiday",
+     "buys": "lights, sweets, gifts, appliances, home decor",
+     "categories": [
+      "homedecor",
+      "gifting",
+      "sweets",
+      "appliances",
+      "electronics",
+      "kitchen"
+     ],
+     "impact": "high",
+     "impact_reason": "Festive sale season peak for phones, appliances and decor",
+     "sources": [
+      "https://arunachalpradesh.gov.in/calendar.php"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Christmas",
+     "local_name": "Christmas",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Significant Christian population (~30%)",
+     "buys": "cakes, gifts, decorations, new clothes, winter wear",
+     "categories": [
+      "gifting",
+      "homedecor",
+      "fashion",
+      "winter",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Large Christian base among Nyishi/Adi/Tangsa etc.; year-end apparel and gifting",
+     "sources": [
+      "https://arunachalpradesh.gov.in/calendar.php"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Statehood Day",
+     "local_name": "Arunachal Statehood Day",
+     "kind": "national",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-20",
+     "date_2027": "2027-02-20",
+     "significance": "Arunachal attained statehood on 20 Feb 1987",
+     "buys": "flags, cultural events",
+     "categories": [
+      "stationery"
+     ],
+     "impact": "low",
+     "impact_reason": "Commemorative; negligible retail",
+     "sources": [
+      "https://arunachalpradesh.gov.in/calendar.php"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Indigenous Faith Day",
+     "local_name": "Indigenous Faith Day",
+     "kind": "tribal",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-01",
+     "date_2027": "2027-12-01",
+     "significance": "State holiday honouring Donyi-Polo and indigenous faiths",
+     "buys": "traditional attire, puja items",
+     "categories": [
+      "ethnic",
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Commemorative",
+     "sources": [
+      "https://arunachalpradesh.gov.in/calendar.php"
+     ],
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "id": "meghalaya",
+   "name": "Meghalaya",
+   "languages": [
+    "English",
+    "Khasi",
+    "Garo",
+    "Pnar"
+   ],
+   "top_cities": [
+    "Shillong",
+    "Tura",
+    "Jowai",
+    "Nongpoh"
+   ],
+   "culture": "Christian-majority; Christmas is the biggest shopping season; fashion-forward youth in Shillong; Khasi matrilineal customs.",
+   "ecommerce": "Unicommerce: Meghalaya top-2 state by order-volume growth in Republic Day 2024 sale. Flipkart sources produce from Garo and Khasi Hills.",
+   "ecommerce_sources": [
+    "https://cxotoday.com/press-release/republic-day-sales-18-7-higher-than-last-year-unicommerce/",
+    "https://www.indianretailer.com/news/flipkart-expands-warehouses-and-seller-network-northeast-festive-growth"
+   ],
+   "festivals": [
+    {
+     "name": "Christmas",
+     "local_name": "Christmas",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-24..2026-12-27",
+     "date_2027": "2027-12-24..2027-12-27",
+     "significance": "Biggest festival in Christian-majority Meghalaya; four days of state holidays",
+     "buys": "new clothes, cakes, decorations, lights, gifts, footwear, winter wear",
+     "categories": [
+      "fashion",
+      "footwear",
+      "gifting",
+      "homedecor",
+      "sweets",
+      "winter",
+      "beauty",
+      "electronics",
+      "phones"
+     ],
+     "impact": "high",
+     "impact_reason": "Shillong markets (Police Bazar, Iewduh) see peak rush; main annual gifting and apparel occasion",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya",
+      "https://sentinelassam.com/north-east-india-news/meghalaya-news/its-christmas-time-in-shillong-city"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "New Year",
+     "local_name": "New Year",
+     "kind": "cultural",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-01",
+     "date_2027": "2027-01-01",
+     "significance": "Public holiday; party and family season after Christmas",
+     "buys": "party wear, gifts, food",
+     "categories": [
+      "fashion",
+      "gifting",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Extension of Christmas shopping window",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Good Friday and Easter",
+     "local_name": "Easter",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-04-03..2026-04-05",
+     "date_2027": "2027-03-26..2027-03-28",
+     "significance": "Major Christian observance",
+     "buys": "new clothes, eggs, cakes, gifts",
+     "categories": [
+      "fashion",
+      "gifting",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Second Christian occasion for apparel and gifting",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Shad Suk Mynsiem",
+     "local_name": "Shad Suk Mynsiem",
+     "kind": "tribal",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-13",
+     "date_2027": null,
+     "significance": "Khasi spring thanksgiving dance festival at Weiking, Shillong",
+     "buys": "traditional attire (jainsem), gold/silver ornaments, food",
+     "categories": [
+      "ethnic",
+      "jewellery",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Cultural; local ornaments and attire, limited online lift",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya",
+      "https://www.hidmc.com/blog-posts/meghalayas-festivals-experiencing-wangala-shad-suk-mynsiem-and-more"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Behdienkhlam",
+     "local_name": "Behdienkhlam",
+     "kind": "tribal",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-09",
+     "date_2027": null,
+     "significance": "Pnar festival in Jowai to drive away plague and evil; state holiday",
+     "buys": "food, rainwear, attire",
+     "categories": [
+      "grocery",
+      "rainwear",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Monsoon festival in Jaintia Hills; minor retail",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya",
+      "https://www.hidmc.com/blog-posts/meghalayas-festivals-experiencing-wangala-shad-suk-mynsiem-and-more"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Wangala",
+     "local_name": "Wangala",
+     "kind": "harvest",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-13",
+     "date_2027": null,
+     "significance": "Garo post-harvest 100 Drums festival honouring Sun god Saljong",
+     "buys": "traditional attire, drums, food, rice beer",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Major Garo occasion; Tura region festive spend",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya",
+      "https://www.hidmc.com/blog-posts/meghalayas-festivals-experiencing-wangala-shad-suk-mynsiem-and-more"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Nongkrem Dance",
+     "local_name": "Ka Pomblang Nongkrem",
+     "kind": "tribal",
+     "months": [
+      11
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Khasi harvest thanksgiving at Smit",
+     "buys": "traditional attire, ornaments, food",
+     "categories": [
+      "ethnic",
+      "jewellery",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Cultural/tourism; little online effect",
+     "sources": [
+      "https://www.hidmc.com/blog-posts/meghalayas-festivals-experiencing-wangala-shad-suk-mynsiem-and-more"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Seng Kut Snem",
+     "local_name": "Seng Kut Snem",
+     "kind": "cultural",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-23",
+     "date_2027": "2027-11-23",
+     "significance": "Khasi Seng Khasi foundation day celebrating indigenous faith",
+     "buys": "traditional attire, food",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Commemorative; limited retail",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Durga Puja",
+     "local_name": "Durga Puja",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-19..2026-10-20",
+     "date_2027": "2027-10-08..2027-10-09",
+     "significance": "Celebrated by Bengali/Nepali/Hindu residents of Shillong",
+     "buys": "new clothes, gifts, electronics",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "gifting",
+      "electronics",
+      "phones"
+     ],
+     "impact": "medium",
+     "impact_reason": "Aligns with national sale season; smaller Hindu share than plains states",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Diwali",
+     "local_name": "Deepavali",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Festival of lights, state holiday",
+     "buys": "lights, sweets, gifts, appliances",
+     "categories": [
+      "homedecor",
+      "gifting",
+      "sweets",
+      "appliances",
+      "electronics"
+     ],
+     "impact": "medium",
+     "impact_reason": "National festive sales draw Meghalaya buyers online",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Id-ul-Fitr",
+     "local_name": "Eid",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "End of Ramzan",
+     "buys": "new clothes, sweets, food",
+     "categories": [
+      "fashion",
+      "grocery",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Small Muslim population",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Republic Day Sale period",
+     "local_name": "Republic Day",
+     "kind": "national",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-26",
+     "date_2027": "2027-01-26",
+     "significance": "National holiday anchoring January online sales",
+     "buys": "phones, electronics, fashion",
+     "categories": [
+      "phones",
+      "electronics",
+      "fashion",
+      "appliances"
+     ],
+     "impact": "medium",
+     "impact_reason": "Unicommerce: Meghalaya among top two states by order-volume growth in Republic Day 2024 sale",
+     "sources": [
+      "https://cxotoday.com/press-release/republic-day-sales-18-7-higher-than-last-year-unicommerce/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "U Tirot Sing Day",
+     "local_name": "U Tirot Sing Day",
+     "kind": "cultural",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-17",
+     "date_2027": "2027-07-17",
+     "significance": "Death anniversary of Khasi freedom fighter",
+     "buys": "commemorative events",
+     "categories": [
+      "stationery"
+     ],
+     "impact": "low",
+     "impact_reason": "Commemorative; negligible retail",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Bohag Bihu",
+     "local_name": "Bihu",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-15",
+     "date_2027": "2027-04-15",
+     "significance": "Restricted holiday for Assamese residents in Meghalaya",
+     "buys": "gamosa, mekhela sador, gifts",
+     "categories": [
+      "ethnic",
+      "gifting",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Small Assamese community; minor ethnic-wear demand",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/meghalaya"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Shillong Cherry Blossom Festival",
+     "local_name": "Cherry Blossom Festival",
+     "kind": "cultural",
+     "months": [
+      11
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Autumn music, food and tourism festival in Shillong",
+     "buys": "travel, fashion, food",
+     "categories": [
+      "travel",
+      "fashion"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism event; minor fashion demand",
+     "sources": [
+      "https://www.hidmc.com/blog-posts/meghalayas-festivals-experiencing-wangala-shad-suk-mynsiem-and-more"
+     ],
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "id": "sikkim",
+   "name": "Sikkim",
+   "languages": [
+    "Nepali",
+    "English",
+    "Bhutia",
+    "Lepcha",
+    "Limbu",
+    "Hindi"
+   ],
+   "top_cities": [
+    "Gangtok",
+    "Namchi",
+    "Gyalshing",
+    "Mangan",
+    "Rangpo"
+   ],
+   "culture": "Nepali-majority with Bhutia/Lepcha Buddhists; Dasain-Tihar is peak spend, Losar/Losoong for Buddhists; high per-capita income, tourism economy.",
+   "ecommerce": "Small market (~7 lakh pop.) served via Siliguri hubs; 49 public holidays in 2026 shows dense festival calendar; no state-specific e-com numbers found.",
+   "ecommerce_sources": [
+    "https://www.keka.com/compliance/public-holiday/sikkim"
+   ],
+   "festivals": [
+    {
+     "name": "Dasain",
+     "local_name": "Dashain",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-19..2026-10-23",
+     "date_2027": "2027-10-05..2027-10-09",
+     "significance": "Biggest festival for Nepali-majority Sikkim; tika and family reunions",
+     "buys": "new clothes, gifts, meat, sweets, electronics, phones",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "gifting",
+      "grocery",
+      "phones",
+      "electronics",
+      "jewellery",
+      "appliances"
+     ],
+     "impact": "high",
+     "impact_reason": "Main annual new-clothes and gifting occasion; coincides with national festive sales",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Tihar",
+     "local_name": "Deepawali / Laxmi Puja",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-09..2026-11-11",
+     "date_2027": "2027-10-29..2027-10-31",
+     "significance": "Five-day festival of lights ending in Bhai Tika",
+     "buys": "lights, diyas, garlands, sweets, gifts, gold, appliances",
+     "categories": [
+      "homedecor",
+      "gifting",
+      "sweets",
+      "jewellery",
+      "appliances",
+      "puja",
+      "electronics"
+     ],
+     "impact": "high",
+     "impact_reason": "Second peak of festive sale season; lights and gifting",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Losar",
+     "local_name": "Losar",
+     "kind": "new_year",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-18",
+     "date_2027": "2027-02-07",
+     "significance": "Tibetan New Year of Bhutia/Sherpa/Tibetan communities",
+     "buys": "new clothes, khapse ingredients, home decor, gifts",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "grocery",
+      "homedecor",
+      "gifting",
+      "winter"
+     ],
+     "impact": "medium",
+     "impact_reason": "Bhutia festive apparel and food; winter clothing",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Losoong / Namsoong",
+     "local_name": "Losoong",
+     "kind": "harvest",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-09..2026-12-14",
+     "date_2027": null,
+     "significance": "Sikkimese (Bhutia/Lepcha) farmers' new year and harvest festival",
+     "buys": "new clothes, food, drinks, gifts",
+     "categories": [
+      "ethnic",
+      "grocery",
+      "gifting",
+      "winter"
+     ],
+     "impact": "medium",
+     "impact_reason": "Six-day holiday block in December; winter wear and food",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Saga Dawa",
+     "local_name": "Saga Dawa",
+     "kind": "religious",
+     "months": [
+      5,
+      6
+     ],
+     "date_2026": "2026-05-31",
+     "date_2027": null,
+     "significance": "Holiest Buddhist month; procession around Gangtok",
+     "buys": "butter lamps, incense, offerings",
+     "categories": [
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Religious; minimal retail",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Pang Lhabsol",
+     "local_name": "Pang Lhabsol",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-08-28",
+     "date_2027": null,
+     "significance": "Unique Sikkim festival honouring Mt Khangchendzonga",
+     "buys": "puja items, cultural attire",
+     "categories": [
+      "puja",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Cultural/religious; low online impact",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Maghe Sankranti",
+     "local_name": "Maghe Sankranti",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-15",
+     "date_2027": "2027-01-15",
+     "significance": "Nepali harvest festival with Jorethang Maghe Mela",
+     "buys": "sweets, yam, ghee, til, fair goods",
+     "categories": [
+      "grocery",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Food-centric; Jorethang Maghe Mela is a large trade fair",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Sonam Lochhar",
+     "local_name": "Sonam Lochar",
+     "kind": "new_year",
+     "months": [
+      1,
+      2
+     ],
+     "date_2026": "2026-01-19",
+     "date_2027": null,
+     "significance": "Tamang New Year",
+     "buys": "new clothes, food, damphu",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Community-specific",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Tamu Lochar",
+     "local_name": "Tamu Lochar",
+     "kind": "new_year",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-30",
+     "date_2027": "2027-12-30",
+     "significance": "Gurung New Year",
+     "buys": "new clothes, food",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Community-specific",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Bhanu Jayanti",
+     "local_name": "Bhanu Jayanti",
+     "kind": "cultural",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-13",
+     "date_2027": "2027-07-13",
+     "significance": "Birth anniversary of Nepali poet Bhanubhakta Acharya",
+     "buys": "books, cultural events",
+     "categories": [
+      "stationery"
+     ],
+     "impact": "low",
+     "impact_reason": "Commemorative",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Teej",
+     "local_name": "Haritalika Teej",
+     "kind": "religious",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": null,
+     "significance": "Nepali women's fasting festival; red attire",
+     "buys": "red sarees, bangles, cosmetics, jewellery",
+     "categories": [
+      "ethnic",
+      "beauty",
+      "jewellery",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "Women's apparel and beauty demand",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Lhabab Duechen",
+     "local_name": "Lhabab Duechen",
+     "kind": "religious",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-01",
+     "date_2027": null,
+     "significance": "Buddha's descent from heaven; butter lamps at monasteries",
+     "buys": "butter lamps, incense",
+     "categories": [
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Religious observance",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Tendong Lho Rum Faat",
+     "local_name": "Tendong Lho Rum Faat",
+     "kind": "tribal",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-08",
+     "date_2027": "2027-08-08",
+     "significance": "Lepcha prayer to Mt Tendong",
+     "buys": "food, costume",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Community observance",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Christmas and New Year",
+     "local_name": "Christmas",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Celebrated in Gangtok along with year-end tourist season",
+     "buys": "cakes, gifts, decorations, winter wear",
+     "categories": [
+      "gifting",
+      "homedecor",
+      "winter",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end tourism and winter wear demand",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kagyed Dance",
+     "local_name": "Kagyed Chaam",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-07",
+     "date_2027": null,
+     "significance": "Masked monk dances to ward off evil before Losoong",
+     "buys": "puja items",
+     "categories": [
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Religious",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Holi",
+     "local_name": "Holi",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-03",
+     "date_2027": "2027-03-22",
+     "significance": "Colour festival among Nepali/plains communities",
+     "buys": "colours, sweets",
+     "categories": [
+      "grocery",
+      "sweets",
+      "toys"
+     ],
+     "impact": "low",
+     "impact_reason": "Moderate snacks and colours",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Sakewa",
+     "local_name": "Sakewa",
+     "kind": "tribal",
+     "months": [
+      11,
+      5
+     ],
+     "date_2026": "2026-11-30",
+     "date_2027": null,
+     "significance": "Kirat Khambu Rai worship of Mother Earth",
+     "buys": "food, attire",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Community-specific",
+     "sources": [
+      "https://www.keka.com/compliance/public-holiday/sikkim",
+      "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
+     ],
+     "confidence": "medium"
+    }
+   ]
+  }
+ ]
+}

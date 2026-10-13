@@ -1,0 +1,1817 @@
+{
+ "group": "g7",
+ "states": [
+  {
+   "id": "tn",
+   "name": "Tamil Nadu",
+   "languages": [
+    "Tamil",
+    "English",
+    "Telugu"
+   ],
+   "top_cities": [
+    "Chennai",
+    "Coimbatore",
+    "Madurai",
+    "Tiruchirappalli",
+    "Vellore"
+   ],
+   "culture": "Tradition-led buyers; silk sarees and gold central to festivals; Aadi discount month is a unique sale season; strong value-seeking in tier-2 towns.",
+   "ecommerce": "Amazon Bazaar TN orders up 5x YoY (May 2026), Chennai new sign-ups 2x; 1,700+ TN sellers. Shiprocket: COD 40%, AOV ~Rs1,163, top products perfumes, plated jewellery, books.",
+   "ecommerce_sources": [
+    "https://apparelresources.com/business-news/retail/amazon-bazaar-records-5x-growth-amid-intense-value-e-commerce-competition/",
+    "https://trends.shiprocket.in/tamilnadu/all/all/last3months",
+    "https://campaignbriefasia.com/2026/07/31/flipkart-transforms-chennais-ranganathan-street-into-an-interactive-print-campaign/"
+   ],
+   "festivals": [
+    {
+     "name": "Pongal (Bhogi to Kaanum Pongal)",
+     "local_name": "Thai Pongal",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14..2026-01-17",
+     "date_2027": "2027-01-14..2027-01-17",
+     "significance": "Tamil harvest festival; Thai month begins; biggest TN festival",
+     "buys": "new clothes, sarees, veshti, pongal pots, sugarcane, jaggery, kolam colours, gifts, appliances",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "kitchen",
+      "grocery",
+      "puja",
+      "gifting",
+      "appliances",
+      "sweets",
+      "homedecor"
+     ],
+     "impact": "high",
+     "impact_reason": "Peak apparel and home purchase window; platforms run Pongal sales in TN; 4-day state holiday",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238",
+      "https://www.drikpanchang.com/festivals/pongal/thai-pongal-date-time.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Jallikattu season",
+     "local_name": "Eru Thazhuvuthal",
+     "kind": "cultural",
+     "months": [
+      1,
+      2
+     ],
+     "date_2026": "2026-01-15..2026-01-31",
+     "date_2027": null,
+     "significance": "Bull-taming events around Pongal in Madurai region",
+     "buys": "cattle decor, traditional wear, travel",
+     "categories": [
+      "ethnic",
+      "travel",
+      "agri"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly offline rural spectacle; little direct online demand",
+     "sources": [
+      "https://www.drikpanchang.com/festivals/pongal/thai-pongal-date-time.html?year=2027"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Thaipusam",
+     "local_name": "Thai Poosam",
+     "kind": "religious",
+     "months": [
+      1,
+      2
+     ],
+     "date_2026": "2026-02-01",
+     "date_2027": "2027-01-22",
+     "significance": "Murugan festival; Palani pilgrimage, kavadi",
+     "buys": "yellow/saffron dhotis, puja items, kavadi accessories, travel",
+     "categories": [
+      "puja",
+      "ethnic",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Devotional and travel-led; modest online puja-item demand",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238",
+      "https://www.drikpanchang.com/festivals/thaipusam/tamil-thaipusam-date.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Ramzan / Eid al-Fitr",
+     "local_name": "Ramzan",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "End of Ramadan; large Muslim communities in Chennai, coastal TN",
+     "buys": "new clothes, attar, dates, dry fruits, sweets, gifts, footwear",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "grocery",
+      "gifting",
+      "beauty",
+      "footwear",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Fashion/attar demand; perfumes are top online product in TN per Shiprocket",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238",
+      "https://www.officeholidays.com/countries/india/2027",
+      "https://trends.shiprocket.in/tamilnadu/all/all/last3months"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Tamil New Year",
+     "local_name": "Puthandu",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-14",
+     "date_2027": "2027-04-14",
+     "significance": "Chithirai 1; Tamil new year with family feast and new purchases",
+     "buys": "new clothes, gold, fruits, puja items, appliances, panchangam",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "puja",
+      "grocery",
+      "appliances",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Auspicious purchase day; summer sales for AC/fridge overlap; jewellers and e-tailers push offers",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Chithirai Thiruvizha (Madurai)",
+     "local_name": "Meenakshi Thirukalyanam",
+     "kind": "fair",
+     "months": [
+      4,
+      5
+     ],
+     "date_2026": "2026-04-19..2026-05-01",
+     "date_2027": null,
+     "significance": "Month-long Madurai temple festival; celestial wedding and Kallazhagar Vaigai entry",
+     "buys": "silk sarees, gold, puja items, travel",
+     "categories": [
+      "ethnic",
+      "jewellery",
+      "puja",
+      "travel"
+     ],
+     "impact": "medium",
+     "impact_reason": "Regional spike in Madurai; mostly offline but drives saree/jewellery searches",
+     "sources": [
+      "https://newstodaynet.com/2026/03/11/madurai-chithirai-festival-schedule-released-kallazhagar-to-enter-vaigai-river-1-may/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Akshaya Tritiya",
+     "local_name": "Akshaya Thiruthiyai",
+     "kind": "religious",
+     "months": [
+      4,
+      5
+     ],
+     "date_2026": "2026-04-19",
+     "date_2027": "2027-05-09",
+     "significance": "Auspicious day for gold purchase",
+     "buys": "gold coins, jewellery, silver, appliances",
+     "categories": [
+      "jewellery",
+      "premium",
+      "appliances"
+     ],
+     "impact": "high",
+     "impact_reason": "TN is a top gold market; jewellers run online booking and digital gold offers",
+     "sources": [
+      "https://www.drikpanchang.com/festivals/akshaya-tritiya/akshaya-tritiya-date-time.html?year=2026"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Bakrid",
+     "local_name": "Bakrid",
+     "kind": "religious",
+     "months": [
+      5,
+      6
+     ],
+     "date_2026": "2026-05-28",
+     "date_2027": "2027-05-17",
+     "significance": "Eid al-Adha; feasts and charity",
+     "buys": "new clothes, meat, spices, kitchenware, gifts",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "grocery",
+      "kitchen",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Apparel and grocery uplift among Muslim households",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "School reopening",
+     "local_name": "",
+     "kind": "cultural",
+     "months": [
+      6
+     ],
+     "date_2026": "2026-06-01..2026-06-15",
+     "date_2027": "2027-06-01..2027-06-15",
+     "significance": "New academic year after summer break",
+     "buys": "school bags, uniforms, notebooks, shoes, lunch boxes, laptops",
+     "categories": [
+      "schoolgear",
+      "stationery",
+      "footwear",
+      "laptops",
+      "rainwear"
+     ],
+     "impact": "medium",
+     "impact_reason": "Educational books are a top online product in TN (Shiprocket); back-to-school demand",
+     "sources": [
+      "https://trends.shiprocket.in/tamilnadu/all/all/last3months"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Aadi month sale",
+     "local_name": "Aadi Thallupadi",
+     "kind": "cultural",
+     "months": [
+      7,
+      8
+     ],
+     "date_2026": "2026-07-17..2026-08-16",
+     "date_2027": "2027-07-17..2027-08-16",
+     "significance": "Inauspicious Tamil month; retailers run deep discount sales",
+     "buys": "sarees, textiles, jewellery, footwear, appliances, furniture",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "footwear",
+      "appliances",
+      "furniture",
+      "kitchen"
+     ],
+     "impact": "high",
+     "impact_reason": "TN's signature discount season; Flipkart ran 'Aadi Thallaadhabadi' sale in July 2026",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Aadi_Thallupadi",
+      "https://campaignbriefasia.com/2026/07/31/flipkart-transforms-chennais-ranganathan-street-into-an-interactive-print-campaign/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Aadi Perukku",
+     "local_name": "Aadi Pathinettu",
+     "kind": "harvest",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-03",
+     "date_2027": "2027-08-03",
+     "significance": "Aadi 18; river/water festival, women pray for prosperity",
+     "buys": "puja items, bangles, new clothes, gold",
+     "categories": [
+      "puja",
+      "ethnic",
+      "jewellery"
+     ],
+     "impact": "low",
+     "impact_reason": "Ritual festival; mostly offline puja purchases",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Aadi_Thallupadi"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Varalakshmi Vratham",
+     "local_name": "Varalakshmi Nonbu",
+     "kind": "religious",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-28",
+     "date_2027": null,
+     "significance": "Women's puja to goddess Lakshmi for family prosperity",
+     "buys": "silk sarees, gold jewellery, kalasam, puja items, flowers",
+     "categories": [
+      "ethnic",
+      "jewellery",
+      "puja",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Jewellery brands (CaratLane, GIVA) run targeted campaigns",
+     "sources": [
+      "https://www.caratlane.com/blog/varalakshmi-vratham/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Velankanni Festival",
+     "local_name": "Arokia Matha feast",
+     "kind": "fair",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-08-29..2026-09-08",
+     "date_2027": "2027-08-29..2027-09-08",
+     "significance": "11-day feast at Basilica of Our Lady of Good Health, Nagapattinam",
+     "buys": "travel, candles, religious items",
+     "categories": [
+      "travel",
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Pilgrim travel; minimal online retail",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Basilica_of_Our_Lady_of_Good_Health"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Krishna Jayanthi",
+     "local_name": "Gokulashtami",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-04",
+     "date_2027": "2027-08-25",
+     "significance": "Birth of Krishna; kolam footprints, sweets",
+     "buys": "kids' Krishna costumes, sweets, puja items, flute toys",
+     "categories": [
+      "puja",
+      "sweets",
+      "toys",
+      "ethnic",
+      "baby"
+     ],
+     "impact": "medium",
+     "impact_reason": "Kids costume and puja online demand",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Vinayagar Chathurthi",
+     "local_name": "Vinayaka Chaturthi",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": "2027-09-04",
+     "significance": "Ganesha festival; clay idols at home",
+     "buys": "clay idols, puja kits, kozhukattai ingredients, decor, flowers",
+     "categories": [
+      "puja",
+      "homedecor",
+      "grocery",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Kickstarts festive quarter; puja kits and decor sold online",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Navaratri Golu",
+     "local_name": "Kolu",
+     "kind": "religious",
+     "months": [
+      9,
+      10
+     ],
+     "date_2026": "2026-10-11..2026-10-20",
+     "date_2027": "2027-10-01..2027-10-09",
+     "significance": "Nine nights; homes display tiered doll steps (golu)",
+     "buys": "golu dolls, steps, silk sarees, return gifts, sundal ingredients",
+     "categories": [
+      "homedecor",
+      "toys",
+      "ethnic",
+      "gifting",
+      "puja"
+     ],
+     "impact": "high",
+     "impact_reason": "Overlaps Big Billion Days / Great Indian Festival sales; golu dolls and return gifts sold online",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ayudha Pooja and Vijayadasami",
+     "local_name": "Saraswathi Pooja",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-19..2026-10-20",
+     "date_2027": "2027-10-08..2027-10-09",
+     "significance": "Worship of tools, vehicles, books; Vijayadasami for new beginnings",
+     "buys": "vehicles, tools, appliances, stationery, puja items, banana leaves",
+     "categories": [
+      "vehicles",
+      "appliances",
+      "puja",
+      "stationery",
+      "electronics"
+     ],
+     "impact": "high",
+     "impact_reason": "Auspicious for vehicle and appliance purchases; peak national sale period",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Deepavali",
+     "local_name": "Deepavali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Biggest shopping festival; early-morning oil bath, new clothes, crackers",
+     "buys": "new clothes, sweets, crackers, gold, phones, TVs, appliances, gifts",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "sweets",
+      "gifting",
+      "jewellery",
+      "phones",
+      "electronics",
+      "tv",
+      "appliances",
+      "homedecor",
+      "footwear"
+     ],
+     "impact": "high",
+     "impact_reason": "Peak e-commerce season nationally; TN Amazon orders up 5x YoY (Amazon Bazaar, 2026)",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238",
+      "https://www.officeholidays.com/countries/india/2027",
+      "https://apparelresources.com/business-news/retail/amazon-bazaar-records-5x-growth-amid-intense-value-e-commerce-competition/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Karthigai Deepam",
+     "local_name": "Karthigai Deepam",
+     "kind": "religious",
+     "months": [
+      11,
+      12
+     ],
+     "date_2026": "2026-11-24",
+     "date_2027": "2027-12-11",
+     "significance": "Festival of lamps; Tiruvannamalai Maha Deepam",
+     "buys": "agal lamps, ghee, oil, decor lights, sweets",
+     "categories": [
+      "puja",
+      "homedecor",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Lamps and decor bought online; regional TN-specific",
+     "sources": [
+      "https://www.drikpanchang.com/festivals/karthigai-deepam/karthigai-deepam-date-time.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Sabarimala season (TN devotees)",
+     "local_name": "Ayyappan viratham",
+     "kind": "religious",
+     "months": [
+      11,
+      12,
+      1
+     ],
+     "date_2026": "2026-11-16..2027-01-20",
+     "date_2027": null,
+     "significance": "41-day Ayyappa vow; many TN men wear black/blue dhotis",
+     "buys": "black dhotis, malas, irumudi kits, travel bags",
+     "categories": [
+      "ethnic",
+      "puja",
+      "travel"
+     ],
+     "impact": "medium",
+     "impact_reason": "Large TN devotee base; dhoti and puja kit demand",
+     "sources": [
+      "https://hindutone.com/festivals/sabarimala-mandala-pooja-2026-date-significance/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Christmas",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Significant Christian population in south TN and Chennai",
+     "buys": "stars, cribs, cakes, gifts, new clothes, decor",
+     "categories": [
+      "homedecor",
+      "gifting",
+      "fashion",
+      "sweets",
+      "toys"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end sale season; decor and gifting",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Margazhi music and dance season",
+     "local_name": "Margazhi",
+     "kind": "cultural",
+     "months": [
+      12,
+      1
+     ],
+     "date_2026": "2026-12-16..2027-01-14",
+     "date_2027": null,
+     "significance": "Chennai December season; kolam and devotional month",
+     "buys": "silk sarees, kolam powder, concert tickets",
+     "categories": [
+      "ethnic",
+      "puja",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Niche, Chennai-centric",
+     "sources": [
+      "https://www.sakshipost.com/news/education/tamil-nadu-public-holiday-calendar-2026-released-24-holidays-declared-474238"
+     ],
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "id": "kerala",
+   "name": "Kerala",
+   "languages": [
+    "Malayalam",
+    "English"
+   ],
+   "top_cities": [
+    "Kochi",
+    "Thiruvananthapuram",
+    "Kozhikode",
+    "Thrissur",
+    "Kollam"
+   ],
+   "culture": "High-literacy, remittance-rich, gold-loving market; Onam and Vishu dominate; strong Muslim (Malabar) and Christian festival calendars.",
+   "ecommerce": "Onam spend est. Rs10-20K cr, retail +30-40% (Manorama); higher online-shopper share than India avg. Shiprocket: COD 42%, AOV ~Rs1,024, Sep peak; perfumes, shorts, plated jewellery.",
+   "ecommerce_sources": [
+    "https://specials.manoramaonline.com/Advertisements/2024/Onam-trade-campaign/index.html",
+    "https://trends.shiprocket.in/kerala/all/all/last3months",
+    "https://www.indiaretailing.com/2024/09/13/kerala-retailers-onam-sales-wayanad"
+   ],
+   "festivals": [
+    {
+     "name": "Vishu",
+     "local_name": "Vishu",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-15",
+     "date_2027": "2027-04-15",
+     "significance": "Malayalam astronomical new year; Vishukkani and kaineettam",
+     "buys": "konna flowers, Vishukkani items, new clothes (Vishu kodi), crackers, sadya groceries, gold",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "puja",
+      "grocery",
+      "jewellery",
+      "gifting",
+      "sweets"
+     ],
+     "impact": "high",
+     "impact_reason": "Second-biggest Kerala shopping festival; summer AC/fridge season overlap",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html",
+      "https://www.officeholidays.com/holidays/india/kerala/vishu"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Onam",
+     "local_name": "Thiruvonam",
+     "kind": "harvest",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-08-25..2026-08-28",
+     "date_2027": "2027-09-12",
+     "significance": "Biggest Kerala festival; King Mahabali's homecoming, 10 days from Atham",
+     "buys": "kasavu sarees/mundu, onakkodi clothes, gold, TVs, appliances, phones, pookalam flowers, sadya groceries",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "jewellery",
+      "tv",
+      "appliances",
+      "phones",
+      "fridge",
+      "grocery",
+      "kitchen",
+      "homedecor",
+      "furniture",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Onam spend est. Rs10-20K cr; retail up 30-40%; Amazon runs Onam store; Kerala's annual peak",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html",
+      "https://specials.manoramaonline.com/Advertisements/2024/Onam-trade-campaign/index.html",
+      "https://www.drikpanchang.com/festivals/onam/onam-thiruvonam-date.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Chingam 1 and wedding season",
+     "local_name": "Malayalam New Year (Kolla Varsham)",
+     "kind": "new_year",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-08-17",
+     "date_2027": null,
+     "significance": "Start of Malayalam year; Chingam is peak wedding/house-warming month",
+     "buys": "wedding gold, silk sarees, furniture, appliances",
+     "categories": [
+      "wedding",
+      "jewellery",
+      "ethnic",
+      "furniture",
+      "appliances"
+     ],
+     "impact": "medium",
+     "impact_reason": "Gold and wedding purchases cluster in Chingam alongside Onam",
+     "sources": [
+      "https://specials.manoramaonline.com/Advertisements/2024/Onam-trade-campaign/index.html"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Karkidakam month",
+     "local_name": "Ramayana masam",
+     "kind": "religious",
+     "months": [
+      7,
+      8
+     ],
+     "date_2026": "2026-07-17..2026-08-16",
+     "date_2027": null,
+     "significance": "Monsoon month for Ayurvedic rejuvenation and Ramayana reading; Karkidaka Vavu",
+     "buys": "Ayurvedic kits (karkidaka kanji), oils, rainwear, umbrellas",
+     "categories": [
+      "health",
+      "rainwear",
+      "grocery",
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Ayurveda health kits sold online; Ayurvedic products trending in Shiprocket island/south data",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Karkidaka Vavu",
+     "local_name": "Vavu Bali",
+     "kind": "religious",
+     "months": [
+      7,
+      8
+     ],
+     "date_2026": "2026-08-12",
+     "date_2027": null,
+     "significance": "Ancestral rites day",
+     "buys": "puja items",
+     "categories": [
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Ritual, offline",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Attukal Pongala",
+     "local_name": "Attukal Pongala",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-03-03",
+     "date_2027": null,
+     "significance": "Massive women's offering at Attukal temple, Thiruvananthapuram",
+     "buys": "clay pots, rice, jaggery, firewood, sarees",
+     "categories": [
+      "puja",
+      "kitchen",
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Local Thiruvananthapuram event; mostly offline",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Attukal_Pongala"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Thrissur Pooram",
+     "local_name": "Thrissur Pooram",
+     "kind": "cultural",
+     "months": [
+      4,
+      5
+     ],
+     "date_2026": "2026-04-26",
+     "date_2027": null,
+     "significance": "Grand temple festival at Vadakkunnathan; elephants and fireworks",
+     "buys": "travel, festive wear",
+     "categories": [
+      "travel",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism/local spend; little online impact",
+     "sources": [
+      "https://www.onmanorama.com/travel/kerala/2026/04/16/thrissur-pooram-complete-guide-tourists.amp.html"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Eid al-Fitr",
+     "local_name": "Cheriya Perunnal",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-20",
+     "date_2027": "2027-03-10",
+     "significance": "End of Ramadan; ~26% Muslim population, esp. Malabar",
+     "buys": "new clothes, attar, mehendi, footwear, dates, gifts",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "beauty",
+      "footwear",
+      "grocery",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Large Malabar fashion demand; perfumes are top online product in Kerala (Shiprocket)",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html",
+      "https://www.officeholidays.com/countries/india/2027",
+      "https://trends.shiprocket.in/kerala/all/all/last3months"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Bakrid",
+     "local_name": "Valiya Perunnal",
+     "kind": "religious",
+     "months": [
+      5,
+      6
+     ],
+     "date_2026": "2026-05-27",
+     "date_2027": "2027-05-17",
+     "significance": "Eid al-Adha; feasts",
+     "buys": "new clothes, meat, spices, kitchenware",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "grocery",
+      "kitchen"
+     ],
+     "impact": "medium",
+     "impact_reason": "Apparel and grocery uplift in Malabar",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Milad-un-Nabi",
+     "local_name": "Nabidinam",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-08-25",
+     "date_2027": "2027-08-15",
+     "significance": "Prophet's birthday; processions in Malabar",
+     "buys": "new clothes, sweets, decor",
+     "categories": [
+      "fashion",
+      "sweets",
+      "homedecor"
+     ],
+     "impact": "low",
+     "impact_reason": "Modest; 2026 overlaps Onam",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Easter",
+     "local_name": "Easter",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-04-05",
+     "date_2027": "2027-03-28",
+     "significance": "Christian festival (~18% Christian pop.), end of Lent",
+     "buys": "new clothes, cakes, meat, gifts",
+     "categories": [
+      "fashion",
+      "grocery",
+      "sweets",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Christian households in central Kerala; apparel and food",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Christmas and New Year",
+     "local_name": "Christmas",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Major in Kerala; stars, cribs, plum cakes; Kochi Carnival at year end",
+     "buys": "stars, cribs, LED lights, plum cakes, wine, gifts, new clothes",
+     "categories": [
+      "homedecor",
+      "gifting",
+      "sweets",
+      "fashion",
+      "toys",
+      "electronics"
+     ],
+     "impact": "high",
+     "impact_reason": "Strong Christian population plus year-end sales; decor and gifting online",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "School reopening (Praveshanolsavam)",
+     "local_name": "Praveshanolsavam",
+     "kind": "cultural",
+     "months": [
+      6
+     ],
+     "date_2026": "2026-06-01..2026-06-10",
+     "date_2027": "2027-06-01..2027-06-10",
+     "significance": "Schools reopen with monsoon onset",
+     "buys": "bags, umbrellas, raincoats, uniforms, notebooks, footwear",
+     "categories": [
+      "schoolgear",
+      "stationery",
+      "rainwear",
+      "footwear"
+     ],
+     "impact": "medium",
+     "impact_reason": "Combined back-to-school and monsoon demand",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Krishna Jayanthi",
+     "local_name": "Ashtami Rohini",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-04",
+     "date_2027": "2027-08-25",
+     "significance": "Krishna birth; Balagokulam Shobha Yatra processions",
+     "buys": "kids' Krishna costumes, puja items",
+     "categories": [
+      "puja",
+      "toys",
+      "baby",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Costume demand for children",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Navaratri and Vidyarambham",
+     "local_name": "Mahanavami / Vijayadasami",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-20..2026-10-21",
+     "date_2027": "2027-10-08..2027-10-09",
+     "significance": "Ayudha puja, book puja; Vidyarambham initiates children into learning",
+     "buys": "books, stationery, slates, vehicles, puja items",
+     "categories": [
+      "stationery",
+      "schoolgear",
+      "vehicles",
+      "puja",
+      "laptops"
+     ],
+     "impact": "medium",
+     "impact_reason": "Overlaps national festive sales; stationery and vehicles",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Deepavali",
+     "local_name": "Deepavali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Observed but smaller in Kerala than other states",
+     "buys": "crackers, sweets, phones, electronics",
+     "categories": [
+      "sweets",
+      "electronics",
+      "phones",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Smaller culturally, but national festive sales drive Kerala online orders",
+     "sources": [
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Sabarimala Mandala-Makaravilakku",
+     "local_name": "Mandalakalam",
+     "kind": "religious",
+     "months": [
+      11,
+      12,
+      1
+     ],
+     "date_2026": "2026-11-16..2027-01-20",
+     "date_2027": null,
+     "significance": "Ayyappa pilgrimage season; 41-day vratham",
+     "buys": "black/blue mundu, malas, irumudi kits, travel",
+     "categories": [
+      "ethnic",
+      "puja",
+      "travel"
+     ],
+     "impact": "medium",
+     "impact_reason": "Huge pilgrim footfall; devotional wear and puja kits",
+     "sources": [
+      "https://thesouthfirst.com/kerala/sabarimala-temple-opens-for-mandala-makaravilakku-pilgrimage-season/",
+      "https://hindutone.com/festivals/sabarimala-mandala-pooja-2026-date-significance/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Akshaya Tritiya",
+     "local_name": "Akshaya Tritiya",
+     "kind": "religious",
+     "months": [
+      4,
+      5
+     ],
+     "date_2026": "2026-04-19",
+     "date_2027": "2027-05-09",
+     "significance": "Auspicious day for buying gold",
+     "buys": "gold, diamond jewellery, coins",
+     "categories": [
+      "jewellery",
+      "premium"
+     ],
+     "impact": "medium",
+     "impact_reason": "Kerala is a major gold market; jewellers push online booking",
+     "sources": [
+      "https://www.drikpanchang.com/festivals/akshaya-tritiya/akshaya-tritiya-date-time.html?year=2026"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Nehru Trophy Boat Race",
+     "local_name": "Vallam Kali",
+     "kind": "cultural",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-08",
+     "date_2027": null,
+     "significance": "Snake boat race on Punnamada Lake, Alappuzha (2nd Sat of Aug)",
+     "buys": "travel, event tickets",
+     "categories": [
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism event; minimal e-commerce",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Nehru_Trophy_Boat_Race"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Maramon Convention",
+     "local_name": "Maramon",
+     "kind": "religious",
+     "months": [
+      2
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Large Christian gathering on Pamba riverbed",
+     "buys": "bibles, travel",
+     "categories": [
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Offline gathering",
+     "sources": [
+      "https://en.wikipedia.org/wiki/Maramon_Convention"
+     ],
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "id": "lakshadweep",
+   "name": "Lakshadweep",
+   "languages": [
+    "Malayalam",
+    "Jeseri",
+    "Mahl"
+   ],
+   "top_cities": [
+    "Kavaratti",
+    "Agatti",
+    "Minicoy",
+    "Andrott"
+   ],
+   "culture": "~96% Muslim island population (~65k, Census 2011); Eid is the main shopping occasion; scarce local retail, reliance on mainland goods.",
+   "ecommerce": "Amazon delivers to Agatti since 2017 via delivery partner; exploring Kavaratti/Andrott; weather and unstable internet limit e-commerce.",
+   "ecommerce_sources": [
+    "https://www.aboutamazon.in/news/amazon-india-news/7-remote-locations-where-amazon-india-delivers-your-orders",
+    "https://vajiramandravi.com/current-affairs/festivals-of-lakshadweep/"
+   ],
+   "festivals": [
+    {
+     "name": "Ramadan month",
+     "local_name": "Ramzan",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-02-18..2026-03-19",
+     "date_2027": "2027-02-08..2027-03-09",
+     "significance": "Holy month of fasting for ~96% Muslim population",
+     "buys": "dates, groceries, prayer items, attar, clothes for Eid",
+     "categories": [
+      "grocery",
+      "puja",
+      "beauty"
+     ],
+     "impact": "medium",
+     "impact_reason": "Pre-Eid ordering window given long shipping times from mainland",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-lakshadweep/",
+      "https://www.aboutamazon.in/news/amazon-india-news/7-remote-locations-where-amazon-india-delivers-your-orders"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Eid al-Fitr",
+     "local_name": "Cheriya Perunnal",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-20",
+     "date_2027": "2027-03-10",
+     "significance": "Most widely celebrated festival in Lakshadweep",
+     "buys": "new clothes, attar, sweets, gifts, footwear",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "beauty",
+      "footwear",
+      "sweets",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Peak apparel demand; limited delivery (Amazon serves Agatti since 2017)",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-lakshadweep/",
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html",
+      "https://www.aboutamazon.in/news/amazon-india-news/7-remote-locations-where-amazon-india-delivers-your-orders"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Bakrid",
+     "local_name": "Valiya Perunnal",
+     "kind": "religious",
+     "months": [
+      5,
+      6
+     ],
+     "date_2026": "2026-05-27",
+     "date_2027": "2027-05-17",
+     "significance": "Eid al-Adha with congregational prayer and Qurbani",
+     "buys": "new clothes, meat, spices",
+     "categories": [
+      "fashion",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Second Eid; apparel orders",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-lakshadweep/",
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Muharram",
+     "local_name": "Muharram",
+     "kind": "religious",
+     "months": [
+      6,
+      7
+     ],
+     "date_2026": "2026-06-25",
+     "date_2027": "2027-06-15",
+     "significance": "Islamic new year/mourning observances",
+     "buys": "black clothes, food",
+     "categories": [
+      "fashion"
+     ],
+     "impact": "low",
+     "impact_reason": "Observance; little shopping",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-lakshadweep/",
+      "https://www.onmanorama.com/news/kerala/2025/10/29/kerala-public-holidays-2026-full-list.html"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Milad-un-Nabi",
+     "local_name": "Nabidinam",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-08-25",
+     "date_2027": "2027-08-15",
+     "significance": "Prophet's birthday; prayers, Quran recitation, processions",
+     "buys": "new clothes, sweets",
+     "categories": [
+      "fashion",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Moderate local spend",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-lakshadweep/",
+      "https://lakshadweep.gov.in/culture"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Independence Day",
+     "local_name": "",
+     "kind": "national",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-15",
+     "date_2027": "2027-08-15",
+     "significance": "Among most celebrated events per UT administration",
+     "buys": "flags, uniforms, phones on national sales",
+     "categories": [
+      "phones",
+      "electronics"
+     ],
+     "impact": "low",
+     "impact_reason": "National sales, but sea/air logistics limit online reach",
+     "sources": [
+      "https://lakshadweep.gov.in/culture",
+      "https://www.aboutamazon.in/news/amazon-india-news/7-remote-locations-where-amazon-india-delivers-your-orders"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Republic Day",
+     "local_name": "",
+     "kind": "national",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-26",
+     "date_2027": "2027-01-26",
+     "significance": "Widely celebrated per UT administration",
+     "buys": "flags, national sale purchases",
+     "categories": [
+      "phones",
+      "electronics"
+     ],
+     "impact": "low",
+     "impact_reason": "National sales; logistics constraints",
+     "sources": [
+      "https://lakshadweep.gov.in/culture"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "National Minicoy Festival",
+     "local_name": "",
+     "kind": "cultural",
+     "months": [
+      1
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Cultural event on Minicoy (Mahl-speaking) with Lava dance",
+     "buys": "traditional items, travel",
+     "categories": [
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Local cultural event; date unverified",
+     "sources": [
+      "https://vajiramandravi.com/current-affairs/festivals-of-lakshadweep/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Monsoon / school reopening",
+     "local_name": "",
+     "kind": "cultural",
+     "months": [
+      6
+     ],
+     "date_2026": "2026-06-01",
+     "date_2027": "2027-06-01",
+     "significance": "Schools reopen with monsoon; ships limited",
+     "buys": "school bags, umbrellas, raincoats, stationery",
+     "categories": [
+      "schoolgear",
+      "rainwear",
+      "stationery"
+     ],
+     "impact": "low",
+     "impact_reason": "Stock-up needed before monsoon cuts sea links",
+     "sources": [
+      "https://www.aboutamazon.in/news/amazon-india-news/7-remote-locations-where-amazon-india-delivers-your-orders"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Diwali-season national sales",
+     "local_name": "Great Indian Festival / Big Billion Days",
+     "kind": "national",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Not a local festival, but pan-India sale season reaches islanders",
+     "buys": "phones, electronics, appliances",
+     "categories": [
+      "phones",
+      "electronics",
+      "appliances"
+     ],
+     "impact": "low",
+     "impact_reason": "Islanders shop national sales, but delivery limited to some islands",
+     "sources": [
+      "https://www.aboutamazon.in/news/amazon-india-news/7-remote-locations-where-amazon-india-delivers-your-orders"
+     ],
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "id": "andaman",
+   "name": "Andaman & Nicobar Islands",
+   "languages": [
+    "Bengali",
+    "Hindi",
+    "Tamil",
+    "Telugu",
+    "Malayalam",
+    "Nicobarese"
+   ],
+   "top_cities": [
+    "Port Blair (Sri Vijaya Puram)",
+    "Swaraj Dweep (Havelock)",
+    "Car Nicobar",
+    "Mayabunder"
+   ],
+   "culture": "Mini-India of settlers; Bengalis largest group so Durga Puja leads; Christian Nicobarese celebrate Christmas; tourism-driven economy.",
+   "ecommerce": "Amazon since 2015 (Port Blair), now thousands of daily deliveries incl. Havelock. Shiprocket: COD 61%, AOV ~Rs1,147, RTO 17%, Sep peak; perfumes, Ayurvedic, earrings.",
+   "ecommerce_sources": [
+    "https://www.aboutamazon.in/news/amazon-india-news/7-remote-locations-where-amazon-india-delivers-your-orders",
+    "https://trends.shiprocket.in/andamannicobarislands/all/all/last3months"
+   ],
+   "festivals": [
+    {
+     "name": "Island Tourism Festival",
+     "local_name": "ITF",
+     "kind": "cultural",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-05..2026-01-15",
+     "date_2027": null,
+     "significance": "10-day carnival at ITF Ground Port Blair; shows, exhibitions",
+     "buys": "festive wear, handicrafts, food, travel",
+     "categories": [
+      "fashion",
+      "travel",
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Offline exhibition-led spend",
+     "sources": [
+      "https://www.utsav.gov.in/view-event/island-tourism-festival-1",
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Subhash Mela",
+     "local_name": "Subhash Mela",
+     "kind": "cultural",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-23",
+     "date_2027": "2027-01-23",
+     "significance": "Netaji's birth anniversary fair; Netaji hoisted flag at Port Blair",
+     "buys": "handicrafts, food stalls",
+     "categories": [
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Local fair, offline",
+     "sources": [
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Pongal",
+     "local_name": "Pongal",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-15",
+     "date_2027": "2027-01-15",
+     "significance": "Celebrated by sizeable Tamil community",
+     "buys": "new clothes, pots, groceries",
+     "categories": [
+      "ethnic",
+      "kitchen",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Community festival; orders flown from Chennai",
+     "sources": [
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Republic Day",
+     "local_name": "",
+     "kind": "national",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-26",
+     "date_2027": "2027-01-26",
+     "significance": "National holiday; pan-India Republic Day sales",
+     "buys": "phones, electronics, appliances",
+     "categories": [
+      "phones",
+      "electronics",
+      "appliances"
+     ],
+     "impact": "medium",
+     "impact_reason": "Platform sales reach Port Blair via air-cargo",
+     "sources": [
+      "https://trends.shiprocket.in/andamannicobarislands/all/all/last3months"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Holi",
+     "local_name": "Holi",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-04",
+     "date_2027": "2027-03-22",
+     "significance": "Celebrated by Hindi/Bengali settler communities",
+     "buys": "colours, white clothes, sweets",
+     "categories": [
+      "sweets",
+      "fashion",
+      "toys"
+     ],
+     "impact": "low",
+     "impact_reason": "Small community",
+     "sources": [
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid al-Fitr",
+     "local_name": "Eid",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-20",
+     "date_2027": "2027-03-10",
+     "significance": "Celebrated in Muslim quarters",
+     "buys": "new clothes, attar, dates",
+     "categories": [
+      "fashion",
+      "beauty",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Perfumes are top online product in A&N (Shiprocket)",
+     "sources": [
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/",
+      "https://trends.shiprocket.in/andamannicobarislands/all/all/last3months"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Bengali New Year",
+     "local_name": "Poila Boishakh",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-15",
+     "date_2027": null,
+     "significance": "Bengalis are the largest community",
+     "buys": "new clothes, sweets, puja items",
+     "categories": [
+      "ethnic",
+      "sweets",
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Mostly offline community celebration",
+     "sources": [
+      "https://utsav.gov.in/view-event/durga-puja-festival-1"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Vishu / Tamil New Year",
+     "local_name": "Vishu / Puthandu",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-14..2026-04-15",
+     "date_2027": "2027-04-14..2027-04-15",
+     "significance": "Malayali and Tamil settler new years",
+     "buys": "new clothes, gold, puja items",
+     "categories": [
+      "ethnic",
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Small communities",
+     "sources": [
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Bakrid",
+     "local_name": "Bakrid",
+     "kind": "religious",
+     "months": [
+      5
+     ],
+     "date_2026": "2026-05-27",
+     "date_2027": "2027-05-17",
+     "significance": "Eid al-Adha",
+     "buys": "clothes, meat, spices",
+     "categories": [
+      "fashion",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Small community",
+     "sources": [
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Independence Day",
+     "local_name": "",
+     "kind": "national",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-15",
+     "date_2027": "2027-08-15",
+     "significance": "National holiday; Freedom sales online",
+     "buys": "phones, electronics, fashion",
+     "categories": [
+      "phones",
+      "electronics",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "National sale events; peak order month Sep on Shiprocket",
+     "sources": [
+      "https://trends.shiprocket.in/andamannicobarislands/all/all/last3months"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Onam",
+     "local_name": "Onam",
+     "kind": "harvest",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-08-26",
+     "date_2027": "2027-09-12",
+     "significance": "Malayali community festival",
+     "buys": "kasavu sarees, sadya groceries",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Small community",
+     "sources": [
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Ganesh Chaturthi",
+     "local_name": "Ganesh Chaturthi",
+     "kind": "religious",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": "2027-09-04",
+     "significance": "Public pandals by Maharashtrian/Telugu/Tamil settlers",
+     "buys": "idols, puja kits, decor",
+     "categories": [
+      "puja",
+      "homedecor"
+     ],
+     "impact": "low",
+     "impact_reason": "Modest",
+     "sources": [
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/",
+      "https://www.officeholidays.com/countries/india/2027"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Durga Puja",
+     "local_name": "Durga Puja",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-17..2026-10-21",
+     "date_2027": "2027-10-05..2027-10-09",
+     "significance": "Biggest festival; grand pandals in Port Blair (Junglighat, Haddo)",
+     "buys": "new clothes, sarees, cosmetics, footwear, jewellery, phones",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "beauty",
+      "footwear",
+      "jewellery",
+      "phones",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "Biggest shopping window; coincides with national festive sales; Sep-Oct peak order months",
+     "sources": [
+      "https://utsav.gov.in/view-event/durga-puja-festival-1",
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/",
+      "https://trends.shiprocket.in/andamannicobarislands/all/all/last3months"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Diwali and Kali Puja",
+     "local_name": "Deepavali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Lights festival; Kali Puja by Bengalis",
+     "buys": "lights, sweets, phones, appliances, gifts",
+     "categories": [
+      "homedecor",
+      "sweets",
+      "phones",
+      "appliances",
+      "electronics",
+      "gifting"
+     ],
+     "impact": "high",
+     "impact_reason": "National festive sales; COD 61% of A&N orders (Shiprocket)",
+     "sources": [
+      "https://www.officeholidays.com/countries/india/2027",
+      "https://trends.shiprocket.in/andamannicobarislands/all/all/last3months"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Chhath Puja",
+     "local_name": "Chhath",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Observed by Bihari/UP settler families",
+     "buys": "puja items, sarees, fruits",
+     "categories": [
+      "puja",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Small community; date unverified",
+     "sources": [
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Christmas and New Year",
+     "local_name": "",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Huge in Nicobar/Car Nicobar (mostly Christian)",
+     "buys": "decor, cakes, clothes, gifts",
+     "categories": [
+      "homedecor",
+      "gifting",
+      "fashion",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Major festival for Nicobarese; tourism peak in Andaman",
+     "sources": [
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Nicobari Ossuary (Pig) Feast",
+     "local_name": "Kana Ruka",
+     "kind": "tribal",
+     "months": [],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Nicobarese tribal feast honouring ancestors; Hodi canoe races",
+     "buys": "pigs, food, traditional items",
+     "categories": [
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Tribal, restricted area; no e-commerce relevance",
+     "sources": [
+      "https://traveltriangle.com/blog/festivals-of-andaman-and-nicobar-islands/"
+     ],
+     "confidence": "low"
+    }
+   ]
+  }
+ ]
+}

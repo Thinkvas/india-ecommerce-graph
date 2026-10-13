@@ -1,0 +1,1773 @@
+{
+ "group": "g9",
+ "states": [
+  {
+   "id": "manipur",
+   "name": "Manipur",
+   "languages": [
+    "Meiteilon (Manipuri)",
+    "Thadou-Kuki",
+    "Tangkhul",
+    "Hmar",
+    "Paite",
+    "English",
+    "Hindi"
+   ],
+   "top_cities": [
+    "Imphal",
+    "Thoubal",
+    "Churachandpur",
+    "Bishnupur",
+    "Ukhrul"
+   ],
+   "culture": "Meitei Vaishnavite valley plus Naga and Kuki-Zo hill tribes; strong handloom (phanek, innaphi) and women-run Ima Keithel market culture; fish and feasts central to festivals.",
+   "ecommerce": "Ethnic conflict since May 2023 and a ~212-day internet shutdown in 2023 badly disrupted online orders and local sellers; Flipkart names Bishnupur among remote delivery points; NE region growing 35-40% YoY for Flipkart.",
+   "ecommerce_sources": [
+    "https://restofworld.org/2024/manipur-internet-blackout-startups/",
+    "https://www.indianretailer.com/news/flipkart-expands-warehouses-and-seller-network-northeast-festive-growth"
+   ],
+   "festivals": [
+    {
+     "name": "Yaoshang",
+     "local_name": "Yaosang",
+     "kind": "religious",
+     "months": [
+      2,
+      3
+     ],
+     "date_2026": "2026-03-03..2026-03-07",
+     "date_2027": "2027-03-22..2027-03-26",
+     "significance": "Premier five-day Meitei festival from Phalguna full moon, Thabal Chongba dances; aligned with Holi/Doljatra",
+     "buys": "colours, new clothes, phanek, sports gear for Yaoshang games, food, sweets",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "sports",
+      "grocery",
+      "sweets",
+      "puja"
+     ],
+     "impact": "medium",
+     "impact_reason": "Biggest Meitei festival; spend mostly local/offline but apparel and sports-gear demand rises; 2027 date estimated from Holi",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/",
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Cheiraoba (Sajibu Nongma Panba)",
+     "local_name": "Sajibu Cheiraoba",
+     "kind": "new_year",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-19",
+     "date_2027": null,
+     "significance": "Meitei lunar New Year; homes cleaned, special dishes offered to deities, hill climbing",
+     "buys": "home cleaning items, new utensils, groceries, fruits, new clothes",
+     "categories": [
+      "grocery",
+      "kitchen",
+      "homedecor",
+      "fashion",
+      "puja"
+     ],
+     "impact": "medium",
+     "impact_reason": "New-year home refresh and kitchenware purchases; holiday list also marks Apr 14 Cheiraoba",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/",
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Ningol Chakouba",
+     "kind": "cultural",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-11",
+     "date_2027": null,
+     "significance": "Married daughters return to parental home for feast and receive gifts from brothers; observed by Meiteis and Meitei Pangals",
+     "buys": "gifts for sisters, sarees/phanek, cosmetics, fish, fruits, sweets, cash gifts",
+     "categories": [
+      "gifting",
+      "ethnic",
+      "fashion",
+      "beauty",
+      "grocery",
+      "sweets",
+      "jewellery"
+     ],
+     "impact": "high",
+     "impact_reason": "Manipur's key gifting occasion; Imphal markets congested before it; strong fit for gifting/fashion campaigns",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/",
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/",
+      "https://nenow.in/north-east-news/manipur/manipur-imphal-witnesses-hustle-bustle-ningol-chakouba.html"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Lui-Ngai-Ni",
+     "kind": "tribal",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-15",
+     "date_2027": "2027-02-15",
+     "significance": "Collective Naga seed-sowing festival marking start of cultivation",
+     "buys": "traditional attire, shawls, food, agri inputs",
+     "categories": [
+      "ethnic",
+      "agri",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Cultural gathering; limited online spend",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/",
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kut (Chavang Kut)",
+     "kind": "harvest",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-01",
+     "date_2027": "2027-11-01",
+     "significance": "Autumn harvest festival of Kuki-Chin-Mizo tribes with dances, feasts, beauty pageants",
+     "buys": "new clothes, traditional shawls, food, party wear",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "grocery",
+      "beauty"
+     ],
+     "impact": "medium",
+     "impact_reason": "Fixed state holiday close to Diwali sales window; apparel demand in hill districts",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/",
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Gaan-Ngai",
+     "local_name": "Gang-Ngai",
+     "kind": "tribal",
+     "months": [
+      12,
+      1
+     ],
+     "date_2026": "2026-01-01",
+     "date_2027": null,
+     "significance": "Five-day post-harvest festival of Zeliangrong/Kabui (Rongmei) Nagas",
+     "buys": "traditional attire, food, gifts",
+     "categories": [
+      "ethnic",
+      "grocery",
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Community feasting; modest spend",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/",
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Kang (Rath Yatra)",
+     "local_name": "Kang Chingba",
+     "kind": "religious",
+     "months": [
+      6,
+      7
+     ],
+     "date_2026": "2026-07-16",
+     "date_2027": null,
+     "significance": "Ten-day Manipuri Rath Yatra with Jagannath chariot processions and Khubak Eshei",
+     "buys": "puja items, lamps, fruits, new clothes",
+     "categories": [
+      "puja",
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Devotional; mostly offline puja spend",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/",
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Heikru Hidongba",
+     "kind": "cultural",
+     "months": [
+      9
+     ],
+     "date_2026": "2026-09-22",
+     "date_2027": null,
+     "significance": "Traditional long-boat race at Bijoy Govinda moat with Vishnu idol installation",
+     "buys": "food, traditional wear",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Spectacle event; negligible online impact",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/",
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Durga Puja / Kwak Jatra",
+     "kind": "religious",
+     "months": [
+      9,
+      10
+     ],
+     "date_2026": "2026-10-17..2026-10-21",
+     "date_2027": "2027-10-05..2027-10-09",
+     "significance": "Durga Puja with Bor Numit (Ashtami) and Kwak Jatra (Dussehra) in Manipur",
+     "buys": "new clothes, puja items, sweets, gifts, electronics",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "puja",
+      "sweets",
+      "electronics",
+      "phones"
+     ],
+     "impact": "high",
+     "impact_reason": "Overlaps national Big Billion Days/Great Indian Festival window",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Diwali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-08..2026-11-10",
+     "date_2027": "2027-10-29",
+     "significance": "Festival of lights; Diwali and Govardhan Puja are holidays in Manipur",
+     "buys": "lamps, lights, sweets, gifts, electronics, home decor",
+     "categories": [
+      "homedecor",
+      "sweets",
+      "gifting",
+      "electronics",
+      "puja",
+      "appliances"
+     ],
+     "impact": "high",
+     "impact_reason": "Peak national e-commerce sale period",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Christmas",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-24..2026-12-26",
+     "date_2027": "2027-12-24..2027-12-26",
+     "significance": "Major festival for hill-district Christian Naga and Kuki-Zo communities",
+     "buys": "new clothes, winter wear, decor, gifts, cakes, feast meat",
+     "categories": [
+      "fashion",
+      "winter",
+      "homedecor",
+      "gifting",
+      "grocery",
+      "footwear"
+     ],
+     "impact": "high",
+     "impact_reason": "Christian ~41% of population; hill districts shop heavily for apparel/winter wear",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/",
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Chumpha",
+     "kind": "harvest",
+     "months": [
+      12
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Seven-day post-harvest festival of Tangkhul (Rangkhul) Nagas, Ukhrul",
+     "buys": "food, traditional attire",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Local community celebration",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Sangai Festival",
+     "kind": "fair",
+     "months": [
+      11
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "State tourism festival in Imphal showcasing handloom, crafts, food and culture",
+     "buys": "handloom, handicrafts, food, souvenirs",
+     "categories": [
+      "ethnic",
+      "gifting",
+      "homedecor"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism fair; held 21-30 Nov in past editions; disrupted in conflict years",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Eid-ul-Fitr",
+     "local_name": "Ramjan Id",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "Most popular festival of Manipuri Muslims (Meitei Pangal)",
+     "buys": "new clothes, attar, dates, sweets, gifts",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "grocery",
+      "sweets",
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Small community (~8%); local spend",
+     "sources": [
+      "https://manipurtourism.gov.in/festivals-of-manipur/",
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Saraswati Puja",
+     "kind": "religious",
+     "months": [
+      1,
+      2
+     ],
+     "date_2026": "2026-01-23",
+     "date_2027": null,
+     "significance": "Worship of goddess of learning by students",
+     "buys": "books, stationery, puja items, new clothes",
+     "categories": [
+      "stationery",
+      "puja",
+      "schoolgear"
+     ],
+     "impact": "low",
+     "impact_reason": "Student-centric minor spend",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Makara Sankranti",
+     "kind": "harvest",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14",
+     "date_2027": "2027-01-14",
+     "significance": "Uttarayan harvest observance in Manipur holiday calendar",
+     "buys": "food, puja items",
+     "categories": [
+      "grocery",
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Minor",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Hun-Thadou Cultural Festival",
+     "kind": "tribal",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-07",
+     "date_2027": null,
+     "significance": "Thadou-Kuki cultural festival listed as state holiday",
+     "buys": "traditional wear, food",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Zomi Namni",
+     "kind": "tribal",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-20",
+     "date_2027": null,
+     "significance": "Zomi national day listed as Manipur holiday",
+     "buys": "traditional wear, food",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Janmashtami",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-04",
+     "date_2027": null,
+     "significance": "Krishna's birth, important for Meitei Vaishnavites",
+     "buys": "puja items, sweets, ethnic wear",
+     "categories": [
+      "puja",
+      "sweets",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Devotional, offline spend",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "New Year",
+     "kind": "cultural",
+     "months": [
+      12,
+      1
+     ],
+     "date_2026": "2026-12-31..2027-01-01",
+     "date_2027": "2027-12-31..2028-01-01",
+     "significance": "New Year Eve/Day, also coincides with Gaan-Ngai",
+     "buys": "party wear, food, gifts",
+     "categories": [
+      "fashion",
+      "grocery",
+      "gifting",
+      "winter"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end sale tail",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
+     ],
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "id": "mizoram",
+   "name": "Mizoram",
+   "languages": [
+    "Mizo",
+    "English",
+    "Hindi",
+    "Chakma",
+    "Mara",
+    "Lai"
+   ],
+   "top_cities": [
+    "Aizawl",
+    "Lunglei",
+    "Champhai",
+    "Kolasib",
+    "Serchhip"
+   ],
+   "culture": "Christian-majority Mizo society; Christmas/New Year is the annual shopping peak, with rural families travelling to Aizawl; strong taste for branded and imported (Myanmar/Thai) fashion.",
+   "ecommerce": "Amazon added delivery stations in Champhai and Kolasib (2020) to reach remote NE towns; Aizawl traders say sales rise sharply from first week of December; NE region growing 35-40% YoY for Flipkart.",
+   "ecommerce_sources": [
+    "https://www.aboutamazon.in/news/operations/amazon-india-deepens-its-reach-in-the-north-east-ahead-of-the-festive-season",
+    "https://www.easternmirrornagaland.com/aizawl-abuzz-with-christmas-shoppers",
+    "https://www.indianretailer.com/news/flipkart-expands-warehouses-and-seller-network-northeast-festive-growth"
+   ],
+   "festivals": [
+    {
+     "name": "Christmas",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-24..2026-12-26",
+     "date_2027": "2027-12-24..2027-12-26",
+     "significance": "Biggest festival; 3-day state holiday, churches and streets decorated, community feast on 26th",
+     "buys": "branded clothes, leather jackets, sweaters, jeans, boots, decor lights, trees, gifts, phones",
+     "categories": [
+      "fashion",
+      "winter",
+      "footwear",
+      "homedecor",
+      "gifting",
+      "phones",
+      "electronics",
+      "beauty",
+      "grocery"
+     ],
+     "impact": "high",
+     "impact_reason": "Annual shopping peak; Aizawl declares no-vehicle zones for shoppers; clothing sales jump from early Dec",
+     "sources": [
+      "https://www.easternmirrornagaland.com/aizawl-abuzz-with-christmas-shoppers",
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "New Year",
+     "kind": "cultural",
+     "months": [
+      12,
+      1
+     ],
+     "date_2026": "2026-12-31..2027-01-02",
+     "date_2027": "2027-12-31..2028-01-02",
+     "significance": "New Year Eve, Day and a further celebration day are all state holidays",
+     "buys": "party wear, food, gifts, gadgets",
+     "categories": [
+      "fashion",
+      "grocery",
+      "gifting",
+      "electronics",
+      "winter"
+     ],
+     "impact": "high",
+     "impact_reason": "Extends Christmas spend; 3 holidays",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Chapchar Kut",
+     "kind": "cultural",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-13",
+     "date_2027": null,
+     "significance": "Spring festival after jhum clearing; state-wide carnival with Cheraw bamboo dance",
+     "buys": "puan (traditional wraps), traditional attire, beauty products, food",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "beauty",
+      "grocery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Major state festival; traditional-attire demand; some lists show 2026-03-06",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/",
+      "https://pickyourtrail.com/blog/festivals-of-mizoram"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Mim Kut",
+     "kind": "harvest",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Maize harvest festival dedicated to departed souls, offerings of first produce",
+     "buys": "maize, bread, food, traditional items",
+     "categories": [
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Ceremonial, little retail spend",
+     "sources": [
+      "https://pickyourtrail.com/blog/festivals-of-mizoram"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Pawl Kut",
+     "kind": "harvest",
+     "months": [
+      12
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Post-harvest thanksgiving feast; now largely merged with Christmas season",
+     "buys": "meat, eggs, feast food, clothes",
+     "categories": [
+      "grocery",
+      "fashion"
+     ],
+     "impact": "low",
+     "impact_reason": "Overlaps Christmas spend",
+     "sources": [
+      "https://pickyourtrail.com/blog/festivals-of-mizoram"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Thalfavang Kut",
+     "kind": "harvest",
+     "months": [
+      11
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Festival after completion of weeding of jhum fields, revived as cultural event",
+     "buys": "traditional attire, food",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Cultural revival event",
+     "sources": [
+      "https://www.veenaworld.com/blog/festivals-in-mizoram"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Easter",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-04-03..2026-04-05",
+     "date_2027": "2027-03-26..2027-03-28",
+     "significance": "Good Friday and Easter observed by Christian majority",
+     "buys": "new clothes, church wear, food",
+     "categories": [
+      "fashion",
+      "grocery",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Church dress-up occasion",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Missionary Day",
+     "kind": "cultural",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-11",
+     "date_2027": "2027-01-11",
+     "significance": "Commemorates arrival of first Christian missionaries (1894)",
+     "buys": "food, church events",
+     "categories": [
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Observance, minor spend",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "State Day",
+     "kind": "national",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-20",
+     "date_2027": "2027-02-20",
+     "significance": "Mizoram statehood day (1987)",
+     "buys": "food, events",
+     "categories": [
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Civic holiday",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "YMA Day",
+     "kind": "cultural",
+     "months": [
+      6
+     ],
+     "date_2026": "2026-06-15",
+     "date_2027": "2027-06-15",
+     "significance": "Founding day of Young Mizo Association",
+     "buys": "community events",
+     "categories": [
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Civic",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Remna Ni",
+     "kind": "cultural",
+     "months": [
+      6
+     ],
+     "date_2026": "2026-06-30",
+     "date_2027": "2027-06-30",
+     "significance": "Peace Day marking 1986 Mizo Peace Accord",
+     "buys": "food",
+     "categories": [
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Civic",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "MHIP Day",
+     "kind": "cultural",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-06",
+     "date_2027": "2027-07-06",
+     "significance": "Foundation day of Mizo women's organisation",
+     "buys": "community events",
+     "categories": [
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Civic",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Anthurium Festival",
+     "kind": "fair",
+     "months": [
+      9
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Tourism festival at Reiek showcasing anthurium flowers, Mizo culture and food",
+     "buys": "flowers, handicrafts, food",
+     "categories": [
+      "homedecor",
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Tourism event",
+     "sources": [
+      "https://www.veenaworld.com/blog/festivals-in-mizoram"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Diwali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Observed by non-Mizo Hindu residents; state holiday",
+     "buys": "lights, sweets, electronics",
+     "categories": [
+      "electronics",
+      "homedecor",
+      "sweets",
+      "phones",
+      "appliances"
+     ],
+     "impact": "medium",
+     "impact_reason": "National sale window drives online gadget buying even without local festival",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Dussehra / Durga Puja",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-20",
+     "date_2027": "2027-10-09",
+     "significance": "Observed by Hindu migrants; holiday",
+     "buys": "puja items, clothes",
+     "categories": [
+      "puja",
+      "fashion"
+     ],
+     "impact": "low",
+     "impact_reason": "Small community; national sales still reach Mizoram",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/"
+     ],
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "id": "nagaland",
+   "name": "Nagaland",
+   "languages": [
+    "Nagamese",
+    "English",
+    "Ao",
+    "Angami",
+    "Konyak",
+    "Lotha",
+    "Sumi",
+    "Hindi"
+   ],
+   "top_cities": [
+    "Dimapur",
+    "Kohima",
+    "Mokokchung",
+    "Tuensang",
+    "Wokha"
+   ],
+   "culture": "16+ Naga tribes each with own harvest/seed festivals; ~88% Christian so Christmas is the shopping peak; Dimapur is the commercial hub with Hongkong Market and New Market.",
+   "ecommerce": "Flipkart lists Dimapur among remote delivery locations; Amazon added Mokokchung delivery station (2020); NE region growing 35-40% YoY for Flipkart; Kohima runs Christmas shopping carnivals.",
+   "ecommerce_sources": [
+    "https://www.indianretailer.com/news/flipkart-expands-warehouses-and-seller-network-northeast-festive-growth",
+    "https://www.aboutamazon.in/news/operations/amazon-india-deepens-its-reach-in-the-north-east-ahead-of-the-festive-season"
+   ],
+   "festivals": [
+    {
+     "name": "Hornbill Festival",
+     "kind": "fair",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-01..2026-12-10",
+     "date_2027": "2027-12-01..2027-12-10",
+     "significance": "'Festival of festivals' at Kisama near Kohima showcasing all Naga tribes; coincides with Statehood Day",
+     "buys": "travel, handicrafts, shawls, souvenirs, winter wear, food",
+     "categories": [
+      "travel",
+      "ethnic",
+      "gifting",
+      "winter",
+      "homedecor"
+     ],
+     "impact": "medium",
+     "impact_reason": "Big tourism inflow; drives travel bookings and craft sales; kicks off Dec shopping",
+     "sources": [
+      "https://www.timeout.com/india/news/everything-you-need-to-know-about-hornbill-festival-2026-at-kisama-in-nagaland-091626",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Christmas",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-24..2026-12-26",
+     "date_2027": "2027-12-24..2027-12-26",
+     "significance": "Biggest festival for Christian-majority Nagaland; carnivals, carols and feasts",
+     "buys": "garments, decor lights, gifts, winter wear, footwear, phones, cakes",
+     "categories": [
+      "fashion",
+      "winter",
+      "footwear",
+      "homedecor",
+      "gifting",
+      "phones",
+      "electronics",
+      "grocery"
+     ],
+     "impact": "high",
+     "impact_reason": "Dimapur markets packed for season sales; shops open Sundays in Dec",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-nagaland/holidays/2026/",
+      "https://www.easternmirrornagaland.com/dimapur-feels-heat-of-festive-season-too-amid-christmas-warmth"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "New Year",
+     "kind": "cultural",
+     "months": [
+      12,
+      1
+     ],
+     "date_2026": "2026-12-31..2027-01-01",
+     "date_2027": "2027-12-31..2028-01-01",
+     "significance": "New Year celebrations following Christmas",
+     "buys": "party wear, food, gifts",
+     "categories": [
+      "fashion",
+      "grocery",
+      "gifting",
+      "winter"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end sale tail",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-nagaland/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Sekrenyi",
+     "kind": "tribal",
+     "months": [
+      2
+     ],
+     "date_2026": "2026-02-25..2026-02-27",
+     "date_2027": "2027-02-25..2027-02-27",
+     "significance": "Angami purification festival (Phousanyi), Kohima region",
+     "buys": "traditional shawls, attire, meat, rice beer ingredients",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Community feasting",
+     "sources": [
+      "https://nagaland.gov.in/people-culture",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Moatsu",
+     "local_name": "Moatsu Mong",
+     "kind": "tribal",
+     "months": [
+      5
+     ],
+     "date_2026": "2026-05-01..2026-05-03",
+     "date_2027": "2027-05-01..2027-05-03",
+     "significance": "Ao post-sowing festival, Mokokchung",
+     "buys": "traditional attire, food",
+     "categories": [
+      "ethnic",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Community feasting",
+     "sources": [
+      "https://nagaland.gov.in/people-culture",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Aoleang",
+     "kind": "tribal",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-01..2026-04-06",
+     "date_2027": "2027-04-01..2027-04-06",
+     "significance": "Konyak spring/new year festival, Mon district",
+     "buys": "traditional ornaments, attire, food",
+     "categories": [
+      "ethnic",
+      "grocery",
+      "jewellery"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event",
+     "sources": [
+      "https://nagaland.gov.in/people-culture",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Tuluni",
+     "kind": "tribal",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-08",
+     "date_2027": "2027-07-08",
+     "significance": "Sumi festival of abundance with feasting and gift exchange",
+     "buys": "food, gifts",
+     "categories": [
+      "grocery",
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Community feasting",
+     "sources": [
+      "https://nagaland.gov.in/people-culture",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Tokhu Emong",
+     "kind": "harvest",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-06..2026-11-07",
+     "date_2027": "2027-11-06..2027-11-07",
+     "significance": "Lotha post-harvest festival, Wokha",
+     "buys": "food, gifts, attire",
+     "categories": [
+      "grocery",
+      "ethnic",
+      "gifting"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event near Diwali sale window",
+     "sources": [
+      "https://nagaland.gov.in/people-culture",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Ngada",
+     "kind": "harvest",
+     "months": [
+      11
+     ],
+     "date_2026": "2026-11-27",
+     "date_2027": "2027-11-27",
+     "significance": "Rengma post-harvest thanksgiving festival",
+     "buys": "food, attire",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event",
+     "sources": [
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Sukhrunye",
+     "local_name": "Sokronye",
+     "kind": "tribal",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-15",
+     "date_2027": "2027-01-15",
+     "significance": "Chakhesang purification festival",
+     "buys": "food, attire",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event",
+     "sources": [
+      "https://nagaland.gov.in/people-culture",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Naknyulem",
+     "kind": "tribal",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-31",
+     "date_2027": "2027-07-31",
+     "significance": "Chang tribe festival, Tuensang",
+     "buys": "food, attire",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event",
+     "sources": [
+      "https://nagaland.gov.in/people-culture",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Yemshe",
+     "kind": "harvest",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-05",
+     "date_2027": "2027-10-05",
+     "significance": "Pochury harvest festival, Phek district",
+     "buys": "food, attire",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event",
+     "sources": [
+      "https://nagaland.gov.in/people-culture",
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Monyu",
+     "kind": "tribal",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-01..2026-04-06",
+     "date_2027": null,
+     "significance": "Phom festival marking end of winter, Longleng",
+     "buys": "food, attire",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event",
+     "sources": [
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Mungmung",
+     "kind": "tribal",
+     "months": [
+      9
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Sangtam festival, first week of September",
+     "buys": "food, attire",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event",
+     "sources": [
+      "https://en.wikipedia.org/wiki/List_of_traditional_Naga_festivals"
+     ],
+     "confidence": "low"
+    },
+    {
+     "name": "Easter",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-04-03..2026-04-05",
+     "date_2027": "2027-03-26..2027-03-28",
+     "significance": "Good Friday to Easter Sunday, all state holidays",
+     "buys": "church wear, food, gifts",
+     "categories": [
+      "fashion",
+      "grocery",
+      "gifting"
+     ],
+     "impact": "medium",
+     "impact_reason": "Christian majority; dress-up occasion",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-nagaland/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Diwali",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-08",
+     "date_2027": "2027-10-29",
+     "significance": "Observed by Hindu residents, especially Dimapur",
+     "buys": "lights, sweets, electronics",
+     "categories": [
+      "electronics",
+      "homedecor",
+      "sweets",
+      "phones",
+      "appliances"
+     ],
+     "impact": "medium",
+     "impact_reason": "Coincides with national online sales; Dimapur business community",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-nagaland/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Durga Puja / Dussehra",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-17..2026-10-21",
+     "date_2027": "2027-10-05..2027-10-09",
+     "significance": "Celebrated by Bengali/Hindu communities in Dimapur",
+     "buys": "clothes, puja items",
+     "categories": [
+      "fashion",
+      "puja",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Minority community; national sale window",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-nagaland/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "id": "tripura",
+   "name": "Tripura",
+   "languages": [
+    "Bengali",
+    "Kokborok",
+    "English",
+    "Hindi",
+    "Chakma",
+    "Mog"
+   ],
+   "top_cities": [
+    "Agartala",
+    "Udaipur",
+    "Dharmanagar",
+    "Kailashahar",
+    "Belonia"
+   ],
+   "culture": "Bengali-majority (~two-thirds) with Tripuri and other tribes; Durga Puja is the dominant shopping season like West Bengal; tribal Garia/Kharchi/Ker are state holidays.",
+   "ecommerce": "Flipkart opened a grocery fulfilment centre in Agartala able to dispatch 5,000 orders/day (2025); NE is Flipkart's fastest-growing region at 35-40% YoY.",
+   "ecommerce_sources": [
+    "https://www.indianretailer.com/news/flipkart-expands-warehouses-and-seller-network-northeast-festive-growth"
+   ],
+   "festivals": [
+    {
+     "name": "Durga Puja",
+     "kind": "religious",
+     "months": [
+      9,
+      10
+     ],
+     "date_2026": "2026-10-17..2026-10-21",
+     "date_2027": "2027-10-05..2027-10-09",
+     "significance": "Biggest festival; Agartala pandals, Ashtami/Navami/Dashami state holidays",
+     "buys": "sarees, new clothes for family, footwear, cosmetics, jewellery, electronics, puja items",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "footwear",
+      "beauty",
+      "jewellery",
+      "electronics",
+      "phones",
+      "puja",
+      "sweets"
+     ],
+     "impact": "high",
+     "impact_reason": "Bengali majority; coincides with Big Billion Days/Great Indian Festival",
+     "sources": [
+      "https://tripura.gov.in/fairs-and-festivals",
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Mahalaya",
+     "kind": "religious",
+     "months": [
+      9,
+      10
+     ],
+     "date_2026": "2026-10-10",
+     "date_2027": null,
+     "significance": "Start of Devi Paksha; marks Puja shopping countdown",
+     "buys": "clothes, puja items",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "puja"
+     ],
+     "impact": "medium",
+     "impact_reason": "Puja shopping peaks around it",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Lakshmi Puja",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": "2026-10-25",
+     "date_2027": null,
+     "significance": "Kojagari Lakshmi Puja in homes; Hojagiri dance by Reang community",
+     "buys": "idols, puja items, fruits, sweets, kitchenware",
+     "categories": [
+      "puja",
+      "grocery",
+      "sweets",
+      "kitchen"
+     ],
+     "impact": "medium",
+     "impact_reason": "Household puja purchases; holiday plus compensatory day",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/",
+      "https://nenow.in/?p=57939"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Diwali / Kali Puja",
+     "kind": "religious",
+     "months": [
+      10,
+      11
+     ],
+     "date_2026": "2026-11-08..2026-11-09",
+     "date_2027": "2027-10-29",
+     "significance": "Kali Puja and Diwali with big mela at Tripurasundari temple, Udaipur",
+     "buys": "lamps, lights, crackers, sweets, electronics, gold",
+     "categories": [
+      "homedecor",
+      "electronics",
+      "sweets",
+      "puja",
+      "jewellery",
+      "appliances"
+     ],
+     "impact": "high",
+     "impact_reason": "National online sale peak",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/",
+      "https://www.thestatesman.com/features/festivals-of-tripura-remind-us-of-rootedness-1503550301.html"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Kharchi Puja",
+     "kind": "religious",
+     "months": [
+      7
+     ],
+     "date_2026": "2026-07-21",
+     "date_2027": null,
+     "significance": "Week-long worship of Fourteen Gods at Chaturdasha Devata temple, Khayerpur",
+     "buys": "puja items, new clothes, fair goods",
+     "categories": [
+      "puja",
+      "ethnic",
+      "fashion"
+     ],
+     "impact": "medium",
+     "impact_reason": "State-sponsored week-long fair; offline mela spend",
+     "sources": [
+      "https://tripura.gov.in/fairs-and-festivals",
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Garia Puja",
+     "kind": "tribal",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-21",
+     "date_2027": "2027-04-21",
+     "significance": "Tripuri household-deity festival on 7th Baisakh with Garia dance",
+     "buys": "rignai/risa attire, food, puja items",
+     "categories": [
+      "ethnic",
+      "grocery",
+      "puja"
+     ],
+     "impact": "medium",
+     "impact_reason": "Major tribal festival; state holiday",
+     "sources": [
+      "https://tripura.gov.in/fairs-and-festivals",
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Ker Puja",
+     "kind": "tribal",
+     "months": [
+      8
+     ],
+     "date_2026": "2026-08-07",
+     "date_2027": null,
+     "significance": "Tripuri protective ritual about two weeks after Kharchi",
+     "buys": "puja items",
+     "categories": [
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Ritual with restrictions on movement",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Bengali New Year",
+     "local_name": "Pohela Boishakh",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-15",
+     "date_2027": "2027-04-15",
+     "significance": "Pohela Boishakh; traders open new ledgers (haal khata)",
+     "buys": "new clothes, sweets, gifts, ledgers",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "sweets",
+      "gifting",
+      "stationery"
+     ],
+     "impact": "medium",
+     "impact_reason": "New-year clothing and sweets demand",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Bizu",
+     "local_name": "Bijhu",
+     "kind": "new_year",
+     "months": [
+      4
+     ],
+     "date_2026": "2026-04-13..2026-04-15",
+     "date_2027": "2027-04-13..2027-04-15",
+     "significance": "Chakma new year/harvest festival on last day of Chaitra",
+     "buys": "food, new clothes",
+     "categories": [
+      "grocery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Community event",
+     "sources": [
+      "https://tripura.gov.in/fairs-and-festivals",
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Pous Sankranti / Tirthamukh Mela",
+     "kind": "fair",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-14",
+     "date_2027": "2027-01-14",
+     "significance": "Holy dip and fair at Tirthamukh; Pithe sweets in Bengali homes",
+     "buys": "pithe ingredients, winter wear, fair goods",
+     "categories": [
+      "grocery",
+      "sweets",
+      "winter"
+     ],
+     "impact": "low",
+     "impact_reason": "Offline fair",
+     "sources": [
+      "https://tripura.gov.in/fairs-and-festivals",
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Saraswati Puja",
+     "kind": "religious",
+     "months": [
+      1,
+      2
+     ],
+     "date_2026": "2026-01-23",
+     "date_2027": null,
+     "significance": "Students' festival; yellow attire, school/college pandals",
+     "buys": "yellow sarees, panjabi, stationery, idols",
+     "categories": [
+      "ethnic",
+      "fashion",
+      "stationery",
+      "puja"
+     ],
+     "impact": "medium",
+     "impact_reason": "Youth fashion spike among Bengalis",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Doljatra / Holi",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-03..2026-03-04",
+     "date_2027": "2027-03-22",
+     "significance": "Bengali Dol Purnima and Holi",
+     "buys": "colours, white clothes, sweets",
+     "categories": [
+      "fashion",
+      "sweets",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Minor online spend",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Buddha Purnima",
+     "kind": "religious",
+     "months": [
+      4,
+      5
+     ],
+     "date_2026": "2026-05-01",
+     "date_2027": "2027-05-20",
+     "significance": "Celebrated by Buddhists at Venuban Vihar, Agartala",
+     "buys": "puja items, candles",
+     "categories": [
+      "puja"
+     ],
+     "impact": "low",
+     "impact_reason": "Small community",
+     "sources": [
+      "https://tripura.gov.in/fairs-and-festivals",
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Owa",
+     "kind": "religious",
+     "months": [
+      10
+     ],
+     "date_2026": null,
+     "date_2027": null,
+     "significance": "Mog Buddhist festival on Ashwin full moon, floating paper boats and candles",
+     "buys": "candles, lanterns",
+     "categories": [
+      "puja",
+      "homedecor"
+     ],
+     "impact": "low",
+     "impact_reason": "Small community",
+     "sources": [
+      "https://tripura.gov.in/fairs-and-festivals"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Eid-ul-Fitr",
+     "kind": "religious",
+     "months": [
+      3
+     ],
+     "date_2026": "2026-03-21",
+     "date_2027": "2027-03-10",
+     "significance": "Celebrated by Muslim minority (~9%)",
+     "buys": "new clothes, attar, sweets",
+     "categories": [
+      "fashion",
+      "ethnic",
+      "sweets",
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Minority community",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/",
+      "https://calendarific.com/holidays/2027/IN"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Christmas",
+     "kind": "religious",
+     "months": [
+      12
+     ],
+     "date_2026": "2026-12-25",
+     "date_2027": "2027-12-25",
+     "significance": "Celebrated by Christian tribes with shopping, cakes, decorations, lighting",
+     "buys": "cakes, decor, gifts, winter wear",
+     "categories": [
+      "homedecor",
+      "gifting",
+      "winter",
+      "sweets"
+     ],
+     "impact": "medium",
+     "impact_reason": "Year-end sales plus winter wear demand",
+     "sources": [
+      "https://tripura.gov.in/fairs-and-festivals",
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Rabindra Jayanti",
+     "kind": "cultural",
+     "months": [
+      5
+     ],
+     "date_2026": "2026-05-09",
+     "date_2027": null,
+     "significance": "Tagore's birth anniversary, cultural programmes",
+     "buys": "books, ethnic wear",
+     "categories": [
+      "stationery",
+      "ethnic"
+     ],
+     "impact": "low",
+     "impact_reason": "Cultural",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Janmashtami",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-04",
+     "date_2027": null,
+     "significance": "Krishna's birth",
+     "buys": "puja items, sweets",
+     "categories": [
+      "puja",
+      "sweets"
+     ],
+     "impact": "low",
+     "impact_reason": "Devotional",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Tripura Statehood Day",
+     "kind": "national",
+     "months": [
+      1
+     ],
+     "date_2026": "2026-01-21",
+     "date_2027": "2027-01-21",
+     "significance": "Statehood day (1972)",
+     "buys": "events",
+     "categories": [
+      "grocery"
+     ],
+     "impact": "low",
+     "impact_reason": "Civic",
+     "sources": [
+      "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
+     ],
+     "confidence": "low"
+    }
+   ]
+  }
+ ]
+}
