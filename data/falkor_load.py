@@ -214,6 +214,7 @@ def main():
     rels = q("MATCH ()-[r]->() RETURN count(r)").result_set[0][0]
     print("loaded:", {l: c for l, c in stats}, "relationships:", rels, "festival-state links:", n_rel)
     export(g)
+    export_graph(g)
 
 
 def export(g):
@@ -248,6 +249,33 @@ def export(g):
                      "links": q("MATCH ()-[r]->() RETURN count(r)").result_set[0][0]}}
     (HERE / "webdata.json").write_text(json.dumps(blob, ensure_ascii=False, separators=(",", ":")))
     print("exported webdata.json:", blob["meta"])
+
+
+def export_graph(g):
+    """The raw knowledge graph straight out of FalkorDB (nodes + relationships), for the graph-over-map view."""
+    q = g.query
+    nodes, edges = [], []
+    for sid, name, share in q("MATCH (s:State) RETURN s.id, s.name, s.share").result_set:
+        nodes.append({"id": sid, "t": "State", "n": name, "sh": share or ""})
+    for fid, name, ms in q("MATCH (f:Festival) RETURN f.id, f.name, f.months").result_set:
+        nodes.append({"id": fid, "t": "Festival", "n": name, "m": ms or []})
+    for iid_, name, cat, gen, onl in q("MATCH (i:Item)-[:IS_A]->(p:Product) RETURN i.id, i.name, p.id, i.generic, i.online").result_set:
+        if not gen:
+            nodes.append({"id": "i_" + iid_, "t": "Item", "n": name, "c": cat, "o": onl})
+    for sgid, name, t, d, st, ms, nat in q("MATCH (s:Signal) RETURN s.id, s.name, s.type, s.direction, s.strength, s.months, s.national").result_set:
+        nodes.append({"id": sgid, "t": "Signal", "n": name, "st": t, "d": d, "s": st, "m": ms or [], "nat": bool(nat)})
+    for f, s, imp, ms, d26, its in q("""MATCH (f:Festival)-[c:CELEBRATED_IN]->(s:State)
+                                       RETURN f.id, s.id, c.impact, c.months, c.date_2026, c.items""").result_set:
+        edges.append({"s": f, "t": s, "r": "CELEBRATED_IN", "i": imp, "m": ms or [], "d": d26, "it": its or []})
+    for f, i, sts in q("MATCH (f:Festival)-[r:NEEDS]->(i:Item) WHERE NOT i.generic RETURN f.id, i.id, r.states").result_set:
+        edges.append({"s": f, "t": "i_" + i, "r": "NEEDS", "st": sts or []})
+    for sg, s in q("MATCH (sg:Signal)-[:AFFECTS]->(s:State) RETURN sg.id, s.id").result_set:
+        edges.append({"s": sg, "t": s, "r": "AFFECTS"})
+    for sg, rel, i in q("MATCH (sg:Signal)-[r:LIFTS_ITEM|CUTS_ITEM]->(i:Item) WHERE NOT i.generic RETURN sg.id, type(r), i.id").result_set:
+        edges.append({"s": sg, "t": "i_" + i, "r": rel})
+    out = {"source": "FalkorDB graph india_ecom", "nodes": nodes, "edges": edges}
+    (HERE / "kgraph.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")))
+    print("exported kgraph.json:", len(nodes), "nodes,", len(edges), "relationships")
 
 
 if __name__ == "__main__":

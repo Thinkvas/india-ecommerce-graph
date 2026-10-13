@@ -4,7 +4,7 @@ Interactive 3D demand map of Indian e-commerce: 36 states and UTs, 343 festivals
 
 Live: https://thinkvas.github.io/india-ecommerce-graph/
 
-Views: **3D map** (each state rises with its opportunity for the chosen month; click a festival or product to see where it matters), network, year wheel and 3D graph.
+Views: **Graph on map** (the FalkorDB knowledge graph in 3D over India: states on the map, festivals floating above the states that celebrate them, specific products above the festivals; click anything to light up its chain), network, year wheel and 3D graph. `data/kgraph.json` is the raw node/relationship export from FalkorDB that this view draws.
 
 Map boundaries: [Datameet](https://github.com/datameet/maps) state boundaries (States/Admin2), simplified by `data/geo_build.py`.
 
