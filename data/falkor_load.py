@@ -197,9 +197,10 @@ def main():
         sgid = "s_" + re.sub(r"[^a-z0-9]+", "_", sg["name"].lower()).strip("_") + f"_{i}"
         cats = sorted({CAT_FIX.get(c, c) for c in sg["categories"]} & set(PRODUCT))
         q("""CREATE (s:Signal {id:$id, name:$name, type:$t, direction:$d, strength:$st, items:$it, reason:$r,
-             national:$nat, months:$ms, src:$src})""",
+             national:$nat, months:$ms, src:$src, item_ids:$its})""",
           {"id": sgid, "name": sg["name"], "t": sg["type"], "d": sg["direction"], "st": sg["strength"], "it": sg.get("items", ""),
-           "r": sg.get("reason", ""), "nat": sg["scope"] == "all", "ms": sg["months"], "src": sg.get("src", "")})
+           "r": sg.get("reason", ""), "nat": sg["scope"] == "all", "ms": sg["months"], "src": sg.get("src", ""),
+           "its": items_of(sg.get("items"), "signal")})
         if sg["scope"] != "all":
             q("MATCH (s:Signal {id:$id}) UNWIND $st AS x MATCH (st:State {id:x}) CREATE (s)-[:AFFECTS]->(st)",
               {"id": sgid, "st": sg["scope"]})
@@ -237,7 +238,7 @@ def export(g):
             "MATCH (s:Signal) RETURN s.id, s.name, s.type, s.direction, s.strength, s.items, s.reason, s.national, s.months, s.src").result_set:
         states = [x[0] for x in q("MATCH (:Signal {id:$id})-[:AFFECTS]->(st:State) RETURN st.id", {"id": sid}).result_set]
         cats = [x[0] for x in q("MATCH (:Signal {id:$id})-[:LIFTS|CUTS]->(p:Product) RETURN p.id", {"id": sid}).result_set]
-        its = [x[0] for x in q("MATCH (:Signal {id:$id})-[:LIFTS_ITEM|CUTS_ITEM]->(i:Item) RETURN i.id", {"id": sid}).result_set]
+        its = q("MATCH (s:Signal {id:$id}) RETURN s.item_ids", {"id": sid}).result_set[0][0] or []   # keeps the researchers' order
         sigs.append({"it": its, "name": name, "type": t, "direction": d, "strength": st, "items": it, "reason": r,
                      "scope": "all" if nat else states, "months": ms, "categories": cats, "src": src})
     evidence = json.loads((HERE / "evidence.json").read_text())
