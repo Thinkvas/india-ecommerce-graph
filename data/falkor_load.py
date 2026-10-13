@@ -97,6 +97,25 @@ SLUG_FIX = {"f_sri_rama_navami": "f_ram_navami", "f_krishna_jayanthi": "f_janmas
 PER_STATE = {"f_state_day", "f_statehood_day", "f_formation_day"}   # generic names: keep one node per state
 
 
+# specific products (kites, rakhis, bonam pots...) from the merchandising taxonomy: raw "buys" phrase -> item ids
+PRODUCTS = json.loads((HERE / "deep" / "products.json").read_text()) if (HERE / "deep" / "products.json").exists() else {"items": {}, "map": {}}
+ITEMS, PMAP = PRODUCTS["items"], PRODUCTS["map"]
+
+
+# the same word means different things in festival lists vs demand signals
+OVERRIDE = {"festival": {"masks": ["carnival_mask"], "chura": ["poha_chura"]}, "signal": {"masks": ["n95_mask"]}}
+
+
+def items_of(text, kind="festival"):
+    out = []
+    for t in re.split(r",|;| and |/", text or ""):
+        t = t.strip().lower().strip(".")
+        for i in OVERRIDE[kind].get(t, PMAP.get(t, [])):
+            if i in ITEMS and i not in out:
+                out.append(i)
+    return out
+
+
 def months_of(f):
     ms = [int(m) for m in (f.get("months") or []) if 1 <= int(m) <= 12]
     return sorted(set(ms))
@@ -119,6 +138,9 @@ def main():
     q("UNWIND range(1,12) AS m CREATE (:Month {n:m, name:$names[m-1]})", {"names": MON})
     q("UNWIND $r AS r CREATE (:Region {id:r})", {"r": ["north", "west", "south", "east"]})
     q("UNWIND $p AS p CREATE (:Product {id:p.id, name:p.name})", {"p": [{"id": k, "name": v} for k, v in PRODUCT.items()]})
+    q("""UNWIND $p AS p MATCH (c:Product {id:p.cat})
+         CREATE (:Item {id:p.id, name:p.name, generic:p.generic, online:p.online})-[:IS_A]->(c)""",
+      {"p": [{"id": k, **v} for k, v in ITEMS.items() if v["cat"] in PRODUCT]})
     for s in ["CREATE INDEX FOR (n:State) ON (n.id)", "CREATE INDEX FOR (n:Festival) ON (n.id)",
               "CREATE INDEX FOR (n:Product) ON (n.id)", "CREATE INDEX FOR (n:Signal) ON (n.id)", "CREATE INDEX FOR (n:Source) ON (n.url)"]:
         try:
@@ -151,13 +173,16 @@ def main():
             q("""MERGE (fe:Festival {id:$fid}) ON CREATE SET fe.name=$name, fe.kind=$kind, fe.significance=$sig, fe.months=$ms
                  WITH fe MATCH (st:State {id:$sid})
                  CREATE (fe)-[:CELEBRATED_IN {impact:$imp, buys:$buys, reason:$why, date_2026:$d26, date_2027:$d27,
-                         confidence:$conf, local_name:$ln, months:$ms, categories:$cats, sources:$src}]->(st)""",
+                         confidence:$conf, local_name:$ln, months:$ms, categories:$cats, sources:$src, items:$its}]->(st)""",
               {"fid": fid, "name": fest_names[fid], "kind": f.get("kind", ""), "sig": f.get("significance", ""),
                "ms": months_of(f), "sid": sid, "imp": f.get("impact", "low"), "buys": f.get("buys", ""),
                "why": f.get("impact_reason", ""), "d26": f.get("date_2026"), "d27": f.get("date_2027"),
                "conf": f.get("confidence", ""), "ln": f.get("local_name", "") or "", "cats": cats,
-               "src": f.get("sources", [])[:3]})
+               "src": f.get("sources", [])[:3], "its": items_of(f.get("buys"))})
             n_rel += 1
+            q("""MATCH (fe:Festival {id:$fid}) UNWIND $its AS x MATCH (it:Item {id:x})
+                 MERGE (fe)-[r:NEEDS]->(it) ON CREATE SET r.states=[$sid] ON MATCH SET r.states=r.states+[$sid]""",
+              {"fid": fid, "its": items_of(f.get("buys")), "sid": sid})
             for c in cats:
                 q("MATCH (fe:Festival {id:$fid}),(p:Product {id:$c}) MERGE (fe)-[d:DRIVES]->(p)", {"fid": fid, "c": c})
             for m in months_of(f):
@@ -181,6 +206,8 @@ def main():
         rel = "CUTS" if sg["direction"] == "dip" else "LIFTS"
         q(f"MATCH (s:Signal {{id:$id}}) UNWIND $c AS x MATCH (p:Product {{id:x}}) CREATE (s)-[:{rel}]->(p)", {"id": sgid, "c": cats})
         q("MATCH (s:Signal {id:$id}) UNWIND $ms AS m MATCH (mo:Month {n:m}) CREATE (s)-[:IN_MONTH]->(mo)", {"id": sgid, "ms": sg["months"]})
+        q(f"MATCH (s:Signal {{id:$id}}) UNWIND $its AS x MATCH (it:Item {{id:x}}) CREATE (s)-[:{rel}_ITEM]->(it)",
+          {"id": sgid, "its": items_of(sg.get("items"), "signal")})
         if sg.get("src"):
             q("MATCH (s:Signal {id:$id}) MERGE (x:Source {url:$u}) CREATE (s)-[:CITES]->(x)", {"id": sgid, "u": sg["src"]})
     stats = q("MATCH (n) RETURN labels(n)[0] AS l, count(*) AS c ORDER BY c DESC").result_set
@@ -199,20 +226,23 @@ def export(g):
     for sid, name, reg, lang, cu, ec, srcs in rows:
         fes = q("""MATCH (fe:Festival)-[c:CELEBRATED_IN]->(:State {id:$id})
                    RETURN fe.id, fe.name, c.months, fe.significance, c.buys, c.categories, c.impact, c.reason, c.sources,
-                          c.date_2026, c.date_2027, c.confidence, fe.kind, c.local_name""", {"id": sid}).result_set
+                          c.date_2026, c.date_2027, c.confidence, fe.kind, c.local_name, c.items""", {"id": sid}).result_set
         out_states.append({"id": sid, "name": name, "r": reg, "l": lang, "cu": cu, "ec": ec, "es": (srcs or [""])[0],
                            "fe": [{"f": a, "n": b, "m": c or [], "s": d or "", "b": e or "", "c": f or [], "i": h or "low",
-                                   "o": i or "", "u": (j or [""])[0], "d26": k, "d27": l, "cf": m, "k": n, "ln": o}
-                                  for a, b, c, d, e, f, h, i, j, k, l, m, n, o in fes]})
+                                   "o": i or "", "u": (j or [""])[0], "d26": k, "d27": l, "cf": m, "k": n, "ln": o, "it": it or []}
+                                  for a, b, c, d, e, f, h, i, j, k, l, m, n, o, it in fes]})
     sigs = []
     for (sid, name, t, d, st, it, r, nat, ms, src) in q(
             "MATCH (s:Signal) RETURN s.id, s.name, s.type, s.direction, s.strength, s.items, s.reason, s.national, s.months, s.src").result_set:
         states = [x[0] for x in q("MATCH (:Signal {id:$id})-[:AFFECTS]->(st:State) RETURN st.id", {"id": sid}).result_set]
         cats = [x[0] for x in q("MATCH (:Signal {id:$id})-[:LIFTS|CUTS]->(p:Product) RETURN p.id", {"id": sid}).result_set]
-        sigs.append({"name": name, "type": t, "direction": d, "strength": st, "items": it, "reason": r,
+        its = [x[0] for x in q("MATCH (:Signal {id:$id})-[:LIFTS_ITEM|CUTS_ITEM]->(i:Item) RETURN i.id", {"id": sid}).result_set]
+        sigs.append({"it": its, "name": name, "type": t, "direction": d, "strength": st, "items": it, "reason": r,
                      "scope": "all" if nat else states, "months": ms, "categories": cats, "src": src})
     evidence = json.loads((HERE / "evidence.json").read_text())
-    blob = {"states": out_states, "evidence": evidence, "signals": sigs,
+    items = {i: {"n": n, "c": c, "g": bool(gn), "o": o} for i, n, c, gn, o in q(
+        "MATCH (i:Item)-[:IS_A]->(p:Product) RETURN i.id, i.name, p.id, i.generic, i.online").result_set}
+    blob = {"states": out_states, "evidence": evidence, "signals": sigs, "items": items,
             "meta": {"source": "FalkorDB graph india_ecom", "states": len(out_states),
                      "festivals": q("MATCH (f:Festival) RETURN count(f)").result_set[0][0],
                      "links": q("MATCH ()-[r]->() RETURN count(r)").result_set[0][0]}}

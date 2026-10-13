@@ -1,0 +1,4312 @@
+{
+ "items": {
+  "sweets_box": {
+   "name": "Mithai / sweet boxes",
+   "cat": "sweets",
+   "generic": false,
+   "online": "medium"
+  },
+  "gujiya": {
+   "name": "Gujiya and gujiya ingredients (khoya, maida)",
+   "cat": "sweets",
+   "generic": false,
+   "online": "medium"
+  },
+  "til_gud_sweets": {
+   "name": "Til-gud sweets (rewri, gajak, chikki, tilkut, til laddoo)",
+   "cat": "sweets",
+   "generic": false,
+   "online": "high"
+  },
+  "sewaiyan": {
+   "name": "Sewaiyan / vermicelli",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "ghevar": {
+   "name": "Ghevar",
+   "cat": "sweets",
+   "generic": false,
+   "online": "medium"
+  },
+  "modak": {
+   "name": "Modak and modak ingredients",
+   "cat": "sweets",
+   "generic": false,
+   "online": "medium"
+  },
+  "pitha_laru": {
+   "name": "Pitha and laru (Assamese/Bengali/Odia rice cakes and ladoos)",
+   "cat": "sweets",
+   "generic": false,
+   "online": "low"
+  },
+  "jaggery": {
+   "name": "Jaggery / gur (incl. nolen gur)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "cakes_bakery": {
+   "name": "Cakes and bakery",
+   "cat": "sweets",
+   "generic": false,
+   "online": "medium"
+  },
+  "plum_cake": {
+   "name": "Christmas plum cakes",
+   "cat": "sweets",
+   "generic": false,
+   "online": "high"
+  },
+  "chocolates": {
+   "name": "Chocolates and chocolate gift packs",
+   "cat": "sweets",
+   "generic": false,
+   "online": "high"
+  },
+  "regional_sweets": {
+   "name": "Regional festival sweets (puran poli, kuswar, khapse, ariselu, anarsa, jalebi)",
+   "cat": "sweets",
+   "generic": false,
+   "online": "medium"
+  },
+  "coconut_sweets": {
+   "name": "Coconut sweets (barfi, naru)",
+   "cat": "sweets",
+   "generic": false,
+   "online": "medium"
+  },
+  "diwali_faral": {
+   "name": "Faral snacks (chakli, chakkuli, unde, chivda)",
+   "cat": "sweets",
+   "generic": false,
+   "online": "medium"
+  },
+  "easter_eggs": {
+   "name": "Easter eggs (chocolate)",
+   "cat": "sweets",
+   "generic": false,
+   "online": "high"
+  },
+  "kheer_mix": {
+   "name": "Kheer and kheer mix",
+   "cat": "grocery",
+   "generic": false,
+   "online": "medium"
+  },
+  "prasad": {
+   "name": "Prasad / prasadam",
+   "cat": "puja",
+   "generic": false,
+   "online": "low"
+  },
+  "snacks_namkeen": {
+   "name": "Snacks, namkeen and papad",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "poha_chura": {
+   "name": "Poha / chura (flattened rice)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "sattu": {
+   "name": "Sattu / chhatua",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "makhana": {
+   "name": "Makhana (fox nuts)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "dates": {
+   "name": "Dates (khajoor)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "dry_fruits": {
+   "name": "Dry fruits (almonds, cashews, walnuts)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "dry_fruit_box": {
+   "name": "Dry fruit gift boxes",
+   "cat": "gifting",
+   "generic": false,
+   "online": "high"
+  },
+  "vrat_food": {
+   "name": "Vrat / fasting foods (sabudana, kuttu, fasting snacks)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "iftar_kit": {
+   "name": "Iftar foods and groceries",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "spices": {
+   "name": "Spices and masalas",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "rice_grains": {
+   "name": "Rice, dal, flour and grains",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "ghee_oil": {
+   "name": "Ghee, butter and cooking oil",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "dairy": {
+   "name": "Milk, dahi, chhena and dairy",
+   "cat": "grocery",
+   "generic": false,
+   "online": "medium"
+  },
+  "groceries": {
+   "name": "Grocery staples stock-up",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "langar_supplies": {
+   "name": "Langar groceries and supplies",
+   "cat": "grocery",
+   "generic": false,
+   "online": "medium"
+  },
+  "sadya_kit": {
+   "name": "Onam sadya groceries",
+   "cat": "grocery",
+   "generic": false,
+   "online": "medium"
+  },
+  "banana_leaves": {
+   "name": "Banana leaves",
+   "cat": "puja",
+   "generic": false,
+   "online": "low"
+  },
+  "newyear_drink_kit": {
+   "name": "New-year ritual ingredients (Ugadi pachadi, panakam, pana, neem)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "medium"
+  },
+  "festive_cooking_kit": {
+   "name": "Regional festive cooking ingredients (undhiyu, kuswar, pithe)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "medium"
+  },
+  "thekua_ingredients": {
+   "name": "Thekua ingredients (Chhath)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "medium"
+  },
+  "fruits_veg": {
+   "name": "Fresh fruits and vegetables",
+   "cat": "grocery",
+   "generic": false,
+   "online": "medium"
+  },
+  "mangoes": {
+   "name": "Mangoes (incl. Alphonso)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "sugarcane": {
+   "name": "Sugarcane",
+   "cat": "grocery",
+   "generic": false,
+   "online": "low"
+  },
+  "coconut": {
+   "name": "Coconuts",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "paan": {
+   "name": "Paan",
+   "cat": "grocery",
+   "generic": false,
+   "online": "low"
+  },
+  "beverages": {
+   "name": "Beverages and cold drinks",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "health_drink": {
+   "name": "Health drinks",
+   "cat": "health",
+   "generic": false,
+   "online": "high"
+  },
+  "liquor": {
+   "name": "Liquor and traditional brews (rice beer, feni, handia, wine)",
+   "cat": "grocery",
+   "generic": false,
+   "online": "low"
+  },
+  "barware": {
+   "name": "Barware and liquor accessories",
+   "cat": "kitchen",
+   "generic": false,
+   "online": "high"
+  },
+  "meat_fish": {
+   "name": "Meat, fish and eggs",
+   "cat": "grocery",
+   "generic": false,
+   "online": "low"
+  },
+  "food_delivery": {
+   "name": "Food delivery orders",
+   "cat": "grocery",
+   "generic": false,
+   "online": "high"
+  },
+  "food": {
+   "name": "Food (general)",
+   "cat": "sweets",
+   "generic": true,
+   "online": "medium"
+  },
+  "street_food": {
+   "name": "Street food and fair food stalls",
+   "cat": "sweets",
+   "generic": true,
+   "online": "low"
+  },
+  "puja_kit": {
+   "name": "Puja samagri kits",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "gudi_kit": {
+   "name": "Gudi Padwa kits",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "vishukkani_kit": {
+   "name": "Vishukkani items",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "irumudi_kit": {
+   "name": "Irumudi kits (Sabarimala)",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "kanwar_gear": {
+   "name": "Kanwar / kavadi yatra gear",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "puja_thali": {
+   "name": "Puja thali sets",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "karwa_set": {
+   "name": "Karwa Chauth sets (karwa, sieve, thali, sargi)",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "soop_daura": {
+   "name": "Soop and daura (Chhath bamboo baskets)",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "sindoor_kumkum": {
+   "name": "Sindoor, kumkum, haldi and alta",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "rudraksha_mala": {
+   "name": "Rudraksha and tulsi malas",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "bel_patra": {
+   "name": "Bel patra (bael leaves)",
+   "cat": "puja",
+   "generic": false,
+   "online": "low"
+  },
+  "mango_leaves": {
+   "name": "Mango leaf torans",
+   "cat": "puja",
+   "generic": false,
+   "online": "low"
+  },
+  "flowers_garlands": {
+   "name": "Flowers and garlands (incl. pookalam flowers)",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "incense": {
+   "name": "Incense / agarbatti",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "clay_idols": {
+   "name": "Deity idols (clay / eco)",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "saraswati_idol": {
+   "name": "Saraswati idols",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "krishna_idol": {
+   "name": "Krishna idols",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "golu_dolls": {
+   "name": "Golu / bombe dolls and steps",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "diya": {
+   "name": "Diyas / earthen and clay lamps",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "brass_lamp": {
+   "name": "Brass lamps",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "butter_lamp": {
+   "name": "Butter lamps (Buddhist)",
+   "cat": "puja",
+   "generic": false,
+   "online": "low"
+  },
+  "kalash": {
+   "name": "Kalash / kalasam pots",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "jitiya_thread": {
+   "name": "Jitiya thread and locket",
+   "cat": "puja",
+   "generic": false,
+   "online": "low"
+  },
+  "boat_lamps": {
+   "name": "Boat lamps and banana-stem boats (Kartik Purnima)",
+   "cat": "puja",
+   "generic": false,
+   "online": "low"
+  },
+  "prayer_mat": {
+   "name": "Prayer mats",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "kirpan": {
+   "name": "Kirpans",
+   "cat": "puja",
+   "generic": false,
+   "online": "low"
+  },
+  "religious_books": {
+   "name": "Bibles and religious books",
+   "cat": "stationery",
+   "generic": false,
+   "online": "high"
+  },
+  "offerings": {
+   "name": "Offerings / donations",
+   "cat": "puja",
+   "generic": true,
+   "online": "low"
+  },
+  "led_lights": {
+   "name": "LED / decorative lights",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "high"
+  },
+  "candles": {
+   "name": "Candles",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "high"
+  },
+  "lanterns": {
+   "name": "Lanterns / akash kandil",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "high"
+  },
+  "xmas_star": {
+   "name": "Christmas stars",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "high"
+  },
+  "christmas_tree": {
+   "name": "Christmas trees and ornaments",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "high"
+  },
+  "home_decor": {
+   "name": "Home decor items",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "high"
+  },
+  "pandal_decor": {
+   "name": "Pandal decor and effigy materials",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "low"
+  },
+  "ganesh_makhar": {
+   "name": "Ganpati makhar (decor frame)",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "medium"
+  },
+  "rangoli_colours": {
+   "name": "Rangoli / kolam / alpona colours",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "high"
+  },
+  "furnishings": {
+   "name": "Home furnishings and bedding",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "high"
+  },
+  "portraits": {
+   "name": "Portraits and framed photos",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "medium"
+  },
+  "jhula": {
+   "name": "Jhula / swings (Laddu Gopal, Teej)",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "laddu_gopal_dress": {
+   "name": "Laddu Gopal dresses",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  },
+  "krishna_costume": {
+   "name": "Kids Krishna costumes",
+   "cat": "baby",
+   "generic": false,
+   "online": "high"
+  },
+  "kids_costume": {
+   "name": "Kids fancy-dress costumes",
+   "cat": "baby",
+   "generic": false,
+   "online": "high"
+  },
+  "carnival_mask": {
+   "name": "Carnival / festival masks",
+   "cat": "toys",
+   "generic": false,
+   "online": "medium"
+  },
+  "flute": {
+   "name": "Flutes and flute toys",
+   "cat": "toys",
+   "generic": false,
+   "online": "high"
+  },
+  "toys": {
+   "name": "Toys",
+   "cat": "toys",
+   "generic": false,
+   "online": "high"
+  },
+  "traditional_toys": {
+   "name": "Traditional toys (toy raths, gedi stilts, clay dolls)",
+   "cat": "toys",
+   "generic": false,
+   "online": "low"
+  },
+  "clay_bullocks": {
+   "name": "Clay bullocks (Pola)",
+   "cat": "toys",
+   "generic": false,
+   "online": "low"
+  },
+  "board_games": {
+   "name": "Board games and indoor games",
+   "cat": "toys",
+   "generic": false,
+   "online": "high"
+  },
+  "gaming": {
+   "name": "Gaming consoles and games",
+   "cat": "electronics",
+   "generic": false,
+   "online": "high"
+  },
+  "kites_manja": {
+   "name": "Kites and manja",
+   "cat": "toys",
+   "generic": false,
+   "online": "medium"
+  },
+  "firecrackers": {
+   "name": "Firecrackers",
+   "cat": "toys",
+   "generic": false,
+   "online": "low"
+  },
+  "pichkari": {
+   "name": "Pichkaris and water guns",
+   "cat": "toys",
+   "generic": false,
+   "online": "high"
+  },
+  "gulal_colours": {
+   "name": "Gulal / Holi colours (abir)",
+   "cat": "toys",
+   "generic": false,
+   "online": "high"
+  },
+  "tricolour_merch": {
+   "name": "Tricolour flags and merchandise",
+   "cat": "gifting",
+   "generic": false,
+   "online": "high"
+  },
+  "saffron_flag": {
+   "name": "Saffron / religious flags",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "blue_flags": {
+   "name": "Blue flags and Ambedkar merchandise",
+   "cat": "gifting",
+   "generic": false,
+   "online": "low"
+  },
+  "regional_pride_merch": {
+   "name": "State pride merchandise (Kannada flags, state-day goods)",
+   "cat": "gifting",
+   "generic": false,
+   "online": "low"
+  },
+  "prayer_flags": {
+   "name": "Buddhist prayer flags",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "musical_instruments": {
+   "name": "Dhol, drums and folk instruments",
+   "cat": "toys",
+   "generic": false,
+   "online": "medium"
+  },
+  "dandiya": {
+   "name": "Dandiya sticks",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "chaniya_choli": {
+   "name": "Chaniya choli",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "garba_wear": {
+   "name": "Garba wear (men's kediyu)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "new_clothes": {
+   "name": "New clothes (general)",
+   "cat": "fashion",
+   "generic": true,
+   "online": "high"
+  },
+  "party_wear": {
+   "name": "Party wear",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "branded_apparel": {
+   "name": "Branded apparel and apparel sales",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "premium_fashion": {
+   "name": "Premium / global fashion brands",
+   "cat": "premium",
+   "generic": false,
+   "online": "high"
+  },
+  "fabric": {
+   "name": "Fabric and textiles",
+   "cat": "fashion",
+   "generic": false,
+   "online": "medium"
+  },
+  "handloom": {
+   "name": "Handloom textiles",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "medium"
+  },
+  "ethnic_wear": {
+   "name": "Ethnic / traditional wear",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "eid_outfit": {
+   "name": "Eid outfits",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "church_wear": {
+   "name": "Church / Sunday best wear",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "saree": {
+   "name": "Sarees",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "silk_saree": {
+   "name": "Silk sarees (pattu, Mysore silk)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "banarasi_saree": {
+   "name": "Banarasi sarees",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "kasavu_saree": {
+   "name": "Kasavu sarees / Onakkodi",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "paithani_saree": {
+   "name": "Paithani sarees",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "lehariya_saree": {
+   "name": "Lehariya sarees",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "handloom_saree": {
+   "name": "Regional handloom sarees (Sambalpuri, Maheshwari)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "lal_paad_saree": {
+   "name": "Red-white lal paad sarees",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "navratri_colour_saree": {
+   "name": "Navratri 9-colour sarees",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "yellow_attire": {
+   "name": "Yellow / basanti outfits",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "green_attire": {
+   "name": "Green sarees and outfits (Sawan, Teej)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "black_attire": {
+   "name": "Black clothes and dhotis (Sabarimala, Muharram)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "white_attire": {
+   "name": "White kurtas and clothing",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "saffron_attire": {
+   "name": "Saffron clothes and dhotis",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "lehenga": {
+   "name": "Lehengas, ghararas and bridal wear",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "salwar_suit": {
+   "name": "Salwar suits",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "phulkari": {
+   "name": "Phulkari suits and dupattas",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "kurta": {
+   "name": "Kurtas (incl. Bengali panjabi)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "kurta_pyjama": {
+   "name": "Kurta-pyjama sets",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "dhoti_veshti": {
+   "name": "Dhoti / veshti / mundu",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "sherwani": {
+   "name": "Sherwanis",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "turban_pheta": {
+   "name": "Turbans and pheta",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "medium"
+  },
+  "caps": {
+   "name": "Traditional caps (e.g. Kullu topi)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "medium"
+  },
+  "dupatta": {
+   "name": "Dupattas",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "chunri": {
+   "name": "Chunri (red festive dupatta)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "parandi": {
+   "name": "Parandi (hair tassel)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "medium"
+  },
+  "pheran": {
+   "name": "Pherans (Kashmiri cloak)",
+   "cat": "winter",
+   "generic": false,
+   "online": "medium"
+  },
+  "abaya": {
+   "name": "Abayas",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "high"
+  },
+  "gamosa": {
+   "name": "Gamosa (Assamese towel)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "medium"
+  },
+  "mekhela_sador": {
+   "name": "Mekhela sador",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "medium"
+  },
+  "ne_handloom_wear": {
+   "name": "North-East traditional wear (phanek, puan, jainsem, dokhona, rignai, risa)",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "medium"
+  },
+  "kantha": {
+   "name": "Kantha embroidery",
+   "cat": "ethnic",
+   "generic": false,
+   "online": "medium"
+  },
+  "school_uniform": {
+   "name": "School uniforms",
+   "cat": "schoolgear",
+   "generic": false,
+   "online": "high"
+  },
+  "tshirt": {
+   "name": "T-shirts",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "jeans": {
+   "name": "Jeans",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "kids_wear": {
+   "name": "Kids' clothes",
+   "cat": "baby",
+   "generic": false,
+   "online": "high"
+  },
+  "summer_cottons": {
+   "name": "Summer cotton wear",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "resort_wear": {
+   "name": "Resort / beach wear",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "swimwear": {
+   "name": "Swimwear and snorkel gear",
+   "cat": "sports",
+   "generic": false,
+   "online": "high"
+  },
+  "jackets": {
+   "name": "Jackets (incl. leather, down, light)",
+   "cat": "winter",
+   "generic": false,
+   "online": "high"
+  },
+  "sweaters": {
+   "name": "Sweaters",
+   "cat": "winter",
+   "generic": false,
+   "online": "high"
+  },
+  "thermals": {
+   "name": "Thermals",
+   "cat": "winter",
+   "generic": false,
+   "online": "high"
+  },
+  "winter_wear": {
+   "name": "Winter wear and woollens",
+   "cat": "winter",
+   "generic": false,
+   "online": "high"
+  },
+  "gloves": {
+   "name": "Gloves",
+   "cat": "winter",
+   "generic": false,
+   "online": "high"
+  },
+  "snow_gear": {
+   "name": "Snow boots and snow gear",
+   "cat": "winter",
+   "generic": false,
+   "online": "medium"
+  },
+  "shawls": {
+   "name": "Shawls (Kullu, Kani)",
+   "cat": "winter",
+   "generic": false,
+   "online": "high"
+  },
+  "pashmina": {
+   "name": "Pashmina shawls",
+   "cat": "premium",
+   "generic": false,
+   "online": "high"
+  },
+  "blankets": {
+   "name": "Blankets and electric blankets",
+   "cat": "heating",
+   "generic": false,
+   "online": "high"
+  },
+  "room_heater": {
+   "name": "Room heaters and oil radiators",
+   "cat": "heating",
+   "generic": false,
+   "online": "high"
+  },
+  "kangri_bukhari": {
+   "name": "Kangri and bukhari (Kashmiri heaters)",
+   "cat": "heating",
+   "generic": false,
+   "online": "low"
+  },
+  "geyser": {
+   "name": "Geysers",
+   "cat": "heating",
+   "generic": false,
+   "online": "high"
+  },
+  "bangles": {
+   "name": "Bangles (incl. chura)",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "high"
+  },
+  "jewellery": {
+   "name": "Jewellery",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "high"
+  },
+  "fashion_jewellery": {
+   "name": "Oxidised / fashion jewellery",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "high"
+  },
+  "gold_jewellery": {
+   "name": "Gold jewellery",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "high"
+  },
+  "gold_coin": {
+   "name": "Gold coins",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "high"
+  },
+  "silver_coin": {
+   "name": "Silver coins",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "high"
+  },
+  "silver_jewellery": {
+   "name": "Silver jewellery",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "high"
+  },
+  "diamond_jewellery": {
+   "name": "Diamond jewellery",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "high"
+  },
+  "digital_gold": {
+   "name": "Digital gold",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "high"
+  },
+  "gold_scheme": {
+   "name": "Gold savings schemes",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "medium"
+  },
+  "nath": {
+   "name": "Nath (nose ring)",
+   "cat": "jewellery",
+   "generic": false,
+   "online": "high"
+  },
+  "mehendi_cone": {
+   "name": "Mehendi / henna cones",
+   "cat": "beauty",
+   "generic": false,
+   "online": "high"
+  },
+  "cosmetics": {
+   "name": "Cosmetics and makeup",
+   "cat": "beauty",
+   "generic": false,
+   "online": "high"
+  },
+  "skincare": {
+   "name": "Skincare",
+   "cat": "beauty",
+   "generic": false,
+   "online": "high"
+  },
+  "moisturiser": {
+   "name": "Moisturisers and cold cream",
+   "cat": "beauty",
+   "generic": false,
+   "online": "high"
+  },
+  "sunscreen": {
+   "name": "Sunscreen",
+   "cat": "beauty",
+   "generic": false,
+   "online": "high"
+  },
+  "haircare": {
+   "name": "Haircare",
+   "cat": "beauty",
+   "generic": false,
+   "online": "high"
+  },
+  "perfume": {
+   "name": "Perfumes and fragrances",
+   "cat": "beauty",
+   "generic": false,
+   "online": "high"
+  },
+  "attar": {
+   "name": "Attar",
+   "cat": "beauty",
+   "generic": false,
+   "online": "high"
+  },
+  "personal_care_gift": {
+   "name": "Personal care gift sets",
+   "cat": "personal",
+   "generic": false,
+   "online": "high"
+  },
+  "grooming_kit": {
+   "name": "Grooming kits",
+   "cat": "personal",
+   "generic": false,
+   "online": "high"
+  },
+  "prickly_heat_powder": {
+   "name": "Prickly-heat powder",
+   "cat": "personal",
+   "generic": false,
+   "online": "high"
+  },
+  "footwear": {
+   "name": "Footwear",
+   "cat": "footwear",
+   "generic": false,
+   "online": "high"
+  },
+  "sports_shoes": {
+   "name": "Sports, running and trekking shoes",
+   "cat": "footwear",
+   "generic": false,
+   "online": "high"
+  },
+  "boots": {
+   "name": "Boots",
+   "cat": "footwear",
+   "generic": false,
+   "online": "high"
+  },
+  "rain_footwear": {
+   "name": "Rain footwear (gumboots, waterproof sandals)",
+   "cat": "rainwear",
+   "generic": false,
+   "online": "high"
+  },
+  "school_shoes": {
+   "name": "School shoes",
+   "cat": "schoolgear",
+   "generic": false,
+   "online": "high"
+  },
+  "watches": {
+   "name": "Watches",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "smartwatch": {
+   "name": "Smartwatches and bands",
+   "cat": "electronics",
+   "generic": false,
+   "online": "high"
+  },
+  "wallets": {
+   "name": "Wallets",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "bags": {
+   "name": "Bags and handbags",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "leather_goods": {
+   "name": "Leather goods",
+   "cat": "fashion",
+   "generic": false,
+   "online": "medium"
+  },
+  "sunglasses": {
+   "name": "Sunglasses",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "fashion_accessories": {
+   "name": "Fashion accessories",
+   "cat": "fashion",
+   "generic": false,
+   "online": "high"
+  },
+  "gifts": {
+   "name": "Gifts (general)",
+   "cat": "gifting",
+   "generic": true,
+   "online": "high"
+  },
+  "gift_hamper": {
+   "name": "Gift hampers and boxes",
+   "cat": "gifting",
+   "generic": false,
+   "online": "high"
+  },
+  "premium_gift": {
+   "name": "Premium gifts",
+   "cat": "premium",
+   "generic": false,
+   "online": "high"
+  },
+  "return_gifts": {
+   "name": "Return gifts (incl. haldi-kumkum vaan)",
+   "cat": "gifting",
+   "generic": false,
+   "online": "high"
+  },
+  "shagun_envelope": {
+   "name": "Shagun / cash gift envelopes",
+   "cat": "gifting",
+   "generic": false,
+   "online": "high"
+  },
+  "greeting_cards": {
+   "name": "Greeting cards and friendship bands",
+   "cat": "gifting",
+   "generic": false,
+   "online": "high"
+  },
+  "souvenirs": {
+   "name": "Souvenirs",
+   "cat": "gifting",
+   "generic": false,
+   "online": "medium"
+  },
+  "handicrafts": {
+   "name": "Handicrafts and regional crafts (incl. Tusu chaudal paper)",
+   "cat": "gifting",
+   "generic": false,
+   "online": "medium"
+  },
+  "baby_gifts": {
+   "name": "Newborn gifts",
+   "cat": "baby",
+   "generic": false,
+   "online": "high"
+  },
+  "crib": {
+   "name": "Cribs",
+   "cat": "baby",
+   "generic": false,
+   "online": "high"
+  },
+  "baby_winter_care": {
+   "name": "Kids' winter care",
+   "cat": "baby",
+   "generic": false,
+   "online": "high"
+  },
+  "electronics": {
+   "name": "Consumer electronics",
+   "cat": "electronics",
+   "generic": false,
+   "online": "high"
+  },
+  "gadgets": {
+   "name": "Gadgets",
+   "cat": "electronics",
+   "generic": false,
+   "online": "high"
+  },
+  "smartphone": {
+   "name": "Smartphones",
+   "cat": "phones",
+   "generic": false,
+   "online": "high"
+  },
+  "tv": {
+   "name": "TVs",
+   "cat": "tv",
+   "generic": false,
+   "online": "high"
+  },
+  "laptop": {
+   "name": "Laptops",
+   "cat": "laptops",
+   "generic": false,
+   "online": "high"
+  },
+  "tablet": {
+   "name": "Tablets",
+   "cat": "laptops",
+   "generic": false,
+   "online": "high"
+  },
+  "camera": {
+   "name": "Cameras",
+   "cat": "electronics",
+   "generic": false,
+   "online": "high"
+  },
+  "speakers": {
+   "name": "Speakers",
+   "cat": "electronics",
+   "generic": false,
+   "online": "high"
+  },
+  "headphones": {
+   "name": "Headphones and earphones",
+   "cat": "mobacc",
+   "generic": false,
+   "online": "high"
+  },
+  "power_bank": {
+   "name": "Power banks",
+   "cat": "mobacc",
+   "generic": false,
+   "online": "high"
+  },
+  "phone_pouch": {
+   "name": "Waterproof phone pouches",
+   "cat": "mobacc",
+   "generic": false,
+   "online": "high"
+  },
+  "extension_board": {
+   "name": "Extension boards",
+   "cat": "electronics",
+   "generic": false,
+   "online": "high"
+  },
+  "emergency_light": {
+   "name": "Torches and emergency lights",
+   "cat": "electronics",
+   "generic": false,
+   "online": "high"
+  },
+  "inverter": {
+   "name": "Inverters and power backup",
+   "cat": "appliances",
+   "generic": false,
+   "online": "medium"
+  },
+  "appliances": {
+   "name": "Home appliances",
+   "cat": "appliances",
+   "generic": false,
+   "online": "high"
+  },
+  "kitchen_appliances": {
+   "name": "Kitchen appliances (kettles, induction)",
+   "cat": "kitchen",
+   "generic": false,
+   "online": "high"
+  },
+  "refrigerator": {
+   "name": "Refrigerators",
+   "cat": "fridge",
+   "generic": false,
+   "online": "high"
+  },
+  "ac": {
+   "name": "Air conditioners",
+   "cat": "ac",
+   "generic": false,
+   "online": "high"
+  },
+  "air_cooler": {
+   "name": "Air coolers",
+   "cat": "cooling",
+   "generic": false,
+   "online": "high"
+  },
+  "fan": {
+   "name": "Fans",
+   "cat": "cooling",
+   "generic": false,
+   "online": "high"
+  },
+  "dehumidifier": {
+   "name": "Dehumidifiers",
+   "cat": "appliances",
+   "generic": false,
+   "online": "high"
+  },
+  "air_purifier": {
+   "name": "Air purifiers and HEPA filters",
+   "cat": "airpurifier",
+   "generic": false,
+   "online": "high"
+  },
+  "n95_mask": {
+   "name": "N95 masks",
+   "cat": "airpurifier",
+   "generic": false,
+   "online": "high"
+  },
+  "two_wheeler": {
+   "name": "Two-wheelers",
+   "cat": "vehicles",
+   "generic": false,
+   "online": "medium"
+  },
+  "car": {
+   "name": "Cars and SUVs",
+   "cat": "vehicles",
+   "generic": false,
+   "online": "medium"
+  },
+  "vehicle_accessories": {
+   "name": "Vehicle accessories and decor",
+   "cat": "vehicles",
+   "generic": false,
+   "online": "high"
+  },
+  "riding_gear": {
+   "name": "Biking / riding gear",
+   "cat": "vehicles",
+   "generic": false,
+   "online": "high"
+  },
+  "bicycle": {
+   "name": "Bicycles",
+   "cat": "sports",
+   "generic": false,
+   "online": "high"
+  },
+  "tractor": {
+   "name": "Tractors",
+   "cat": "agri",
+   "generic": false,
+   "online": "low"
+  },
+  "real_estate": {
+   "name": "Homes / property",
+   "cat": "homeimprove",
+   "generic": false,
+   "online": "low"
+  },
+  "home_renovation": {
+   "name": "Home renovation and upgrades",
+   "cat": "homeimprove",
+   "generic": false,
+   "online": "medium"
+  },
+  "paint": {
+   "name": "Paint",
+   "cat": "homeimprove",
+   "generic": false,
+   "online": "medium"
+  },
+  "marble": {
+   "name": "Marble and marble crafts",
+   "cat": "homeimprove",
+   "generic": false,
+   "online": "low"
+  },
+  "waterproofing": {
+   "name": "Waterproofing",
+   "cat": "homeimprove",
+   "generic": false,
+   "online": "medium"
+  },
+  "tarpaulin": {
+   "name": "Tarpaulins",
+   "cat": "homeimprove",
+   "generic": false,
+   "online": "high"
+  },
+  "anti_skid_mat": {
+   "name": "Anti-skid mats",
+   "cat": "homeimprove",
+   "generic": false,
+   "online": "high"
+  },
+  "tools": {
+   "name": "Tools",
+   "cat": "homeimprove",
+   "generic": false,
+   "online": "high"
+  },
+  "broom": {
+   "name": "Brooms",
+   "cat": "homeimprove",
+   "generic": false,
+   "online": "high"
+  },
+  "cleaning_supplies": {
+   "name": "Cleaning supplies (mops, buckets, disinfectants)",
+   "cat": "homeimprove",
+   "generic": false,
+   "online": "high"
+  },
+  "household": {
+   "name": "Household goods (general)",
+   "cat": "homeimprove",
+   "generic": true,
+   "online": "high"
+  },
+  "housewarming": {
+   "name": "Housewarming essentials",
+   "cat": "homedecor",
+   "generic": false,
+   "online": "high"
+  },
+  "furniture": {
+   "name": "Furniture",
+   "cat": "furniture",
+   "generic": false,
+   "online": "high"
+  },
+  "mattress": {
+   "name": "Mattresses",
+   "cat": "furniture",
+   "generic": false,
+   "online": "high"
+  },
+  "study_table": {
+   "name": "Study tables",
+   "cat": "furniture",
+   "generic": false,
+   "online": "high"
+  },
+  "utensils": {
+   "name": "Utensils and kitchenware",
+   "cat": "kitchen",
+   "generic": false,
+   "online": "high"
+  },
+  "dinnerware": {
+   "name": "Crockery and dinnerware",
+   "cat": "kitchen",
+   "generic": false,
+   "online": "high"
+  },
+  "clay_pots": {
+   "name": "Clay pots and chulhas",
+   "cat": "kitchen",
+   "generic": false,
+   "online": "low"
+  },
+  "pongal_pot": {
+   "name": "Pongal pots",
+   "cat": "puja",
+   "generic": false,
+   "online": "medium"
+  },
+  "bonam_pot": {
+   "name": "Bonam pots (Bonalu)",
+   "cat": "puja",
+   "generic": false,
+   "online": "low"
+  },
+  "lunch_box": {
+   "name": "Lunch / tiffin boxes",
+   "cat": "schoolgear",
+   "generic": false,
+   "online": "high"
+  },
+  "water_bottle": {
+   "name": "Water bottles",
+   "cat": "schoolgear",
+   "generic": false,
+   "online": "high"
+  },
+  "books": {
+   "name": "Books",
+   "cat": "stationery",
+   "generic": false,
+   "online": "high"
+  },
+  "textbooks": {
+   "name": "Textbooks, guides and sample papers",
+   "cat": "stationery",
+   "generic": false,
+   "online": "high"
+  },
+  "stationery": {
+   "name": "Stationery (notebooks, pens, geometry sets)",
+   "cat": "stationery",
+   "generic": false,
+   "online": "high"
+  },
+  "slate": {
+   "name": "Slates (Vidyarambham)",
+   "cat": "stationery",
+   "generic": false,
+   "online": "medium"
+  },
+  "school_bag": {
+   "name": "School bags and backpacks",
+   "cat": "schoolgear",
+   "generic": false,
+   "online": "high"
+  },
+  "desk_lamp": {
+   "name": "Desk lamps",
+   "cat": "stationery",
+   "generic": false,
+   "online": "high"
+  },
+  "bahi_khata": {
+   "name": "Bahi-khata ledgers / account books",
+   "cat": "stationery",
+   "generic": false,
+   "online": "medium"
+  },
+  "panchang": {
+   "name": "Panchang / almanac",
+   "cat": "stationery",
+   "generic": false,
+   "online": "medium"
+  },
+  "cattle_decor": {
+   "name": "Cattle decorations and bells",
+   "cat": "agri",
+   "generic": false,
+   "online": "low"
+  },
+  "livestock": {
+   "name": "Livestock",
+   "cat": "agri",
+   "generic": false,
+   "online": "low"
+  },
+  "agri_tools": {
+   "name": "Farm tools and machinery",
+   "cat": "agri",
+   "generic": false,
+   "online": "low"
+  },
+  "seeds_agri_inputs": {
+   "name": "Seeds and agri inputs",
+   "cat": "agri",
+   "generic": false,
+   "online": "medium"
+  },
+  "plants_gardening": {
+   "name": "Plants, saplings and gardening",
+   "cat": "agri",
+   "generic": false,
+   "online": "medium"
+  },
+  "firewood": {
+   "name": "Firewood (bonfire)",
+   "cat": "agri",
+   "generic": false,
+   "online": "low"
+  },
+  "mosquito_repellent": {
+   "name": "Mosquito repellents and coils",
+   "cat": "health",
+   "generic": false,
+   "online": "high"
+  },
+  "mosquito_net": {
+   "name": "Mosquito nets",
+   "cat": "health",
+   "generic": false,
+   "online": "high"
+  },
+  "otc_medicines": {
+   "name": "OTC medicines (fever, cough, cold)",
+   "cat": "health",
+   "generic": false,
+   "online": "medium"
+  },
+  "health_devices": {
+   "name": "Thermometers and test kits",
+   "cat": "health",
+   "generic": false,
+   "online": "high"
+  },
+  "vaporiser": {
+   "name": "Vaporisers and humidifiers",
+   "cat": "health",
+   "generic": false,
+   "online": "high"
+  },
+  "supplements": {
+   "name": "Health and immunity supplements",
+   "cat": "health",
+   "generic": false,
+   "online": "high"
+  },
+  "ors": {
+   "name": "ORS",
+   "cat": "health",
+   "generic": false,
+   "online": "high"
+  },
+  "antifungal": {
+   "name": "Anti-fungal care",
+   "cat": "health",
+   "generic": false,
+   "online": "high"
+  },
+  "ayurvedic_kit": {
+   "name": "Ayurvedic kits (Karkidaka kanji)",
+   "cat": "health",
+   "generic": false,
+   "online": "medium"
+  },
+  "yoga_gear": {
+   "name": "Yoga mats and activewear",
+   "cat": "sports",
+   "generic": false,
+   "online": "high"
+  },
+  "gym_gear": {
+   "name": "Gym gear",
+   "cat": "sports",
+   "generic": false,
+   "online": "high"
+  },
+  "sports_gear": {
+   "name": "Sports gear",
+   "cat": "sports",
+   "generic": false,
+   "online": "high"
+  },
+  "cricket_gear": {
+   "name": "Cricket gear",
+   "cat": "sports",
+   "generic": false,
+   "online": "high"
+  },
+  "team_jersey": {
+   "name": "Team jerseys and franchise merchandise",
+   "cat": "sports",
+   "generic": false,
+   "online": "high"
+  },
+  "trekking_gear": {
+   "name": "Trekking and camping gear",
+   "cat": "sports",
+   "generic": false,
+   "online": "high"
+  },
+  "rainwear": {
+   "name": "Raincoats and rainwear",
+   "cat": "rainwear",
+   "generic": false,
+   "online": "high"
+  },
+  "umbrella": {
+   "name": "Umbrellas",
+   "cat": "rainwear",
+   "generic": false,
+   "online": "high"
+  },
+  "luggage": {
+   "name": "Luggage and travel bags",
+   "cat": "travel",
+   "generic": false,
+   "online": "high"
+  },
+  "travel_kit": {
+   "name": "Travel kits",
+   "cat": "travel",
+   "generic": false,
+   "online": "high"
+  },
+  "travel_package": {
+   "name": "Travel and holiday packages",
+   "cat": "travel",
+   "generic": false,
+   "online": "high"
+  },
+  "travel_tickets": {
+   "name": "Train / bus / flight tickets",
+   "cat": "travel",
+   "generic": false,
+   "online": "high"
+  },
+  "hotel_stays": {
+   "name": "Hotel stays",
+   "cat": "travel",
+   "generic": false,
+   "online": "high"
+  },
+  "event_tickets": {
+   "name": "Event and concert tickets",
+   "cat": "travel",
+   "generic": false,
+   "online": "medium"
+  },
+  "dining_out": {
+   "name": "Dining out",
+   "cat": "travel",
+   "generic": true,
+   "online": "medium"
+  },
+  "picnic_supplies": {
+   "name": "Picnic supplies",
+   "cat": "travel",
+   "generic": false,
+   "online": "medium"
+  },
+  "wedding_shopping": {
+   "name": "Wedding shopping (general)",
+   "cat": "wedding",
+   "generic": true,
+   "online": "high"
+  },
+  "fair_goods": {
+   "name": "Local fair goods",
+   "cat": "gifting",
+   "generic": true,
+   "online": "low"
+  },
+  "traditional_items": {
+   "name": "Traditional items (general)",
+   "cat": "gifting",
+   "generic": true,
+   "online": "low"
+  },
+  "discretionary_spend": {
+   "name": "Discretionary spending (signal, not a product)",
+   "cat": "premium",
+   "generic": true,
+   "online": "low"
+  },
+  "none": {
+   "name": "No specific purchase",
+   "cat": "gifting",
+   "generic": true,
+   "online": "low"
+  },
+  "rakhi": {
+   "name": "Rakhis",
+   "cat": "puja",
+   "generic": false,
+   "online": "high"
+  }
+ },
+ "map": {
+  "sweets": [
+   "sweets_box"
+  ],
+  "sweets (aarsa)": [
+   "sweets_box"
+  ],
+  "gujiya ingredients": [
+   "gujiya"
+  ],
+  "rewri": [
+   "til_gud_sweets"
+  ],
+  "gajak": [
+   "til_gud_sweets"
+  ],
+  "chikki": [
+   "til_gud_sweets"
+  ],
+  "til laddoo": [
+   "til_gud_sweets"
+  ],
+  "til-gur laddoo": [
+   "til_gud_sweets"
+  ],
+  "til sweets": [
+   "til_gud_sweets"
+  ],
+  "til-gud sweets": [
+   "til_gud_sweets"
+  ],
+  "til-gul": [
+   "til_gud_sweets"
+  ],
+  "ellu-bella (sesame-jaggery)": [
+   "til_gud_sweets"
+  ],
+  "til": [
+   "til_gud_sweets"
+  ],
+  "tilkut": [
+   "til_gud_sweets"
+  ],
+  "jaggery (bangaram)": [
+   "til_gud_sweets"
+  ],
+  "sewaiyan": [
+   "sewaiyan"
+  ],
+  "sewai": [
+   "sewaiyan"
+  ],
+  "vermicelli": [
+   "sewaiyan"
+  ],
+  "ghevar": [
+   "ghevar"
+  ],
+  "ghewar": [
+   "ghevar"
+  ],
+  "modaks": [
+   "modak"
+  ],
+  "modak": [
+   "modak"
+  ],
+  "modak)": [
+   "modak"
+  ],
+  "kozhukattai ingredients": [
+   "modak"
+  ],
+  "pitha": [
+   "pitha_laru"
+  ],
+  "pithe ingredients": [
+   "pitha_laru"
+  ],
+  "pitha ingredients": [
+   "pitha_laru"
+  ],
+  "laru ingredients": [
+   "pitha_laru"
+  ],
+  "jaggery": [
+   "jaggery"
+  ],
+  "gur": [
+   "jaggery"
+  ],
+  "nolen gur": [
+   "jaggery"
+  ],
+  "cakes": [
+   "cakes_bakery"
+  ],
+  "bakery": [
+   "cakes_bakery"
+  ],
+  "bread": [
+   "cakes_bakery"
+  ],
+  "plum cakes": [
+   "plum_cake"
+  ],
+  "chocolates": [
+   "chocolates"
+  ],
+  "thethri-khurmi sweets": [
+   "regional_sweets"
+  ],
+  "ghughute sweets": [
+   "regional_sweets"
+  ],
+  "sweets (ariselu)": [
+   "regional_sweets"
+  ],
+  "jilipi": [
+   "regional_sweets"
+  ],
+  "sattu sweets": [
+   "regional_sweets"
+  ],
+  "sweets (puran poli)": [
+   "regional_sweets"
+  ],
+  "sweets (nevri": [
+   "regional_sweets"
+  ],
+  "kuswar ingredients": [
+   "regional_sweets"
+  ],
+  "khapse": [
+   "regional_sweets"
+  ],
+  "khapse ingredients": [
+   "regional_sweets"
+  ],
+  "halwa jewellery": [
+   "regional_sweets"
+  ],
+  "coconut barfi": [
+   "coconut_sweets"
+  ],
+  "coconut sweets": [
+   "coconut_sweets"
+  ],
+  "naru": [
+   "coconut_sweets"
+  ],
+  "faral ingredients": [
+   "diwali_faral"
+  ],
+  "chakkuli": [
+   "diwali_faral"
+  ],
+  "unde snacks": [
+   "diwali_faral"
+  ],
+  "easter eggs": [
+   "easter_eggs"
+  ],
+  "kheer": [
+   "kheer_mix"
+  ],
+  "kheer offerings": [
+   "kheer_mix"
+  ],
+  "prasad": [
+   "prasad"
+  ],
+  "prasadam": [
+   "prasad"
+  ],
+  "snacks": [
+   "snacks_namkeen"
+  ],
+  "popcorn": [
+   "snacks_namkeen"
+  ],
+  "peanuts": [
+   "snacks_namkeen"
+  ],
+  "groundnuts": [
+   "snacks_namkeen"
+  ],
+  "farsan": [
+   "snacks_namkeen"
+  ],
+  "wafers": [
+   "snacks_namkeen"
+  ],
+  "watch-party snacks": [
+   "snacks_namkeen"
+  ],
+  "papad": [
+   "snacks_namkeen"
+  ],
+  "poha": [
+   "poha_chura"
+  ],
+  "chura": [
+   "poha_chura",
+   "bangles"
+  ],
+  "sweets (pohe)": [
+   "poha_chura"
+  ],
+  "sattu": [
+   "sattu"
+  ],
+  "chhatua": [
+   "sattu"
+  ],
+  "makhana": [
+   "makhana"
+  ],
+  "dates": [
+   "dates"
+  ],
+  "dry fruits": [
+   "dry_fruits"
+  ],
+  "walnuts": [
+   "dry_fruits"
+  ],
+  "dry fruit gift boxes": [
+   "dry_fruit_box"
+  ],
+  "fasting foods": [
+   "vrat_food"
+  ],
+  "fasting food": [
+   "vrat_food"
+  ],
+  "fasting foods (sabudana)": [
+   "vrat_food"
+  ],
+  "jain foods": [
+   "vrat_food"
+  ],
+  "sabudana": [
+   "vrat_food"
+  ],
+  "fasting snacks": [
+   "vrat_food"
+  ],
+  "iftar foods": [
+   "iftar_kit"
+  ],
+  "iftar groceries": [
+   "iftar_kit"
+  ],
+  "spices": [
+   "spices"
+  ],
+  "milk masala": [
+   "spices"
+  ],
+  "turmeric": [
+   "spices"
+  ],
+  "rice": [
+   "rice_grains"
+  ],
+  "new rice": [
+   "rice_grains"
+  ],
+  "saffron rice": [
+   "rice_grains"
+  ],
+  "khichdi rice-dal": [
+   "rice_grains"
+  ],
+  "grain": [
+   "rice_grains"
+  ],
+  "flour": [
+   "rice_grains"
+  ],
+  "rice powder": [
+   "rice_grains"
+  ],
+  "maize": [
+   "rice_grains"
+  ],
+  "dry food": [
+   "rice_grains"
+  ],
+  "ghee": [
+   "ghee_oil"
+  ],
+  "butter": [
+   "ghee_oil"
+  ],
+  "oil": [
+   "ghee_oil"
+  ],
+  "oils": [
+   "ghee_oil"
+  ],
+  "milk": [
+   "dairy"
+  ],
+  "dahi": [
+   "dairy"
+  ],
+  "dairy": [
+   "dairy"
+  ],
+  "chhena": [
+   "dairy"
+  ],
+  "groceries": [
+   "groceries"
+  ],
+  "veg groceries": [
+   "groceries"
+  ],
+  "nazr groceries": [
+   "groceries"
+  ],
+  "staples": [
+   "groceries"
+  ],
+  "staples rise": [
+   "groceries"
+  ],
+  "monthly grocery stock-up": [
+   "groceries"
+  ],
+  "essentials rise": [
+   "groceries"
+  ],
+  "langar groceries": [
+   "langar_supplies"
+  ],
+  "langar supplies": [
+   "langar_supplies"
+  ],
+  "langar": [
+   "langar_supplies"
+  ],
+  "sadya groceries": [
+   "sadya_kit"
+  ],
+  "banana leaves": [
+   "banana_leaves"
+  ],
+  "ugadi pachadi ingredients": [
+   "newyear_drink_kit"
+  ],
+  "panakam ingredients": [
+   "newyear_drink_kit"
+  ],
+  "pana ingredients": [
+   "newyear_drink_kit"
+  ],
+  "neem": [
+   "newyear_drink_kit"
+  ],
+  "sundal ingredients": [
+   "festive_cooking_kit"
+  ],
+  "undhiyu ingredients": [
+   "festive_cooking_kit"
+  ],
+  "rice beer ingredients": [
+   "festive_cooking_kit"
+  ],
+  "thekua ingredients": [
+   "thekua_ingredients"
+  ],
+  "fruits": [
+   "fruits_veg"
+  ],
+  "matoli fruits": [
+   "fruits_veg"
+  ],
+  "yam": [
+   "fruits_veg"
+  ],
+  "mangoes": [
+   "mangoes"
+  ],
+  "alphonso mangoes": [
+   "mangoes"
+  ],
+  "sugarcane": [
+   "sugarcane"
+  ],
+  "coconut": [
+   "coconut"
+  ],
+  "coconuts": [
+   "coconut"
+  ],
+  "paan": [
+   "paan"
+  ],
+  "beverages": [
+   "beverages"
+  ],
+  "drinks": [
+   "beverages"
+  ],
+  "cold drinks": [
+   "beverages"
+  ],
+  "health drinks": [
+   "health_drink"
+  ],
+  "liquor": [
+   "liquor"
+  ],
+  "local liquor": [
+   "liquor"
+  ],
+  "rice beer": [
+   "liquor"
+  ],
+  "handia": [
+   "liquor"
+  ],
+  "wine": [
+   "liquor"
+  ],
+  "feni": [
+   "liquor"
+  ],
+  "liquor accessories": [
+   "barware"
+  ],
+  "meat": [
+   "meat_fish"
+  ],
+  "fish": [
+   "meat_fish"
+  ],
+  "feast meat": [
+   "meat_fish"
+  ],
+  "eggs": [
+   "meat_fish"
+  ],
+  "pigs": [
+   "meat_fish"
+  ],
+  "non-veg food orders": [
+   "meat_fish"
+  ],
+  "food delivery": [
+   "food_delivery"
+  ],
+  "home-match food delivery": [
+   "food_delivery"
+  ],
+  "food": [
+   "food"
+  ],
+  "local food": [
+   "food"
+  ],
+  "traditional food": [
+   "food"
+  ],
+  "feast food": [
+   "food"
+  ],
+  "local dishes (cheela)": [
+   "food"
+  ],
+  "street food": [
+   "street_food"
+  ],
+  "food stalls": [
+   "street_food"
+  ],
+  "puja items": [
+   "puja_kit"
+  ],
+  "puja samagri": [
+   "puja_kit"
+  ],
+  "puja kits": [
+   "puja_kit"
+  ],
+  "religious items": [
+   "puja_kit"
+  ],
+  "prayer items": [
+   "puja_kit"
+  ],
+  "buddha puja items": [
+   "puja_kit"
+  ],
+  "bagina items": [
+   "puja_kit"
+  ],
+  "gudi kits": [
+   "gudi_kit"
+  ],
+  "vishukkani items": [
+   "vishukkani_kit"
+  ],
+  "irumudi kits": [
+   "irumudi_kit"
+  ],
+  "kanwar": [
+   "kanwar_gear"
+  ],
+  "kavadi accessories": [
+   "kanwar_gear"
+  ],
+  "puja thali": [
+   "puja_thali"
+  ],
+  "thali items": [
+   "puja_thali"
+  ],
+  "karwa": [
+   "karwa_set"
+  ],
+  "karwa sets": [
+   "karwa_set"
+  ],
+  "sieve thali": [
+   "karwa_set"
+  ],
+  "sargi": [
+   "karwa_set"
+  ],
+  "soop": [
+   "soop_daura"
+  ],
+  "daura": [
+   "soop_daura"
+  ],
+  "sindoor": [
+   "sindoor_kumkum"
+  ],
+  "kumkum": [
+   "sindoor_kumkum"
+  ],
+  "alta": [
+   "sindoor_kumkum"
+  ],
+  "rudraksha": [
+   "rudraksha_mala"
+  ],
+  "malas": [
+   "rudraksha_mala"
+  ],
+  "tulsi malas": [
+   "rudraksha_mala"
+  ],
+  "bel": [
+   "bel_patra"
+  ],
+  "bel patra": [
+   "bel_patra"
+  ],
+  "bel leaves": [
+   "bel_patra"
+  ],
+  "mango leaves": [
+   "mango_leaves"
+  ],
+  "flowers": [
+   "flowers_garlands"
+  ],
+  "garlands": [
+   "flowers_garlands"
+  ],
+  "jasmine": [
+   "flowers_garlands"
+  ],
+  "konna flowers": [
+   "flowers_garlands"
+  ],
+  "pookalam flowers": [
+   "flowers_garlands"
+  ],
+  "kopel flower crowns": [
+   "flowers_garlands"
+  ],
+  "mandar": [
+   "flowers_garlands"
+  ],
+  "incense": [
+   "incense"
+  ],
+  "idols": [
+   "clay_idols"
+  ],
+  "clay idols": [
+   "clay_idols"
+  ],
+  "clay": [
+   "clay_idols"
+  ],
+  "saraswati idols": [
+   "saraswati_idol"
+  ],
+  "krishna idols": [
+   "krishna_idol"
+  ],
+  "golu dolls": [
+   "golu_dolls"
+  ],
+  "dolls (bombe)": [
+   "golu_dolls"
+  ],
+  "steps": [
+   "golu_dolls"
+  ],
+  "diyas": [
+   "diya"
+  ],
+  "earthen lamps": [
+   "diya"
+  ],
+  "clay lamps": [
+   "diya"
+  ],
+  "agal lamps": [
+   "diya"
+  ],
+  "lamps": [
+   "diya"
+  ],
+  "brass lamps": [
+   "brass_lamp"
+  ],
+  "butter lamps": [
+   "butter_lamp"
+  ],
+  "kalasam": [
+   "kalash"
+  ],
+  "jyoti kalash": [
+   "kalash"
+  ],
+  "jitiya thread": [
+   "jitiya_thread"
+  ],
+  "threads": [
+   "jitiya_thread"
+  ],
+  "locket": [
+   "jitiya_thread"
+  ],
+  "banana-stem boats": [
+   "boat_lamps"
+  ],
+  "boat-lamp models": [
+   "boat_lamps"
+  ],
+  "prayer mats": [
+   "prayer_mat"
+  ],
+  "kirpans": [
+   "kirpan"
+  ],
+  "bibles": [
+   "religious_books"
+  ],
+  "offerings": [
+   "offerings"
+  ],
+  "donations": [
+   "offerings"
+  ],
+  "lights": [
+   "led_lights"
+  ],
+  "decor lights": [
+   "led_lights"
+  ],
+  "home decor lights": [
+   "led_lights"
+  ],
+  "led lights": [
+   "led_lights"
+  ],
+  "candles": [
+   "candles"
+  ],
+  "lanterns": [
+   "lanterns"
+  ],
+  "kandil lanterns": [
+   "lanterns"
+  ],
+  "stars": [
+   "xmas_star"
+  ],
+  "trees": [
+   "christmas_tree"
+  ],
+  "ornaments": [
+   "christmas_tree"
+  ],
+  "decor": [
+   "home_decor"
+  ],
+  "decorations": [
+   "home_decor"
+  ],
+  "decor items": [
+   "home_decor"
+  ],
+  "home decor": [
+   "home_decor"
+  ],
+  "cow dung decor": [
+   "home_decor"
+  ],
+  "pandal decor": [
+   "pandal_decor"
+  ],
+  "narkasur effigy materials": [
+   "pandal_decor"
+  ],
+  "decor (makhar)": [
+   "ganesh_makhar"
+  ],
+  "rangoli": [
+   "rangoli_colours"
+  ],
+  "rangoli colours": [
+   "rangoli_colours"
+  ],
+  "kolam colours": [
+   "rangoli_colours"
+  ],
+  "kolam powder": [
+   "rangoli_colours"
+  ],
+  "alpona": [
+   "rangoli_colours"
+  ],
+  "home furnishings": [
+   "furnishings"
+  ],
+  "hostel bedding": [
+   "furnishings"
+  ],
+  "portraits": [
+   "portraits"
+  ],
+  "jhula": [
+   "jhula"
+  ],
+  "jhula decor": [
+   "jhula"
+  ],
+  "swings": [
+   "jhula"
+  ],
+  "laddu gopal dresses": [
+   "laddu_gopal_dress"
+  ],
+  "kids' krishna costumes": [
+   "krishna_costume"
+  ],
+  "kids krishna costumes": [
+   "krishna_costume"
+  ],
+  "krishna costumes": [
+   "krishna_costume"
+  ],
+  "kids costumes": [
+   "kids_costume"
+  ],
+  "kids' costumes": [
+   "kids_costume"
+  ],
+  "costumes": [
+   "kids_costume"
+  ],
+  "costume": [
+   "kids_costume"
+  ],
+  "flutes": [
+   "flute"
+  ],
+  "flute": [
+   "flute"
+  ],
+  "flute toys": [
+   "flute"
+  ],
+  "toys": [
+   "toys"
+  ],
+  "kids' toys": [
+   "toys"
+  ],
+  "indoor toys": [
+   "toys"
+  ],
+  "toy raths": [
+   "traditional_toys"
+  ],
+  "gedi": [
+   "traditional_toys"
+  ],
+  "clay dolls": [
+   "traditional_toys"
+  ],
+  "clay bulls": [
+   "clay_bullocks"
+  ],
+  "clay bullocks": [
+   "clay_bullocks"
+  ],
+  "board games": [
+   "board_games"
+  ],
+  "games": [
+   "board_games"
+  ],
+  "kids' games": [
+   "board_games"
+  ],
+  "indoor entertainment": [
+   "board_games"
+  ],
+  "gaming": [
+   "gaming"
+  ],
+  "kites": [
+   "kites_manja"
+  ],
+  "manja": [
+   "kites_manja"
+  ],
+  "crackers": [
+   "firecrackers"
+  ],
+  "firecrackers": [
+   "firecrackers"
+  ],
+  "pichkaris": [
+   "pichkari"
+  ],
+  "pichkari": [
+   "pichkari"
+  ],
+  "water guns": [
+   "pichkari"
+  ],
+  "colours": [
+   "gulal_colours"
+  ],
+  "gulal": [
+   "gulal_colours"
+  ],
+  "abir": [
+   "gulal_colours"
+  ],
+  "abira": [
+   "gulal_colours"
+  ],
+  "tricolour merchandise": [
+   "tricolour_merch"
+  ],
+  "flags": [
+   "saffron_flag"
+  ],
+  "saffron flags": [
+   "saffron_flag"
+  ],
+  "blue flags": [
+   "blue_flags"
+  ],
+  "red-yellow flags": [
+   "regional_pride_merch"
+  ],
+  "kannada merch": [
+   "regional_pride_merch"
+  ],
+  "event merchandise": [
+   "regional_pride_merch"
+  ],
+  "state products": [
+   "regional_pride_merch"
+  ],
+  "event goods": [
+   "regional_pride_merch"
+  ],
+  "prayer flags": [
+   "prayer_flags"
+  ],
+  "dhol": [
+   "musical_instruments"
+  ],
+  "drums": [
+   "musical_instruments"
+  ],
+  "musical instruments": [
+   "musical_instruments"
+  ],
+  "baul music items": [
+   "musical_instruments"
+  ],
+  "pepa": [
+   "musical_instruments"
+  ],
+  "damphu": [
+   "musical_instruments"
+  ],
+  "dandiya sticks": [
+   "dandiya"
+  ],
+  "chaniya choli": [
+   "chaniya_choli"
+  ],
+  "garba wear": [
+   "garba_wear"
+  ],
+  "kediyu": [
+   "garba_wear"
+  ],
+  "new clothes": [
+   "new_clothes"
+  ],
+  "clothes": [
+   "new_clothes"
+  ],
+  "attire": [
+   "new_clothes"
+  ],
+  "apparel": [
+   "new_clothes"
+  ],
+  "garments": [
+   "new_clothes"
+  ],
+  "new clothes (kutch)": [
+   "new_clothes"
+  ],
+  "new clothes for family": [
+   "new_clothes"
+  ],
+  "fashion": [
+   "new_clothes"
+  ],
+  "outfits": [
+   "new_clothes"
+  ],
+  "new dresses": [
+   "new_clothes"
+  ],
+  "party wear": [
+   "party_wear"
+  ],
+  "branded clothes": [
+   "branded_apparel"
+  ],
+  "apparel clearance": [
+   "branded_apparel"
+  ],
+  "discretionary fashion": [
+   "branded_apparel"
+  ],
+  "premium fashion": [
+   "premium_fashion"
+  ],
+  "global fashion brands": [
+   "premium_fashion"
+  ],
+  "cloth": [
+   "fabric"
+  ],
+  "textiles": [
+   "fabric"
+  ],
+  "red cloth": [
+   "fabric"
+  ],
+  "handloom": [
+   "handloom"
+  ],
+  "odia handloom": [
+   "handloom"
+  ],
+  "ethnic wear": [
+   "ethnic_wear"
+  ],
+  "traditional attire": [
+   "ethnic_wear"
+  ],
+  "traditional wear": [
+   "ethnic_wear"
+  ],
+  "ethnic attire": [
+   "ethnic_wear"
+  ],
+  "cultural attire": [
+   "ethnic_wear"
+  ],
+  "festive wear": [
+   "ethnic_wear"
+  ],
+  "traditional kodava attire": [
+   "ethnic_wear"
+  ],
+  "koli attire": [
+   "ethnic_wear"
+  ],
+  "nihang attire": [
+   "ethnic_wear"
+  ],
+  "white traditional attire": [
+   "ethnic_wear"
+  ],
+  "eid outfits": [
+   "eid_outfit"
+  ],
+  "clothes for eid": [
+   "eid_outfit"
+  ],
+  "eid clothes": [
+   "eid_outfit"
+  ],
+  "church wear": [
+   "church_wear"
+  ],
+  "sarees": [
+   "saree"
+  ],
+  "saree": [
+   "saree"
+  ],
+  "saris": [
+   "saree"
+  ],
+  "new sarees": [
+   "saree"
+  ],
+  "sarees (state also distributes)": [
+   "saree"
+  ],
+  "sarees for girls": [
+   "saree"
+  ],
+  "red sarees": [
+   "saree"
+  ],
+  "silk sarees": [
+   "silk_saree"
+  ],
+  "pattu sarees": [
+   "silk_saree"
+  ],
+  "mysore silk sarees": [
+   "silk_saree"
+  ],
+  "banarasi sarees": [
+   "banarasi_saree"
+  ],
+  "kasavu sarees": [
+   "kasavu_saree"
+  ],
+  "kasavu": [
+   "kasavu_saree"
+  ],
+  "paithani": [
+   "paithani_saree"
+  ],
+  "paithani sarees": [
+   "paithani_saree"
+  ],
+  "lehariya": [
+   "lehariya_saree"
+  ],
+  "lehariya sarees": [
+   "lehariya_saree"
+  ],
+  "sambalpuri sarees": [
+   "handloom_saree"
+  ],
+  "maheshwari sarees": [
+   "handloom_saree"
+  ],
+  "red-white sarees (lal paad)": [
+   "lal_paad_saree"
+  ],
+  "9-colour sarees": [
+   "navratri_colour_saree"
+  ],
+  "yellow clothes": [
+   "yellow_attire"
+  ],
+  "yellow": [
+   "yellow_attire"
+  ],
+  "basanti sarees": [
+   "yellow_attire"
+  ],
+  "yellow sarees": [
+   "yellow_attire"
+  ],
+  "green sarees": [
+   "green_attire"
+  ],
+  "green outfits": [
+   "green_attire"
+  ],
+  "black clothes": [
+   "black_attire"
+  ],
+  "black": [
+   "black_attire"
+  ],
+  "black dhotis": [
+   "black_attire"
+  ],
+  "black sarees": [
+   "black_attire"
+  ],
+  "white clothes": [
+   "white_attire"
+  ],
+  "white clothing": [
+   "white_attire"
+  ],
+  "white kurtas": [
+   "white_attire"
+  ],
+  "white kurta": [
+   "white_attire"
+  ],
+  "saffron clothes": [
+   "saffron_attire"
+  ],
+  "saffron clothing": [
+   "saffron_attire"
+  ],
+  "saffron wear": [
+   "saffron_attire"
+  ],
+  "saffron dhotis": [
+   "saffron_attire"
+  ],
+  "lehengas": [
+   "lehenga"
+  ],
+  "bridal wear": [
+   "lehenga"
+  ],
+  "gharara": [
+   "lehenga"
+  ],
+  "suits": [
+   "salwar_suit"
+  ],
+  "new suits": [
+   "salwar_suit"
+  ],
+  "salwar suits": [
+   "salwar_suit"
+  ],
+  "phulkari": [
+   "phulkari"
+  ],
+  "phulkari suits": [
+   "phulkari"
+  ],
+  "kurtas": [
+   "kurta"
+  ],
+  "kurta": [
+   "kurta"
+  ],
+  "panjabi": [
+   "kurta"
+  ],
+  "eid kurtas": [
+   "kurta"
+  ],
+  "kurta-pajama": [
+   "kurta_pyjama"
+  ],
+  "kurta-pyjama": [
+   "kurta_pyjama"
+  ],
+  "dhoti": [
+   "dhoti_veshti"
+  ],
+  "veshti": [
+   "dhoti_veshti"
+  ],
+  "mundu": [
+   "dhoti_veshti"
+  ],
+  "blue mundu": [
+   "dhoti_veshti"
+  ],
+  "sherwanis": [
+   "sherwani"
+  ],
+  "turbans": [
+   "turban_pheta"
+  ],
+  "pheta": [
+   "turban_pheta"
+  ],
+  "caps": [
+   "caps"
+  ],
+  "dupattas": [
+   "dupatta"
+  ],
+  "chunri": [
+   "chunri"
+  ],
+  "red chunri": [
+   "chunri"
+  ],
+  "parandi": [
+   "parandi"
+  ],
+  "pherans": [
+   "pheran"
+  ],
+  "abayas": [
+   "abaya"
+  ],
+  "gamosa": [
+   "gamosa"
+  ],
+  "mekhela sador": [
+   "mekhela_sador"
+  ],
+  "phanek": [
+   "ne_handloom_wear"
+  ],
+  "puan (traditional wraps)": [
+   "ne_handloom_wear"
+  ],
+  "dokhona": [
+   "ne_handloom_wear"
+  ],
+  "aronai": [
+   "ne_handloom_wear"
+  ],
+  "rignai": [
+   "ne_handloom_wear"
+  ],
+  "risa attire": [
+   "ne_handloom_wear"
+  ],
+  "traditional attire (jainsem)": [
+   "ne_handloom_wear"
+  ],
+  "kantha": [
+   "kantha"
+  ],
+  "uniforms": [
+   "school_uniform"
+  ],
+  "replacement uniforms": [
+   "school_uniform"
+  ],
+  "warm uniforms": [
+   "school_uniform"
+  ],
+  "t-shirts": [
+   "tshirt"
+  ],
+  "jeans": [
+   "jeans"
+  ],
+  "kids' clothes": [
+   "kids_wear"
+  ],
+  "kids' apparel": [
+   "kids_wear"
+  ],
+  "cotton wear": [
+   "summer_cottons"
+  ],
+  "summer apparel": [
+   "summer_cottons"
+  ],
+  "resort wear": [
+   "resort_wear"
+  ],
+  "swimwear": [
+   "swimwear"
+  ],
+  "snorkel gear": [
+   "swimwear"
+  ],
+  "jackets": [
+   "jackets"
+  ],
+  "leather jackets": [
+   "jackets"
+  ],
+  "winter jackets": [
+   "jackets"
+  ],
+  "light jackets": [
+   "jackets"
+  ],
+  "down jackets": [
+   "jackets"
+  ],
+  "light jackets (bengaluru": [
+   "jackets"
+  ],
+  "hyderabad nights)": [
+   "jackets"
+  ],
+  "sweaters": [
+   "sweaters"
+  ],
+  "thermals": [
+   "thermals"
+  ],
+  "thermal layers": [
+   "thermals"
+  ],
+  "winter wear": [
+   "winter_wear"
+  ],
+  "woollens": [
+   "winter_wear"
+  ],
+  "winterwear": [
+   "winter_wear"
+  ],
+  "winter clothing": [
+   "winter_wear"
+  ],
+  "warm clothes": [
+   "winter_wear"
+  ],
+  "winter clothes": [
+   "winter_wear"
+  ],
+  "woollens for daan": [
+   "winter_wear"
+  ],
+  "warm wear": [
+   "winter_wear"
+  ],
+  "light woollens": [
+   "winter_wear"
+  ],
+  "gloves": [
+   "gloves"
+  ],
+  "snow boots": [
+   "snow_gear"
+  ],
+  "snow gear in winter": [
+   "snow_gear"
+  ],
+  "shawls": [
+   "shawls"
+  ],
+  "traditional shawls": [
+   "shawls"
+  ],
+  "kullu shawls": [
+   "shawls"
+  ],
+  "kani items": [
+   "shawls"
+  ],
+  "pashmina": [
+   "pashmina"
+  ],
+  "blankets": [
+   "blankets"
+  ],
+  "electric blankets": [
+   "blankets"
+  ],
+  "heated blankets": [
+   "blankets"
+  ],
+  "heaters": [
+   "room_heater"
+  ],
+  "room heaters": [
+   "room_heater"
+  ],
+  "oil radiators": [
+   "room_heater"
+  ],
+  "ne hills need heaters": [
+   "room_heater"
+  ],
+  "kangri": [
+   "kangri_bukhari"
+  ],
+  "bukharis": [
+   "kangri_bukhari"
+  ],
+  "geysers": [
+   "geyser"
+  ],
+  "bangles": [
+   "bangles"
+  ],
+  "green bangles": [
+   "bangles"
+  ],
+  "jewellery": [
+   "jewellery"
+  ],
+  "jewellery gifts": [
+   "jewellery"
+  ],
+  "traditional ornaments": [
+   "jewellery"
+  ],
+  "oxidised jewellery": [
+   "fashion_jewellery"
+  ],
+  "gold jewellery": [
+   "gold_jewellery"
+  ],
+  "wedding gold": [
+   "gold_jewellery"
+  ],
+  "bridal gold": [
+   "gold_jewellery"
+  ],
+  "gold coins": [
+   "gold_coin"
+  ],
+  "coins": [
+   "gold_coin"
+  ],
+  "silver jewellery": [
+   "silver_jewellery"
+  ],
+  "silver ornaments": [
+   "silver_jewellery"
+  ],
+  "diamond jewellery": [
+   "diamond_jewellery"
+  ],
+  "digital gold": [
+   "digital_gold"
+  ],
+  "gold schemes": [
+   "gold_scheme"
+  ],
+  "nath": [
+   "nath"
+  ],
+  "mehendi": [
+   "mehendi_cone"
+  ],
+  "henna": [
+   "mehendi_cone"
+  ],
+  "mehndi": [
+   "mehendi_cone"
+  ],
+  "cosmetics": [
+   "cosmetics"
+  ],
+  "makeup": [
+   "cosmetics"
+  ],
+  "beauty kits": [
+   "cosmetics"
+  ],
+  "beauty products": [
+   "cosmetics"
+  ],
+  "beauty": [
+   "cosmetics"
+  ],
+  "skincare": [
+   "skincare"
+  ],
+  "skin": [
+   "skincare"
+  ],
+  "moisturisers": [
+   "moisturiser"
+  ],
+  "cold cream": [
+   "moisturiser"
+  ],
+  "sunscreen": [
+   "sunscreen"
+  ],
+  "high-spf sunscreen": [
+   "sunscreen"
+  ],
+  "hair care": [
+   "haircare"
+  ],
+  "haircare": [
+   "haircare"
+  ],
+  "perfumes": [
+   "perfume"
+  ],
+  "fragrances": [
+   "perfume"
+  ],
+  "attar": [
+   "attar"
+  ],
+  "personal care gifts": [
+   "personal_care_gift"
+  ],
+  "grooming kits": [
+   "grooming_kit"
+  ],
+  "prickly-heat powder": [
+   "prickly_heat_powder"
+  ],
+  "footwear": [
+   "footwear"
+  ],
+  "shoes": [
+   "footwear"
+  ],
+  "footwear clearance": [
+   "footwear"
+  ],
+  "sports shoes": [
+   "sports_shoes"
+  ],
+  "trekking shoes": [
+   "sports_shoes"
+  ],
+  "running shoes": [
+   "sports_shoes"
+  ],
+  "boots": [
+   "boots"
+  ],
+  "waterproof footwear": [
+   "rain_footwear"
+  ],
+  "gumboots": [
+   "rain_footwear"
+  ],
+  "waterproof sandals": [
+   "rain_footwear"
+  ],
+  "school shoes": [
+   "school_shoes"
+  ],
+  "watches": [
+   "watches"
+  ],
+  "smartwatches": [
+   "smartwatch"
+  ],
+  "bands": [
+   "smartwatch"
+  ],
+  "wallets": [
+   "wallets"
+  ],
+  "bags": [
+   "bags"
+  ],
+  "handbags": [
+   "bags"
+  ],
+  "leather": [
+   "leather_goods"
+  ],
+  "sunglasses": [
+   "sunglasses"
+  ],
+  "accessories": [
+   "fashion_accessories"
+  ],
+  "gifts": [
+   "gifts"
+  ],
+  "small gifts": [
+   "gifts"
+  ],
+  "gift hampers": [
+   "gift_hamper"
+  ],
+  "gift boxes": [
+   "gift_hamper"
+  ],
+  "premium gifts": [
+   "premium_gift"
+  ],
+  "return gifts": [
+   "return_gifts"
+  ],
+  "haldi-kumkum return gifts (vaan)": [
+   "return_gifts"
+  ],
+  "cash envelopes": [
+   "shagun_envelope"
+  ],
+  "cash gifts": [
+   "shagun_envelope"
+  ],
+  "cards": [
+   "greeting_cards"
+  ],
+  "souvenirs": [
+   "souvenirs"
+  ],
+  "handicrafts": [
+   "handicrafts"
+  ],
+  "kutchi handicrafts": [
+   "handicrafts"
+  ],
+  "local crafts": [
+   "handicrafts"
+  ],
+  "tribal art": [
+   "handicrafts"
+  ],
+  "tribal crafts": [
+   "handicrafts"
+  ],
+  "chamba rumal": [
+   "handicrafts"
+  ],
+  "jaapi": [
+   "handicrafts"
+  ],
+  "chaudal paper": [
+   "handicrafts"
+  ],
+  "gifts for newborns": [
+   "baby_gifts"
+  ],
+  "cribs": [
+   "crib"
+  ],
+  "kids' winter care": [
+   "baby_winter_care"
+  ],
+  "electronics": [
+   "electronics"
+  ],
+  "gadgets": [
+   "gadgets"
+  ],
+  "gadgets as gifts": [
+   "gadgets"
+  ],
+  "small gadgets": [
+   "gadgets"
+  ],
+  "premium gadgets": [
+   "gadgets"
+  ],
+  "discretionary gadgets": [
+   "gadgets"
+  ],
+  "phones": [
+   "smartphone"
+  ],
+  "mobiles": [
+   "smartphone"
+  ],
+  "phones on national sales": [
+   "smartphone"
+  ],
+  "smartphones": [
+   "smartphone"
+  ],
+  "budget phones": [
+   "smartphone"
+  ],
+  "tvs": [
+   "tv"
+  ],
+  "large tvs": [
+   "tv"
+  ],
+  "laptops": [
+   "laptop"
+  ],
+  "tablets": [
+   "tablet"
+  ],
+  "cameras": [
+   "camera"
+  ],
+  "speakers": [
+   "speakers"
+  ],
+  "headphones": [
+   "headphones"
+  ],
+  "earphones": [
+   "headphones"
+  ],
+  "power banks": [
+   "power_bank"
+  ],
+  "phone pouches": [
+   "phone_pouch"
+  ],
+  "extension boards": [
+   "extension_board"
+  ],
+  "torches": [
+   "emergency_light"
+  ],
+  "emergency lights": [
+   "emergency_light"
+  ],
+  "emergency lights rise": [
+   "emergency_light"
+  ],
+  "inverters": [
+   "inverter"
+  ],
+  "power backup": [
+   "inverter"
+  ],
+  "appliances": [
+   "appliances"
+  ],
+  "home appliances": [
+   "appliances"
+  ],
+  "appliances on offer": [
+   "appliances"
+  ],
+  "kitchen appliances": [
+   "kitchen_appliances"
+  ],
+  "kettles": [
+   "kitchen_appliances"
+  ],
+  "induction cooktops": [
+   "kitchen_appliances"
+  ],
+  "induction stoves": [
+   "kitchen_appliances"
+  ],
+  "fridges": [
+   "refrigerator"
+  ],
+  "refrigerators": [
+   "refrigerator"
+  ],
+  "mini-fridges": [
+   "refrigerator"
+  ],
+  "acs": [
+   "ac"
+  ],
+  "split": [
+   "ac"
+  ],
+  "window acs": [
+   "ac"
+  ],
+  "acs as gifts": [
+   "ac"
+  ],
+  "coolers during sales": [
+   "air_cooler"
+  ],
+  "coolers": [
+   "air_cooler"
+  ],
+  "air coolers": [
+   "air_cooler"
+  ],
+  "coolers on emi with installation": [
+   "air_cooler"
+  ],
+  "coolers before summer": [
+   "air_cooler"
+  ],
+  "fans": [
+   "fan"
+  ],
+  "dehumidifiers": [
+   "dehumidifier"
+  ],
+  "air purifiers": [
+   "air_purifier"
+  ],
+  "hepa filters": [
+   "air_purifier"
+  ],
+  "budget air purifiers": [
+   "air_purifier"
+  ],
+  "n95 masks": [
+   "n95_mask"
+  ],
+  "two-wheelers": [
+   "two_wheeler"
+  ],
+  "bike": [
+   "two_wheeler"
+  ],
+  "cars": [
+   "car"
+  ],
+  "suvs": [
+   "car"
+  ],
+  "vehicle accessories": [
+   "vehicle_accessories"
+  ],
+  "vehicle decor": [
+   "vehicle_accessories"
+  ],
+  "car covers": [
+   "vehicle_accessories"
+  ],
+  "biking gear": [
+   "riding_gear"
+  ],
+  "riding gear": [
+   "riding_gear"
+  ],
+  "cycles": [
+   "bicycle"
+  ],
+  "tractors": [
+   "tractor"
+  ],
+  "homes": [
+   "real_estate"
+  ],
+  "home upgrades": [
+   "home_renovation"
+  ],
+  "home renovation": [
+   "home_renovation"
+  ],
+  "rebuilding rise": [
+   "home_renovation"
+  ],
+  "paint": [
+   "paint"
+  ],
+  "paints": [
+   "paint"
+  ],
+  "marble": [
+   "marble"
+  ],
+  "waterproofing": [
+   "waterproofing"
+  ],
+  "roof waterproofing": [
+   "waterproofing"
+  ],
+  "tarpaulins": [
+   "tarpaulin"
+  ],
+  "tarpaulins rise": [
+   "tarpaulin"
+  ],
+  "anti-skid mats": [
+   "anti_skid_mat"
+  ],
+  "tools": [
+   "tools"
+  ],
+  "brooms": [
+   "broom"
+  ],
+  "home cleaning goods": [
+   "cleaning_supplies"
+  ],
+  "home cleaning items": [
+   "cleaning_supplies"
+  ],
+  "mop": [
+   "cleaning_supplies"
+  ],
+  "cleaning sets (2.5x)": [
+   "cleaning_supplies"
+  ],
+  "buckets": [
+   "cleaning_supplies"
+  ],
+  "disinfectants": [
+   "cleaning_supplies"
+  ],
+  "household goods": [
+   "household"
+  ],
+  "home goods": [
+   "household"
+  ],
+  "home": [
+   "household"
+  ],
+  "housewarming": [
+   "housewarming"
+  ],
+  "housewarming goods": [
+   "housewarming"
+  ],
+  "new home goods": [
+   "housewarming"
+  ],
+  "house moves": [
+   "housewarming"
+  ],
+  "furniture": [
+   "furniture"
+  ],
+  "mattresses": [
+   "mattress"
+  ],
+  "study tables": [
+   "study_table"
+  ],
+  "utensils": [
+   "utensils"
+  ],
+  "kitchenware": [
+   "utensils"
+  ],
+  "kitchen utensils": [
+   "utensils"
+  ],
+  "new utensils": [
+   "utensils"
+  ],
+  "vessels": [
+   "utensils"
+  ],
+  "kitchen": [
+   "utensils"
+  ],
+  "crockery": [
+   "dinnerware"
+  ],
+  "dining": [
+   "dining_out"
+  ],
+  "clay pots": [
+   "clay_pots"
+  ],
+  "pots": [
+   "clay_pots"
+  ],
+  "water pots": [
+   "clay_pots"
+  ],
+  "clay stoves": [
+   "clay_pots"
+  ],
+  "pongal pots": [
+   "pongal_pot"
+  ],
+  "pots (bonam)": [
+   "bonam_pot"
+  ],
+  "lunch boxes": [
+   "lunch_box"
+  ],
+  "tiffin boxes": [
+   "lunch_box"
+  ],
+  "water bottles": [
+   "water_bottle"
+  ],
+  "books": [
+   "books"
+  ],
+  "books (saraswati puja)": [
+   "books"
+  ],
+  "textbooks": [
+   "textbooks"
+  ],
+  "study guides": [
+   "textbooks"
+  ],
+  "sample papers": [
+   "textbooks"
+  ],
+  "test-series books": [
+   "textbooks"
+  ],
+  "stationery": [
+   "stationery"
+  ],
+  "notebooks": [
+   "stationery"
+  ],
+  "pens": [
+   "stationery"
+  ],
+  "geometry sets": [
+   "stationery"
+  ],
+  "slates": [
+   "slate"
+  ],
+  "school bags": [
+   "school_bag"
+  ],
+  "backpacks": [
+   "school_bag"
+  ],
+  "desk lamps": [
+   "desk_lamp"
+  ],
+  "account books": [
+   "bahi_khata"
+  ],
+  "ledgers": [
+   "bahi_khata"
+  ],
+  "new ledgers": [
+   "bahi_khata"
+  ],
+  "almanac (jantri)": [
+   "panchang"
+  ],
+  "panjika": [
+   "panchang"
+  ],
+  "panchangam": [
+   "panchang"
+  ],
+  "cattle decor": [
+   "cattle_decor"
+  ],
+  "bullock decorations": [
+   "cattle_decor"
+  ],
+  "bells": [
+   "cattle_decor"
+  ],
+  "livestock": [
+   "livestock"
+  ],
+  "cattle": [
+   "livestock"
+  ],
+  "horses": [
+   "livestock"
+  ],
+  "agri equipment": [
+   "agri_tools"
+  ],
+  "farm tools": [
+   "agri_tools"
+  ],
+  "machinery": [
+   "agri_tools"
+  ],
+  "seeds": [
+   "seeds_agri_inputs"
+  ],
+  "agri inputs": [
+   "seeds_agri_inputs"
+  ],
+  "kharif seeds": [
+   "seeds_agri_inputs"
+  ],
+  "saplings": [
+   "plants_gardening"
+  ],
+  "plants": [
+   "plants_gardening"
+  ],
+  "gardening": [
+   "plants_gardening"
+  ],
+  "gardening tools": [
+   "plants_gardening"
+  ],
+  "firewood": [
+   "firewood"
+  ],
+  "repellents": [
+   "mosquito_repellent"
+  ],
+  "mosquito repellent": [
+   "mosquito_repellent"
+  ],
+  "mosquito repellent (tn gets only light sw rain)": [
+   "mosquito_repellent"
+  ],
+  "mosquito repellents": [
+   "mosquito_repellent"
+  ],
+  "coils": [
+   "mosquito_repellent"
+  ],
+  "nets": [
+   "mosquito_net"
+  ],
+  "mosquito nets": [
+   "mosquito_net"
+  ],
+  "medicines": [
+   "otc_medicines"
+  ],
+  "fever meds": [
+   "otc_medicines"
+  ],
+  "fever": [
+   "otc_medicines"
+  ],
+  "flu meds": [
+   "otc_medicines"
+  ],
+  "cough": [
+   "otc_medicines"
+  ],
+  "cold remedies": [
+   "otc_medicines"
+  ],
+  "nasal": [
+   "otc_medicines"
+  ],
+  "throat care": [
+   "otc_medicines"
+  ],
+  "antihistamines": [
+   "otc_medicines"
+  ],
+  "thermometers": [
+   "health_devices"
+  ],
+  "test kits": [
+   "health_devices"
+  ],
+  "vaporisers": [
+   "vaporiser"
+  ],
+  "humidifiers": [
+   "vaporiser"
+  ],
+  "supplements": [
+   "supplements"
+  ],
+  "health supplements": [
+   "supplements"
+  ],
+  "immunity supplements": [
+   "supplements"
+  ],
+  "protein": [
+   "supplements"
+  ],
+  "wellness": [
+   "supplements"
+  ],
+  "ors": [
+   "ors"
+  ],
+  "anti-fungal care": [
+   "antifungal"
+  ],
+  "ayurvedic kits (karkidaka kanji)": [
+   "ayurvedic_kit"
+  ],
+  "yoga mats": [
+   "yoga_gear"
+  ],
+  "activewear": [
+   "yoga_gear"
+  ],
+  "gym gear": [
+   "gym_gear"
+  ],
+  "sports gear for yaoshang games": [
+   "sports_gear"
+  ],
+  "summer-camp gear": [
+   "sports_gear"
+  ],
+  "cricket gear": [
+   "cricket_gear"
+  ],
+  "team jerseys": [
+   "team_jersey"
+  ],
+  "jerseys": [
+   "team_jersey"
+  ],
+  "franchise merchandise": [
+   "team_jersey"
+  ],
+  "trekking gear": [
+   "trekking_gear"
+  ],
+  "camping gear": [
+   "trekking_gear"
+  ],
+  "trekking": [
+   "trekking_gear"
+  ],
+  "rainwear": [
+   "rainwear"
+  ],
+  "raincoats": [
+   "rainwear"
+  ],
+  "rain": [
+   "rainwear"
+  ],
+  "raincoats (up to 5x)": [
+   "rainwear"
+  ],
+  "rainwear demand tails off": [
+   "rainwear"
+  ],
+  "umbrellas": [
+   "umbrella"
+  ],
+  "embroidered umbrellas": [
+   "umbrella"
+  ],
+  "luggage": [
+   "luggage"
+  ],
+  "trolley bags": [
+   "luggage"
+  ],
+  "luggage in spring": [
+   "luggage"
+  ],
+  "travel bags": [
+   "luggage"
+  ],
+  "travel gear (acs rarely needed)": [
+   "luggage"
+  ],
+  "travel kits": [
+   "travel_kit"
+  ],
+  "travel": [
+   "travel_package"
+  ],
+  "summer travel": [
+   "travel_package"
+  ],
+  "family travel": [
+   "travel_package"
+  ],
+  "hill-station travel": [
+   "travel_package"
+  ],
+  "holiday travel": [
+   "travel_package"
+  ],
+  "beach travel": [
+   "travel_package"
+  ],
+  "tourism": [
+   "travel_package"
+  ],
+  "bageshwar uttarayani mela": [
+   "travel_package"
+  ],
+  "travel tickets": [
+   "travel_tickets"
+  ],
+  "travel bookings": [
+   "travel_tickets"
+  ],
+  "bus": [
+   "travel_tickets"
+  ],
+  "train travel home": [
+   "travel_tickets"
+  ],
+  "hometown travel": [
+   "travel_tickets"
+  ],
+  "hotel stays": [
+   "hotel_stays"
+  ],
+  "events": [
+   "event_tickets"
+  ],
+  "event tickets": [
+   "event_tickets"
+  ],
+  "concert tickets": [
+   "event_tickets"
+  ],
+  "cultural events": [
+   "event_tickets"
+  ],
+  "cultural programmes": [
+   "event_tickets"
+  ],
+  "community events": [
+   "event_tickets"
+  ],
+  "commemorative events": [
+   "event_tickets"
+  ],
+  "church events": [
+   "event_tickets"
+  ],
+  "entertainment": [
+   "event_tickets"
+  ],
+  "picnic supplies": [
+   "picnic_supplies"
+  ],
+  "wedding goods": [
+   "wedding_shopping"
+  ],
+  "weddings": [
+   "wedding_shopping"
+  ],
+  "wedding shopping": [
+   "wedding_shopping"
+  ],
+  "wedding spend": [
+   "wedding_shopping"
+  ],
+  "wedding buys": [
+   "wedding_shopping"
+  ],
+  "new ventures": [
+   "wedding_shopping"
+  ],
+  "fair goods": [
+   "fair_goods"
+  ],
+  "traditional items": [
+   "traditional_items"
+  ],
+  "discretionary dips": [
+   "discretionary_spend"
+  ],
+  "discretionary spend dips at landfall": [
+   "discretionary_spend"
+  ],
+  "short dips at landfall": [
+   "discretionary_spend"
+  ],
+  "discretionary spend dip": [
+   "discretionary_spend"
+  ],
+  "delivery disruption": [
+   "discretionary_spend"
+  ],
+  "none significant": [
+   "none"
+  ],
+  "none specific": [
+   "none"
+  ],
+  "gold": [
+   "gold_jewellery",
+   "gold_coin"
+  ],
+  "silver": [
+   "silver_coin",
+   "silver_jewellery"
+  ],
+  "silver coins": [
+   "silver_coin"
+  ],
+  "vehicles": [
+   "two_wheeler",
+   "car"
+  ],
+  "new vehicles": [
+   "two_wheeler",
+   "car"
+  ],
+  "rakhis": [
+   "rakhi"
+  ],
+  "gifts for wives": [
+   "jewellery",
+   "cosmetics",
+   "gift_hamper"
+  ],
+  "gifts for sisters": [
+   "gift_hamper",
+   "chocolates",
+   "jewellery"
+  ],
+  "onakkodi clothes": [
+   "kasavu_saree",
+   "dhoti_veshti"
+  ],
+  "new clothes (vishu kodi)": [
+   "kasavu_saree",
+   "dhoti_veshti"
+  ],
+  "wedding wear": [
+   "lehenga",
+   "sherwani",
+   "silk_saree"
+  ],
+  "masks": [
+   "carnival_mask",
+   "n95_mask"
+  ],
+  "national sale purchases": [
+   "smartphone",
+   "electronics",
+   "appliances"
+  ]
+ }
+}
