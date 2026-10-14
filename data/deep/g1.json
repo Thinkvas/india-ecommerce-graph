@@ -38,7 +38,7 @@
      "date_2026": "2026-11-06..2026-11-11",
      "date_2027": "2027-10-27..2027-10-31",
      "significance": "Biggest Hindu festival; Dhanteras metal/gold buying, Lakshmi puja, gifting",
-     "buys": "gold coins, utensils, phones, TVs, appliances, diyas, lights, dry fruits, gift hampers, new clothes",
+     "buys": "diyas, lights, rangoli, lakshmi-ganesh idols, dry fruit gift boxes, sweets, gift hampers, gold coins, silver coins, utensils, phones, TVs, appliances, new clothes",
      "categories": [
       "electronics",
       "phones",
@@ -74,7 +74,7 @@
      "date_2026": "2026-10-11..2026-10-20",
      "date_2027": "2027-09-30..2027-10-09",
      "significance": "Nine nights of Durga worship ending in Dussehra/Ravan Dahan; auspicious for vehicle & home purchases",
-     "buys": "vehicles, two-wheelers, ethnic wear, puja samagri, fasting foods, electronics",
+     "buys": "fasting foods, chunri, puja samagri, kanya pujan gifts, ethnic wear, vehicles, two-wheelers, electronics",
      "categories": [
       "vehicles",
       "ethnic",
@@ -83,7 +83,8 @@
       "grocery",
       "electronics",
       "phones",
-      "appliances"
+      "appliances",
+      "gifting"
      ],
      "impact": "high",
      "impact_reason": "Coincides with opening of Flipkart/Amazon festive sales; first-purchase muhurat for durables",
@@ -114,7 +115,7 @@
       "personal",
       "gifting"
      ],
-     "impact": "medium",
+     "impact": "high",
      "impact_reason": "Holi sales on fashion and grocery apps; quick-commerce spikes for colours/snacks",
      "sources": [
       "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
@@ -241,7 +242,7 @@
      "date_2026": "2026-10-29",
      "date_2027": "2027-10-18",
      "significance": "Married women fast for husbands; solah shringar",
-     "buys": "sarees, lehengas, mehendi, bangles, cosmetics, karwa/sieve thali, jewellery, gifts for wives",
+     "buys": "karwa sets, sargi, sieve thali, mehendi, bangles, sindoor, sarees, jewellery, cosmetics, gifts",
      "categories": [
       "ethnic",
       "beauty",
@@ -269,7 +270,7 @@
      "date_2026": "2026-01-14",
      "date_2027": "2027-01-15",
      "significance": "Sun enters Capricorn; holy dips, til-gur, khichdi daan",
-     "buys": "khichdi rice-dal, til-gur laddoo, kites, blankets/woollens for daan",
+     "buys": "khichdi rice-dal, til-gur laddoo, tilkut, kites, woollens for daan",
      "categories": [
       "grocery",
       "sweets",
@@ -296,14 +297,14 @@
      "date_2026": "2026-01-23",
      "date_2027": "2027-02-11",
      "significance": "Spring festival; Saraswati worship, yellow attire",
-     "buys": "yellow clothes, kites, books, pens, Saraswati idols",
+     "buys": "Saraswati idols, yellow clothes, puja items, kites, books, pens",
      "categories": [
       "ethnic",
       "stationery",
       "puja",
       "sweets"
      ],
-     "impact": "low",
+     "impact": "medium",
      "impact_reason": "Niche category spikes (yellow ethnic wear, stationery)",
      "sources": [
       "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
@@ -370,7 +371,7 @@
      "date_2026": "2026-11-13..2026-11-16",
      "date_2027": "2027-11-02..2027-11-05",
      "significance": "Major in eastern UP (Varanasi, Gorakhpur, Ballia)",
-     "buys": "sarees, soop, fruits, puja items",
+     "buys": "soop/daura, thekua ingredients, sarees, sugarcane, fruits, clay stoves, puja items",
      "categories": [
       "ethnic",
       "puja",
@@ -393,7 +394,7 @@
       11
      ],
      "date_2026": "2026-11-05..2026-11-07",
-     "date_2027": null,
+     "date_2027": "2027-10-27..2027-10-28",
      "significance": "State-run lamp festival at Ram Ki Paidi; 33 lakh diyas planned in 2026",
      "buys": "diyas, ethnic wear, travel, decor",
      "categories": [
@@ -437,12 +438,13 @@
      "local_name": "Lathmar Holi",
      "kind": "cultural",
      "months": [
-      2
+      2,
+      3
      ],
      "date_2026": "2026-02-25..2026-02-26",
-     "date_2027": null,
+     "date_2027": "2027-03-16..2027-03-22",
      "significance": "Week-long Holi in Mathura-Vrindavan region",
-     "buys": "gulal, travel, white clothing",
+     "buys": "gulal, pichkaris, white clothing, travel",
      "categories": [
       "travel",
       "fashion"
@@ -487,9 +489,9 @@
       8
      ],
      "date_2026": "2026-07-30..2026-08-11",
-     "date_2027": null,
+     "date_2027": "2027-07-19..2027-08-03",
      "significance": "Kanwariyas carry Ganga water; Sawan Mondays fasting",
-     "buys": "saffron clothing, kanwar, puja items, footwear, fasting food",
+     "buys": "saffron clothing, kanwar, gangajal containers, puja items, footwear, fasting food",
      "categories": [
       "puja",
       "fashion",
@@ -562,7 +564,7 @@
       2
      ],
      "date_2026": "2026-02-18..2026-02-27",
-     "date_2027": null,
+     "date_2027": "2027-02-18..2027-02-27",
      "significance": "10-day crafts & culture fair at Shilpgram, Agra",
      "buys": "handicrafts, marble, leather, textiles",
      "categories": [
@@ -653,6 +655,56 @@
       "https://publicholidays.in/uttar-pradesh/"
      ],
      "confidence": "high"
+    },
+    {
+     "name": "Hartalika Teej",
+     "local_name": "Teej",
+     "kind": "religious",
+     "months": [
+      8,
+      9
+     ],
+     "date_2026": "2026-09-14",
+     "date_2027": "2027-09-03",
+     "significance": "Married women's nirjala fast for Shiva-Parvati (East UP/Purvanchal)",
+     "buys": "sindoor, bangles, red sarees, green sarees, mehendi, cosmetics, puja items",
+     "categories": [
+      "ethnic",
+      "beauty",
+      "puja",
+      "jewellery"
+     ],
+     "impact": "medium",
+     "impact_reason": "Large in Purvanchal; solah-shringar buying",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
+    },
+    {
+     "name": "Chaitra Navratri",
+     "local_name": "Vasant Navratri",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-19..2026-03-27",
+     "date_2027": "2027-04-07..2027-04-15",
+     "significance": "Nine-day spring Navratri ending in Ram Navami; fasting and kanya pujan",
+     "buys": "fasting foods, chunri, puja items, kanya pujan gifts, ethnic wear",
+     "categories": [
+      "grocery",
+      "puja",
+      "gifting",
+      "ethnic"
+     ],
+     "impact": "medium",
+     "impact_reason": "Widely observed fasting festival in the Hindi belt",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
     }
    ]
   },
@@ -715,12 +767,13 @@
      "local_name": "Chaiti Chhath",
      "kind": "religious",
      "months": [
-      3
+      3,
+      4
      ],
      "date_2026": "2026-03-22..2026-03-25",
-     "date_2027": null,
+     "date_2027": "2027-04-10..2027-04-13",
      "significance": "Summer Chhath in Chaitra month",
-     "buys": "puja items, fruits, sarees",
+     "buys": "soop/daura, thekua ingredients, sarees, fruits, puja items",
      "categories": [
       "puja",
       "grocery",
@@ -744,7 +797,7 @@
      "date_2026": "2026-11-06..2026-11-11",
      "date_2027": "2027-10-27..2027-10-31",
      "significance": "Biggest Hindu festival; Dhanteras metal/gold buying, Lakshmi puja, gifting",
-     "buys": "gold coins, utensils, phones, TVs, appliances, diyas, lights, dry fruits, gift hampers, new clothes",
+     "buys": "diyas, lights, rangoli, lakshmi-ganesh idols, dry fruit gift boxes, sweets, gift hampers, gold coins, silver coins, utensils, phones, TVs, appliances, new clothes",
      "categories": [
       "electronics",
       "phones",
@@ -780,7 +833,7 @@
      "date_2026": "2026-10-11..2026-10-20",
      "date_2027": "2027-09-30..2027-10-09",
      "significance": "Nine nights of Durga worship ending in Dussehra/Ravan Dahan; auspicious for vehicle & home purchases",
-     "buys": "vehicles, two-wheelers, ethnic wear, puja samagri, fasting foods, electronics",
+     "buys": "sarees, ethnic wear, puja samagri, fasting foods, footwear, cosmetics, vehicles, two-wheelers, electronics",
      "categories": [
       "vehicles",
       "ethnic",
@@ -820,7 +873,7 @@
       "personal",
       "gifting"
      ],
-     "impact": "medium",
+     "impact": "high",
      "impact_reason": "Holi sales on fashion and grocery apps; quick-commerce spikes for colours/snacks",
      "sources": [
       "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
@@ -919,7 +972,7 @@
      "date_2026": "2026-01-14",
      "date_2027": "2027-01-15",
      "significance": "Sun enters Capricorn; holy dips, til-gur, khichdi daan",
-     "buys": "chura, dahi, tilkut, gur, woollens",
+     "buys": "tilkut, chura, dahi, gur, khichdi rice-dal, woollens",
      "categories": [
       "grocery",
       "sweets",
@@ -944,7 +997,7 @@
      "date_2026": "2026-01-23",
      "date_2027": "2027-02-11",
      "significance": "Students worship Saraswati; idol pandals",
-     "buys": "Saraswati idols, books, pens, yellow clothes, pandal decor",
+     "buys": "Saraswati idols, puja items, yellow sarees, yellow clothes, pandal decor, books, pens",
      "categories": [
       "stationery",
       "puja",
@@ -992,7 +1045,7 @@
      "date_2026": "2026-09-14",
      "date_2027": "2027-09-03",
      "significance": "Married women's fast for Shiva-Parvati",
-     "buys": "sarees, bangles, sindoor, cosmetics, mehendi",
+     "buys": "sindoor, bangles, red sarees, green sarees, mehendi, cosmetics, puja items",
      "categories": [
       "ethnic",
       "beauty",
@@ -1064,9 +1117,9 @@
       10
      ],
      "date_2026": "2026-09-25..2026-10-10",
-     "date_2027": null,
+     "date_2027": "2027-09-15..2027-09-29",
      "significance": "Pind-daan pilgrimage to Gaya",
-     "buys": "travel, puja items",
+     "buys": "puja items, dhoti",
      "categories": [
       "travel",
       "puja"
@@ -1087,9 +1140,9 @@
       8
      ],
      "date_2026": "2026-07-30..2026-08-28",
-     "date_2027": null,
+     "date_2027": "2027-07-19..2027-08-17",
      "significance": "Kanwariyas carry Ganga water from Sultanganj to Deoghar",
-     "buys": "saffron clothes, kanwar, footwear",
+     "buys": "saffron clothes, t-shirts, kanwar, gangajal containers, puja items, fasting foods, footwear",
      "categories": [
       "puja",
       "fashion",
@@ -1182,11 +1235,13 @@
       12,
       1,
       2,
+      3,
       4,
-      5
+      5,
+      6
      ],
-     "date_2026": "2026-11-20..2026-12-15",
-     "date_2027": null,
+     "date_2026": "2026-11-20..2027-03-10",
+     "date_2027": "2027-04-15..2027-06-30",
      "significance": "Auspicious marriage season",
      "buys": "jewellery, lehengas, sherwanis, appliances, furniture, utensils",
      "categories": [
@@ -1255,6 +1310,31 @@
       "https://publicholidays.in/uttar-pradesh/"
      ],
      "confidence": "high"
+    },
+    {
+     "name": "Chaitra Navratri",
+     "local_name": "Vasant Navratri",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-19..2026-03-27",
+     "date_2027": "2027-04-07..2027-04-15",
+     "significance": "Nine-day spring Navratri ending in Ram Navami; fasting and kanya pujan",
+     "buys": "fasting foods, chunri, puja items, kanya pujan gifts, ethnic wear",
+     "categories": [
+      "grocery",
+      "puja",
+      "gifting",
+      "ethnic"
+     ],
+     "impact": "medium",
+     "impact_reason": "Widely observed fasting festival in the Hindi belt",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
     }
    ]
   },
@@ -1291,7 +1371,7 @@
      "date_2026": "2026-11-06..2026-11-11",
      "date_2027": "2027-10-27..2027-10-31",
      "significance": "Biggest Hindu festival; Dhanteras metal/gold buying, Lakshmi puja, gifting",
-     "buys": "gold coins, utensils, phones, TVs, appliances, diyas, lights, dry fruits, gift hampers, new clothes",
+     "buys": "diyas, lights, rangoli, lakshmi-ganesh idols, dry fruit gift boxes, sweets, gift hampers, gold coins, silver coins, utensils, phones, TVs, appliances, new clothes",
      "categories": [
       "electronics",
       "phones",
@@ -1351,7 +1431,7 @@
      "date_2026": "2026-10-11..2026-10-20",
      "date_2027": "2027-09-30..2027-10-09",
      "significance": "Nine nights of Durga worship ending in Dussehra/Ravan Dahan; auspicious for vehicle & home purchases",
-     "buys": "vehicles, two-wheelers, ethnic wear, puja samagri, fasting foods, electronics",
+     "buys": "fasting foods, chunri, puja samagri, kanya pujan gifts, ethnic wear, vehicles, two-wheelers, electronics",
      "categories": [
       "vehicles",
       "ethnic",
@@ -1360,7 +1440,8 @@
       "grocery",
       "electronics",
       "phones",
-      "appliances"
+      "appliances",
+      "gifting"
      ],
      "impact": "high",
      "impact_reason": "Coincides with opening of Flipkart/Amazon festive sales; first-purchase muhurat for durables",
@@ -1438,7 +1519,7 @@
      "date_2026": "2026-10-29",
      "date_2027": "2027-10-18",
      "significance": "Married women fast for husbands; solah shringar",
-     "buys": "sarees, lehengas, mehendi, bangles, cosmetics, karwa/sieve thali, jewellery, gifts for wives",
+     "buys": "karwa sets, sargi, sieve thali, mehendi, bangles, sindoor, sarees, jewellery, cosmetics, gifts",
      "categories": [
       "ethnic",
       "beauty",
@@ -1662,9 +1743,9 @@
       8
      ],
      "date_2026": "2026-07-30..2026-08-11",
-     "date_2027": null,
+     "date_2027": "2027-07-19..2027-08-03",
      "significance": "Millions of kanwariyas collect Ganga water at Haridwar",
-     "buys": "saffron clothes, kanwar, footwear, puja items",
+     "buys": "saffron clothes, kanwar, gangajal containers, puja items, footwear",
      "categories": [
       "puja",
       "fashion",
@@ -1685,7 +1766,7 @@
       9
      ],
      "date_2026": "2026-09-17..2026-09-21",
-     "date_2027": null,
+     "date_2027": "2027-09-06..2027-09-10",
      "significance": "Kumaon fair on Nanda Ashtami",
      "buys": "local crafts, sweets",
      "categories": [
@@ -1733,7 +1814,7 @@
      "date_2026": "2026-09-14",
      "date_2027": "2027-09-03",
      "significance": "Women's fast",
-     "buys": "sarees, bangles, cosmetics",
+     "buys": "sindoor, bangles, red sarees, green sarees, mehendi, cosmetics, puja items",
      "categories": [
       "ethnic",
       "beauty"
@@ -1825,6 +1906,57 @@
       "https://publicholidays.in/uttar-pradesh/"
      ],
      "confidence": "medium"
+    },
+    {
+     "name": "Winter onset (hills)",
+     "local_name": "",
+     "kind": "season",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2
+     ],
+     "date_2026": "2026-10-15..2027-02-15",
+     "date_2027": "2027-10-15..2028-02-15",
+     "significance": "Cold season in Garhwal/Kumaon hills; woollens and heating bought from mid-Oct",
+     "buys": "thermals, jackets, shawls, room heaters, blankets",
+     "categories": [
+      "winter",
+      "heating"
+     ],
+     "impact": "medium",
+     "impact_reason": "Hill districts cold from late Oct; Dehradun/Haridwar milder",
+     "sources": [
+      "https://mausam.imd.gov.in/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Chaitra Navratri",
+     "local_name": "Vasant Navratri",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-19..2026-03-27",
+     "date_2027": "2027-04-07..2027-04-15",
+     "significance": "Nine-day spring Navratri ending in Ram Navami; fasting and kanya pujan",
+     "buys": "fasting foods, chunri, puja items, kanya pujan gifts, ethnic wear",
+     "categories": [
+      "grocery",
+      "puja",
+      "gifting",
+      "ethnic"
+     ],
+     "impact": "medium",
+     "impact_reason": "Widely observed fasting festival in the Hindi belt",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
     }
    ]
   },
@@ -1863,7 +1995,7 @@
      "date_2026": "2026-11-06..2026-11-11",
      "date_2027": "2027-10-27..2027-10-31",
      "significance": "Biggest gifting season; corporate hampers, Dhanteras gold",
-     "buys": "gift hampers, dry fruits, gold, electronics, phones, decor lights, crockery, sweets",
+     "buys": "diyas, decor lights, rangoli, lakshmi-ganesh idols, dry fruit gift boxes, gift hampers, sweets, silver coins, utensils, gold, crockery, electronics, phones",
      "categories": [
       "gifting",
       "premium",
@@ -1875,7 +2007,8 @@
       "kitchen",
       "sweets",
       "fashion",
-      "appliances"
+      "appliances",
+      "puja"
      ],
      "impact": "high",
      "impact_reason": "CAIT Diwali 2025 trade Rs 6.05 lakh crore nationally; Delhi a top-order region",
@@ -1896,7 +2029,7 @@
      "date_2026": "2026-10-29",
      "date_2027": "2027-10-18",
      "significance": "Married women fast for husbands; solah shringar",
-     "buys": "sarees, lehengas, mehendi, bangles, cosmetics, karwa/sieve thali, jewellery, gifts for wives",
+     "buys": "karwa sets, sargi, sieve thali, mehendi, bangles, sindoor, sarees, jewellery, cosmetics, gifts",
      "categories": [
       "ethnic",
       "beauty",
@@ -2007,7 +2140,7 @@
      "date_2026": "2026-10-11..2026-10-20",
      "date_2027": "2027-09-30..2027-10-09",
      "significance": "Nine nights of Durga worship ending in Dussehra/Ravan Dahan; auspicious for vehicle & home purchases",
-     "buys": "vehicles, two-wheelers, ethnic wear, puja samagri, fasting foods, electronics",
+     "buys": "fasting foods, chunri, puja samagri, kanya pujan gifts, ethnic wear, vehicles, two-wheelers, electronics",
      "categories": [
       "vehicles",
       "ethnic",
@@ -2016,7 +2149,8 @@
       "grocery",
       "electronics",
       "phones",
-      "appliances"
+      "appliances",
+      "gifting"
      ],
      "impact": "high",
      "impact_reason": "Coincides with opening of Flipkart/Amazon festive sales; first-purchase muhurat for durables",
@@ -2427,6 +2561,31 @@
       "https://publicholidays.in/uttar-pradesh/"
      ],
      "confidence": "medium"
+    },
+    {
+     "name": "Chaitra Navratri",
+     "local_name": "Vasant Navratri",
+     "kind": "religious",
+     "months": [
+      3,
+      4
+     ],
+     "date_2026": "2026-03-19..2026-03-27",
+     "date_2027": "2027-04-07..2027-04-15",
+     "significance": "Nine-day spring Navratri ending in Ram Navami; fasting and kanya pujan",
+     "buys": "fasting foods, chunri, puja items, kanya pujan gifts, ethnic wear",
+     "categories": [
+      "grocery",
+      "puja",
+      "gifting",
+      "ethnic"
+     ],
+     "impact": "medium",
+     "impact_reason": "Widely observed fasting festival in the Hindi belt",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "high"
     }
    ]
   }

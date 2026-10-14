@@ -34,7 +34,7 @@
      "date_2026": "2026-01-14..2026-01-17",
      "date_2027": "2027-01-14..2027-01-17",
      "significance": "Tamil harvest festival; Thai month begins; biggest TN festival",
-     "buys": "new clothes, sarees, veshti, pongal pots, sugarcane, jaggery, kolam colours, gifts, appliances",
+     "buys": "pongal pots, sugarcane, jaggery, silk sarees, veshti, new clothes, kolam colours, gold, gifts, appliances",
      "categories": [
       "ethnic",
       "fashion",
@@ -44,7 +44,8 @@
       "gifting",
       "appliances",
       "sweets",
-      "homedecor"
+      "homedecor",
+      "jewellery"
      ],
      "impact": "high",
      "impact_reason": "Peak apparel and home purchase window; platforms run Pongal sales in TN; 4-day state holiday",
@@ -63,7 +64,7 @@
       2
      ],
      "date_2026": "2026-01-15..2026-01-31",
-     "date_2027": null,
+     "date_2027": "2027-01-15..2027-01-31",
      "significance": "Bull-taming events around Pongal in Madurai region",
      "buys": "cattle decor, traditional wear, travel",
      "categories": [
@@ -168,7 +169,7 @@
       5
      ],
      "date_2026": "2026-04-19..2026-05-01",
-     "date_2027": null,
+     "date_2027": "2027-04-09..2027-04-21",
      "significance": "Month-long Madurai temple festival; celestial wedding and Kallazhagar Vaigai entry",
      "buys": "silk sarees, gold, puja items, travel",
      "categories": [
@@ -319,8 +320,8 @@
      "months": [
       8
      ],
-     "date_2026": "2026-08-28",
-     "date_2027": null,
+     "date_2026": "2026-08-21",
+     "date_2027": "2027-08-13",
      "significance": "Women's puja to goddess Lakshmi for family prosperity",
      "buys": "silk sarees, gold jewellery, kalasam, puja items, flowers",
      "categories": [
@@ -421,7 +422,7 @@
       10
      ],
      "date_2026": "2026-10-11..2026-10-20",
-     "date_2027": "2027-10-01..2027-10-09",
+     "date_2027": "2027-09-30..2027-10-09",
      "significance": "Nine nights; homes display tiered doll steps (golu)",
      "buys": "golu dolls, steps, silk sarees, return gifts, sundal ingredients",
      "categories": [
@@ -476,7 +477,7 @@
      "date_2026": "2026-11-08",
      "date_2027": "2027-10-29",
      "significance": "Biggest shopping festival; early-morning oil bath, new clothes, crackers",
-     "buys": "new clothes, sweets, crackers, gold, phones, TVs, appliances, gifts",
+     "buys": "new clothes, silk sarees, veshti, kids' clothes, sweets, gold, phones, TVs, appliances, gifts",
      "categories": [
       "fashion",
       "ethnic",
@@ -631,7 +632,7 @@
      "date_2026": "2026-04-15",
      "date_2027": "2027-04-15",
      "significance": "Malayalam astronomical new year; Vishukkani and kaineettam",
-     "buys": "konna flowers, Vishukkani items, new clothes (Vishu kodi), crackers, sadya groceries, gold",
+     "buys": "konna flowers, Vishukkani items, new clothes (Vishu kodi), led lights, sadya groceries, gold",
      "categories": [
       "ethnic",
       "fashion",
@@ -658,9 +659,9 @@
       9
      ],
      "date_2026": "2026-08-25..2026-08-28",
-     "date_2027": "2027-09-12",
+     "date_2027": "2027-09-03..2027-09-13",
      "significance": "Biggest Kerala festival; King Mahabali's homecoming, 10 days from Atham",
-     "buys": "kasavu sarees/mundu, onakkodi clothes, gold, TVs, appliances, phones, pookalam flowers, sadya groceries",
+     "buys": "kasavu sarees/mundu, pookalam flowers, sadya groceries, banana leaves, payasam mixes, uruli, kids' clothes, gold, TVs, appliances, phones",
      "categories": [
       "ethnic",
       "fashion",
@@ -673,7 +674,8 @@
       "kitchen",
       "homedecor",
       "furniture",
-      "gifting"
+      "gifting",
+      "baby"
      ],
      "impact": "high",
      "impact_reason": "Onam spend est. Rs10-20K cr; retail up 30-40%; Amazon runs Onam store; Kerala's annual peak",
@@ -693,7 +695,7 @@
       9
      ],
      "date_2026": "2026-08-17",
-     "date_2027": null,
+     "date_2027": "2027-08-17",
      "significance": "Start of Malayalam year; Chingam is peak wedding/house-warming month",
      "buys": "wedding gold, silk sarees, furniture, appliances",
      "categories": [
@@ -719,9 +721,9 @@
       8
      ],
      "date_2026": "2026-07-17..2026-08-16",
-     "date_2027": null,
+     "date_2027": "2027-07-17..2027-08-16",
      "significance": "Monsoon month for Ayurvedic rejuvenation and Ramayana reading; Karkidaka Vavu",
-     "buys": "Ayurvedic kits (karkidaka kanji), oils, rainwear, umbrellas",
+     "buys": "ayurvedic kits (karkidaka kanji), ramayana books, oils, umbrellas, rainwear",
      "categories": [
       "health",
       "rainwear",
@@ -744,7 +746,7 @@
       8
      ],
      "date_2026": "2026-08-12",
-     "date_2027": null,
+     "date_2027": "2027-08-02",
      "significance": "Ancestral rites day",
      "buys": "puja items",
      "categories": [
@@ -766,7 +768,7 @@
       3
      ],
      "date_2026": "2026-03-03",
-     "date_2027": null,
+     "date_2027": "2027-02-20",
      "significance": "Massive women's offering at Attukal temple, Thiruvananthapuram",
      "buys": "clay pots, rice, jaggery, firewood, sarees",
      "categories": [
@@ -780,7 +782,7 @@
      "sources": [
       "https://en.wikipedia.org/wiki/Attukal_Pongala"
      ],
-     "confidence": "high"
+     "confidence": "low"
     },
     {
      "name": "Thrissur Pooram",
@@ -894,12 +896,13 @@
      "date_2026": "2026-04-05",
      "date_2027": "2027-03-28",
      "significance": "Christian festival (~18% Christian pop.), end of Lent",
-     "buys": "new clothes, cakes, meat, gifts",
+     "buys": "cakes, church wear, new clothes, gift hampers, meat",
      "categories": [
       "fashion",
       "grocery",
       "sweets",
-      "gifting"
+      "gifting",
+      "ethnic"
      ],
      "impact": "medium",
      "impact_reason": "Christian households in central Kerala; apparel and food",
@@ -945,7 +948,7 @@
      "date_2026": "2026-06-01..2026-06-10",
      "date_2027": "2027-06-01..2027-06-10",
      "significance": "Schools reopen with monsoon onset",
-     "buys": "bags, umbrellas, raincoats, uniforms, notebooks, footwear",
+     "buys": "school bags, uniforms, umbrellas, raincoats, notebooks, school shoes, lunch boxes",
      "categories": [
       "schoolgear",
       "stationery",
@@ -1022,7 +1025,7 @@
      "date_2026": "2026-11-08",
      "date_2027": "2027-10-29",
      "significance": "Observed but smaller in Kerala than other states",
-     "buys": "crackers, sweets, phones, electronics",
+     "buys": "sweets, phones, electronics, led lights",
      "categories": [
       "sweets",
       "electronics",
@@ -1094,7 +1097,7 @@
       8
      ],
      "date_2026": "2026-08-08",
-     "date_2027": null,
+     "date_2027": "2027-08-14",
      "significance": "Snake boat race on Punnamada Lake, Alappuzha (2nd Sat of Aug)",
      "buys": "travel, event tickets",
      "categories": [
@@ -1239,7 +1242,7 @@
      "date_2026": "2026-06-25",
      "date_2027": "2027-06-15",
      "significance": "Islamic new year/mourning observances",
-     "buys": "black clothes, food",
+     "buys": "black kurtas and abayas, food",
      "categories": [
       "fashion"
      ],
@@ -1285,7 +1288,7 @@
      "date_2026": "2026-08-15",
      "date_2027": "2027-08-15",
      "significance": "Among most celebrated events per UT administration",
-     "buys": "flags, uniforms, phones on national sales",
+     "buys": "tricolour merchandise, phones on national sales",
      "categories": [
       "phones",
       "electronics"
@@ -1308,7 +1311,7 @@
      "date_2026": "2026-01-26",
      "date_2027": "2027-01-26",
      "significance": "Widely celebrated per UT administration",
-     "buys": "flags, national sale purchases",
+     "buys": "tricolour merchandise, national sale purchases",
      "categories": [
       "phones",
       "electronics"
@@ -1560,7 +1563,7 @@
       4
      ],
      "date_2026": "2026-04-15",
-     "date_2027": null,
+     "date_2027": "2027-04-15",
      "significance": "Bengalis are the largest community",
      "buys": "new clothes, sweets, puja items",
      "categories": [
@@ -1756,7 +1759,7 @@
      "date_2026": null,
      "date_2027": null,
      "significance": "Observed by Bihari/UP settler families",
-     "buys": "puja items, sarees, fruits",
+     "buys": "soop, puja items, sarees, fruits",
      "categories": [
       "puja",
       "ethnic"

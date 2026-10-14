@@ -305,7 +305,7 @@
      "date_2026": "2026-09-14",
      "date_2027": "2027-09-03",
      "significance": "Married women return to maternal home and fast for husbands",
-     "buys": "sarees, bangles, sindoor, mehndi, cosmetics",
+     "buys": "sarees, bangles, sindoor, mehndi, cosmetics, gifts",
      "categories": [
       "ethnic",
       "beauty",
@@ -400,6 +400,7 @@
      "local_name": "",
      "kind": "religious",
      "months": [
+      9,
       10
      ],
      "date_2026": "2026-10-11..2026-10-20",
@@ -433,12 +434,13 @@
      "date_2026": "2026-10-29",
      "date_2027": "2027-10-18",
      "significance": "Married women's fast, popular in urban CG",
-     "buys": "sarees, cosmetics, mehndi, jewellery, gifts",
+     "buys": "karwa sets, sargi, sieve thali, mehendi, bangles, sindoor, sarees, jewellery, cosmetics, gifts",
      "categories": [
       "ethnic",
       "beauty",
       "jewellery",
-      "gifting"
+      "gifting",
+      "puja"
      ],
      "impact": "medium",
      "impact_reason": "Beauty/fashion and gifting online in cities",
@@ -638,7 +640,7 @@
      "date_2026": "2026-01-14",
      "date_2027": "2027-01-15",
      "significance": "Kurmi/Mahato harvest festival; Tusu chaudal floats, river melas",
-     "buys": "pitha, til, chaudal paper, new clothes",
+     "buys": "tilkut, chura, dahi, jaggery, pitha, til, chaudal paper, new clothes",
      "categories": [
       "grocery",
       "sweets",
@@ -828,15 +830,16 @@
      "date_2026": "2026-07-30..2026-08-28",
      "date_2027": "2027-07-19..2027-08-17",
      "significance": "Month-long kanwar yatra to Baidyanath Dham, Deoghar",
-     "buys": "saffron clothes, kanwar, footwear, rainwear",
+     "buys": "saffron clothes, t-shirts, kanwar, gangajal containers, puja items, fasting foods, footwear, rainwear",
      "categories": [
       "puja",
       "fashion",
       "footwear",
       "rainwear",
-      "travel"
+      "travel",
+      "grocery"
      ],
-     "impact": "low",
+     "impact": "medium",
      "impact_reason": "Pilgrim trade offline; travel bookings",
      "sources": [
       "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
@@ -1148,7 +1151,7 @@
      "date_2026": "2026-01-14",
      "date_2027": "2027-01-15",
      "significance": "Makar chaula offering; Makar Mela in western/tribal Odisha",
-     "buys": "new rice, chhena, jaggery, til, kites",
+     "buys": "makar chaula ingredients, til, jaggery, chhena, new rice, kites",
      "categories": [
       "grocery",
       "sweets",
@@ -1167,11 +1170,10 @@
      "local_name": "Dhanu Jatra",
      "kind": "fair",
      "months": [
-      12,
       1
      ],
-     "date_2026": "2025-12-24..2026-01-03",
-     "date_2027": "2027-01-12..2027-01-22",
+     "date_2026": "2027-01-12..2027-01-22",
+     "date_2027": "2028-01-01..2028-01-11",
      "significance": "11-day open-air theatre fair in Bargarh",
      "buys": "handicrafts, toys, utensils, travel",
      "categories": [
@@ -1384,19 +1386,21 @@
      "local_name": "Ratha Jatra",
      "kind": "religious",
      "months": [
+      6,
       7
      ],
      "date_2026": "2026-07-16",
      "date_2027": "2027-07-05",
      "significance": "Jagannath chariot festival at Puri; biggest Odia festival",
-     "buys": "puja items, sweets, new clothes, travel",
+     "buys": "puja items, new clothes, sambalpuri sarees, travel bags, sweets, TVs",
      "categories": [
       "puja",
       "travel",
       "sweets",
-      "ethnic"
+      "ethnic",
+      "tv"
      ],
-     "impact": "medium",
+     "impact": "high",
      "impact_reason": "Travel to Puri; new clothes; online darshan/merch",
      "sources": [
       "https://www.greythr.com/wiki/acts/st-orissa/holidays/2026/",
@@ -1540,7 +1544,7 @@
      "date_2026": "2026-11-08",
      "date_2027": "2027-10-29",
      "significance": "Badabadua daka ancestral ritual; Kali puja",
-     "buys": "lamps, crackers, decor, sweets, phones, appliances",
+     "buys": "lamps, decor, sweets, led lights, phones, appliances",
      "categories": [
       "homedecor",
       "sweets",
@@ -1587,12 +1591,13 @@
      "local_name": "Boita Bandana",
      "kind": "religious",
      "months": [
+      10,
       11
      ],
-     "date_2026": "2026-11-24",
-     "date_2027": "2027-11-14",
+     "date_2026": "2026-10-26..2026-11-24",
+     "date_2027": "2027-10-16..2027-11-14",
      "significance": "Kartik month of habisha (veg); maritime boat-floating ritual on Kartik Purnima",
-     "buys": "puja items, banana-stem boats, veg groceries",
+     "buys": "puja items, veg groceries, diyas, banana-stem boats",
      "categories": [
       "puja",
       "grocery"
@@ -1715,7 +1720,7 @@
      "date_2026": "2026-01-14",
      "date_2027": "2027-01-15",
      "significance": "Pilgrims at Sagar Island; pithe-puli harvest sweets",
-     "buys": "nolen gur, pithe ingredients, winterwear, travel",
+     "buys": "nolen gur, patali gur, pithe ingredients, til, travel, winterwear",
      "categories": [
       "sweets",
       "grocery",
@@ -1961,13 +1966,13 @@
      "date_2026": "2026-09-17",
      "date_2027": "2027-09-17",
      "significance": "Worship of tools/machines in factories; kite flying",
-     "buys": "kites, puja items, tools",
+     "buys": "kites, manja, puja items, tools",
      "categories": [
       "puja",
       "toys",
       "homeimprove"
      ],
-     "impact": "low",
+     "impact": "medium",
      "impact_reason": "B2B/offline",
      "sources": [
       "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2026",
@@ -2088,7 +2093,7 @@
      "date_2026": "2026-11-08",
      "date_2027": "2027-10-29",
      "significance": "Kali worship night; lamps, Bhoot Chaturdashi day before",
-     "buys": "lights, diyas, decor, crackers, sweets",
+     "buys": "lights, diyas, decor, sweets",
      "categories": [
       "homedecor",
       "puja",

@@ -1,0 +1,19 @@
+{"items":{
+"washing_machine":{"name":"Washing machines","cat":"appliances","generic":false,"online":"high"}
+},
+"map":{
+"school uniforms":["school_uniform"],
+"housewarming essentials":["housewarming"],
+"dhotis":["dhoti_veshti"],
+"kanwar kits":["kanwar_gear"],
+"ramayana books":["religious_books"],
+"religious books":["religious_books"],
+"christmas stars":["xmas_star"],
+"christmas trees":["christmas_tree"],
+"tricolour flags":["tricolour_merch"],
+"washing machines":["washing_machine"],
+"wedding gifts":["gift_hamper"],
+"vrat foods":["vrat_food"],
+"otc medicines":["otc_medicines"],
+"cleaning supplies":["cleaning_supplies"]
+}}

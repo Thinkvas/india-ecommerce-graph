@@ -6,6 +6,10 @@ Live: https://thinkvas.github.io/india-ecommerce-graph/
 
 Views: **Graph on map** (the FalkorDB knowledge graph in 3D over India: states on the map, festivals floating above the states that celebrate them, specific products above the festivals; click anything to light up its chain), network, year wheel and 3D graph. `data/kgraph.json` is the raw node/relationship export from FalkorDB that this view draws.
 
+**Draw an area** (Graph on map view): draw a polygon or circle anywhere on India and get what is happening inside it: states covered and estimated share of online orders (people-weighted), festivals now and next month, demand signals, the products to push and hold (from the FalkorDB graph), live 7-day weather from [Open-Meteo](https://open-meteo.com) with the products it triggers, and shops, markets and towns from [OpenStreetMap](https://www.openstreetmap.org) (Overpass API). "Copy this area as JSON" gives the same result for apps. Aggregates only, no personal data.
+
+QA: `tools/qa_harness.js` runs every state x month plan, every map focus and every view; expert-review issues and fix logs are in `qa/` (not published).
+
 Map boundaries: [Datameet](https://github.com/datameet/maps) state boundaries (States/Admin2), simplified by `data/geo_build.py`.
 
 ## Data: FalkorDB is the master

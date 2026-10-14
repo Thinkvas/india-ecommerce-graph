@@ -121,7 +121,7 @@
      "date_2026": "2026-06-26",
      "date_2027": "2027-06-15",
      "significance": "Mourning for Imam Hussain; Shia processions in Srinagar",
-     "buys": "black clothes, langar/nazr groceries",
+     "buys": "black kurtas and abayas, langar/nazr groceries",
      "categories": [
       "fashion",
       "grocery"
@@ -144,7 +144,7 @@
      "date_2026": "2026-08-26",
      "date_2027": "2027-08-15",
      "significance": "Prophet's birthday; relic display at Hazratbal",
-     "buys": "lights, flags, sweets, new clothes",
+     "buys": "lights, sweets, new clothes",
      "categories": [
       "homedecor",
       "sweets",
@@ -215,7 +215,7 @@
       6
      ],
      "date_2026": "2026-06-22",
-     "date_2027": null,
+     "date_2027": "2027-06-12",
      "significance": "Annual fair at Ragnya Devi temple, Tulmulla (Ganderbal)",
      "buys": "puja items, flowers, milk/kheer offerings, travel",
      "categories": [
@@ -227,7 +227,7 @@
      "sources": [
       "https://kashmirreader.com/2026/06/22/thousands-participate-in-kheer-bhawani-mela-at-tulmulla-shrine/"
      ],
-     "confidence": "high"
+     "confidence": "low"
     },
     {
      "name": "Amarnath Yatra",
@@ -238,7 +238,7 @@
       8
      ],
      "date_2026": "2026-07-03..2026-08-28",
-     "date_2027": null,
+     "date_2027": "2027-07-01..2027-08-17",
      "significance": "Pilgrimage to Amarnath cave shrine (Shravan)",
      "buys": "trekking gear, rain/winter jackets, shoes, travel",
      "categories": [
@@ -254,7 +254,7 @@
      "sources": [
       "https://kashmirlife.net/amarnath-yatra-2026-to-begin-on-july-3-lg-sinha-432035/"
      ],
-     "confidence": "medium"
+     "confidence": "low"
     },
     {
      "name": "Lohri",
@@ -390,7 +390,7 @@
      "date_2026": "2026-10-29",
      "date_2027": "2027-10-18",
      "significance": "Married women fast for husbands",
-     "buys": "sarees, lehengas, jewellery, mehendi, cosmetics, karwa sets, gifts",
+     "buys": "karwa sets, sargi, sieve thali, mehendi, bangles, sindoor, sarees, jewellery, cosmetics, gifts",
      "categories": [
       "ethnic",
       "jewellery",
@@ -417,7 +417,7 @@
      "date_2026": "2026-11-06",
      "date_2027": "2027-10-27",
      "significance": "Auspicious day to buy gold, metal and vehicles",
-     "buys": "gold and silver coins, utensils, vehicles, appliances, brooms",
+     "buys": "gold and silver coins, utensils, brooms, vehicles, appliances",
      "categories": [
       "jewellery",
       "kitchen",
@@ -444,7 +444,7 @@
      "date_2026": "2026-11-08",
      "date_2027": "2027-10-29",
      "significance": "Festival of lights; peak annual shopping",
-     "buys": "electronics, phones, appliances, home decor, diyas, sweets, dry fruits, gifts, new clothes",
+     "buys": "diyas, lights, rangoli, lakshmi-ganesh idols, dry fruit gift boxes, sweets, home decor, gifts, new clothes, electronics, phones, appliances",
      "categories": [
       "electronics",
       "phones",
@@ -560,6 +560,30 @@
      "impact": "high",
      "impact_reason": "Strong online demand for heaters, blankets, thermals; power cuts drive gadgets",
      "sources": [],
+     "confidence": "medium"
+    },
+    {
+     "name": "Pre-winter (Kashmir)",
+     "local_name": "",
+     "kind": "season",
+     "months": [
+      10,
+      11,
+      12
+     ],
+     "date_2026": "2026-10-20..2026-12-20",
+     "date_2027": "2027-10-20..2027-12-20",
+     "significance": "Kashmir valley turns cold by late October; households stock pherans, kangris and heating before Chillai Kalan",
+     "buys": "pherans, thermals, kangri, heaters, electric blankets",
+     "categories": [
+      "winter",
+      "heating"
+     ],
+     "impact": "high",
+     "impact_reason": "Pre-winter stock-up is Kashmir's main seasonal buy",
+     "sources": [
+      "https://mausam.imd.gov.in/"
+     ],
      "confidence": "medium"
     }
    ]
@@ -944,7 +968,7 @@
      "date_2026": "2026-06-26",
      "date_2027": "2027-06-15",
      "significance": "Major Shia mourning observance in Kargil",
-     "buys": "black clothes, nazr groceries",
+     "buys": "black kurtas and abayas, nazr groceries",
      "categories": [
       "fashion",
       "grocery"
@@ -993,7 +1017,7 @@
      "date_2026": "2026-11-08",
      "date_2027": "2027-10-29",
      "significance": "Festival of lights; peak annual shopping",
-     "buys": "electronics, phones, appliances, home decor, diyas, sweets, dry fruits, gifts, new clothes",
+     "buys": "diyas, lights, rangoli, lakshmi-ganesh idols, dry fruit gift boxes, sweets, home decor, gifts, new clothes, electronics, phones, appliances",
      "categories": [
       "electronics",
       "phones",
@@ -1076,7 +1100,7 @@
       1
      ],
      "date_2026": "2026-01-09..2026-01-11",
-     "date_2027": null,
+     "date_2027": "2027-01-10..2027-01-12",
      "significance": "Tourism festival celebrating camels",
      "buys": "handicrafts, travel",
      "categories": [
@@ -1095,11 +1119,10 @@
      "local_name": "Maru Mahotsav",
      "kind": "cultural",
      "months": [
-      1,
       2
      ],
      "date_2026": "2026-01-30..2026-02-01",
-     "date_2027": null,
+     "date_2027": "2027-02-18..2027-02-20",
      "significance": "Desert tourism festival at Sam dunes",
      "buys": "travel, handicrafts",
      "categories": [
@@ -1117,11 +1140,10 @@
      "local_name": "Baneshwar Mela",
      "kind": "tribal",
      "months": [
-      1,
       2
      ],
      "date_2026": "2026-01-27..2026-02-01",
-     "date_2027": null,
+     "date_2027": "2027-02-15..2027-02-20",
      "significance": "Bhil tribal fair at Som-Mahi confluence, Dungarpur (Magh Purnima)",
      "buys": "silver jewellery, utensils, clothes, toys",
      "categories": [
@@ -1192,11 +1214,10 @@
      "local_name": "Basoda",
      "kind": "religious",
      "months": [
-      3,
-      4
+      3
      ],
-     "date_2026": null,
-     "date_2027": null,
+     "date_2026": "2026-03-11",
+     "date_2027": "2027-03-30",
      "significance": "Worship of Sheetala Mata with stale food; fairs at Chaksu",
      "buys": "puja items, utensils, sweets",
      "categories": [
@@ -1532,7 +1553,7 @@
      "date_2026": "2026-10-29",
      "date_2027": "2027-10-18",
      "significance": "Married women fast for husbands",
-     "buys": "sarees, lehengas, jewellery, mehendi, cosmetics, karwa sets, gifts",
+     "buys": "karwa sets, sargi, sieve thali, mehendi, bangles, sindoor, sarees, jewellery, cosmetics, gifts",
      "categories": [
       "ethnic",
       "jewellery",
@@ -1559,7 +1580,7 @@
      "date_2026": "2026-11-06",
      "date_2027": "2027-10-27",
      "significance": "Auspicious day to buy gold, metal and vehicles",
-     "buys": "gold and silver coins, utensils, vehicles, appliances, brooms",
+     "buys": "gold and silver coins, utensils, brooms, vehicles, appliances",
      "categories": [
       "jewellery",
       "kitchen",
@@ -1586,7 +1607,7 @@
      "date_2026": "2026-11-08",
      "date_2027": "2027-10-29",
      "significance": "Festival of lights; peak annual shopping",
-     "buys": "electronics, phones, appliances, home decor, diyas, sweets, dry fruits, gifts, new clothes",
+     "buys": "diyas, lights, rangoli, lakshmi-ganesh idols, dry fruit gift boxes, sweets, home decor, gifts, new clothes, electronics, phones, appliances",
      "categories": [
       "electronics",
       "phones",
@@ -1720,7 +1741,7 @@
      "date_2026": "2026-01-14..2026-01-15",
      "date_2027": "2027-01-14..2027-01-15",
      "significance": "Sun enters Capricorn; harvest and kite festival",
-     "buys": "kites, manja, chikki, undhiyu ingredients, caps, sunglasses, speakers",
+     "buys": "kites, manja, chikki, undhiyu ingredients, sun caps, sunglasses, speakers",
      "categories": [
       "toys",
       "sweets",
@@ -1945,11 +1966,10 @@
      "local_name": "Ashadhi Bij",
      "kind": "religious",
      "months": [
-      6,
       7
      ],
      "date_2026": "2026-07-16",
-     "date_2027": null,
+     "date_2027": "2027-07-05",
      "significance": "Jagannath Rath Yatra in Ahmedabad; Kutchi new year",
      "buys": "puja items, sweets, new clothes (Kutch)",
      "categories": [
@@ -1998,7 +2018,7 @@
      "date_2026": "2026-09-04",
      "date_2027": "2027-08-25",
      "significance": "Birth of Lord Krishna (Dwarka, Dakor)",
-     "buys": "Krishna idols, jhula, puja items, kids costumes, sweets",
+     "buys": "Laddu Gopal dresses, jhula, Krishna idols, matki, puja items, kids costumes, sweets",
      "categories": [
       "puja",
       "homedecor",
@@ -2116,7 +2136,7 @@
      "date_2026": "2026-10-11..2026-10-19",
      "date_2027": "2027-09-30..2027-10-08",
      "significance": "Nine nights of Goddess worship",
-     "buys": "ethnic wear, puja items, fasting foods, jewellery",
+     "buys": "chaniya choli, kediyu, dandiya sticks, oxidised jewellery, garba wear, puja items, fasting foods",
      "categories": [
       "ethnic",
       "fashion",
@@ -2167,7 +2187,7 @@
      "months": [
       10
      ],
-     "date_2026": null,
+     "date_2026": "2026-10-25",
      "date_2027": "2027-10-15",
      "significance": "Full-moon night garba and doodh-pauva",
      "buys": "milk, dry fruits, ethnic wear",
@@ -2191,7 +2211,7 @@
      "date_2026": "2026-11-06",
      "date_2027": "2027-10-27",
      "significance": "Auspicious day to buy gold, metal and vehicles",
-     "buys": "gold and silver coins, utensils, vehicles, appliances, brooms",
+     "buys": "gold and silver coins, utensils, brooms, vehicles, appliances",
      "categories": [
       "jewellery",
       "kitchen",
@@ -2218,7 +2238,7 @@
      "date_2026": "2026-11-08",
      "date_2027": "2027-10-29",
      "significance": "Festival of lights; peak annual shopping",
-     "buys": "electronics, phones, appliances, home decor, diyas, sweets, dry fruits, gifts, new clothes",
+     "buys": "diyas, lights, rangoli, lakshmi-ganesh idols, dry fruit gift boxes, sweets, home decor, gifts, new clothes, electronics, phones, appliances",
      "categories": [
       "electronics",
       "phones",

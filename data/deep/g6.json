@@ -228,7 +228,7 @@
      "date_2026": null,
      "date_2027": "2027-06-26..2027-07-07",
      "significance": "Once-in-12-years holy dip festival on the Godavari; Rajamahendravaram main ghats",
-     "buys": "travel, puja items, new clothes, hotel stays, food",
+     "buys": "puja items, dhotis, sarees, travel, hotel stays, food",
      "categories": [
       "travel",
       "puja",
@@ -333,7 +333,7 @@
      "date_2026": "2026-09-14",
      "date_2027": "2027-09-04",
      "significance": "Birth of Lord Ganesha; idols, pandals, immersion",
-     "buys": "clay idols, puja items, flowers, fruits, sweets, new clothes, decor",
+     "buys": "clay idols, pandal decor, puja items, flowers, fruits, sweets, new clothes",
      "categories": [
       "puja",
       "homedecor",
@@ -358,7 +358,7 @@
       10
      ],
      "date_2026": "2026-09-15..2026-09-23",
-     "date_2027": null,
+     "date_2027": "2027-09-30..2027-10-08",
      "significance": "Annual 9-day festival of Lord Venkateswara; 2026 adhika year had a second Navaratri Brahmotsavam Oct 12-20",
      "buys": "travel, puja items, silk sarees, prasadam",
      "categories": [
@@ -371,7 +371,7 @@
      "sources": [
       "https://hindutone.com/tirumala/tirumala-brahmotsavam-2026-dates-schedule-vahana-sevas/"
      ],
-     "confidence": "medium"
+     "confidence": "low"
     },
     {
      "name": "Dasara / Navaratri (Vijayawada Kanaka Durga)",
@@ -384,7 +384,7 @@
      "date_2026": "2026-10-11..2026-10-20",
      "date_2027": "2027-09-30..2027-10-09",
      "significance": "Navaratri ending Vijayadashami; Indrakeeladri Durga festival, Ayudha puja",
-     "buys": "new clothes, silk sarees, gold, vehicles, electronics, puja items, sweets",
+     "buys": "new clothes, silk sarees, golu dolls, gold, puja items, vehicles, electronics, sweets",
      "categories": [
       "ethnic",
       "fashion",
@@ -416,7 +416,7 @@
      "date_2026": "2026-11-01",
      "date_2027": "2027-11-01",
      "significance": "State formation day",
-     "buys": "flags, event goods",
+     "buys": "tricolour merchandise, event goods",
      "categories": [
       "gifting"
      ],
@@ -438,7 +438,7 @@
      "date_2026": "2026-11-06..2026-11-08",
      "date_2027": "2027-10-27..2027-10-29",
      "significance": "Festival of lights; Dhanteras to Naraka Chaturdashi/Deepavali",
-     "buys": "crackers, gold, new clothes, sweets, diyas, appliances, phones, gift hampers",
+     "buys": "new clothes, silk sarees, sweets, gold, diyas, lights, gift hampers, phones, appliances",
      "categories": [
       "ethnic",
       "fashion",
@@ -657,7 +657,7 @@
      "date_2026": "2026-03-21",
      "date_2027": "2027-03-10",
      "significance": "End of Ramadan fasting month",
-     "buys": "new clothes, attar, dry fruits, dates, footwear, bangles, gifts",
+     "buys": "new clothes, kurtas, sherwanis, abayas, attar, dry fruits, dates, footwear, bangles, gifts",
      "categories": [
       "ethnic",
       "fashion",
@@ -667,7 +667,7 @@
       "gifting",
       "sweets"
      ],
-     "impact": "medium",
+     "impact": "high",
      "impact_reason": "Month-long Ramadan shopping for apparel, beauty and groceries; dates moon-dependent",
      "sources": [
       "https://www.etvbharat.com/en/state/ramadan-fever-grips-hyderabad-haleem-craze-peaks-queues-get-longer-every-evening-enn26031806996",
@@ -792,7 +792,7 @@
      "date_2026": "2026-06-02",
      "date_2027": "2027-06-02",
      "significance": "State formation day",
-     "buys": "flags, event goods",
+     "buys": "tricolour merchandise, event goods",
      "categories": [
       "gifting"
      ],
@@ -812,7 +812,7 @@
       8
      ],
      "date_2026": "2026-07-16..2026-08-10",
-     "date_2027": null,
+     "date_2027": "2027-07-11..2027-08-01",
      "significance": "Month-long Ashada offerings to Mahakali (Golconda, Ujjaini Mahankali, Lal Darwaza); state festival",
      "buys": "new sarees, bangles, pots (bonam), turmeric, kumkum, neem, puja items, meat, liquor",
      "categories": [
@@ -869,13 +869,13 @@
      "date_2026": "2026-08-28",
      "date_2027": "2027-08-17",
      "significance": "Sibling bond festival",
-     "buys": "rakhis, gift hampers, chocolates, sweets",
+     "buys": "rakhis, rakhi gift hampers, chocolates, sweets",
      "categories": [
       "gifting",
       "sweets",
       "personal"
      ],
-     "impact": "medium",
+     "impact": "high",
      "impact_reason": "Online rakhi + gift delivery is a well-established category, growing in south metros",
      "sources": [
       "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
@@ -920,7 +920,7 @@
      "date_2026": "2026-09-14",
      "date_2027": "2027-09-04",
      "significance": "Birth of Lord Ganesha; idols, pandals, immersion",
-     "buys": "clay idols, puja items, flowers, fruits, sweets, new clothes, decor",
+     "buys": "clay idols, pandal decor, puja items, decor, flowers, sweets, new clothes",
      "categories": [
       "puja",
       "homedecor",
@@ -928,7 +928,7 @@
       "ethnic",
       "grocery"
      ],
-     "impact": "medium",
+     "impact": "high",
      "impact_reason": "Puja kits/decor and early festive-sale build-up; mostly offline idol buying",
      "sources": [
       "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays",
@@ -1008,7 +1008,7 @@
      "date_2026": "2026-11-06..2026-11-08",
      "date_2027": "2027-10-27..2027-10-29",
      "significance": "Festival of lights; Dhanteras to Naraka Chaturdashi/Deepavali",
-     "buys": "crackers, gold, new clothes, sweets, diyas, appliances, phones, gift hampers",
+     "buys": "new clothes, silk sarees, sweets, gold, diyas, lights, gift hampers, phones, appliances",
      "categories": [
       "ethnic",
       "fashion",
@@ -1078,6 +1078,52 @@
       "https://www.sakshipost.com/news/telangana/telangana-government-releases-2026-holiday-list-full-general-optional-holidays"
      ],
      "confidence": "high"
+    },
+    {
+     "name": "Medaram Mini Jatara",
+     "local_name": "Mini Medaram",
+     "kind": "tribal",
+     "months": [
+      2
+     ],
+     "date_2026": null,
+     "date_2027": "2027-02-17..2027-02-20",
+     "significance": "Off-year Mini Jatara of the biennial Sammakka Saralamma festival (main Jatara 2026, 2028)",
+     "buys": "jaggery (bangaram), coconuts, puja items, travel",
+     "categories": [
+      "puja",
+      "travel"
+     ],
+     "impact": "low",
+     "impact_reason": "Smaller off-year gathering",
+     "sources": [
+      "https://medaramjatara.telangana.gov.in/"
+     ],
+     "confidence": "medium"
+    },
+    {
+     "name": "Godavari Pushkaralu",
+     "local_name": "Godavari Pushkaralu",
+     "kind": "religious",
+     "months": [
+      6,
+      7
+     ],
+     "date_2026": null,
+     "date_2027": "2027-06-26..2027-07-07",
+     "significance": "Once-in-12-years holy dip on the Godavari when Jupiter enters Simha; ghats at Basara, Dharmapuri, Kaleshwaram, Bhadrachalam",
+     "buys": "puja items, dhotis, sarees, travel, hotel stays",
+     "categories": [
+      "puja",
+      "ethnic",
+      "travel"
+     ],
+     "impact": "medium",
+     "impact_reason": "Crores of pilgrims over 12 days; travel, stays and ritual clothing",
+     "sources": [
+      "https://www.drikpanchang.com/calendars/hindu/hinducalendar.html?year=2027"
+     ],
+     "confidence": "medium"
     }
    ]
   },
@@ -1116,7 +1162,7 @@
      "date_2026": "2026-01-15",
      "date_2027": "2027-01-15",
      "significance": "Harvest festival; ellu-bella exchange, cattle decoration",
-     "buys": "ellu-bella (sesame-jaggery), sugarcane, new clothes, gifts, rangoli",
+     "buys": "ellu-bella (sesame-jaggery), sugarcane, new clothes, rangoli, gifts",
      "categories": [
       "grocery",
       "sweets",
@@ -1244,11 +1290,10 @@
      "local_name": "Karaga",
      "kind": "religious",
      "months": [
-      3,
       4
      ],
      "date_2026": "2026-03-26..2026-04-01",
-     "date_2027": null,
+     "date_2027": "2027-04-13..2027-04-21",
      "significance": "Centuries-old Thigala community Draupadi festival, Dharmaraya temple, Chaitra Purnima",
      "buys": "jasmine, puja items, food",
      "categories": [
@@ -1260,7 +1305,7 @@
       "https://karnatakatourism.org/experiences/bengaluru-karaga/",
       "https://www.etvbharat.com/en/state/bengaluru-karaga-festival-ends-with-devotion-and-harmony-lakhs-witness-sacred-tradition-enn26040205876"
      ],
-     "confidence": "high"
+     "confidence": "low"
     },
     {
      "name": "Sri Rama Navami",
@@ -1377,13 +1422,13 @@
      "date_2026": "2026-08-28",
      "date_2027": "2027-08-17",
      "significance": "Sibling bond festival",
-     "buys": "rakhis, gift hampers, chocolates, sweets",
+     "buys": "rakhis, rakhi gift hampers, chocolates, sweets",
      "categories": [
       "gifting",
       "sweets",
       "personal"
      ],
-     "impact": "medium",
+     "impact": "high",
      "impact_reason": "Online rakhi + gift delivery is a well-established category, growing in south metros",
      "sources": [
       "https://www.sakshipost.com/news/education/karnataka-2026-holidays-list-full-list-general-and-restricted-holidays-announced",
@@ -1456,7 +1501,7 @@
      "date_2026": "2026-10-11..2026-10-20",
      "date_2027": "2027-09-30..2027-10-09",
      "significance": "State festival (Nada Habba); Jamboo Savari; Bombe Habba doll displays; Ayudha puje",
-     "buys": "Mysore silk sarees, gold, dolls (bombe), vehicles, electronics, sweets",
+     "buys": "dolls (bombe), return gifts, Mysore silk sarees, gold, vehicles, electronics, sweets",
      "categories": [
       "ethnic",
       "jewellery",
@@ -1532,7 +1577,7 @@
      "date_2026": "2026-11-06..2026-11-08",
      "date_2027": "2027-10-27..2027-10-29",
      "significance": "Festival of lights; Dhanteras to Naraka Chaturdashi/Deepavali",
-     "buys": "crackers, gold, new clothes, sweets, diyas, appliances, phones, gift hampers",
+     "buys": "new clothes, silk sarees, sweets, gold, diyas, lights, gift hampers, phones, appliances",
      "categories": [
       "ethnic",
       "fashion",
@@ -1566,7 +1611,7 @@
      "date_2026": null,
      "date_2027": null,
      "significance": "Basavanagudi groundnut fair at Bull Temple, last Monday of Karthika (2025: Nov 17-21)",
-     "buys": "groundnuts, street food, toys, handicrafts",
+     "buys": "groundnuts, street food",
      "categories": [
       "grocery",
       "toys"
@@ -1590,7 +1635,7 @@
      "date_2026": "2026-11-26",
      "date_2027": null,
      "significance": "Kodava rice harvest festival of Kodagu",
-     "buys": "traditional Kodava attire, food, firecrackers",
+     "buys": "traditional Kodava attire, food, led lights",
      "categories": [
       "ethnic",
       "grocery"
@@ -1616,7 +1661,7 @@
      "date_2026": null,
      "date_2027": null,
      "significance": "Buffalo race season in coastal Dakshina Kannada/Udupi",
-     "buys": "travel, food",
+     "buys": "street food",
      "categories": [
       "travel"
      ],
@@ -1782,7 +1827,7 @@
       3
      ],
      "date_2026": "2026-03-02",
-     "date_2027": null,
+     "date_2027": "2027-02-20",
      "significance": "Deities from temples taken for sea bath at Vaithikuppam beach",
      "buys": "puja items, flowers, food",
      "categories": [
@@ -1850,7 +1895,7 @@
      "confidence": "medium"
     },
     {
-     "name": "Tamil New Year / Vishu",
+     "name": "Tamil New Year (Puthandu) / Vishu",
      "local_name": "Puthandu / Vishu",
      "kind": "new_year",
      "months": [
@@ -1859,7 +1904,7 @@
      "date_2026": "2026-04-14",
      "date_2027": "2027-04-14",
      "significance": "Tamil New Year; Vishu in Mahe",
-     "buys": "new clothes, gold, kani items, sweets",
+     "buys": "gold coins, silk sarees, new clothes, puja items, home appliances, sweets",
      "categories": [
       "ethnic",
       "jewellery",
@@ -1867,7 +1912,7 @@
       "puja",
       "sweets"
      ],
-     "impact": "medium",
+     "impact": "high",
      "impact_reason": "Regional new-year shopping",
      "sources": [
       "https://www.mysarkarinaukri.com/en/puducherry-government-holiday-list/"
@@ -1931,7 +1976,7 @@
       7
      ],
      "date_2026": "2026-06-29",
-     "date_2027": null,
+     "date_2027": "2027-06-18",
      "significance": "Karaikal Ammaiyar mango festival, Aani Pournami",
      "buys": "mangoes, puja items",
      "categories": [
@@ -1976,7 +2021,7 @@
      "date_2026": "2026-08-16",
      "date_2027": "2027-08-16",
      "significance": "Legal transfer of Puducherry from France to India (1962)",
-     "buys": "flags",
+     "buys": "tricolour merchandise",
      "categories": [
       "gifting"
      ],
@@ -2047,10 +2092,10 @@
       9,
       10
      ],
-     "date_2026": "2026-10-19",
-     "date_2027": "2027-10-08",
+     "date_2026": "2026-10-11..2026-10-20",
+     "date_2027": "2027-09-30..2027-10-09",
      "significance": "Golu displays, worship of tools/vehicles/books",
-     "buys": "golu dolls, puja items, vehicle decor, sweets, new clothes",
+     "buys": "golu dolls, steps, return gifts, puja items, vehicle decor, sweets, new clothes",
      "categories": [
       "puja",
       "toys",
@@ -2076,7 +2121,7 @@
      "date_2026": "2026-11-01",
      "date_2027": "2027-11-01",
      "significance": "De facto merger with India (1954)",
-     "buys": "flags",
+     "buys": "tricolour merchandise",
      "categories": [
       "gifting"
      ],
@@ -2098,7 +2143,7 @@
      "date_2026": "2026-11-06..2026-11-08",
      "date_2027": "2027-10-27..2027-10-29",
      "significance": "Festival of lights; Dhanteras to Naraka Chaturdashi/Deepavali",
-     "buys": "crackers, gold, new clothes, sweets, diyas, appliances, phones, gift hampers",
+     "buys": "new clothes, silk sarees, sweets, gold, diyas, lights, gift hampers, phones, appliances",
      "categories": [
       "ethnic",
       "fashion",

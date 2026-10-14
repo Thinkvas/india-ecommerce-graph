@@ -100,6 +100,11 @@ PER_STATE = {"f_state_day", "f_statehood_day", "f_formation_day"}   # generic na
 # specific products (kites, rakhis, bonam pots...) from the merchandising taxonomy: raw "buys" phrase -> item ids
 PRODUCTS = json.loads((HERE / "deep" / "products.json").read_text()) if (HERE / "deep" / "products.json").exists() else {"items": {}, "map": {}}
 ITEMS, PMAP = PRODUCTS["items"], PRODUCTS["map"]
+for extra in sorted((HERE / "deep").glob("products_extra*.json")):   # additions from the QA fix passes
+    x = json.loads(extra.read_text())
+    ITEMS.update(x.get("items", {}))
+    for k, v in x.get("map", {}).items():
+        PMAP[k.lower()] = v
 
 
 # the same word means different things in festival lists vs demand signals

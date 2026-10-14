@@ -1,0 +1,39 @@
+{
+ "items": {
+  "kanya_pujan_kit": {"name": "Kanya pujan gift packs", "cat": "gifting", "generic": false, "online": "medium"},
+  "muharram_black_wear": {"name": "Black kurtas and abayas (Muharram)", "cat": "ethnic", "generic": false, "online": "medium"},
+  "sun_cap": {"name": "Caps and sun hats", "cat": "fashion", "generic": false, "online": "high"},
+  "sankranti_black_saree": {"name": "Black sarees and kurtas for Sankranti", "cat": "ethnic", "generic": false, "online": "medium"},
+  "modak_mould": {"name": "Modak moulds", "cat": "kitchen", "generic": false, "online": "high"},
+  "nauvari_saree": {"name": "Nauvari sarees", "cat": "ethnic", "generic": false, "online": "medium"},
+  "mangalsutra": {"name": "Mangalsutra", "cat": "jewellery", "generic": false, "online": "medium"}
+ },
+ "map": {
+  "lakshmi-ganesh idols": ["clay_idols"],
+  "kanya pujan gifts": ["kanya_pujan_kit"],
+  "gangajal containers": ["kanwar_gear"],
+  "black kurtas": ["muharram_black_wear"],
+  "sun caps": ["sun_cap"],
+  "matki": ["clay_pots"],
+  "black sankranti sarees": ["sankranti_black_saree"],
+  "modak moulds": ["modak_mould"],
+  "nauvari sarees": ["nauvari_saree"],
+  "mangalsutra": ["mangalsutra"],
+  "bridal jewellery": ["gold_jewellery"],
+  "sweets (nevri)": ["regional_sweets"],
+  "makar chaula ingredients": ["festive_cooking_kit"],
+  "patali gur": ["jaggery"],
+  "dhotis": ["dhoti_veshti"],
+  "rakhi gift hampers": ["rakhi", "gift_hamper"],
+  "payasam mixes": ["sadya_kit"],
+  "uruli": ["utensils"],
+  "ramayana books": ["religious_books"],
+  "chira": ["poha_chura"],
+  "jolpan": ["poha_chura"],
+  "tribal handloom attire": ["ne_handloom_wear"],
+  "traditional jewellery": ["jewellery"],
+  "daura-suruwal": ["ethnic_wear"],
+  "gunyo-cholo": ["ethnic_wear"],
+  "ne handloom shawls": ["ne_handloom_wear"]
+ }
+}

@@ -63,13 +63,14 @@
      "date_2026": "2026-01-14..2026-01-15",
      "date_2027": "2027-01-14..2027-01-15",
      "significance": "Harvest feast festival with Uruka night community feasts and Meji bonfires",
-     "buys": "pitha/laru ingredients, rice, fish, meat, sweets, shawls, winter clothing",
+     "buys": "pitha ingredients, til, jaggery, chira, jolpan, mekhela sador, gamosa, utensils, fish, meat, winter clothing",
      "categories": [
       "grocery",
       "sweets",
       "winter",
       "kitchen",
-      "gifting"
+      "gifting",
+      "ethnic"
      ],
      "impact": "medium",
      "impact_reason": "Food-led festival; grocery/quick-commerce spikes, plus winter wear; Guwahati alcohol sales ~Rs 12.5 cr over 2 days",
@@ -144,7 +145,7 @@
      "date_2026": "2026-11-08",
      "date_2027": "2027-10-29",
      "significance": "Festival of lights; Kali Puja widely observed by Bengali and Assamese Hindus",
-     "buys": "diyas, lights, sweets, gifts, gold, appliances, home decor, crackers",
+     "buys": "diyas, lights, sweets, gifts, gold, appliances, home decor",
      "categories": [
       "homedecor",
       "gifting",
@@ -436,7 +437,7 @@
      "date_2026": "2026-11-15",
      "date_2027": "2027-11-04",
      "significance": "Observed by Hindi-speaking Bihari/Marwari communities in Assam",
-     "buys": "fruits, soop, puja items, new clothes",
+     "buys": "soop, fruits, puja items, new clothes",
      "categories": [
       "puja",
       "grocery",
@@ -457,7 +458,7 @@
       9
      ],
      "date_2026": "2026-09-22",
-     "date_2027": null,
+     "date_2027": "2027-09-12",
      "significance": "Tea-tribe (Adivasi) harvest and nature festival",
      "buys": "new clothes, sweets, puja items",
      "categories": [
@@ -558,7 +559,7 @@
      "date_2026": "2026-02-26",
      "date_2027": "2027-02-26",
      "significance": "Nyishi festival for prosperity and harvest; Nyishi is the largest tribe",
-     "buys": "traditional attire, ornaments, food, rice beer",
+     "buys": "tribal handloom attire, traditional jewellery, rice, rice beer",
      "categories": [
       "ethnic",
       "jewellery",
@@ -912,7 +913,7 @@
      "date_2026": "2026-02-20",
      "date_2027": "2027-02-20",
      "significance": "Arunachal attained statehood on 20 Feb 1987",
-     "buys": "flags, cultural events",
+     "buys": "tricolour merchandise, cultural events",
      "categories": [
       "stationery"
      ],
@@ -974,12 +975,13 @@
      "local_name": "Christmas",
      "kind": "religious",
      "months": [
+      11,
       12
      ],
      "date_2026": "2026-12-24..2026-12-27",
      "date_2027": "2027-12-24..2027-12-27",
      "significance": "Biggest festival in Christian-majority Meghalaya; four days of state holidays",
-     "buys": "new clothes, cakes, decorations, lights, gifts, footwear, winter wear",
+     "buys": "stars, trees, church wear, cakes, lights, gifts, new clothes, footwear, winter wear",
      "categories": [
       "fashion",
       "footwear",
@@ -989,7 +991,8 @@
       "winter",
       "beauty",
       "electronics",
-      "phones"
+      "phones",
+      "ethnic"
      ],
      "impact": "high",
      "impact_reason": "Shillong markets (Police Bazar, Iewduh) see peak rush; main annual gifting and apparel occasion",
@@ -1004,10 +1007,10 @@
      "local_name": "New Year",
      "kind": "cultural",
      "months": [
-      1
+      12
      ],
-     "date_2026": "2026-01-01",
-     "date_2027": "2027-01-01",
+     "date_2026": "2026-12-31",
+     "date_2027": "2027-12-31",
      "significance": "Public holiday; party and family season after Christmas",
      "buys": "party wear, gifts, food",
      "categories": [
@@ -1054,7 +1057,7 @@
       4
      ],
      "date_2026": "2026-04-13",
-     "date_2027": null,
+     "date_2027": "2027-04-13",
      "significance": "Khasi spring thanksgiving dance festival at Weiking, Shillong",
      "buys": "traditional attire (jainsem), gold/silver ornaments, food",
      "categories": [
@@ -1078,7 +1081,7 @@
       7
      ],
      "date_2026": "2026-07-09",
-     "date_2027": null,
+     "date_2027": "2027-07-09",
      "significance": "Pnar festival in Jowai to drive away plague and evil; state holiday",
      "buys": "food, rainwear, attire",
      "categories": [
@@ -1092,7 +1095,7 @@
       "https://www.keka.com/compliance/public-holiday/meghalaya",
       "https://www.hidmc.com/blog-posts/meghalayas-festivals-experiencing-wangala-shad-suk-mynsiem-and-more"
      ],
-     "confidence": "high"
+     "confidence": "low"
     },
     {
      "name": "Wangala",
@@ -1127,7 +1130,7 @@
      "date_2026": null,
      "date_2027": null,
      "significance": "Khasi harvest thanksgiving at Smit",
-     "buys": "traditional attire, ornaments, food",
+     "buys": "traditional attire (jainsem), traditional jewellery, food",
      "categories": [
       "ethnic",
       "jewellery",
@@ -1356,12 +1359,13 @@
      "local_name": "Dashain",
      "kind": "religious",
      "months": [
+      9,
       10
      ],
-     "date_2026": "2026-10-19..2026-10-23",
-     "date_2027": "2027-10-05..2027-10-09",
+     "date_2026": "2026-10-11..2026-10-21",
+     "date_2027": "2027-09-30..2027-10-10",
      "significance": "Biggest festival for Nepali-majority Sikkim; tika and family reunions",
-     "buys": "new clothes, gifts, meat, sweets, electronics, phones",
+     "buys": "daura-suruwal, gunyo-cholo, sarees, new clothes, kids' clothes, puja items, gift hampers, dry fruits, sweets, meat, phones, electronics",
      "categories": [
       "fashion",
       "ethnic",
@@ -1370,7 +1374,9 @@
       "phones",
       "electronics",
       "jewellery",
-      "appliances"
+      "appliances",
+      "baby",
+      "puja"
      ],
      "impact": "high",
      "impact_reason": "Main annual new-clothes and gifting occasion; coincides with national festive sales",
@@ -1443,9 +1449,9 @@
       12
      ],
      "date_2026": "2026-12-09..2026-12-14",
-     "date_2027": null,
+     "date_2027": "2027-12-28..2028-01-02",
      "significance": "Sikkimese (Bhutia/Lepcha) farmers' new year and harvest festival",
-     "buys": "new clothes, food, drinks, gifts",
+     "buys": "traditional wear, gift hampers, home decor, food",
      "categories": [
       "ethnic",
       "grocery",
@@ -1469,7 +1475,7 @@
       6
      ],
      "date_2026": "2026-05-31",
-     "date_2027": null,
+     "date_2027": "2027-06-18",
      "significance": "Holiest Buddhist month; procession around Gangtok",
      "buys": "butter lamps, incense, offerings",
      "categories": [
@@ -1488,11 +1494,10 @@
      "local_name": "Pang Lhabsol",
      "kind": "religious",
      "months": [
-      8,
       9
      ],
      "date_2026": "2026-08-28",
-     "date_2027": null,
+     "date_2027": "2027-09-16",
      "significance": "Unique Sikkim festival honouring Mt Khangchendzonga",
      "buys": "puja items, cultural attire",
      "categories": [
@@ -1505,7 +1510,7 @@
       "https://www.keka.com/compliance/public-holiday/sikkim",
       "https://www.sikkim.gov.in/KnowSikkim/about-sikkim/festivals-in-sikkim"
      ],
-     "confidence": "medium"
+     "confidence": "low"
     },
     {
      "name": "Maghe Sankranti",
@@ -1539,7 +1544,7 @@
       2
      ],
      "date_2026": "2026-01-19",
-     "date_2027": null,
+     "date_2027": "2027-02-07",
      "significance": "Tamang New Year",
      "buys": "new clothes, food, damphu",
      "categories": [
@@ -1600,16 +1605,16 @@
      "confidence": "high"
     },
     {
-     "name": "Teej",
+     "name": "Haritalika Teej",
      "local_name": "Haritalika Teej",
      "kind": "religious",
      "months": [
       9
      ],
      "date_2026": "2026-09-14",
-     "date_2027": null,
+     "date_2027": "2027-09-03",
      "significance": "Nepali women's fasting festival; red attire",
-     "buys": "red sarees, bangles, cosmetics, jewellery",
+     "buys": "red sarees, bangles, sindoor, mehendi, cosmetics, jewellery",
      "categories": [
       "ethnic",
       "beauty",

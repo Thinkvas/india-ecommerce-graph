@@ -128,6 +128,11 @@ svg.zoomed .node.minor text,.node.minor.hot text,.node.minor.sel text,.node.mino
 #g3d{position:absolute;inset:0}
 #gmap{position:absolute;inset:0}
 body[data-view="map"] #overlay{display:none!important}
+.maptools{position:absolute;left:14px;top:52px;z-index:3;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.maptools button{font:inherit;font-size:12.5px;padding:5px 10px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.maptools button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.maptools #tHint{font-size:12px;color:var(--muted);background:var(--panel);border-radius:6px;padding:3px 7px}
+.maptools #tHint:empty{display:none}
 .maptitle{position:absolute;left:14px;top:12px;z-index:2;font-family:var(--f-display,inherit);font-weight:700;font-size:15px;color:var(--ink);
   background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 10px;pointer-events:none}
 .maplegend{position:absolute;left:14px;bottom:10px;z-index:2;display:flex;gap:10px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:5px 9px;pointer-events:none}
@@ -246,7 +251,8 @@ ol.push .why{color:var(--muted);font-size:12px}
   </aside>
 
   <main>
-    <div id="gmap" hidden><div id="gmapTitle" class="maptitle"></div><div class="maplegend"><span><i style="background:var(--t-state)"></i>State (on the map)</span><span><i style="background:var(--t-festival)"></i>Festival</span><span><i style="background:var(--t-signal)"></i>Signal</span><span><i style="background:var(--t-item)"></i>Product</span></div><div class="mapcredit">Graph: FalkorDB &middot; Boundaries: Datameet</div></div><div id="g3d" hidden></div><div id="g3dLabels" class="labels3d" hidden></div>
+    <div id="gmap" hidden><div id="gmapTitle" class="maptitle"></div>
+      <div id="mapTools" class="maptools"><button type="button" id="tPoly" aria-pressed="false">Draw area</button><button type="button" id="tCircle" aria-pressed="false">Circle</button><button type="button" id="tDone" hidden>Finish</button><button type="button" id="tClear" hidden>Clear area</button><span id="tHint"></span></div><div class="maplegend"><span><i style="background:var(--t-state)"></i>State (on the map)</span><span><i style="background:var(--t-festival)"></i>Festival</span><span><i style="background:var(--t-signal)"></i>Signal</span><span><i style="background:var(--t-item)"></i>Product</span></div><div class="mapcredit">Graph: FalkorDB &middot; Boundaries: Datameet</div></div><div id="g3d" hidden></div><div id="g3dLabels" class="labels3d" hidden></div>
     <svg id="stage" role="img" aria-label="Animated knowledge graph of Indian e-commerce: platforms, regions, states, seasons, festivals and product categories"></svg>
     <div class="tools"><button type="button" class="btn" id="fit">Fit</button><button type="button" class="btn" id="clear">Clear</button></div>
     <div class="overlay" id="overlay" hidden></div>
@@ -465,12 +471,18 @@ function stateBrief(id){
 /* ---------- Month planner: which state to target, what to push, and why ---------- */
 const IMPW={high:3,medium:2,low:1};
 function signalsFor(stId,m){
-  return N.filter(d=>d.type==="signal"&&d.months.includes(m)&&(d.national||d.states.includes(stId)));
+  // a signal named for one year ("Cricket World Cup 2027") only applies when the planned month falls in that year
+  return N.filter(d=>{ if(d.type!=="signal"||!d.months.includes(m)||!(d.national||d.states.includes(stId))) return false;
+    const y=(d.label.match(/\b(20\d\d)\b/)||[])[1]; return !y||+y===yearFor(m); });
 }
 // planning a month = the NEXT time that month comes round (today Oct 2026: Oct-Dec -> 2026 dates, Jan-Sep -> 2027 dates)
 const NOW=new Date(), NOW_M=NOW.getMonth()+1, NOW_Y=NOW.getFullYear();
 const yearFor=m=>m>=NOW_M?NOW_Y:NOW_Y+1;
-function dateFor(meta,m){ if(!meta) return null; const y=yearFor(m); const d=y===2026?meta.d26:y===2027?meta.d27:null; return d||null; }
+// year+month of a "YYYY-MM-DD" or "YYYY-MM-DD..YYYY-MM-DD" date; does it cover month m of year y?
+const ym=s=>{const [y,mo,d]=String(s).split("-").map(Number);return {y,mo,d,k:y*12+mo};};
+function covers(dt,y,m){ if(!dt) return false; const [a,b]=String(dt).split("..").map(ym); if(!a.mo) return false; const k=y*12+m; return k>=a.k&&k<=(b&&b.mo?b.k:a.k); }
+function startsIn(dt,y,m){ if(!dt) return null; const a=ym(String(dt).split("..")[0]); return a.mo&&a.y===y&&a.mo===m?a:null; }
+function dateFor(meta,m,y=yearFor(m)){ if(!meta) return null; return [meta.d26,meta.d27].find(d=>covers(d,y,m))||null; }
 function monthsOfDate(d){ const [a,b]=String(d).split("..").map(s=>s.split("-").map(Number)); if(!a||!a[1]) return [];
   const out=[a[1]]; if(b&&b[1]){ let k=a[1]; while(k!==b[1]){ k=k%12+1; out.push(k); if(out.length>12) break; } } return out; }
 function monthPlan(stId,m){
@@ -478,11 +490,14 @@ function monthPlan(stId,m){
   // this state's own festival dates; a festival early next month (any day next month if high impact) is a half-weight "pre-push"
   const fs=E.filter(l=>sid(l.target)===stId&&l.rel==="is big in")
     .map(l=>({f:byId.get(sid(l.source)),meta:l.meta})).map(x=>{
-      const d=dateFor(x.meta,m), base=x.meta?IMPW[x.meta.i]:x.f.impact;
-      const ms=d?monthsOfDate(d):x.meta&&x.meta.m&&x.meta.m.length?x.meta.m:x.f.months;
-      if(ms.includes(m)) return {...x,w:base,date:d};
-      const nm=m%12+1, dn=dateFor(x.meta,nm), st=dn?String(dn).split("-").map(Number):null;
-      if(st&&st[1]===nm&&(st[2]<=15||base>=3)) return {...x,w:base*.5,lead:true,date:dn};   // big festivals: shopping starts weeks ahead
+      const y=yearFor(m), base=x.meta?IMPW[x.meta.i]:x.f.impact, dated=!!(x.meta&&(x.meta.d26||x.meta.d27));
+      const d=dateFor(x.meta,m,y);
+      if(d) return {...x,w:base,date:d};
+      // undated entries fall back to their typical months
+      if(!dated&&(x.meta&&x.meta.m&&x.meta.m.length?x.meta.m:x.f.months).includes(m)) return {...x,w:base,date:null};
+      // pre-push: starts next month (same planning timeline: Dec -> Jan of the following year)
+      const nm=m%12+1, ny=m===12?y+1:y, nd=x.meta&&[x.meta.d26,x.meta.d27].find(dd=>startsIn(dd,ny,nm)), st=nd&&startsIn(nd,ny,nm);
+      if(st&&(st.d<=15||base>=3)) return {...x,w:base*.5,lead:true,date:nd};   // big festivals: shopping starts weeks ahead
       return null; }).filter(Boolean).sort((a,b)=>b.w-a.w);
   const sigs=signalsFor(stId,m).sort((a,b)=>(b.national?0:1)-(a.national?0:1)||b.str-a.str);
   const val=new Map(),why=new Map(),hold=new Map(),holdWhy=new Map(),ids=new Map();
@@ -508,20 +523,36 @@ function monthPlan(stId,m){
     addI(iv,iw,i,iVal(i,x.w*2/(1+.15*k)),{id:x.f.id,label:x.f.label+(x.lead?" pre-push":""),d:x.date||x.meta.d26,u:x.meta.u,cf:x.meta.cf}); }));
   const sUp=new Map(),sDn=new Map();
   // signals: no rarity discount (ACs are named by many heat signals precisely because they matter); weather leads, holidays trail
-  const SIGW={weather:1.5,health:1.1,agri_income:1.1,financial:1,wedding:1.1,academic:.8,vacation:.75,sports:.8,tourism:.8,sale_event:.9,gifting_day:.9,religious:1,inauspicious:1};
+  const SIGW={weather:1.3,health:1.1,agri_income:1.1,financial:1,wedding:1.1,academic:.8,vacation:.75,sports:.8,tourism:.8,sale_event:.9,gifting_day:.9,religious:1,inauspicious:1};
   sigs.forEach(g=>g.its.forEach((i,k)=>{ if(!ITEMS[i]||ITEMS[i].g) return;
-    const v=g.str*(g.national?.5:1.3)*(ONW[ITEMS[i].o]||.7)*2.4*(SIGW[g.stype]||1)/(1+.1*k), r={id:g.id,label:g.label,u:g.url,sig:true};
-    // a "dip" signal (Pitru Paksha, cyclone) only holds products in the groups it cuts; other items it names are what people need
-    const cut=g.dir<0&&g.cats.includes(ITEMS[i].c);
+    const v=g.str*(g.national?.5:1.3)*(ONW[ITEMS[i].o]||.7)*1.8*(SIGW[g.stype]||1)/(1+.1*k), r={id:g.id,label:g.label,u:g.url,sig:true};
+    // observances (Pitru Paksha, Kharmas, Ashada, Aadi, fasting) hold what they name; weather dips (cyclone, floods) name what people need
+    const cut=g.dir<0&&["inauspicious","religious","financial"].includes(g.stype);
     const mp=cut?sDn:sUp; if(v>(mp.get(i)?.v||0)) mp.set(i,{v,r});
     if(cut){ if(!ihw.has(i))ihw.set(i,[]); if(!ihw.get(i).some(x=>x.id===r.id))ihw.get(i).push(r); }
     else { if(!iw.has(i))iw.set(i,[]); if(!iw.get(i).some(x=>x.id===r.id))iw.get(i).push(r); } }));
   sUp.forEach((x,i)=>iv.set(i,(iv.get(i)||0)+x.v));
   sDn.forEach((x,i)=>ih.set(i,x.v));
-  const perCat=new Map();
-  const items=[...iv].map(([i,v])=>({i,v:v-(ih.get(i)||0),why:iw.get(i),watch:ihw.get(i)||null})).filter(x=>x.v>0&&byId.has(iid(x.i)))
-    .sort((a,b)=>b.v-a.v).filter(x=>{const c=ITEMS[x.i].c,k=perCat.get(c)||0; perCat.set(c,k+1); return k<2;}).slice(0,10);
-  const holdItems=[...ih].filter(([i,v])=>v>=(iv.get(i)||0)&&byId.has(iid(i))).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([i,v])=>({i,v,why:ihw.get(i)}));
+  const cand=[...iv].map(([i,v])=>({i,v:v-(ih.get(i)||0),why:iw.get(i),watch:ihw.get(i)||null})).filter(x=>x.v>0&&byId.has(iid(x.i))).sort((a,b)=>b.v-a.v);
+  const byI=new Map(cand.map(x=>[x.i,x]));
+  // guaranteed slots: every high-impact festival this month shows its 3 signature products; every strong local weather signal its top 2
+  const reserved=[];
+  fs.filter(x=>!x.lead&&x.w>=3).forEach(x=>((x.meta&&x.meta.it)||[]).filter(i=>byI.has(i)).slice(0,3).forEach(i=>reserved.push(i)));
+  // strong local signals that define the month (weather, school calendar, weddings, harvest cash) get their top 2 too
+  sigs.filter(g=>!g.national&&g.dir>0&&g.str>=3&&["weather","academic","wedding","agri_income"].includes(g.stype))
+    .sort((a,b)=>["weather","academic","wedding","agri_income"].indexOf(a.stype)-["weather","academic","wedding","agri_income"].indexOf(b.stype))
+    .forEach(g=>g.its.filter(i=>byI.has(i)).slice(0,2).forEach(i=>reserved.push(i)));
+  const perCat=new Map(), picked=[], seen=new Set();
+  const take=(x,force)=>{ if(seen.has(x.i)) return; const c=ITEMS[x.i].c,k=perCat.get(c)||0; if(!force&&k>=2) return; perCat.set(c,k+1); seen.add(x.i); picked.push(x); };
+  [...new Set(reserved)].slice(0,7).map(i=>byI.get(i)).forEach(x=>take(x,true));   // festivals first, then signals in the order above
+  cand.forEach(x=>{ if(picked.length<10) take(x,false); });
+  // keep score order, but a guaranteed product never falls out of the visible top 8
+  const items=picked.sort((a,b)=>b.v-a.v).slice(0,10), resv=new Set(reserved);
+  for(let k=8;k<items.length;k++) if(resv.has(items[k].i)){ let j=7; while(j>=0&&resv.has(items[j].i)) j--; if(j<0) break;
+    const [x]=items.splice(k,1); items.splice(j,0,x); }
+  // a hold is dropped when the same product group is being pushed this month (no "push jewellery, hold gold jewellery")
+  const pushCats=new Set(items.map(x=>ITEMS[x.i].c));
+  const holdItems=[...ih].filter(([i,v])=>v>=(iv.get(i)||0)&&byId.has(iid(i))&&!pushCats.has(ITEMS[i].c)).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([i,v])=>({i,v,why:ihw.get(i)}));
   const festW=d3.sum(fs,x=>x.w), localW=d3.sum(sigs.filter(g=>!g.national),g=>g.dir>0?g.str:-g.str/2);
   const share=pct(s.share)||0.6, peak=byId.get("peak").months.includes(m);
   return {s,fs,sigs,pushes,holds,items,holdItems,festW,localW,share,known:!!s.share,peak,score:share*Math.max(.3,1+festW+localW)*(peak?1.3:1)};
@@ -798,6 +829,7 @@ function column(ids,c,side,start=0){ ids.forEach((id,k)=>{ LP.set(id,[c[0]+(side
 const short=s=>{ s=String(s).replace(/\s*\([^)]*\)/g,"").trim(); return s.length>30?s.slice(0,29)+"\u2026":s; };
 // which part of the graph to draw: small, focused, never the whole hairball
 function mapModel(){
+  if(AREA&&AREA.done) return areaModel();
   const show=new Set(), hot=new Set(), E2=[], text=new Map();
   const IW={high:3,medium:2,low:1};
   const inM=e=>!month||(e.m||[]).includes(month);
@@ -875,22 +907,29 @@ function mapModel(){
 function initMap(){
   if(deckMap||!GEO||!KG) return;
   if(typeof deck==="undefined"){ mapEl.innerHTML='<p class="empty" style="padding:24px">The 3D map library could not load. Check your internet connection.</p>'; return; }
-  deckMap=new deck.Deck({parent:mapEl, controller:true,
+  deckMap=new deck.Deck({parent:mapEl, controller:{doubleClickZoom:false},
+    onHover:info=>{ if(AREA&&!AREA.done&&info.coordinate){ AREA.hover=info.coordinate; refreshMap(); } },
     initialViewState:{longitude:81,latitude:19.5,zoom:3.7,pitch:52,bearing:-14},
     getTooltip:({object})=>{ const n=object&&(object.properties?KN.get(object.properties.id):object.t?object:null); if(!n) return null;
       const T={State:"State",Festival:"Festival",Item:"Product",Signal:"Demand signal"}[n.t];
       return {html:`<b>${esc(n.n)}</b><br><span style="opacity:.7">${T}${n.sh?" \u00b7 "+esc(n.sh)+" of orders":""}</span>`,
         style:{background:cssv("--panel"),color:cssv("--ink"),fontSize:"12px",borderRadius:"8px",border:"1px solid "+cssv("--line")}}; },
-    onClick:({object})=>{ const n=object&&(object.properties?KN.get(object.properties.id):object.t?object:null);
+    onClick:(info)=>{ if(info.coordinate&&areaClick(info.coordinate)) return; const object=info.object;
+      const n=object&&(object.properties?KN.get(object.properties.id):object.t?object:null);
       if(n){ const pid=pidOf(n); if(pid&&byId.has(pid)) select(pid,false); } else if(selected) clearSel(); },
     layers:[]});
+  document.getElementById("tPoly").onclick=()=>AREA&&!AREA.done&&AREA.mode==="poly"?clearArea():startArea("poly");
+  document.getElementById("tCircle").onclick=()=>AREA&&!AREA.done&&AREA.mode==="circle"?clearArea():startArea("circle");
+  document.getElementById("tDone").onclick=()=>{ if(AREA&&AREA.pts.length>=3) finishArea(AREA.pts.slice()); };
+  document.getElementById("tClear").onclick=()=>clearArea();
   refreshMap();
 }
 const VIEW0={longitude:81,latitude:19.5,zoom:3.7,pitch:52,bearing:-14};
 let flyKey=null;
 function flyMap(m){
   // camera follows the focus: frame the lit-up nodes (lifted toward the layers they float on), or all of India
-  const key=(selected||"")+"|"+(month||""); if(key===flyKey) return; flyKey=key;
+  const key=(selected||"")+"|"+(month||"")+"|"+(AREA&&AREA.done?AREA_N:""); if(key===flyKey) return; flyKey=key;
+  if(AREA&&!AREA.done) return;
   const hot=[...m.hot].map(id=>KN.get(id)).filter(Boolean);
   let vs=VIEW0;
   if(m.cols){
@@ -921,9 +960,16 @@ function refreshMap(){
   const ePos=(id)=>pos3(KN.get(id));
   deckMap.setProps({layers:[
     new deck.GeoJsonLayer({id:"floor",data:GEO,extruded:false,pickable:true,
-      getFillColor:f=>f.properties.id===selected?[...acc,120]:m.hot.has(f.properties.id)?[...rgb("--t-state"),70]:[...land,255],
+      getFillColor:f=>f.properties.id===selected?[...acc,120]:m.hot.has(f.properties.id)?[...rgb("--t-state"),m.area?40:70]:[...land,255],
       getLineColor:[...rgb("--muted"),140],lineWidthMinPixels:1,
       updateTriggers:{getFillColor:[selected,month,m.title]},transitions:{getFillColor:{duration:reduce?0:500}}}),
+    // the drawn area (finished shape, or the shape being drawn with a rubber-band preview)
+    new deck.PolygonLayer({id:"area",data:AREA&&AREA.done?[AREA.ring]:[],getPolygon:d=>d,filled:true,stroked:true,
+      getFillColor:[...acc,45],getLineColor:[...acc,255],lineWidthMinPixels:2.5,updateTriggers:{getPolygon:[AREA_N]}}),
+    new deck.PathLayer({id:"draft",data:AREA&&!AREA.done&&AREA.pts.length?[AREA.mode==="circle"&&AREA.hover?circleRing(AREA.pts[0],AREA.hover).concat([circleRing(AREA.pts[0],AREA.hover)[0]]):AREA.pts.concat(AREA.hover?[AREA.hover]:[])]:[],
+      getPath:d=>d,getColor:[...acc,230],widthMinPixels:2,getDashArray:[6,4]}),
+    new deck.ScatterplotLayer({id:"draftPts",data:AREA&&!AREA.done?AREA.pts:[],getPosition:d=>d,radiusUnits:"pixels",getRadius:(d,{index})=>index===0?7:5,
+      getFillColor:[...acc,255],stroked:true,getLineColor:[...panel,255],lineWidthMinPixels:2}),
     new deck.LineLayer({id:"edges",data:m.edges,getSourcePosition:e=>ePos(e.s),getTargetPosition:e=>ePos(e.t),
       getColor:e=>m.focus?(e.r==="CUTS_ITEM"?[...rgb("--t-category"),200]:[...acc,210]):[...rgb("--muted"),70],
       getWidth:e=>m.focus?(e.r==="CELEBRATED_IN"?({high:2.6,medium:1.8,low:1.1}[e.i]||1.2):1.6):0.8,widthUnits:"pixels",
@@ -941,6 +987,165 @@ function refreshMap(){
       characterSet:"auto",fontFamily:"system-ui, sans-serif",fontWeight:600,
       updateTriggers:{getSize:[selected],getText:[m.title],getTextAnchor:[m.title],getPixelOffset:[m.title],getAlignmentBaseline:[m.title]}})
   ]});
+}
+/* ---------- AREA: draw a polygon or circle on the map -> what is happening inside it ----------
+   Geometry runs in the browser (point-in-polygon sampling against the state boundaries); the answer comes from the
+   FalkorDB graph (festivals, signals, products per state, weighted by how much of each state the shape covers),
+   plus two free live sources: Open-Meteo weather and OpenStreetMap shops / markets / towns. Aggregates only. */
+let AREA=null, AREA_N=0;
+// Census 2011 population (millions) per state/UT, used to weight a drawn area by people rather than land
+const POP={up:199.8,maharashtra:112.4,bihar:104.1,wb:91.3,mp:72.6,tn:72.1,rajasthan:68.5,karnataka:61.1,gujarat:60.4,ap:49.4,telangana:35.0,
+  odisha:42.0,kerala:33.4,jharkhand:33.0,assam:31.2,punjab:27.7,cg:25.5,haryana:25.4,delhi:16.8,jk:12.3,uttarakhand:10.1,hp:6.9,tripura:3.7,
+  meghalaya:3.0,manipur:2.9,nagaland:2.0,goa:1.5,arunachal:1.4,puducherry:1.2,mizoram:1.1,chandigarh:1.1,sikkim:0.6,dnhdd:0.59,andaman:0.38,ladakh:0.27,lakshadweep:0.064};          // {mode, pts, ring, done, m, res, live, pos}
+function pip(pt,ring){ let c=false; for(let i=0,j=ring.length-1;i<ring.length;j=i++){ const [xi,yi]=ring[i],[xj,yj]=ring[j];
+  if(((yi>pt[1])!==(yj>pt[1]))&&(pt[0]<(xj-xi)*(pt[1]-yi)/(yj-yi)+xi)) c=!c; } return c; }
+const polysOf=g=>g.type==="Polygon"?[g.coordinates]:g.coordinates;
+const inGeom=(pt,g)=>polysOf(g).some(P=>pip(pt,P[0])&&!P.slice(1).some(h=>pip(pt,h)));
+function areaKm2(ring){ const lat0=d3.mean(ring,p=>p[1])*Math.PI/180, kx=111.32*Math.cos(lat0), ky=110.57; let s=0;
+  ring.forEach((p,i)=>{const q=ring[(i+1)%ring.length]; s+=p[0]*kx*q[1]*ky-q[0]*kx*p[1]*ky;}); return Math.abs(s)/2; }
+const GBOX=new Map((GEO?GEO.features:[]).map(f=>{ const xs=[],ys=[]; polysOf(f.geometry).forEach(P=>P[0].forEach(([x,y])=>{xs.push(x);ys.push(y);}));
+  return [f.properties.id,{b:[Math.min(...xs),Math.min(...ys),Math.max(...xs),Math.max(...ys)],f,km2:d3.sum(polysOf(f.geometry),P=>areaKm2(P[0]))}]; }));
+function circleRing(c,e){ const k=Math.cos(c[1]*Math.PI/180), R=Math.hypot((e[0]-c[0])*k,e[1]-c[1]);
+  return d3.range(72).map(i=>{const a=i/72*2*Math.PI;return [c[0]+R*Math.cos(a)/k,c[1]+R*Math.sin(a)];}); }
+function coverOf(ring){
+  const xs=ring.map(p=>p[0]),ys=ring.map(p=>p[1]), x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+  const step=Math.max(0.02,Math.min(0.25,Math.sqrt((x1-x0)*(y1-y0)/5000))), hits=new Map();
+  for(let x=x0+step/2;x<x1;x+=step) for(let y=y0+step/2;y<y1;y+=step){ if(!pip([x,y],ring)) continue;
+    for(const [id,o] of GBOX){ const b=o.b; if(x<b[0]||x>b[2]||y<b[1]||y>b[3]) continue; if(inGeom([x,y],o.f.geometry)){ hits.set(id,(hits.get(id)||0)+Math.cos(y*Math.PI/180)); break; } } }
+  const cell=step*111.32*step*110.57;
+  return [...hits].map(([id,n])=>{const km=n*cell;return {id,km,frac:Math.min(1,km/GBOX.get(id).km2)};}).filter(c=>c.km>1).sort((a,b)=>b.km-a.km);
+}
+function analyseArea(){
+  const m=month||NOW_M, ring=AREA.ring, cover=coverOf(ring);
+  const nm=m%12+1;
+  const fest=new Map(), items=new Map(), holds=new Map(), sigs=new Map();
+  let share=0, known=0;
+  cover.forEach(c=>{
+    const st=byId.get(c.id), sh=pct(st.share), w=c.frac*Math.sqrt(sh||0.6);
+    if(sh){ share+=sh*c.frac; known++; }
+    const p=monthPlan(c.id,m), pn=monthPlan(c.id,nm);
+    [...p.fs.map(x=>({x,now:true})),...pn.fs.filter(x=>!x.lead).map(x=>({x,now:false}))].forEach(({x,now})=>{
+      const k=x.f.id, o=fest.get(k)||{f:x.f,w:0,states:new Set(),date:null,now:false};
+      if(now&&x.lead&&o.now) return;
+      o.w+=x.w*w*(now&&!x.lead?1:.6); o.states.add(st.label); o.date=o.date||x.date; o.now=o.now||(now&&!x.lead); o.lead=!o.now; fest.set(k,o); });
+    p.items.forEach(x=>{ const o=items.get(x.i)||{i:x.i,v:0,why:new Map(),states:new Set()}; o.v+=x.v*w; o.states.add(st.label);
+      x.why.forEach(r=>o.why.set(r.id,r)); items.set(x.i,o); });
+    p.holdItems.forEach(x=>{ const o=holds.get(x.i)||{i:x.i,v:0,why:new Set()}; o.v+=x.v*w; x.why.forEach(r=>o.why.add(r.label)); holds.set(x.i,o); });
+    p.sigs.filter(g=>!g.national||g.str>=3).forEach(g=>{ const o=sigs.get(g.id)||{g,w:0,states:new Set()}; o.w+=g.str*w*(g.national?.5:1); o.states.add(st.label); sigs.set(g.id,o); });
+  });
+  const km2=areaKm2(ring);
+  return {m,cover,km2,share,known,
+    fest:[...fest.values()].sort((a,b)=>(b.now-a.now)||b.w-a.w).slice(0,8),
+    items:[...items.values()].sort((a,b)=>b.v-a.v).slice(0,10),
+    holds:[...holds.values()].filter(h=>!items.has(h.i)).sort((a,b)=>b.v-a.v).slice(0,5),
+    sigs:[...sigs.values()].sort((a,b)=>b.w-a.w).slice(0,6)};
+}
+function areaCentroid(r){ return [d3.mean(r,p=>p[0]),d3.mean(r,p=>p[1])]; }
+// live, free sources: 7-day weather at the centre of the shape; shops, markets and towns from OpenStreetMap
+async function areaLive(n){
+  const c=areaCentroid(AREA.ring);
+  try{
+    const u=`https://api.open-meteo.com/v1/forecast?latitude=${c[1].toFixed(3)}&longitude=${c[0].toFixed(3)}&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&current=temperature_2m&timezone=Asia%2FKolkata&forecast_days=7`;
+    const j=await (await fetch(u)).json(); if(n!==AREA_N) return;
+    const d=j.daily, tmax=Math.max(...d.temperature_2m_max), tmin=Math.min(...d.temperature_2m_min), rain=d3.sum(d.precipitation_sum);
+    const pick=cats=>Object.entries(ITEMS).filter(([i,v])=>cats.includes(v.c)&&byId.has(iid(i))).sort((a,b)=>(sigMentions.get(b[0])||0)-(sigMentions.get(a[0])||0)).slice(0,3).map(x=>x[0]);
+    const acts=[];
+    if(tmax>=37) acts.push({why:`Heat: up to ${Math.round(tmax)}°C this week`,items:pick(["ac","cooling"])});
+    if(rain>=40) acts.push({why:`Rain: ${Math.round(rain)} mm expected this week`,items:pick(["rainwear"])});
+    if(tmin<=10) acts.push({why:`Cold: down to ${Math.round(tmin)}°C this week`,items:pick(["winter","heating"])});
+    AREA.live={now:j.current&&j.current.temperature_2m,tmax,tmin,rain,acts};
+  }catch(e){ AREA.live={err:"Live weather unavailable here"}; }
+  if(n===AREA_N){ showDetail(); }
+  if(AREA.km2>25000){ AREA.pos={skip:true}; if(n===AREA_N) showDetail(); return; }
+  try{
+    const P=AREA.ring.map(p=>`${p[1].toFixed(4)} ${p[0].toFixed(4)}`).join(" ");
+    const q=`[out:json][timeout:25];node["place"~"^(city|town)$"](poly:"${P}")->.t;.t out body 80;nwr["shop"](poly:"${P}")->.s;.s out tags 4000;nwr["amenity"="marketplace"](poly:"${P}")->.m;.m out tags 300;`;
+    const r=await fetch("https://overpass-api.de/api/interpreter",{method:"POST",body:"data="+encodeURIComponent(q),headers:{"Content-Type":"application/x-www-form-urlencoded"}});
+    const j=await r.json(); if(n!==AREA_N) return;
+    const towns=[],shops=new Map(); let markets=0, nshop=0;
+    j.elements.forEach(e=>{ const t=e.tags||{}; if(t.place) towns.push({n:t.name||"",pop:+String(t.population||0).replace(/[^0-9]/g,""),k:t.place,ll:[e.lon,e.lat]});
+      else if(t.amenity==="marketplace") markets++; else if(t.shop){ nshop++; shops.set(t.shop,(shops.get(t.shop)||0)+1); } });
+    // people-weighted order share: town population inside the shape / state population, with an urban online uplift (x1.6)
+    const popIn=new Map(); towns.forEach(t=>{ if(!t.pop||!t.ll) return; for(const c of AREA.res.cover){ if(inGeom(t.ll,GBOX.get(c.id).f.geometry)){ popIn.set(c.id,(popIn.get(c.id)||0)+t.pop); break; } } });
+    let sharePop=0; AREA.res.cover.forEach(c=>{ const sh=pct(byId.get(c.id).share); if(!sh) return;
+      const urb=Math.min(1,(popIn.get(c.id)||0)/1e6/(POP[c.id]||1)*1.6); sharePop+=sh*Math.max(c.frac,urb); });
+    AREA.res.sharePop=sharePop; AREA.res.popTowns=d3.sum(towns,t=>t.pop||0);
+    AREA.pos={towns:towns.filter(t=>t.n).sort((a,b)=>(b.k==="city")-(a.k==="city")||b.pop-a.pop).slice(0,12),shops:[...shops].sort((a,b)=>b[1]-a[1]).slice(0,10),nshop,markets,capped:nshop>=3990};
+  }catch(e){ AREA.pos={err:"Store data unavailable (OpenStreetMap busy). Try again."}; }
+  if(n===AREA_N){ showDetail(); }
+}
+function finishArea(ring){
+  AREA={...AREA,ring,done:true,km2:areaKm2(ring)}; AREA.res=analyseArea(); AREA.m=AREA.res.m; AREA.live=null; AREA.pos=null;
+  const n=++AREA_N; selected=null; syncTools(); applyHighlight(); showDetail(); showMonth(); areaLive(n);
+}
+function startArea(mode){ AREA={mode,pts:[],done:false}; AREA_N++; syncTools(); refreshMap(); }
+function clearArea(){ AREA=null; AREA_N++; syncTools(); flyKey=null; applyHighlight(); showDetail(); }
+function syncTools(){
+  const t=document.getElementById("mapTools"); if(!t) return;
+  const drawing=AREA&&!AREA.done;
+  t.querySelector("#tPoly").setAttribute("aria-pressed",String(!!(drawing&&AREA.mode==="poly")));
+  t.querySelector("#tCircle").setAttribute("aria-pressed",String(!!(drawing&&AREA.mode==="circle")));
+  t.querySelector("#tDone").hidden=!(drawing&&AREA.mode==="poly"&&AREA.pts.length>=3);
+  t.querySelector("#tClear").hidden=!AREA;
+  t.querySelector("#tHint").textContent=!AREA?"":drawing?(AREA.mode==="poly"?(AREA.pts.length<3?"Click points around the area":"Click the first point or Finish to close"):(AREA.pts.length?"Click to set the edge of the circle":"Click the centre of the circle")):"";
+}
+function areaClick(c){
+  if(!AREA||AREA.done) return false;
+  if(AREA.mode==="circle"){ if(!AREA.pts.length){ AREA.pts=[c]; syncTools(); refreshMap(); } else finishArea(circleRing(AREA.pts[0],c)); return true; }
+  if(AREA.pts.length>=3&&deckMap){ const a=deckMap.getViewports()[0].project(AREA.pts[0]), b=deckMap.getViewports()[0].project(c);
+    if(Math.hypot(a[0]-b[0],a[1]-b[1])<14){ finishArea(AREA.pts.slice()); return true; } }
+  AREA.pts.push(c); syncTools(); refreshMap(); return true;
+}
+// what the graph-on-map shows for an area: covered states lit on the floor, reasons on the left, products on the right
+function areaModel(){
+  if(AREA.m!==(month||NOW_M)){ AREA.res=analyseArea(); AREA.m=AREA.res.m; }
+  const R=AREA.res, show=new Set(), hot=new Set(), E2=[], text=new Map();
+  KG.nodes.filter(n=>n.t==="State").forEach(n=>show.add(n.id));
+  const cov=new Set(R.cover.map(c=>c.id)); cov.forEach(id=>hot.add(id));
+  const F=R.fest.slice(0,6).map(o=>o.f.id).filter(id=>KN.has(id));
+  const S=R.sigs.slice(0,3).map(o=>kid(o.g.id)).filter(Boolean);
+  const I=R.items.slice(0,8).map(o=>iid(o.i)).filter(id=>KN.has(id));
+  [...F,...S,...I].forEach(id=>{hot.add(id);show.add(id);});
+  F.forEach(f=>(KOUT.get(f)||[]).filter(e=>e.r==="CELEBRATED_IN"&&cov.has(e.t)).forEach(e=>E2.push(e)));
+  S.forEach(s=>(KOUT.get(s)||[]).filter(e=>(e.r==="AFFECTS"&&cov.has(e.t))||(e.r.endsWith("_ITEM")&&I.includes(e.t))).forEach(e=>E2.push(e)));
+  I.forEach(i=>(KIN.get(i)||[]).filter(e=>e.r==="NEEDS"&&F.includes(e.s)).forEach(e=>E2.push(e)));
+  LP=new Map(); SIDE=new Map();
+  const anchor=areaCentroid(AREA.ring), spreadDeg=Math.max(...AREA.ring.map(p=>p[0]))-Math.min(...AREA.ring.map(p=>p[0]));
+  const scale=spreadDeg>10?1.75:spreadDeg>5?1.35:1; ZSTEP=105000*scale; COLX=0.9*scale; Z0=170000*scale*scale;
+  const L=[...F,...S]; column(L,anchor,"L"); column(I,anchor,"R",Math.max(0,(L.length-I.length)/2));
+  return {show,hot,edges:E2,title:`Your area · ${MON[R.m-1]}: ${R.cover.length} state${R.cover.length===1?"":"s"}, ${Math.round(R.km2).toLocaleString("en-IN")} km²`,focus:true,anchor,cols:true,text,area:true};
+}
+function areaHTML(){
+  const R=AREA.res, L=AREA.live, P=AREA.pos;
+  if(!R.cover.length) return `<div class="d-type">Your area</div><div class="d-name">Nothing inside</div><p class="empty">The shape doesn't cover any Indian state. Draw it over the map.</p>`;
+  const card={area_km2:Math.round(R.km2),month:MON[R.m-1],year:yearFor(R.m),states:R.cover.map(c=>({state:byId.get(c.id).label,covered:+c.frac.toFixed(2)})),
+    est_share_of_orders_pct:+(R.sharePop!=null?R.sharePop:R.share).toFixed(2),festivals:R.fest.map(o=>({name:o.f.label,date:o.date,when:o.now?"this month":"next month"})),
+    push:R.items.map(o=>({product:byId.get(iid(o.i)).label,category:byId.get(ITEMS[o.i].c).label,because:[...o.why.values()].map(r=>r.label).slice(0,3)})),
+    hold:R.holds.map(o=>({product:byId.get(iid(o.i)).label,because:[...o.why]})),live:L&&!L.err?L.acts.map(a=>({signal:a.why,push:a.items.map(i=>byId.get(iid(i)).label)})):[]};
+  lastCards=card;
+  const st=R.cover.slice(0,8).map(c=>`${lnk(c.id)} <span class="mon">${Math.round(c.frac*100)}%</span>`).join(", ");
+  return `<div class="d-type"><span class="dot" style="background:var(--accent)"></span>Your area</div><div class="d-name">${MON[R.m-1]} ${yearFor(R.m)} inside the shape</div>
+    <div class="kpis"><div class="kpi"><b>${Math.round(R.km2).toLocaleString("en-IN")}</b><span>km&sup2;</span></div>
+      <div class="kpi"><b>${R.cover.length}</b><span>state${R.cover.length===1?"":"s"}</span></div>
+      <div class="kpi"><b>${R.known?"\u2248"+(R.sharePop!=null?R.sharePop:R.share).toFixed(1)+"%":"n/a"}</b><span>of online orders</span></div></div>
+    <div class="d-src">Covers: ${st}${R.cover.length>8?` +${R.cover.length-8}`:""}. ${R.sharePop!=null?`Order share weighted by people: ${(R.popTowns/1e6).toFixed(1)}M in mapped towns inside (OpenStreetMap) vs state population (Census 2011), urban areas counted 1.6&times;.`:"Order share from land area until town populations load (cities hold far more orders than land suggests)."}</div>
+    <div class="brief plan"><h4>Live now (Open-Meteo, next 7 days)</h4>
+      ${!L?'<div class="fg-n">Fetching weather&hellip;</div>':L.err?`<div class="fg-n">${esc(L.err)}</div>`:`<div class="fg-b">${L.now!=null?`Now ${Math.round(L.now)}&deg;C &middot; `:""}max ${Math.round(L.tmax)}&deg;C &middot; min ${Math.round(L.tmin)}&deg;C &middot; rain ${Math.round(L.rain)} mm</div>
+        ${L.acts.length?L.acts.map(a=>`<div class="fg-n"><b>${esc(a.why)}</b> &rarr; push ${a.items.map(i=>`<button type="button" class="lnk" data-go="${iid(i)}">${esc(byId.get(iid(i)).label)}</button>`).join(", ")}</div>`).join(""):'<div class="fg-n">No weather extreme this week.</div>'}`}
+      <div class="fg-b" style="margin-top:8px"><b>Festivals and events</b></div>
+      ${R.fest.length?`<ul class="push">${R.fest.map(o=>`<li>${lnk(o.f.id)} <span class="mon">${o.date?fmtD(o.date):""}${o.now?"":" &middot; next month"}</span> <span class="why">${[...o.states].slice(0,3).map(esc).join(", ")}${o.states.size>3?` +${o.states.size-3}`:""}</span></li>`).join("")}</ul>`:'<div class="fg-n">None recorded this month or next.</div>'}
+      <div class="fg-b" style="margin-top:8px"><b>Push here, in order</b></div>
+      <ol class="push">${R.items.map(o=>`<li><button type="button" class="lnk" data-go="${iid(o.i)}">${esc(byId.get(iid(o.i)).label)}</button> <span class="why">for ${[...o.why.values()].slice(0,3).map(r=>esc(r.label)).join(" + ")}</span></li>`).join("")}</ol>
+      ${R.holds.length?`<div class="fg-b"><b>Hold:</b> ${R.holds.map(o=>esc(byId.get(iid(o.i)).label)).join(", ")} <span class="why">because of ${[...new Set(R.holds.flatMap(o=>[...o.why]))].map(esc).join(", ")}</span></div>`:""}
+      ${R.sigs.length?`<div class="fg-b" style="margin-top:8px"><b>Demand signals</b></div><div class="fg-n">${R.sigs.map(o=>`<button type="button" class="lnk" data-go="${o.g.id}">${esc(o.g.label)}</button>${o.g.dir<0?' <span class="pill hold">hold</span>':""}`).join(", ")}</div>`:""}
+      <div class="fg-b" style="margin-top:8px"><b>Points of sale (OpenStreetMap)</b></div>
+      ${!P?'<div class="fg-n">Counting shops and markets&hellip;</div>':P.skip?'<div class="fg-n">Draw a smaller area (under 25,000 km&sup2;, about a district) to count shops and towns.</div>':P.err?`<div class="fg-n">${esc(P.err)}</div>`:
+        `<div class="fg-n">${P.nshop.toLocaleString("en-IN")}${P.capped?"+":""} shops mapped &middot; ${P.markets} markets${P.shops.length?` &middot; most common: ${P.shops.slice(0,6).map(([k,v])=>`${esc(k.replace(/_/g," "))} ${v}`).join(", ")}`:""}</div>
+         ${P.towns.length?`<div class="fg-n"><b>Towns:</b> ${P.towns.map(t=>esc(t.n)).join(", ")}</div>`:""}`}
+      <div class="note" style="margin-top:6px">Store counts are what volunteers have mapped on OpenStreetMap, so treat them as relative, not complete.</div>
+      <div class="fg-b" style="margin-top:10px"><b>Signal for the app</b></div>
+      <button type="button" class="btn copy" id="copyCards">Copy this area as JSON</button><textarea class="copybox" id="copyBox" hidden readonly></textarea>
+    </div>`;
 }
 /* festival dates from FalkorDB: "2026-11-08" or "2026-11-06..2026-11-08" -> "8 Nov 2026" / "6-8 Nov 2026" */
 function fmtD(s){ if(!s) return ""; const one=t=>{const [y,m,d]=t.split("-").map(Number);return {y,m,d};};
@@ -1130,6 +1335,7 @@ const dot=t=>`<span class="dot" style="background:var(${TYPES[t][1]})"></span>`;
 const lnk=id=>`<button type="button" class="lnk" data-go="${id}">${esc(byId.get(id).label)}</button>`;
 const detail=document.getElementById("detail");
 function showDetail(){
+  if(AREA&&AREA.done&&AREA.res&&!selected&&view==="map"){ detail.innerHTML=areaHTML(); return; }
   if(!selected&&month){ detail.innerHTML=boardHTML(month); return; }
   if(!selected){ detail.innerHTML=`<div class="d-type">Start here</div><div class="d-name">Pick anything</div>
     <p class="empty">Click a dot, search a name, or press <b>Play the year</b> to watch the selling calendar light up month by month. Click a <b>state</b> for its sales brief.</p>
@@ -1321,13 +1527,14 @@ function select(id,center){
   if(hiddenTypes.has(d.type)&&d.type!=="signal"&&d.type!=="item"){hiddenTypes.delete(d.type);syncChips();applyVisibility();}
   if(d.type==="festival"&&hiddenImpact.has(d.impact)){hiddenImpact.delete(d.impact);syncImp();}
   if(!nodeVisible(d))setView("net");
+  if(AREA&&AREA.done){ AREA=null; AREA_N++; syncTools(); }   // picking a node replaces the drawn area
   selected=id; stopPlay(); applyHighlight(); showDetail(); showMonth();
   if(view==="3d") fit(800);
   if(view==="map"&&!["state","festival","item","signal"].includes(d.type)) setView("net");
   if(center&&!flowActive()){const t=d3.zoomTransform(stageEl);const k=Math.max(t.k,1.2);
     svg.transition().duration(reduce?0:600).call(zoom.transform,d3.zoomIdentity.translate(W/2-k*d.x,H/2-k*d.y).scale(k));}
 }
-function clearSel(){selected=null;applyHighlight();showDetail();showMonth();if(view==="3d")fit();}
+function clearSel(){ if(AREA){ AREA=null; AREA_N++; syncTools(); flyKey=null; } selected=null;applyHighlight();showDetail();showMonth();if(view==="3d")fit();}
 nodeSel.on("click",(ev,d)=>{ev.stopPropagation();select(d.id,false);})
   .on("keydown",(ev,d)=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();select(d.id,true);}});
 svg.on("click",()=>clearSel());

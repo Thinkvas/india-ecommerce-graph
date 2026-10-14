@@ -37,7 +37,7 @@
      "date_2026": "2026-01-14",
      "date_2027": "2027-01-15",
      "significance": "Sun's northward transit; til-gul exchange, women's haldi-kumkum gatherings",
-     "buys": "til-gul, halwa jewellery, black sarees, kites, haldi-kumkum return gifts (vaan)",
+     "buys": "til-gul, halwa jewellery, black sankranti sarees, kites, haldi-kumkum return gifts (vaan)",
      "categories": [
       "ethnic",
       "sweets",
@@ -413,7 +413,7 @@
      "date_2026": "2026-09-05",
      "date_2027": "2027-08-26",
      "significance": "Human-pyramid pot-breaking the day after Janmashtami; Mumbai/Thane mandals",
-     "buys": "T-shirts, sports shoes, kids' Krishna costumes, flute, poha",
+     "buys": "kids' Krishna costumes, flute, poha, puja items, T-shirts",
      "categories": [
       "fashion",
       "toys",
@@ -433,10 +433,11 @@
      "local_name": "Pola",
      "kind": "harvest",
      "months": [
+      8,
       9
      ],
      "date_2026": "2026-09-10",
-     "date_2027": null,
+     "date_2027": "2027-08-31",
      "significance": "Farmers decorate and honour bullocks; big in Vidarbha/Marathwada",
      "buys": "bullock decorations, paint, bells, clay bulls, sweets",
      "categories": [
@@ -461,7 +462,7 @@
      "date_2026": "2026-09-14..2026-09-25",
      "date_2027": "2027-09-04..2027-09-14",
      "significance": "State's biggest festival; 1.5-10 day home and public Ganpati",
-     "buys": "idols, decor (makhar), lights, modaks, puja kits, ethnic wear, TVs/appliances",
+     "buys": "idols, decor (makhar), lights, modaks, modak moulds, puja kits, ethnic wear, TVs/appliances",
      "categories": [
       "puja",
       "homedecor",
@@ -488,6 +489,7 @@
      "local_name": "Navratri / Dussehra",
      "kind": "religious",
      "months": [
+      9,
       10
      ],
      "date_2026": "2026-10-11..2026-10-20",
@@ -609,7 +611,7 @@
      "date_2026": "2026-11-21",
      "date_2027": "2027-11-11",
      "significance": "Ritual marriage of Tulsi; Marathi wedding season begins",
-     "buys": "wedding wear, paithani, gold, gifts, furniture, appliances",
+     "buys": "paithani sarees, nauvari sarees, mangalsutra, bridal jewellery, gold, gifts, furniture, appliances",
      "categories": [
       "wedding",
       "jewellery",
@@ -774,7 +776,7 @@
       3
      ],
      "date_2026": "2026-03-05..2026-03-18",
-     "date_2027": null,
+     "date_2027": "2027-03-22..2027-04-05",
      "significance": "Hindu spring festival with float parades across 19 centres",
      "buys": "costumes, colours, flags, drums, sweets",
      "categories": [
@@ -965,7 +967,7 @@
      "date_2026": "2026-09-14..2026-09-18",
      "date_2027": "2027-09-04..2027-09-08",
      "significance": "Goa's biggest Hindu festival; families reunite, matoli canopy decoration",
-     "buys": "idols, matoli fruits, sweets (nevri, modak), decor, clothes, electronics",
+     "buys": "idols, decor (makhar), matoli fruits, modak, lights, sweets (nevri), clothes, electronics",
      "categories": [
       "puja",
       "sweets",
@@ -989,6 +991,7 @@
      "local_name": "Dasro",
      "kind": "religious",
      "months": [
+      9,
       10
      ],
      "date_2026": "2026-10-11..2026-10-20",
@@ -1101,7 +1104,7 @@
      "date_2026": "2026-12-19",
      "date_2027": "2027-12-19",
      "significance": "Liberation from Portuguese rule, 1961",
-     "buys": "flags",
+     "buys": "tricolour merchandise",
      "categories": [
       "homedecor"
      ],
@@ -1174,7 +1177,7 @@
      "date_2026": "2026-01-14",
      "date_2027": "2027-01-15",
      "significance": "Kite festival at Silvassa riverfront and Daman lighthouse beach",
-     "buys": "kites, manja, caps, sunglasses, chikki",
+     "buys": "kites, manja, chikki, undhiyu ingredients, sun caps, sunglasses",
      "categories": [
       "toys",
       "sweets",
@@ -1316,7 +1319,7 @@
      "date_2026": "2026-08-02",
      "date_2027": "2027-08-02",
      "significance": "Liberation of Dadra & Nagar Haveli, 1954",
-     "buys": "flags",
+     "buys": "tricolour merchandise",
      "categories": [
       "homedecor"
      ],
@@ -1425,6 +1428,7 @@
      "local_name": "Navratri",
      "kind": "religious",
      "months": [
+      9,
       10
      ],
      "date_2026": "2026-10-11..2026-10-19",
@@ -1515,7 +1519,7 @@
      "date_2026": "2026-12-19",
      "date_2027": "2027-12-19",
      "significance": "Liberation from Portuguese rule, 1961; seaside celebrations",
-     "buys": "flags, food",
+     "buys": "tricolour merchandise, food",
      "categories": [
       "homedecor"
      ],
@@ -1705,7 +1709,7 @@
       3
      ],
      "date_2026": "2026-02-15..2026-03-18",
-     "date_2027": null,
+     "date_2027": "2027-03-06..2027-04-06",
      "significance": "Trade fair with 50% vehicle tax rebate; 2024 edition sold ~23,700 vehicles (Rs 1,200 cr)",
      "buys": "cars, two-wheelers",
      "categories": [
@@ -1717,7 +1721,7 @@
       "https://teamleaseregtech.com/updates/article/51944/govt-of-madhya-pradesh-notified-regarding-grant-of-50-exemption-on-lifetime-motor-vehicle-tax-for-vehicles-sold-during-vyapar-mela-gwalior-2025-2026-and-vikramotsav-vyapar-mela-ujjain-2026/",
       "https://www.drishtiias.com/state-pcs-current-affairs/first-edition-of-the-ujjain-trade-fair/print_manually"
      ],
-     "confidence": "high"
+     "confidence": "low"
     },
     {
      "name": "Bhagoria",
@@ -1969,12 +1973,13 @@
      "local_name": "Navratri / Dussehra",
      "kind": "religious",
      "months": [
+      9,
       10
      ],
      "date_2026": "2026-10-11..2026-10-20",
      "date_2027": "2027-09-30..2027-10-09",
      "significance": "Durga pandals, garba in Indore/Bhopal; Ravan dahan",
-     "buys": "garba wear, vehicles, electronics, gold",
+     "buys": "garba wear, chaniya choli, dandiya sticks, puja items, vehicles, electronics, gold",
      "categories": [
       "ethnic",
       "vehicles",
@@ -2002,12 +2007,13 @@
      "date_2026": "2026-10-29",
      "date_2027": "2027-10-18",
      "significance": "Married women's fast",
-     "buys": "sarees, jewellery, cosmetics, karwa sets, gifts",
+     "buys": "karwa sets, sargi, sieve thali, mehendi, bangles, sindoor, sarees, jewellery, cosmetics, gifts",
      "categories": [
       "ethnic",
       "jewellery",
       "beauty",
-      "gifting"
+      "gifting",
+      "puja"
      ],
      "impact": "medium",
      "impact_reason": "Beauty and gifting online",
@@ -2027,7 +2033,7 @@
      "date_2026": "2026-11-01",
      "date_2027": "2027-11-01",
      "significance": "State formation; MP Utsav in Bhopal",
-     "buys": "flags, handicrafts",
+     "buys": "tricolour merchandise, handicrafts",
      "categories": [
       "homedecor"
      ],

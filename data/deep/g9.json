@@ -60,11 +60,10 @@
      "local_name": "Sajibu Cheiraoba",
      "kind": "new_year",
      "months": [
-      3,
       4
      ],
      "date_2026": "2026-03-19",
-     "date_2027": null,
+     "date_2027": "2027-04-07",
      "significance": "Meitei lunar New Year; homes cleaned, special dishes offered to deities, hill climbing",
      "buys": "home cleaning items, new utensils, groceries, fruits, new clothes",
      "categories": [
@@ -120,7 +119,7 @@
      "date_2026": "2026-02-15",
      "date_2027": "2027-02-15",
      "significance": "Collective Naga seed-sowing festival marking start of cultivation",
-     "buys": "traditional attire, shawls, food, agri inputs",
+     "buys": "traditional attire, ne handloom shawls, food, agri inputs",
      "categories": [
       "ethnic",
       "agri",
@@ -144,7 +143,7 @@
      "date_2026": "2026-11-01",
      "date_2027": "2027-11-01",
      "significance": "Autumn harvest festival of Kuki-Chin-Mizo tribes with dances, feasts, beauty pageants",
-     "buys": "new clothes, traditional shawls, food, party wear",
+     "buys": "new clothes, ne handloom shawls, food, party wear",
      "categories": [
       "fashion",
       "ethnic",
@@ -190,19 +189,18 @@
      "local_name": "Kang Chingba",
      "kind": "religious",
      "months": [
-      6,
       7
      ],
-     "date_2026": "2026-07-16",
-     "date_2027": null,
+     "date_2026": "2026-07-16..2026-07-24",
+     "date_2027": "2027-07-05..2027-07-13",
      "significance": "Ten-day Manipuri Rath Yatra with Jagannath chariot processions and Khubak Eshei",
-     "buys": "puja items, lamps, fruits, new clothes",
+     "buys": "puja items, phanek, fruits, sweets, lamps, new clothes",
      "categories": [
       "puja",
       "grocery",
       "ethnic"
      ],
-     "impact": "low",
+     "impact": "medium",
      "impact_reason": "Devotional; mostly offline puja spend",
      "sources": [
       "https://manipurtourism.gov.in/festivals-of-manipur/",
@@ -217,7 +215,7 @@
       9
      ],
      "date_2026": "2026-09-22",
-     "date_2027": null,
+     "date_2027": "2027-09-11",
      "significance": "Traditional long-boat race at Bijoy Govinda moat with Vishnu idol installation",
      "buys": "food, traditional wear",
      "categories": [
@@ -230,7 +228,7 @@
       "https://manipurtourism.gov.in/festivals-of-manipur/",
       "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
      ],
-     "confidence": "medium"
+     "confidence": "low"
     },
     {
      "name": "Durga Puja / Kwak Jatra",
@@ -390,7 +388,7 @@
       2
      ],
      "date_2026": "2026-01-23",
-     "date_2027": null,
+     "date_2027": "2027-02-11",
      "significance": "Worship of goddess of learning by students",
      "buys": "books, stationery, puja items, new clothes",
      "categories": [
@@ -454,7 +452,7 @@
       2
      ],
      "date_2026": "2026-02-20",
-     "date_2027": null,
+     "date_2027": "2027-02-20",
      "significance": "Zomi national day listed as Manipur holiday",
      "buys": "traditional wear, food",
      "categories": [
@@ -466,17 +464,16 @@
      "sources": [
       "https://www.greythr.com/wiki/acts/st-manipur/holidays/2026/"
      ],
-     "confidence": "low"
+     "confidence": "medium"
     },
     {
      "name": "Janmashtami",
      "kind": "religious",
      "months": [
-      8,
-      9
+      8
      ],
      "date_2026": "2026-09-04",
-     "date_2027": null,
+     "date_2027": "2027-08-25",
      "significance": "Krishna's birth, important for Meitei Vaishnavites",
      "buys": "puja items, sweets, ethnic wear",
      "categories": [
@@ -495,11 +492,10 @@
      "name": "New Year",
      "kind": "cultural",
      "months": [
-      12,
-      1
+      12
      ],
-     "date_2026": "2026-12-31..2027-01-01",
-     "date_2027": "2027-12-31..2028-01-01",
+     "date_2026": "2026-12-31",
+     "date_2027": "2027-12-31",
      "significance": "New Year Eve/Day, also coincides with Gaan-Ngai",
      "buys": "party wear, food, gifts",
      "categories": [
@@ -547,12 +543,13 @@
      "name": "Christmas",
      "kind": "religious",
      "months": [
+      11,
       12
      ],
      "date_2026": "2026-12-24..2026-12-26",
      "date_2027": "2027-12-24..2027-12-26",
      "significance": "Biggest festival; 3-day state holiday, churches and streets decorated, community feast on 26th",
-     "buys": "branded clothes, leather jackets, sweaters, jeans, boots, decor lights, trees, gifts, phones",
+     "buys": "trees, decor lights, stars, gifts, cakes, church wear, branded clothes, leather jackets, sweaters, boots, phones",
      "categories": [
       "fashion",
       "winter",
@@ -562,7 +559,9 @@
       "phones",
       "electronics",
       "beauty",
-      "grocery"
+      "grocery",
+      "sweets",
+      "ethnic"
      ],
      "impact": "high",
      "impact_reason": "Annual shopping peak; Aizawl declares no-vehicle zones for shoppers; clothing sales jump from early Dec",
@@ -576,11 +575,10 @@
      "name": "New Year",
      "kind": "cultural",
      "months": [
-      12,
-      1
+      12
      ],
-     "date_2026": "2026-12-31..2027-01-02",
-     "date_2027": "2027-12-31..2028-01-02",
+     "date_2026": "2026-12-31",
+     "date_2027": "2027-12-31",
      "significance": "New Year Eve, Day and a further celebration day are all state holidays",
      "buys": "party wear, food, gifts, gadgets",
      "categories": [
@@ -604,7 +602,7 @@
       3
      ],
      "date_2026": "2026-03-13",
-     "date_2027": null,
+     "date_2027": "2027-03-05",
      "significance": "Spring festival after jhum clearing; state-wide carnival with Cheraw bamboo dance",
      "buys": "puan (traditional wraps), traditional attire, beauty products, food",
      "categories": [
@@ -847,7 +845,7 @@
       "phones",
       "appliances"
      ],
-     "impact": "medium",
+     "impact": "low",
      "impact_reason": "National sale window drives online gadget buying even without local festival",
      "sources": [
       "https://www.greythr.com/wiki/acts/st-mizoram/holidays/2026/",
@@ -864,7 +862,7 @@
      "date_2026": "2026-10-20",
      "date_2027": "2027-10-09",
      "significance": "Observed by Hindu migrants; holiday",
-     "buys": "puja items, clothes",
+     "buys": "clothes",
      "categories": [
       "puja",
       "fashion"
@@ -914,7 +912,7 @@
      "date_2026": "2026-12-01..2026-12-10",
      "date_2027": "2027-12-01..2027-12-10",
      "significance": "'Festival of festivals' at Kisama near Kohima showcasing all Naga tribes; coincides with Statehood Day",
-     "buys": "travel, handicrafts, shawls, souvenirs, winter wear, food",
+     "buys": "ne handloom shawls, handicrafts, souvenirs, travel, winter wear, food",
      "categories": [
       "travel",
       "ethnic",
@@ -934,12 +932,13 @@
      "name": "Christmas",
      "kind": "religious",
      "months": [
+      11,
       12
      ],
      "date_2026": "2026-12-24..2026-12-26",
      "date_2027": "2027-12-24..2027-12-26",
      "significance": "Biggest festival for Christian-majority Nagaland; carnivals, carols and feasts",
-     "buys": "garments, decor lights, gifts, winter wear, footwear, phones, cakes",
+     "buys": "trees, decor lights, stars, gifts, cakes, church wear, garments, winter wear, footwear, phones",
      "categories": [
       "fashion",
       "winter",
@@ -948,7 +947,9 @@
       "gifting",
       "phones",
       "electronics",
-      "grocery"
+      "grocery",
+      "sweets",
+      "ethnic"
      ],
      "impact": "high",
      "impact_reason": "Dimapur markets packed for season sales; shops open Sundays in Dec",
@@ -962,11 +963,10 @@
      "name": "New Year",
      "kind": "cultural",
      "months": [
-      12,
-      1
+      12
      ],
-     "date_2026": "2026-12-31..2027-01-01",
-     "date_2027": "2027-12-31..2028-01-01",
+     "date_2026": "2026-12-31",
+     "date_2027": "2027-12-31",
      "significance": "New Year celebrations following Christmas",
      "buys": "party wear, food, gifts",
      "categories": [
@@ -991,7 +991,7 @@
      "date_2026": "2026-02-25..2026-02-27",
      "date_2027": "2027-02-25..2027-02-27",
      "significance": "Angami purification festival (Phousanyi), Kohima region",
-     "buys": "traditional shawls, attire, meat, rice beer ingredients",
+     "buys": "ne handloom shawls, attire, meat, rice beer ingredients",
      "categories": [
       "ethnic",
       "grocery"
@@ -1190,7 +1190,7 @@
       4
      ],
      "date_2026": "2026-04-01..2026-04-06",
-     "date_2027": null,
+     "date_2027": "2027-04-01..2027-04-06",
      "significance": "Phom festival marking end of winter, Longleng",
      "buys": "food, attire",
      "categories": [
@@ -1267,7 +1267,7 @@
       "phones",
       "appliances"
      ],
-     "impact": "medium",
+     "impact": "low",
      "impact_reason": "Coincides with national online sales; Dimapur business community",
      "sources": [
       "https://www.greythr.com/wiki/acts/st-nagaland/holidays/2026/",
@@ -1363,7 +1363,7 @@
       10
      ],
      "date_2026": "2026-10-10",
-     "date_2027": null,
+     "date_2027": "2027-09-29",
      "significance": "Start of Devi Paksha; marks Puja shopping countdown",
      "buys": "clothes, puja items",
      "categories": [
@@ -1385,7 +1385,7 @@
       10
      ],
      "date_2026": "2026-10-25",
-     "date_2027": null,
+     "date_2027": "2027-10-14",
      "significance": "Kojagari Lakshmi Puja in homes; Hojagiri dance by Reang community",
      "buys": "idols, puja items, fruits, sweets, kitchenware",
      "categories": [
@@ -1412,7 +1412,7 @@
      "date_2026": "2026-11-08..2026-11-09",
      "date_2027": "2027-10-29",
      "significance": "Kali Puja and Diwali with big mela at Tripurasundari temple, Udaipur",
-     "buys": "lamps, lights, crackers, sweets, electronics, gold",
+     "buys": "lamps, lights, sweets, electronics, gold",
      "categories": [
       "homedecor",
       "electronics",
@@ -1436,7 +1436,7 @@
       7
      ],
      "date_2026": "2026-07-21",
-     "date_2027": null,
+     "date_2027": "2027-07-11",
      "significance": "Week-long worship of Fourteen Gods at Chaturdasha Devata temple, Khayerpur",
      "buys": "puja items, new clothes, fair goods",
      "categories": [
@@ -1450,7 +1450,7 @@
       "https://tripura.gov.in/fairs-and-festivals",
       "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
      ],
-     "confidence": "high"
+     "confidence": "low"
     },
     {
      "name": "Garia Puja",
@@ -1482,7 +1482,7 @@
       8
      ],
      "date_2026": "2026-08-07",
-     "date_2027": null,
+     "date_2027": "2027-07-25",
      "significance": "Tripuri protective ritual about two weeks after Kharchi",
      "buys": "puja items",
      "categories": [
@@ -1493,7 +1493,7 @@
      "sources": [
       "https://www.greythr.com/wiki/acts/st-tripura/holidays/2026/"
      ],
-     "confidence": "high"
+     "confidence": "low"
     },
     {
      "name": "Bengali New Year",
@@ -1505,7 +1505,7 @@
      "date_2026": "2026-04-15",
      "date_2027": "2027-04-15",
      "significance": "Pohela Boishakh; traders open new ledgers (haal khata)",
-     "buys": "new clothes, sweets, gifts, ledgers",
+     "buys": "sarees, panjabi, sweets, new clothes, gifts, ledgers",
      "categories": [
       "fashion",
       "ethnic",
@@ -1574,9 +1574,9 @@
       2
      ],
      "date_2026": "2026-01-23",
-     "date_2027": null,
+     "date_2027": "2027-02-11",
      "significance": "Students' festival; yellow attire, school/college pandals",
-     "buys": "yellow sarees, panjabi, stationery, idols",
+     "buys": "saraswati idols, puja items, yellow sarees, panjabi, stationery",
      "categories": [
       "ethnic",
       "fashion",
@@ -1711,7 +1711,7 @@
       5
      ],
      "date_2026": "2026-05-09",
-     "date_2027": null,
+     "date_2027": "2027-05-09",
      "significance": "Tagore's birth anniversary, cultural programmes",
      "buys": "books, ethnic wear",
      "categories": [
@@ -1729,11 +1729,10 @@
      "name": "Janmashtami",
      "kind": "religious",
      "months": [
-      8,
-      9
+      8
      ],
      "date_2026": "2026-09-04",
-     "date_2027": null,
+     "date_2027": "2027-08-25",
      "significance": "Krishna's birth",
      "buys": "puja items, sweets",
      "categories": [
