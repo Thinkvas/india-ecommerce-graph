@@ -841,9 +841,13 @@ function mapModel(){
     title=`${sn.n}: where it is celebrated and what people buy`;
   } else if(sn&&sn.t==="Item"){
     hot.add(sel);
-    (KIN.get(sel)||[]).filter(e=>e.r==="NEEDS").forEach(e=>{ add(e); hot.add(e.s);
-      (KOUT.get(e.s)||[]).filter(x=>x.r==="CELEBRATED_IN"&&(e.st||[]).includes(x.t)).forEach(x=>{add(x);hot.add(x.t);}); });
-    (KIN.get(sel)||[]).filter(e=>e.r!=="NEEDS").forEach(e=>{add(e);hot.add(e.s);});
+    // the 8 festivals that matter most for this product (impact x market size, only this month if one is picked)
+    const fe=(KIN.get(sel)||[]).filter(e=>e.r==="NEEDS").map(e=>{
+      const cel=(KOUT.get(e.s)||[]).filter(x=>x.r==="CELEBRATED_IN"&&(e.st||[]).includes(x.t)&&inM(x));
+      return {e,cel,v:d3.sum(cel,x=>(IW[x.i]||1)**2*Math.sqrt(pct(KN.get(x.t).sh)||0.6))}; }).filter(x=>x.cel.length).sort((a,b)=>b.v-a.v).slice(0,8);
+    fe.forEach(x=>{ add(x.e); hot.add(x.e.s); x.cel.forEach(c=>{add(c);hot.add(c.t);}); });
+    (KIN.get(sel)||[]).filter(e=>e.r!=="NEEDS"&&(!month||(KN.get(e.s).m||[]).includes(month))).sort((a,b)=>(KN.get(b.s).s==="high")-(KN.get(a.s).s==="high")).slice(0,3)
+      .forEach(e=>{add(e);hot.add(e.s);});
     title=`${sn.n}: which festivals and states buy it`;
   } else if(sn&&sn.t==="Signal"){
     hot.add(sel);

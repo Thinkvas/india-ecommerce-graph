@@ -1,0 +1,1441 @@
+<title>India E-commerce Knowledge Graph</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/3d-force-graph@1.77.0/dist/3d-force-graph.min.js"></script>
+<script src="https://unpkg.com/deck.gl@9.1.15/dist.min.js"></script>
+<style>
+/* Layout: operator console. Top bar (views + play), left rail (find, filters, insights), centre stage (graph), right sheet (brief). Stacks on phones. */
+:root{
+  --bg:#F4F5F9; --panel:#FFFFFF; --ink:#181B2A; --muted:#5B6177; --line:#DCE0EA; --accent:#C2410C; --accent-soft:#FDE7DA;
+  --t-hub:#181B2A; --t-platform:#3B4CCA; --t-sale:#C2410C; --t-strategy:#7C5CBF; --t-region:#0F766E;
+  --t-state:#15803D; --t-city:#65A30D; --t-season:#D97706; --t-festival:#DB2777; --t-category:#2563EB; --t-signal:#0E7490; --t-item:#9333EA;
+  --edge:#AEB5C8; --edge-hot:#C2410C; --wheel:#E7EAF2; --halo:#F4F5F9;
+  --f-display:"Bricolage Grotesque","Avenir Next",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0F111C; --panel:#171A29; --ink:#E9EBF5; --muted:#A0A6BC; --line:#2A2F45; --accent:#FB923C; --accent-soft:#3A2416;
+  --t-hub:#E9EBF5; --t-platform:#8C9BFF; --t-sale:#FB923C; --t-strategy:#B79CF2; --t-region:#2DD4BF;
+  --t-state:#4ADE80; --t-city:#A3E635; --t-season:#FBBF24; --t-festival:#F472B6; --t-category:#60A5FA; --t-signal:#22D3EE; --t-item:#C084FC;
+  --edge:#3A4160; --edge-hot:#FB923C; --wheel:#22273A; --halo:#0F111C; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --bg:#0F111C; --panel:#171A29; --ink:#E9EBF5; --muted:#A0A6BC; --line:#2A2F45; --accent:#FB923C; --accent-soft:#3A2416;
+  --t-hub:#E9EBF5; --t-platform:#8C9BFF; --t-sale:#FB923C; --t-strategy:#B79CF2; --t-region:#2DD4BF;
+  --t-state:#4ADE80; --t-city:#A3E635; --t-season:#FBBF24; --t-festival:#F472B6; --t-category:#60A5FA; --t-signal:#22D3EE; --t-item:#C084FC;
+  --edge:#3A4160; --edge-hot:#FB923C; --wheel:#22273A; --halo:#0F111C; color-scheme:dark; }
+
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:14px;line-height:1.5}
+.app{display:grid;grid-template-columns:290px minmax(0,1fr) 340px;grid-template-rows:auto minmax(0,1fr);height:100%}
+header{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:12px 18px;border-bottom:1px solid var(--line);background:var(--panel)}
+h1{font-family:var(--f-display);font-weight:800;font-size:21px;letter-spacing:-.01em;margin:0}
+.meta{font-family:var(--f-mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.seg button{font:inherit;font-size:13px;padding:6px 12px;border:0;background:var(--panel);color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.play{display:inline-flex;align-items:center;gap:8px;margin-left:auto}
+.btn{font:inherit;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+.btn:focus-visible,.seg button:focus-visible,.chip:focus-visible,.link:focus-visible,input:focus-visible,.month:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.months{display:flex;gap:2px}
+.month{font-family:var(--f-mono);font-size:11px;width:28px;padding:5px 0;text-align:center;border-radius:5px;border:1px solid transparent;background:transparent;color:var(--muted);cursor:pointer}
+.month[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+.statebar{flex-basis:100%;display:flex;align-items:center;gap:8px;min-width:0}
+.statebar .lbl{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600;flex:none}
+.states{display:flex;gap:5px;overflow-x:auto;padding-bottom:3px;min-width:0;scrollbar-width:thin}
+.st{flex:none;display:inline-flex;align-items:center;gap:5px;font:inherit;font-size:12px;padding:4px 9px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;white-space:nowrap}
+.st .sh{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.st[aria-pressed="true"]{background:var(--t-state);border-color:var(--t-state);color:var(--bg)}
+.st[aria-pressed="true"] .sh{color:var(--bg)}
+.st:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.st.lit{border-color:var(--accent)}
+aside{background:var(--panel);border-right:1px solid var(--line);overflow-y:auto;padding:14px 16px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.sec h2{font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+input.search{width:100%;box-sizing:border-box;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:12px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="false"]{opacity:.4}
+.chip .n{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;flex:none}
+.ins{display:flex;flex-direction:column;gap:8px}
+.ins .card{border:1px solid var(--line);border-radius:9px;padding:9px 10px;background:var(--bg)}
+.ins .big{font-family:var(--f-display);font-weight:800;font-size:20px;line-height:1.1;color:var(--accent);font-variant-numeric:tabular-nums}
+.ins .txt{font-size:12.5px}
+.ins .tag{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+main{position:relative;min-width:0;min-height:0;overflow:hidden}
+svg#stage{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab}
+svg#stage:active{cursor:grabbing}
+.link{fill:none;stroke:var(--edge);stroke-width:.8;opacity:.5;transition:opacity .35s,stroke .35s,stroke-width .35s}
+.link.hot{stroke:var(--edge-hot);stroke-width:1.8;opacity:.95;stroke-dasharray:6 5;animation:flow 1.1s linear infinite}
+.link.dim{opacity:.06}
+@keyframes flow{to{stroke-dashoffset:-22}}
+.node circle{stroke:var(--halo);stroke-width:1.5;transition:opacity .35s, r .35s}
+.node text{font-family:var(--f-body);font-size:10.5px;fill:var(--ink);paint-order:stroke;stroke:var(--halo);stroke-width:3.2px;stroke-linejoin:round;pointer-events:none;transition:opacity .35s}
+.node.major text{font-size:12.5px;font-weight:600}
+.node.minor text{opacity:0}
+svg.zoomed .node.minor text,.node.minor.hot text,.node.minor.sel text,.node.minor.nb text{opacity:1}
+.node.dim circle{opacity:.12}.node.dim text{opacity:.12}
+.node.hot circle{stroke:var(--edge-hot);stroke-width:2.5}
+.node.sel circle{stroke:var(--ink);stroke-width:3}
+.pulse{fill:none;stroke:var(--edge-hot);stroke-width:2;opacity:0}
+.node.hot .pulse{animation:pulse 1.6s ease-out infinite}
+@keyframes pulse{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(2.4)}}
+.wheel circle{fill:none;stroke:var(--wheel);stroke-width:1}
+.wheel text{font-family:var(--f-mono);font-size:11px;fill:var(--muted);text-anchor:middle}
+.wheel .hand{stroke:var(--accent);stroke-width:2;opacity:.8}
+.wheel .wedge{fill:var(--accent);opacity:.07}
+.ringlbl{font-family:var(--f-body);font-size:10px;fill:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.overlay{position:absolute;left:12px;bottom:12px;max-width:min(420px,calc(100% - 24px));background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.overlay h3{font-family:var(--f-display);font-weight:800;font-size:17px;margin:0 0 4px}
+.overlay .row{font-size:12.5px;margin:2px 0}
+.overlay .k{color:var(--muted)}
+.tools{position:absolute;right:12px;top:12px;display:flex;gap:6px}
+#detail{background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;padding:16px 18px;min-width:0}
+.d-type{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.d-name{font-family:var(--f-display);font-weight:800;font-size:25px;line-height:1.12;margin:4px 0 6px}
+.kpis{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.kpi{border:1px solid var(--line);border-radius:8px;padding:6px 9px;background:var(--bg);min-width:70px}
+.kpi b{display:block;font-family:var(--f-display);font-size:18px;font-variant-numeric:tabular-nums}
+.kpi span{font-size:11px;color:var(--muted)}
+.d-info{margin:6px 0}
+.d-src{font-size:12px;color:var(--muted);margin-bottom:12px}
+.brief{border:1px solid var(--accent);background:var(--accent-soft);border-radius:10px;padding:10px 12px;margin:10px 0 14px}
+.brief h4{margin:0 0 6px;font-family:var(--f-display);font-size:14px}
+.brief ul{margin:0;padding-left:18px}.brief li{margin:2px 0;font-size:13px}
+.brief .note{font-size:11px;color:var(--muted);margin-top:6px}
+.rels{display:flex;flex-direction:column;gap:4px}
+.rel{font-size:13px;padding:5px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line)}
+.rel .verb{color:var(--muted)}
+.lnk{font:inherit;font-weight:600;color:var(--ink);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.lnk:hover{text-decoration-color:var(--accent)}
+.empty{color:var(--muted);font-size:13px}
+.pill{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.03em;padding:1px 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted);margin-left:6px;vertical-align:1px}
+.pill.p3{background:var(--accent);border-color:var(--accent);color:#fff}
+.pill.p2{border-color:var(--accent);color:var(--accent)}
+.culture{display:flex;flex-direction:column;gap:4px;font-size:13px;margin:6px 0 10px;padding:9px 11px;border-radius:9px;background:var(--bg);border:1px solid var(--line)}
+.culture .k,.fg .mon,.row .k{color:var(--muted)}
+.culture a,.fg-n a,.brief a,.evid a{color:var(--accent)}
+.fguide{display:flex;flex-direction:column;gap:6px}
+.fg{border:1px solid var(--line);border-radius:8px;padding:7px 9px;background:var(--bg)}
+.fg-h{font-size:13px}
+.fg.off{opacity:.4}
+.planline{fill:none;stroke:var(--accent);stroke-dasharray:2 6;stroke-linecap:round;opacity:.95;animation:flow 1s linear infinite}
+
+#g3d{position:absolute;inset:0}
+#gmap{position:absolute;inset:0}
+body[data-view="map"] #overlay{display:none!important}
+.maptitle{position:absolute;left:14px;top:12px;z-index:2;font-family:var(--f-display,inherit);font-weight:700;font-size:15px;color:var(--ink);
+  background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 10px;pointer-events:none}
+.maplegend{position:absolute;left:14px;bottom:10px;z-index:2;display:flex;gap:10px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:5px 9px;pointer-events:none}
+.maplegend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+.mapcredit{position:absolute;right:10px;bottom:8px;z-index:2;font-size:10.5px;color:var(--muted);pointer-events:none}
+.labels3d{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.l3{position:absolute;left:0;top:0;font-family:var(--f-body);font-size:12px;font-weight:600;color:var(--ink);white-space:nowrap;
+  text-shadow:0 0 3px var(--bg),0 0 3px var(--bg),0 0 3px var(--bg)}
+.l3 i{font-style:normal;font-weight:500;color:var(--muted);font-family:var(--f-mono);font-size:10.5px}
+.l3.sel{color:var(--accent);font-size:13.5px}
+.fg-d{font-family:var(--f-mono);font-size:11px;color:var(--accent);margin:2px 0 3px}
+.fg-d .cf,.why .cf{color:var(--muted)}
+.base{transition:opacity .45s}
+svg.flowmode .base{opacity:.04;pointer-events:none}
+.flow .f-link{fill:none;stroke-linecap:round;opacity:.55;transition:opacity .2s}
+.flow .f-link.hold{stroke-dasharray:4 5}
+.flow .f-node{cursor:pointer}
+.flow .f-node circle{stroke:var(--halo);stroke-width:2}
+.flow .f-node text{font-family:var(--f-body);font-size:13px;fill:var(--ink)}
+.flow .f-node .sub{font-size:11px;fill:var(--muted)}
+.flow .f-node:hover text{text-decoration:underline}
+.flow .f-head{font-family:var(--f-body);font-size:10.5px;font-weight:600;letter-spacing:.09em;fill:var(--muted);text-transform:uppercase}
+.flow .f-title{font-family:var(--f-display);font-weight:800;font-size:26px;fill:var(--ink)}
+.flow .f-sub{font-family:var(--f-body);font-size:13px;fill:var(--muted)}
+.flow .f-col{font-family:var(--f-display);font-weight:600;font-size:14px;fill:var(--accent)}
+.flow .f-col.hold{fill:var(--t-festival)}
+svg.flowmode .flow .f-link.dimmed{opacity:.08}
+.planline.hold{stroke:var(--t-festival);stroke-dasharray:1 5;opacity:.8}
+.brief.plan h4{font-size:15px}
+ol.push{margin:4px 0 6px;padding-left:20px}
+ol.push li{font-size:13px;margin:3px 0}
+ol.push .why{color:var(--muted);font-size:12px}
+.watch{color:var(--t-festival)}
+.board{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.bd{display:flex;gap:9px;align-items:flex-start;text-align:left;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:7px 9px;cursor:pointer}
+.bd:hover{border-color:var(--accent)}
+.bd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.bd .rk{font-family:var(--f-display);font-weight:800;font-size:16px;color:var(--accent);min-width:20px;font-variant-numeric:tabular-nums}
+.bd-main{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}
+.bd-top{display:flex;justify-content:space-between;gap:8px;font-size:13px}
+.bd .mon{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.bar{display:block;height:5px;border-radius:3px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.bd-why{font-size:12px;color:var(--muted)}
+.drivers{display:flex;flex-direction:column;gap:3px;font-size:12.5px}
+.drivers .k{color:var(--muted)}
+.drivers .mon{font-family:var(--f-mono);font-size:10.5px;color:var(--muted)}
+.pill.hold{border-color:var(--t-festival);color:var(--t-festival)}
+.cards{display:flex;flex-direction:column;gap:5px;margin-top:6px}
+.sigcard{display:flex;flex-direction:column;gap:1px;font-size:12.5px;padding:6px 9px;border-radius:7px;border:1px solid var(--line);background:var(--panel);border-left:3px solid var(--accent)}
+.sigcard.hold{border-left-color:var(--t-festival)}
+.sigcard .act{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;color:var(--accent)}
+.sigcard.hold .act{color:var(--t-festival)}
+.sigcard .cb{color:var(--muted);font-size:12px}
+.btn.copy{margin-top:8px;font-size:12px}
+.copybox{width:100%;height:120px;margin-top:6px;font-family:var(--f-mono);font-size:11px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px}
+
+.fg .mon{font-family:var(--f-mono);font-size:11px;margin-left:6px}
+.fg-b{font-size:12.5px;margin-top:2px}
+.fg-n{font-size:11.5px;color:var(--muted);margin-top:2px}
+.evid{display:flex;flex-direction:column;gap:7px}
+.evid .e{font-size:12px;border-left:2px solid var(--accent);padding:2px 0 2px 8px}
+.evid .who{color:var(--muted);font-size:11px}
+@media (max-width:1150px){ .app{grid-template-columns:260px minmax(0,1fr)} #detail{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);max-height:40vh} }
+@media (max-width:760px){
+  html,body{height:auto}
+  .app{display:flex;flex-direction:column;height:auto}
+  aside{border-right:0;border-bottom:1px solid var(--line)}
+  main{height:72vh;min-height:440px}
+  #detail{max-height:none}
+  .play{margin-left:0;flex-wrap:wrap}
+  .months{flex-wrap:wrap}
+}
+@media (prefers-reduced-motion: reduce){ .link.hot,.node.hot .pulse{animation:none} *{transition:none!important} }
+</style>
+
+<div class="app">
+  <header>
+    <h1>India E-commerce Knowledge Graph</h1>
+    <div class="seg" role="group" aria-label="View">
+      <button type="button" id="v-net" aria-pressed="true">Network</button>
+      <button type="button" id="v-wheel" aria-pressed="false">Year wheel</button>
+      <button type="button" id="v-map" aria-pressed="false">Graph on map</button>
+      <button type="button" id="v-3d" aria-pressed="false">3D graph</button>
+    </div>
+    <div class="play">
+      <button type="button" class="btn primary" id="playBtn">&#9654; Play the year</button>
+      <div class="months" id="months" role="group" aria-label="Month"></div>
+    </div>
+    <span class="meta" id="meta"></span>
+    <div class="statebar"><span class="lbl">States</span><div class="states" id="states" role="group" aria-label="States, largest share first"></div></div>
+  </header>
+
+  <aside>
+    <div class="sec">
+      <h2><label for="search">Find</label></h2>
+      <input id="search" class="search" list="names" placeholder="State, festival, platform&#x2026;" autocomplete="off">
+      <datalist id="names"></datalist>
+    </div>
+    <div class="sec">
+      <h2>Show</h2>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="sec">
+      <h2>Festivals by online impact</h2>
+      <div class="chips" id="impChips"></div>
+    </div>
+    <div class="sec">
+      <h2>What the data says</h2>
+      <div class="ins" id="insights"></div>
+    </div>
+    <div class="sec">
+      <h2>Market evidence</h2>
+      <div class="evid" id="evidence"></div>
+    </div>
+  </aside>
+
+  <main>
+    <div id="gmap" hidden><div id="gmapTitle" class="maptitle"></div><div class="maplegend"><span><i style="background:var(--t-state)"></i>State (on the map)</span><span><i style="background:var(--t-festival)"></i>Festival</span><span><i style="background:var(--t-signal)"></i>Signal</span><span><i style="background:var(--t-item)"></i>Product</span></div><div class="mapcredit">Graph: FalkorDB &middot; Boundaries: Datameet</div></div><div id="g3d" hidden></div><div id="g3dLabels" class="labels3d" hidden></div>
+    <svg id="stage" role="img" aria-label="Animated knowledge graph of Indian e-commerce: platforms, regions, states, seasons, festivals and product categories"></svg>
+    <div class="tools"><button type="button" class="btn" id="fit">Fit</button><button type="button" class="btn" id="clear">Clear</button></div>
+    <div class="overlay" id="overlay" hidden></div>
+  </main>
+
+  <section id="detail" aria-live="polite"></section>
+</div>
+
+<script>
+"use strict";
+/* =========================================================================
+   1. DATA  (transcribed from the notes; months for festivals = typical dates)
+   ========================================================================= */
+const SRC={p1:"Notes, 26 Sep",p2:"Notes, 30 Sep",p3:"Notes, 1 Oct",p4:"Notes, 2 Oct",p5:"Notes, 3 Oct",p6:"Notes, 4 Oct",p7:"Notes, 6 Oct",p8:"Notes, 7 Oct"};
+const TYPES={hub:["Topic","--t-hub"],platform:["Platform","--t-platform"],sale:["Sale / campaign","--t-sale"],strategy:["Strategy","--t-strategy"],
+  region:["Region","--t-region"],state:["State","--t-state"],city:["City","--t-city"],season:["Season","--t-season"],festival:["Festival","--t-festival"],category:["Product group","--t-category"],item:["Specific product","--t-item"],signal:["Demand signal","--t-signal"]};
+const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const N=[],E=[];
+const n=(id,label,type,o={})=>N.push({id,label,type,info:o.info||"",src:o.src||"",share:o.share||null,months:o.months||[]});
+const e=(a,rel,b)=>E.push({source:a,target:b,rel});
+
+n("india","Indian e-commerce","hub",{info:"The market described in the notes."});
+const P=[["amazon","Amazon","Location strategy: services in regional languages and empowering small businesses.","p1"],
+ ["flipkart","Flipkart","Annual Big Billion Days sale: massive revenues and the driver of festive shopping.","p1"],
+ ["myntra","Myntra","End of Reason Sale is a crowd-puller; leader in fashion e-commerce.","p1"],
+ ["snapdeal","Snapdeal","Bolstered rural economies by connecting local artisans with a wider audience.","p1"],
+ ["paytm","Paytm Mall","Festive cashback campaigns drove significant traffic and sales.","p1"],
+ ["tatacliq","Tata CLiQ","Authentic and luxury products; resonates with premium shoppers.","p2"],
+ ["ajio","Ajio","Growth from targeted marketing campaigns and strategic brand collaborations.","p2"],
+ ["bigbasket","BigBasket","Innovative delivery models; benchmark in online grocery, especially Tier 1 cities.","p2"],
+ ["nykaa","Nykaa","2021 IPO cemented its leadership in the beauty segment.","p2"]];
+P.forEach(([id,l,i,s])=>{n(id,l,"platform",{info:i,src:s});e(id,"is a platform in","india");});
+n("bbd","Big Billion Days","sale",{info:"Flipkart's mega-sale; anchors the main festive wave.",src:"p1",months:[9,10]});
+n("gif","Great Indian Festival","sale",{info:"Amazon's mega-sale; anchors the main festive wave.",src:"p5",months:[9,10]});
+n("eors","End of Reason Sale","sale",{info:"Myntra's crowd-pulling fashion sale.",src:"p1"});
+n("cashback","Festive cashback","sale",{info:"Paytm Mall's festive cashback campaigns.",src:"p1",months:[9,10,11]});
+n("ipo","2021 IPO","sale",{info:"Nykaa's stock market listing.",src:"p2"});
+e("flipkart","runs","bbd");e("amazon","runs","gif");e("myntra","runs","eors");e("paytm","runs","cashback");e("nykaa","listed via","ipo");
+[["regional","Regional-language services","amazon","p1"],["smallbiz","Empowering small businesses","amazon","p1"],["artisans","Connecting rural artisans","snapdeal","p1"],
+ ["targeted","Targeted marketing","ajio","p2"],["collabs","Brand collaborations","ajio","p2"],["delivery","Innovative delivery models","bigbasket","p2"]]
+ .forEach(([id,l,p,s])=>{n(id,l,"strategy",{src:s});e(p,"uses",id);});
+const CAT={fashion:"Apparel & fashion",ethnic:"Ethnic fashion",beauty:"Beauty",grocery:"Online grocery",premium:"Luxury & premium",gifting:"Gifting",
+ mobacc:"Mobile accessories",personal:"Personal care",phones:"Smartphones",appliances:"Large home appliances",electronics:"Electronics",winter:"Winter wear",
+ party:"Party & gifting ranges",jewellery:"Jewellery",cosmetics:"Luxury cosmetics",footwear:"Footwear",wedding:"Wedding registry items",ac:"Air conditioners",fridge:"Refrigerators"};
+Object.entries(CAT).forEach(([id,l])=>n(id,l,"category"));
+e("myntra","leads in","fashion");e("nykaa","leads in","beauty");e("bigbasket","sets the benchmark in","grocery");e("tatacliq","focuses on","premium");
+[["north","North India","34%"],["west","West & Central India","25\u201328%"],["south","South India","22\u201325%"],["east","East & Northeast India","13\u201315%"]]
+ .forEach(([id,l,s])=>{n(id,l,"region",{info:"Share of the national e-commerce market.",src:"p6",share:s});e(id,"is a region of","india");});
+const ST=[["maharashtra","Maharashtra","west","About 15% of national order count; high customer trust and repeat purchases.","p3","15%"],
+ ["karnataka","Karnataka","south","Roughly 9%; a tech-savvy hub.","p3","9%"],["up","Uttar Pradesh","north","High user engagement and strong growth.","p3","8%"],
+ ["tn","Tamil Nadu","south","Strong order contributions from Chennai and surrounding urban centres.","p3","7%"],
+ ["delhi","Delhi-NCR","north","Primary market for premium, high-ticket products.","p4","6%"],["gujarat","Gujarat","west","","p4","5%"],
+ ["wb","West Bengal","east","","p4","4%"],["telangana","Telangana","south","","p4","4%"],["rajasthan","Rajasthan","north","Region not stated in notes; placed in North.","p4","3%"],
+ ["kerala","Kerala","south","","p4","3%"],["bihar","Bihar","north","Grouped with Uttar Pradesh in the notes.","p7"],["punjab","Punjab","north","","p7"],
+ ["haryana","Haryana","north","","p7"],["jk","Jammu & Kashmir","north","","p7"],["hp","Himachal Pradesh","north","","p7"],["odisha","Odisha","east","","p7"],
+ ["jharkhand","Jharkhand","east","","p7"],["assam","Assam & Northeast","east","","p8"],["mp","Madhya Pradesh","west","","p8"],["cg","Chhattisgarh","west","","p8"]];
+ST.forEach(([id,l,r,i,s,sh])=>{n(id,l,"state",{info:i,src:s,share:sh});e(id,"is in",r);});
+["maharashtra","karnataka","delhi"].forEach(s=>e(s,"leads India in shopping volume","india"));
+e("delhi","is a primary market for","premium");
+[["mumbai","Mumbai","maharashtra",""],["thane","Thane","maharashtra",""],["pune","Pune","maharashtra",""],["bengaluru","Bengaluru","karnataka","Top-spending metro and logistics capital."],
+ ["lucknow","Lucknow","up","Strong e-commerce growth."],["chennai","Chennai","tn","Strong order contributions."]]
+ .forEach(([id,l,s,i])=>{n(id,l,"city",{info:i,src:"p3"});e(id,"is in",s);});
+n("peak","Peak window","season",{info:"August to December generates 40% to 60% of the year's e-commerce spending.",src:"p4",share:"40\u201360%",months:[8,9,10,11,12]});
+n("pre","Pre-festive kickoff","season",{info:"Raksha Bandhan, Independence Day sales and early festival launches drive early momentum.",src:"p4",months:[8,9]});
+n("main","Main festive wave","season",{info:"A 30\u201335 day window: the core engine, anchored by the mega-sales.",src:"p5",months:[9,10,11]});
+n("yearend","Year-end closure","season",{info:"Christmas and New Year sales.",src:"p5",months:[12]});
+n("novjan","Nov\u2013Jan window","season",{info:"Apparel, jewellery, luxury cosmetics, footwear and wedding registry items.",src:"p6",months:[11,12,1]});
+n("secondary","Secondary spikes","season",{info:"Valentine's Day, Holi and regional new year festivals.",src:"p5",months:[2,3,4]});
+n("summer","Pre-summer","season",{info:"Cooling appliances ahead of summer.",src:"p6",months:[3,4]});
+e("pre","is part of","peak");e("main","is part of","peak");e("yearend","is part of","peak");
+["peak","novjan","secondary","summer"].forEach(s=>e(s,"is a buying season in","india"));
+e("bbd","anchors","main");e("gif","anchors","main");e("cashback","runs during","main");
+[["pre",["fashion","gifting","mobacc","personal"]],["main",["phones","appliances","electronics","ethnic"]],["yearend",["electronics","winter","party"]],
+ ["novjan",["fashion","jewellery","cosmetics","footwear","wedding"]],["summer",["ac","fridge"]]].forEach(([s,cs])=>cs.forEach(c=>e(s,"drives sales of",c)));
+const FE=[["rakhi","Raksha Bandhan",[8],"p4"],["iday","Independence Day sales",[8],"p4"],["ganesh","Ganesh Chaturthi",[8,9],"p4"],["navratri","Navratri",[9,10],"p5"],
+ ["dussehra","Dussehra",[10],"p5"],["karwa","Karwa Chauth",[10,11],"p5"],["dhanteras","Dhanteras",[10,11],"p5"],["diwali","Diwali",[10,11],"p5"],["bhaidooj","Bhai Dooj",[10,11],"p5"],
+ ["christmas","Christmas",[12],"p5"],["newyear","New Year",[12,1],"p5"],["valentine","Valentine's Day",[2],"p5"],["holi","Holi",[3],"p5"],["ugadi","Ugadi",[3,4],"p5"],
+ ["gudi","Gudi Padwa",[3,4],"p5"],["vishu","Vishu",[4],"p5"],["chhath","Chhath Puja",[11],"p7"],["lohri","Lohri",[1],"p7"],["eid","Eid",[],"p7"],
+ ["gujny","Gujarati New Year",[10,11],"p7"],["durga","Durga Puja",[9,10],"p7"],["kali","Kali Puja",[10,11],"p7"],["bhogali","Bhogali Bihu",[1],"p8"],
+ ["rangali","Rangali Bihu",[4],"p8"],["onam","Onam",[8,9],"p8"],["pongal","Pongal",[1],"p8"]];
+FE.forEach(([id,l,m,s])=>n(id,l,"festival",{src:s,months:m,info:id==="diwali"?"The biggest spike: \u201cDiwali = massive\u201d.":id==="chhath"?"A massive secondary peak in November.":id==="eid"?"Date moves about 11 days earlier each year.":""}));
+[["pre",["rakhi","iday","ganesh"]],["main",["navratri","dussehra","karwa","dhanteras","diwali","bhaidooj"]],["yearend",["christmas","newyear"]],
+ ["secondary",["valentine","holi","ugadi","gudi","vishu"]]].forEach(([s,fs])=>fs.forEach(f=>e(f,"falls in",s)));
+const CEL={up:["navratri","diwali","dhanteras","chhath"],bihar:["navratri","diwali","dhanteras","chhath"],delhi:["rakhi","karwa","diwali"],
+ punjab:["rakhi","karwa","diwali","lohri"],haryana:["rakhi","karwa","diwali"],jk:["eid","diwali"],hp:["eid","diwali"],maharashtra:["ganesh","navratri","diwali"],
+ gujarat:["navratri","gujny"],wb:["durga"],odisha:["durga","kali","diwali"],jharkhand:["durga","kali","diwali"],assam:["bhogali","rangali","durga","christmas","newyear"],
+ kerala:["onam","vishu","christmas"],tn:["diwali","pongal"],karnataka:["ugadi","dussehra","diwali"],telangana:["ugadi","dussehra","diwali"],
+ mp:["navratri","dhanteras","diwali"],cg:["navratri","dhanteras","diwali"]};
+Object.entries(CEL).forEach(([s,fs])=>fs.forEach(f=>e(f,"is big in",s)));
+
+/* ---------- 1b. WEB RESEARCH LAYER: all 36 states & UTs, festivals, what people buy ---------- */
+const WEB=/*WEBDATA*/{states:[],evidence:{national:[],festival:[]}}/*END*/;
+const NEWCAT={homedecor:"Home decor & lights",kitchen:"Kitchen & utensils",sweets:"Sweets & festive food",puja:"Puja items",
+  toys:"Toys & kites",vehicles:"Vehicles",travel:"Travel & stays"};
+Object.entries(NEWCAT).forEach(([id,l])=>n(id,l,"category"));
+n("sankranti","Makar Sankranti","festival",{months:[1],src:"web",info:"Harvest festival marking the sun's northward move; called Sankranti, Uttarayan, Khichdi or Tila Sankranti in different states."});
+(function mergeWeb(){
+  const has=new Map(N.map(d=>[d.id,d]));
+  const edgeKey=new Map(E.map(l=>[l.source+"|"+l.rel+"|"+l.target,l]));
+  const IMP={high:3,medium:2,low:1};
+  WEB.states.forEach(s=>{
+    if(!has.has(s.id)){ n(s.id,s.name,"state",{src:"web"}); has.set(s.id,N[N.length-1]); e(s.id,"is in",s.r); }
+    const st=has.get(s.id); if(s.id==="assam") st.label="Assam";
+    Object.assign(st,{lang:s.l,culture:s.cu,ecom:s.ec,esrc:s.es,web:true});
+    s.fe.forEach(f=>{
+      if(!has.has(f.f)){ n(f.f,f.n,"festival",{src:"web",months:f.m,info:f.s}); has.set(f.f,N[N.length-1]); }
+      const fd=has.get(f.f);
+      if(!fd.months.length&&f.m.length) fd.months=f.m;
+      if(!fd.info&&f.s) fd.info=f.s;
+      fd.impact=Math.max(fd.impact||0,IMP[f.i]||1);
+      const k=f.f+"|is big in|"+s.id;
+      let l=edgeKey.get(k);
+      if(!l){ l={source:f.f,target:s.id,rel:"is big in",via:"web"}; E.push(l); edgeKey.set(k,l); } else l.via="notes + web";
+      l.meta=f;
+      f.c.forEach(c=>{ const k2=f.f+"|people buy|"+c;
+        if(!edgeKey.has(k2)){ const l2={source:f.f,target:c,rel:"people buy",soft:true,via:"web"}; E.push(l2); edgeKey.set(k2,l2); } });
+    });
+  });
+  N.filter(d=>d.type==="festival"&&!d.impact).forEach(d=>d.impact=2);
+})();
+
+/* ---------- 1c. DEMAND SIGNALS: school calendars, weather, income, weddings, hold periods, sales, sports, tourism, health ---------- */
+const MORECAT={stationery:"Books & stationery",schoolgear:"School bags, uniforms & shoes",laptops:"Laptops & tablets",cooling:"Fans, coolers & cooling",
+  heating:"Heaters, geysers & blankets",rainwear:"Umbrellas & rainwear",airpurifier:"Air purifiers & masks",health:"Health & wellness",baby:"Baby & kids",
+  homeimprove:"Home improvement & repair",sports:"Sports & fitness",tv:"TVs & home entertainment",furniture:"Furniture & mattresses",agri:"Farm tools & agri inputs"};
+Object.entries(MORECAT).forEach(([id,l])=>n(id,l,"category"));
+const SIGTYPE={academic:"School & college",weather:"Weather",agri_income:"Harvest & farm income",financial:"Money & salaries",wedding:"Weddings",
+  inauspicious:"Hold period",vacation:"School holidays",religious:"Religious observance",sale_event:"Sale event",gifting_day:"Gifting day",sports:"Sports",tourism:"Tourism",health:"Health",life_event:"Life event"};
+const STR={high:3,medium:2,low:1};
+(function mergeSignals(){
+  const has=new Set(N.map(d=>d.id)), seen=new Map();
+  (WEB.signals||[]).forEach((s,i)=>{
+    let id="s_"+s.name.toLowerCase().replace(/[^a-z0-9]+/g,"_").replace(/^_|_$/g,"");
+    if(seen.has(id)) id+="_"+i; seen.set(id,1);
+    const states=s.scope==="all"?[]:(s.scope||[]).filter(x=>has.has(x));
+    n(id,s.name,"signal",{months:s.months||[],info:s.reason,src:"web"});
+    Object.assign(N[N.length-1],{stype:s.type,dir:s.direction==="dip"?-1:1,str:STR[s.strength]||1,items:s.items||"",its:s.it||[],url:s.src||"",
+      national:s.scope==="all",states,cats:(s.categories||[]).filter(c=>has.has(c))});
+    if(s.scope==="all") e(id,"applies across","india"); else states.forEach(st=>e(id,"affects",st));
+    N[N.length-1].cats.forEach(c=>E.push({source:id,target:c,rel:s.direction==="dip"?"cuts demand for":"lifts demand for",soft:true,via:"web"}));
+  });
+})();
+
+/* ---------- 1d. SPECIFIC PRODUCTS: what actually goes on the homepage (kites, rakhis, bonam pots...) ---------- */
+const ITEMS=WEB.items||{};
+const ONW={high:1,medium:.7,low:.35};          // how sellable online the item really is
+const iid=i=>"i_"+i;
+const itemUse=new Map();                        // item -> every festival-state entry whose shoppers buy it
+let NFE=0;
+WEB.states.forEach(s=>s.fe.forEach(f=>{NFE++;(f.it||[]).forEach(i=>{if(!itemUse.has(i))itemUse.set(i,[]);itemUse.get(i).push({f:f.f,s:s.id,meta:f});});}));
+// distinctiveness: kites (Sankranti only) should outrank sweets (every festival)
+// signals are broad (one signal covers many states), so each signal mention counts like 3 festival mentions
+const sigMentions=new Map(); (WEB.signals||[]).forEach(s=>(s.it||[]).forEach(i=>sigMentions.set(i,(sigMentions.get(i)||0)+1)));
+const idf=i=>1+Math.log((NFE+1)/((itemUse.get(i)||[]).length+3*(sigMentions.get(i)||0)+1))/2.5;
+(function mergeItems(){
+  const has=new Set(N.map(d=>d.id));
+  const sigUse=new Map(); N.filter(d=>d.type==="signal").forEach(g=>g.its.forEach(i=>{if(!sigUse.has(i))sigUse.set(i,[]);sigUse.get(i).push(g);}));
+  Object.entries(ITEMS).forEach(([i,it])=>{
+    if(it.g||!has.has(it.c)) return;                                     // vague phrases ("gifts", "food") are not products
+    const uses=itemUse.get(i)||[], sg=sigUse.get(i)||[];
+    if(!uses.length&&!sg.length) return;
+    n(iid(i),it.n,"item",{src:"web"});
+    Object.assign(N[N.length-1],{cat:it.c,online:it.o||"medium",uses:uses.length});
+    e(iid(i),"is a",it.c);
+    [...new Set(uses.map(u=>u.f))].forEach(f=>{ if(has.has(f)) E.push({source:f,target:iid(i),rel:"people buy",soft:true,via:"web"}); });
+    sg.forEach(g=>E.push({source:g.id,target:iid(i),rel:g.dir<0?"cuts demand for":"lifts demand for",soft:true,via:"web"}));
+  });
+})();
+
+/* =========================================================================
+   2. INDEXES + DERIVED SALES LOGIC
+   ========================================================================= */
+const byId=new Map(N.map(d=>[d.id,d]));
+const pct=s=>{if(!s)return 0;const m=String(s).match(/[\d.]+/g);return m?Math.max(...m.map(Number)):0;};
+const out=id=>E.filter(l=>l.source===id||l.source.id===id);
+const inn=id=>E.filter(l=>l.target===id||l.target.id===id);
+const sid=x=>typeof x==="object"?x.id:x;
+const neighbours=id=>{const s=new Set([id]);E.forEach(l=>{if(sid(l.source)===id)s.add(sid(l.target));if(sid(l.target)===id)s.add(sid(l.source));});return s;};
+const seasonsIn=m=>N.filter(d=>d.type==="season"&&d.months.includes(m));
+const catsOfSeason=s=>E.filter(l=>sid(l.source)===s&&l.rel==="drives sales of").map(l=>sid(l.target));
+const festsOfState=s=>E.filter(l=>sid(l.target)===s&&l.rel==="is big in").map(l=>byId.get(sid(l.source)));
+const statesOfFest=f=>E.filter(l=>sid(l.source)===f&&l.rel==="is big in").map(l=>sid(l.target));
+const stateRegion=s=>{const l=E.find(l=>sid(l.source)===s&&l.rel==="is in");return l?byId.get(sid(l.target)):null;};
+
+function monthActive(m){
+  const act=new Set(["india"]);
+  N.forEach(d=>{if(d.months.includes(m))act.add(d.id);});
+  seasonsIn(m).forEach(s=>catsOfSeason(s.id).forEach(c=>act.add(c)));
+  N.filter(d=>d.type==="festival"&&d.months.includes(m)).forEach(f=>statesOfFest(f.id).forEach(s=>act.add(s)));
+  return act;
+}
+function monthBrief(m){
+  const fests=N.filter(d=>d.type==="festival"&&d.months.includes(m));
+  const seasons=seasonsIn(m).filter(s=>s.id!=="peak");
+  const cats=[...new Set(seasons.flatMap(s=>catsOfSeason(s.id)))].map(c=>byId.get(c).label);
+  const states=[...new Set(fests.flatMap(f=>statesOfFest(f.id)))].map(s=>byId.get(s)).sort((a,b)=>pct(b.share)-pct(a.share));
+  const sales=N.filter(d=>d.type==="sale"&&d.months.includes(m));
+  const cnt=new Map();     // what this month's festivals make people buy, weighted by e-commerce impact
+  fests.filter(f=>f.impact>=2).forEach(f=>E.forEach(l=>{ if(sid(l.source)===f.id&&l.rel==="people buy"){const c=sid(l.target);cnt.set(c,(cnt.get(c)||0)+f.impact);} }));
+  const buys=[...cnt].sort((a,b)=>b[1]-a[1]).slice(0,6).map(([c])=>byId.get(c).label);
+  fests.sort((a,b)=>b.impact-a.impact);
+  return {fests,seasons,cats,states,sales,buys,peak:byId.get("peak").months.includes(m)};
+}
+function stateBrief(id){
+  const fs=festsOfState(id).filter(f=>f.months.length);
+  const months=[...new Set(fs.flatMap(f=>f.months))].sort((a,b)=>((a+3)%12)-((b+3)%12)); // fiscal-style order from Apr
+  const plan=months.map(m=>{const f=fs.filter(x=>x.months.includes(m)).map(x=>x.label);
+    const p=monthPlan(id,m);
+    const c=p.items.length?p.items.slice(0,5).map(x=>byId.get(iid(x.i)).label):p.pushes.slice(0,4).map(x=>byId.get(x.c).label);return {m,f,c};});
+  const ranked=N.filter(d=>d.type==="state"&&d.share).sort((a,b)=>pct(b.share)-pct(a.share));
+  const rank=ranked.findIndex(d=>d.id===id)+1;
+  const total=ranked.reduce((s,d)=>s+pct(d.share),0);
+  return {plan,rank,ofRanked:ranked.length,weight:pct(byId.get(id).share)?(pct(byId.get(id).share)/total*100):null};
+}
+
+/* ---------- Month planner: which state to target, what to push, and why ---------- */
+const IMPW={high:3,medium:2,low:1};
+function signalsFor(stId,m){
+  return N.filter(d=>d.type==="signal"&&d.months.includes(m)&&(d.national||d.states.includes(stId)));
+}
+// planning a month = the NEXT time that month comes round (today Oct 2026: Oct-Dec -> 2026 dates, Jan-Sep -> 2027 dates)
+const NOW=new Date(), NOW_M=NOW.getMonth()+1, NOW_Y=NOW.getFullYear();
+const yearFor=m=>m>=NOW_M?NOW_Y:NOW_Y+1;
+function dateFor(meta,m){ if(!meta) return null; const y=yearFor(m); const d=y===2026?meta.d26:y===2027?meta.d27:null; return d||null; }
+function monthsOfDate(d){ const [a,b]=String(d).split("..").map(s=>s.split("-").map(Number)); if(!a||!a[1]) return [];
+  const out=[a[1]]; if(b&&b[1]){ let k=a[1]; while(k!==b[1]){ k=k%12+1; out.push(k); if(out.length>12) break; } } return out; }
+function monthPlan(stId,m){
+  const s=byId.get(stId);
+  // this state's own festival dates; a festival early next month (any day next month if high impact) is a half-weight "pre-push"
+  const fs=E.filter(l=>sid(l.target)===stId&&l.rel==="is big in")
+    .map(l=>({f:byId.get(sid(l.source)),meta:l.meta})).map(x=>{
+      const d=dateFor(x.meta,m), base=x.meta?IMPW[x.meta.i]:x.f.impact;
+      const ms=d?monthsOfDate(d):x.meta&&x.meta.m&&x.meta.m.length?x.meta.m:x.f.months;
+      if(ms.includes(m)) return {...x,w:base,date:d};
+      const nm=m%12+1, dn=dateFor(x.meta,nm), st=dn?String(dn).split("-").map(Number):null;
+      if(st&&st[1]===nm&&(st[2]<=15||base>=3)) return {...x,w:base*.5,lead:true,date:dn};   // big festivals: shopping starts weeks ahead
+      return null; }).filter(Boolean).sort((a,b)=>b.w-a.w);
+  const sigs=signalsFor(stId,m).sort((a,b)=>(b.national?0:1)-(a.national?0:1)||b.str-a.str);
+  const val=new Map(),why=new Map(),hold=new Map(),holdWhy=new Map(),ids=new Map();
+  const add=(map,wmap,c,v,reason,rid,neg)=>{map.set(c,(map.get(c)||0)+v);if(!wmap.has(c))wmap.set(c,[]);if(!wmap.get(c).includes(reason))wmap.get(c).push(reason);
+    const k=(neg?"-":"+")+c; if(!ids.has(k))ids.set(k,new Map()); ids.get(k).set(rid,(ids.get(k).get(rid)||0)+v);};
+  fs.forEach(x=>{ const cs=x.meta?x.meta.c:E.filter(l=>sid(l.source)===x.f.id&&l.rel==="people buy").map(l=>sid(l.target));
+    cs.forEach(c=>add(val,why,c,x.w*2,`${x.f.label} (festival)`,x.f.id)); });
+  seasonsIn(m).filter(se=>se.id!=="peak").forEach(se=>catsOfSeason(se.id).forEach(c=>add(val,why,c,1.5,`${se.label} (season)`,se.id)));
+  sigs.forEach(g=>{ const w=g.str*(g.national?1:2), r=`${g.label} (${(SIGTYPE[g.stype]||"signal").toLowerCase()})`;
+    g.cats.forEach(c=>g.dir>0?add(val,why,c,w,r,g.id):add(hold,holdWhy,c,w,r,g.id,true)); });
+  const srcOf=k=>[...(ids.get(k)||new Map())].map(([id,v])=>({id,v})).sort((a,b)=>b.v-a.v);
+  const pushes=[...val].map(([c,v])=>({c,v:v-(hold.get(c)||0),why:why.get(c),watch:holdWhy.get(c)||null,from:srcOf("+"+c)})).filter(x=>x.v>0)
+    .sort((a,b)=>b.v-a.v).slice(0,7);
+  // a hold only counts as "hold" when it outweighs the reasons to push; otherwise it becomes a "watch" note on the push
+  const holds=[...hold].filter(([c,v])=>v>=(val.get(c)||0)).sort((a,b)=>b[1]-a[1]).map(([c,v])=>({c,v,why:holdWhy.get(c),from:srcOf("-"+c)}));
+  // specific products: festival shopping lists (rarer = more distinctive) + signal items; holds subtract
+  const iv=new Map(),iw=new Map(),ih=new Map(),ihw=new Map();
+  const addI=(mp,wm,i,v,r)=>{mp.set(i,(mp.get(i)||0)+v);if(!wm.has(i))wm.set(i,[]);if(!wm.get(i).some(x=>x.id===r.id))wm.get(i).push(r);};
+  const iVal=(i,w)=>{const it=ITEMS[i];return it?w*(ONW[it.o]||.7)*idf(i):0;};
+  // the state's own festivals lead; signals add context (strongest signal per product counts, they don't stack)
+  // researchers list the main purchases first, so earlier items in a festival's list count more
+  fs.forEach(x=>((x.meta&&x.meta.it)||[]).forEach((i,k)=>{ if(ITEMS[i]&&!ITEMS[i].g)
+    addI(iv,iw,i,iVal(i,x.w*2/(1+.15*k)),{id:x.f.id,label:x.f.label+(x.lead?" pre-push":""),d:x.date||x.meta.d26,u:x.meta.u,cf:x.meta.cf}); }));
+  const sUp=new Map(),sDn=new Map();
+  // signals: no rarity discount (ACs are named by many heat signals precisely because they matter); weather leads, holidays trail
+  const SIGW={weather:1.5,health:1.1,agri_income:1.1,financial:1,wedding:1.1,academic:.8,vacation:.75,sports:.8,tourism:.8,sale_event:.9,gifting_day:.9,religious:1,inauspicious:1};
+  sigs.forEach(g=>g.its.forEach((i,k)=>{ if(!ITEMS[i]||ITEMS[i].g) return;
+    const v=g.str*(g.national?.5:1.3)*(ONW[ITEMS[i].o]||.7)*2.4*(SIGW[g.stype]||1)/(1+.1*k), r={id:g.id,label:g.label,u:g.url,sig:true};
+    // a "dip" signal (Pitru Paksha, cyclone) only holds products in the groups it cuts; other items it names are what people need
+    const cut=g.dir<0&&g.cats.includes(ITEMS[i].c);
+    const mp=cut?sDn:sUp; if(v>(mp.get(i)?.v||0)) mp.set(i,{v,r});
+    if(cut){ if(!ihw.has(i))ihw.set(i,[]); if(!ihw.get(i).some(x=>x.id===r.id))ihw.get(i).push(r); }
+    else { if(!iw.has(i))iw.set(i,[]); if(!iw.get(i).some(x=>x.id===r.id))iw.get(i).push(r); } }));
+  sUp.forEach((x,i)=>iv.set(i,(iv.get(i)||0)+x.v));
+  sDn.forEach((x,i)=>ih.set(i,x.v));
+  const perCat=new Map();
+  const items=[...iv].map(([i,v])=>({i,v:v-(ih.get(i)||0),why:iw.get(i),watch:ihw.get(i)||null})).filter(x=>x.v>0&&byId.has(iid(x.i)))
+    .sort((a,b)=>b.v-a.v).filter(x=>{const c=ITEMS[x.i].c,k=perCat.get(c)||0; perCat.set(c,k+1); return k<2;}).slice(0,10);
+  const holdItems=[...ih].filter(([i,v])=>v>=(iv.get(i)||0)&&byId.has(iid(i))).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([i,v])=>({i,v,why:ihw.get(i)}));
+  const festW=d3.sum(fs,x=>x.w), localW=d3.sum(sigs.filter(g=>!g.national),g=>g.dir>0?g.str:-g.str/2);
+  const share=pct(s.share)||0.6, peak=byId.get("peak").months.includes(m);
+  return {s,fs,sigs,pushes,holds,items,holdItems,festW,localW,share,known:!!s.share,peak,score:share*Math.max(.3,1+festW+localW)*(peak?1.3:1)};
+}
+const boardCache=new Map();
+function board(m){
+  if(!boardCache.has(m)) boardCache.set(m,N.filter(d=>d.type==="state").map(d=>monthPlan(d.id,m)).sort((a,b)=>b.score-a.score));
+  return boardCache.get(m);
+}
+
+/* =========================================================================
+   3. STAGE (D3 force + wheel layouts, animated transitions)
+   ========================================================================= */
+const svg=d3.select("#stage");
+const stageEl=document.getElementById("stage");
+let W=stageEl.clientWidth||900,H=stageEl.clientHeight||640;
+const root=svg.append("g");
+const wheelG=root.append("g").attr("class","wheel").style("opacity",0);
+const linkG=root.append("g").attr("class","base");
+const planG=root.append("g").attr("class","base");        // dashed "target -> push" lines for the month planner
+const nodeG=root.append("g").attr("class","base");
+const flowG=root.append("g").attr("class","flow");   // clean left-to-right "why -> push" diagram shown in month mode
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const radius=d=>d.type==="hub"?24:d.type==="state"?(7+pct(d.share)*1.25):d.type==="region"?(13+pct(d.share)*.22):
+  d.type==="platform"?13:d.type==="season"?(d.id==="peak"?17:12):d.type==="sale"?10:d.type==="item"?5.5:7.5;
+const isMajor=d=>["hub","platform","region","season"].includes(d.type)||(d.type==="state"&&pct(d.share)>=5)||d.id==="diwali";
+
+const linkSel=linkG.selectAll("path").data(E).join("path").attr("class","link");
+const nodeSel=nodeG.selectAll("g").data(N,d=>d.id).join("g")
+  .attr("class",d=>"node "+(isMajor(d)?"major":"minor")).attr("tabindex",0).attr("role","button")
+  .attr("aria-label",d=>`${d.label}, ${TYPES[d.type][0]}`);
+nodeSel.append("circle").attr("class","pulse").attr("r",radius);
+nodeSel.append("circle").attr("class","core").attr("r",0).style("fill",d=>`var(${TYPES[d.type][1]})`);
+nodeSel.append("text").attr("dy",d=>radius(d)+12).attr("text-anchor","middle")
+  .text(d=>d.share&&(d.type==="state"||d.type==="region")?`${d.label} \u00b7 ${d.share}`:d.label);
+nodeSel.select(".pulse").style("transform-box","fill-box").style("transform-origin","center");
+
+// entrance animation: grow in by type order
+const order=["hub","region","platform","season","state","festival","category","item","sale","strategy","city"];
+nodeSel.select(".core").transition().delay(d=>reduce?0:order.indexOf(d.type)*140+Math.random()*120).duration(reduce?0:600)
+  .ease(d3.easeBackOut.overshoot(1.6)).attr("r",radius);
+
+// force layout
+// "people buy" links are only drawn on focus, so they stay out of the physics; resolve their ends by hand
+E.forEach(l=>{ if(l.soft){ l.source=byId.get(sid(l.source)); l.target=byId.get(sid(l.target)); } });
+const hardDeg=new Map(); E.filter(l=>!l.soft).forEach(l=>[sid(l.source),sid(l.target)].forEach(k=>hardDeg.set(k,(hardDeg.get(k)||0)+1)));
+const sim=d3.forceSimulation(N)
+  .force("link",d3.forceLink(E.filter(l=>!l.soft)).id(d=>d.id).distance(l=>{const t=sid(l.target);return t==="india"?170:l.rel==="is big in"?80:l.rel==="is a"?34:60;}).strength(.5))
+  .force("charge",d3.forceManyBody().strength(d=>d.type==="hub"?-1100:d.type==="platform"||d.type==="region"?-360:d.type==="state"?-220:-120))
+  .force("collide",d3.forceCollide().radius(d=>radius(d)+6))
+  .force("x",d3.forceX(0).strength(d=>hardDeg.get(d.id)?.04:.3)).force("y",d3.forceY(0).strength(d=>hardDeg.get(d.id)?.05:.3))
+  .alphaDecay(.03).on("tick",render);
+N.forEach(d=>{d.x=(Math.random()-.5)*60;d.y=(Math.random()-.5)*60;});
+
+function linkPath(l){
+  const s=l.source,t=l.target,dx=t.x-s.x,dy=t.y-s.y,dr=Math.hypot(dx,dy)*1.8;
+  return `M${s.x},${s.y}A${dr},${dr} 0 0,1 ${t.x},${t.y}`;
+}
+const planPath=d=>`M${d.s.x},${d.s.y}L${d.t.x},${d.t.y}`;
+function render(){ linkSel.attr("d",linkPath); planG.selectAll("path").attr("d",planPath); nodeSel.attr("transform",d=>`translate(${d.x},${d.y})`); }
+
+// drag
+nodeSel.call(d3.drag()
+  .on("start",(ev,d)=>{ if(view!=="net")return; if(!ev.active)sim.alphaTarget(.25).restart(); d.fx=d.x; d.fy=d.y; })
+  .on("drag",(ev,d)=>{ if(view!=="net")return; d.fx=ev.x; d.fy=ev.y; })
+  .on("end",(ev,d)=>{ if(view!=="net")return; if(!ev.active)sim.alphaTarget(0); d.fx=null; d.fy=null; }));
+
+// zoom
+const zoom=d3.zoom().scaleExtent([.3,4]).on("zoom",ev=>{root.attr("transform",ev.transform);svg.classed("zoomed",ev.transform.k>1.35);});
+svg.call(zoom).on("dblclick.zoom",null);
+function fit(dur=650){
+  if(view==="map"){ flyKey=null; refreshMap(); return; }
+  if(view==="3d"){ if(g3) g3.zoomToFit(dur+300,60,n=>focusNow?focusNow.has(n.id):isShown(n.ref)); return; }
+  const vis=N.filter(isShown),xs=vis.map(d=>d.x),ys=vis.map(d=>d.y);
+  if(!xs.length)return;
+  W=stageEl.clientWidth;H=stageEl.clientHeight;
+  if(!W||!H){setTimeout(()=>fit(dur),300);return;}          // stage not laid out yet: retry
+  const x0=Math.min(...xs)-60,x1=Math.max(...xs)+60,y0=Math.min(...ys)-50,y1=Math.max(...ys)+70;
+  const k=Math.min(2,.95*Math.min(W/(x1-x0),H/(y1-y0)));
+  if(!isFinite(k)||k<=0)return;
+  const t=d3.zoomIdentity.translate(W/2-k*(x0+x1)/2,H/2-k*(y0+y1)/2).scale(k);
+  if(reduce||document.hidden) svg.call(zoom.transform,t);    // no animation frames in background tabs
+  else svg.transition().duration(dur).call(zoom.transform,t);
+}
+
+/* ---------- Year wheel layout ---------- */
+const WHEEL_TYPES=new Set(["hub","season","festival","category","state","sale","signal"]);
+const nodeVisible=d=>view!=="wheel"||WHEEL_TYPES.has(d.type);
+const ang=m=>((m-1)/12)*2*Math.PI-Math.PI/2;
+function circMean(ms){const x=d3.mean(ms,m=>Math.cos(ang(m))),y=d3.mean(ms,m=>Math.sin(ang(m)));return Math.atan2(y,x);}
+function wheelTargets(){
+  const R=300,T=new Map();
+  T.set("india",{x:0,y:0});
+  // seasons + sales: inner ring at their month centre
+  N.filter(d=>d.type==="season").forEach(d=>{const a=circMean(d.months);const r=d.id==="peak"?R*.2:R*.36;T.set(d.id,{x:r*Math.cos(a),y:r*Math.sin(a)});});
+  N.filter(d=>d.type==="sale").forEach((d,i)=>{const a=d.months.length?circMean(d.months):-Math.PI/2+i*.25;const r=d.months.length?R*.5:R*1.32;T.set(d.id,{x:r*Math.cos(a)+(i%2?14:-14),y:r*Math.sin(a)});});
+  // categories: near the seasons that drive them
+  let loose=0;
+  N.filter(d=>d.type==="category").forEach(d=>{
+    const ss=E.filter(l=>sid(l.target)===d.id&&l.rel==="drives sales of").map(l=>byId.get(sid(l.source)));
+    const ms=ss.flatMap(s=>s.months);
+    if(!ms.length){T.set(d.id,{x:-R*1.5,y:-R*.9+(loose++)*46});return;}   // year-round categories parked at the side
+    d._a=circMean(ms);});
+  const catGroups=d3.group(N.filter(d=>d.type==="category"&&d._a!==undefined),d=>d._a.toFixed(2));
+  catGroups.forEach(arr=>arr.forEach((d,i)=>{const a=d._a+(i-(arr.length-1)/2)*.13;const r=R*(.58+(i%2)*.08);
+    T.set(d.id,{x:r*Math.cos(a),y:r*Math.sin(a)});}));
+  // festivals: ring by typical month, spread within the month
+  const fests=N.filter(d=>d.type==="festival");
+  const groups=d3.group(fests,d=>d.months.length?Math.round((circMean(d.months)+Math.PI/2+2*Math.PI)%(2*Math.PI)/(Math.PI/6)*2)/2:-1);
+  groups.forEach((arr,key)=>arr.forEach((d,i)=>{
+    if(key===-1){T.set(d.id,{x:R*1.25,y:R*1.05});return;}
+    const step=Math.min(.11,.48/Math.max(1,arr.length-1));               // keep each month's festivals inside its slice
+    const a=circMean(d.months)+(i-(arr.length-1)/2)*step;const r=R*(.8+(i%3)*.065);T.set(d.id,{x:r*Math.cos(a),y:r*Math.sin(a)});}));
+  // states: outer ring, ordered by region, sized by share
+  const states=N.filter(d=>d.type==="state").sort((a,b)=>["north","west","south","east"].indexOf(stateRegion(a.id).id)-["north","west","south","east"].indexOf(stateRegion(b.id).id)||pct(b.share)-pct(a.share));
+  states.forEach((d,i)=>{const a=-Math.PI/2+(i+.5)/states.length*2*Math.PI;T.set(d.id,{x:R*1.22*Math.cos(a),y:R*1.22*Math.sin(a)});});
+  return T;
+}
+function drawWheel(){
+  const R=300;wheelG.selectAll("*").remove();
+  [R*.36,R*.62,R*.88,R*1.22].forEach(r=>wheelG.append("circle").attr("r",r));
+  wheelG.append("path").attr("class","wedge").attr("id","wedge");
+  MON.forEach((m,i)=>{const a=ang(i+1);wheelG.append("text").attr("x",R*1.06*Math.cos(a)).attr("y",R*1.06*Math.sin(a)+4).text(m);});
+  [["Seasons",R*.36],["Products",R*.62],["Festivals",R*.88],["States",R*1.22]].forEach(([t,r])=>wheelG.append("text").attr("class","ringlbl").attr("x",4).attr("y",-r-5).style("text-anchor","start").text(t));
+  wheelG.append("line").attr("class","hand").attr("id","hand").attr("x1",0).attr("y1",0).attr("x2",0).attr("y2",-R*1.3).style("opacity",0);
+}
+drawWheel();
+function setHand(m){
+  const R=300,a=ang(m),a0=a-Math.PI/12,a1=a+Math.PI/12;
+  const arc=d3.arc()({innerRadius:0,outerRadius:R*1.32,startAngle:a0+Math.PI/2,endAngle:a1+Math.PI/2});
+  wheelG.select("#wedge").transition().duration(reduce?0:500).attr("d",arc);
+  wheelG.select("#hand").style("opacity",.8).transition().duration(reduce?0:500).attr("x2",R*1.3*Math.cos(a)).attr("y2",R*1.3*Math.sin(a));
+}
+
+let view="net";
+function setView(v){
+  if(v===view)return; const was=view; view=v;
+  ["net","wheel","3d","map"].forEach(x=>document.getElementById("v-"+x).setAttribute("aria-pressed",String(v===x)));
+  const is3=v==="3d", isM=v==="map"; document.body.dataset.view=v; g3El.hidden=!is3; lab3.hidden=!is3; mapEl.hidden=!isM; stageEl.style.visibility=is3||isM?"hidden":"visible";
+  if(is3){ sim.stop(); init3d(); size3d(); applyVisibility(); applyHighlight(); refresh3d(); return; }
+  if(isM){ sim.stop(); initMap(); applyHighlight(); refreshMap(); return; }
+  if((was==="3d"||was==="map")&&v==="net"){ sim.alpha(.3).restart(); applyVisibility(); applyHighlight(); setTimeout(()=>flowActive()?fitFlow():fit(),300); return; }
+  if(v==="wheel"){
+    sim.stop();
+    const T=wheelTargets();
+    N.forEach(d=>{d._x0=d.x;d._y0=d.y;const t=T.get(d.id)||{x:d.x,y:d.y};d._x1=t.x;d._y1=t.y;});
+    tween(()=>{N.forEach(d=>{d.fx=d.x;d.fy=d.y;});fit(500);});
+    wheelG.transition().duration(reduce?0:700).style("opacity",1);
+  }else{
+    N.forEach(d=>{d.fx=null;d.fy=null;});
+    wheelG.transition().duration(reduce?0:300).style("opacity",0);
+    sim.alpha(.9).restart(); setTimeout(()=>fit(),reduce?0:1400);
+  }
+  applyVisibility(); applyHighlight();
+}
+function tween(done){
+  const ease=d3.easeCubicInOut,dur=reduce?1:1100;
+  const t=d3.timer(el=>{const k=ease(Math.min(1,el/dur));
+    N.forEach(d=>{d.x=d._x0+(d._x1-d._x0)*k;d.y=d._y0+(d._y1-d._y0)*k;}); render();
+    if(el>=dur){t.stop();done&&done();}});
+}
+
+/* ---------- 3D view (3d-force-graph): same data, same controls, fly-through ---------- */
+const g3El=document.getElementById("g3d"), lab3=document.getElementById("g3dLabels");
+let g3=null, g3raf=null;
+const cssv=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+function mix(hex,bg,t){ const p=h=>{h=h.replace("#","");if(h.length===3)h=h.split("").map(c=>c+c).join("");return [0,2,4].map(i=>parseInt(h.slice(i,i+2),16));};
+  try{const a=p(hex),b=p(bg);return "#"+a.map((v,i)=>Math.round(v*(1-t)+b[i]*t).toString(16).padStart(2,"0")).join("");}catch(_){return hex;} }
+const nodes3=N.map(d=>({id:d.id,ref:d}));
+const links3=E.map(l=>({source:sid(l.source),target:sid(l.target),ref:l}));
+function hot3(l){ const a=sid(l.ref.source),b=sid(l.ref.target); return !!(focusNow&&focusNow.has(a)&&focusNow.has(b)&&a!=="india"&&b!=="india"); }
+function init3d(){
+  if(g3) return;
+  if(typeof ForceGraph3D!=="function"){ g3El.innerHTML='<p class="empty" style="padding:24px">The 3D library could not load. Check your internet connection.</p>'; return; }
+  g3=ForceGraph3D({controlType:"orbit"})(g3El)
+    .backgroundColor(cssv("--bg"))
+    .graphData({nodes:nodes3,links:links3})
+    .nodeId("id")
+    .nodeVal(n=>Math.max(1,(radius(n.ref)**2)/12))
+    .nodeOpacity(.95).nodeResolution(14)
+    .nodeLabel(n=>`<b>${esc(n.ref.label)}</b><br><span style="opacity:.75">${TYPES[n.ref.type][0]}${n.ref.share?` \u00b7 ${esc(n.ref.share)}`:""}</span>`)
+    .linkWidth(l=>hot3(l)?1.6:.25)
+    .linkOpacity(.35)
+    .linkDirectionalParticles(l=>hot3(l)?3:0).linkDirectionalParticleWidth(2.2).linkDirectionalParticleSpeed(.006)
+    .onNodeClick(n=>select(n.id,false))
+    .onBackgroundClick(()=>{ if(selected) clearSel(); })
+    .d3VelocityDecay(.35)
+    .cooldownTicks(220);
+  g3.d3Force("charge").strength(-60);
+  try{ g3.controls().autoRotate=!reduce; g3.controls().autoRotateSpeed=.35; }catch(_){}
+  g3El.addEventListener("pointerdown",()=>{ try{g3.controls().autoRotate=false;}catch(_){} });
+  refresh3d(); size3d();
+  g3.onEngineStop(()=>{ if(!selected) g3.zoomToFit(900,60); });
+}
+function size3d(){ if(!g3) return; const r=g3El.parentElement.getBoundingClientRect(); g3.width(r.width).height(r.height); }
+addEventListener("resize",size3d);
+function refresh3d(){
+  if(!g3||view!=="3d") return;
+  const bg=cssv("--bg"), acc=cssv("--accent"), edge=cssv("--edge");
+  g3.backgroundColor(bg)
+    .nodeVisibility(n=>isShown(n.ref))
+    .linkVisibility(l=>linkShown(l.ref)||hot3(l))
+    .nodeColor(n=>{ const c=cssv(TYPES[n.ref.type][1]); if(n.id===selected) return acc; return focusNow&&!focusNow.has(n.id)?mix(c,bg,.86):c; })
+    .linkColor(l=>hot3(l)?acc:edge)
+    .linkWidth(l=>hot3(l)?1.6:.25)
+    .linkDirectionalParticles(l=>hot3(l)?3:0);
+  labels3();
+}
+function labels3(){
+  // HTML labels for the important things only, projected from 3D each frame
+  const pick=nodes3.filter(n=>isShown(n.ref)&&(n.id===selected||(focusNow?focusNow.has(n.id)&&n.ref.type!=="signal":
+    ["hub","region"].includes(n.ref.type)||(n.ref.type==="state"&&n.ref.share))));
+  lab3.innerHTML=pick.slice(0,46).map(n=>`<span data-id="${n.id}" class="l3 ${n.id===selected?"sel":""}">${esc(n.ref.label)}${n.ref.share&&n.ref.type!=="season"?` <i>${esc(n.ref.share)}</i>`:""}</span>`).join("");
+  if(!g3raf) loop3();
+}
+function loop3(){
+  g3raf=requestAnimationFrame(loop3);
+  if(!g3||view!=="3d") return;
+  const W3=g3El.clientWidth,H3=g3El.clientHeight;
+  lab3.querySelectorAll(".l3").forEach(s=>{ const n=byId.get(s.dataset.id); const o=nodes3.find(x=>x.id===s.dataset.id);
+    if(!o||o.x===undefined){s.style.display="none";return;}
+    const p=g3.graph2ScreenCoords(o.x,o.y,o.z);
+    const ok=p.x>0&&p.y>0&&p.x<W3&&p.y<H3;
+    s.style.display=ok?"block":"none"; if(ok) s.style.transform=`translate(${p.x}px,${p.y+10}px) translate(-50%,0)`; });
+}
+function fly3(id){
+  if(!g3) return; const o=nodes3.find(x=>x.id===id); if(!o||o.x===undefined) return;
+  const d=120, r=Math.hypot(o.x,o.y,o.z)||1;
+  g3.cameraPosition({x:o.x*(1+d/r),y:o.y*(1+d/r),z:o.z*(1+d/r)},o,1100);
+}
+/* ---------- 3D MAP view: the FalkorDB knowledge graph floating over India ----------
+   Floor = India map, state nodes at their real location. Layer 2 = festivals (above the states that celebrate them).
+   Layer 3 = specific products (above the festivals they are bought for). Signals sit between, shown only on focus. */
+const GEO=/*GEODATA*/null/*END*/;
+const KG=/*KGRAPH*/null/*END*/;
+const mapEl=document.getElementById("gmap");
+let deckMap=null, lastModel=null;
+const Z={State:0,Festival:330000,Signal:520000,Item:700000};   // metres above the map
+const rgb=v=>{const h=cssv(v).replace("#","");return [0,2,4].map(i=>parseInt(h.slice(i,i+2),16));};
+const CENT=new Map((GEO?GEO.features:[]).map(f=>[f.properties.id,f.properties.c]));
+const KN=new Map(), KOUT=new Map(), KIN=new Map();
+const pageSigByName=new Map(N.filter(d=>d.type==="signal").map(d=>[d.label,d.id]));
+if(KG){
+  KG.nodes.forEach(n=>KN.set(n.id,n));
+  KG.edges.forEach(e=>{ if(!KN.has(e.s)||!KN.has(e.t)) return;
+    (KOUT.get(e.s)||KOUT.set(e.s,[]).get(e.s)).push(e); (KIN.get(e.t)||KIN.set(e.t,[]).get(e.t)).push(e); });
+  // positions: states on their centroid; festivals over the states that celebrate them; products over their festivals
+  const avg=(pts)=>{let x=0,y=0,w=0;pts.forEach(([p,k])=>{x+=p[0]*k;y+=p[1]*k;w+=k;});return w?[x/w,y/w]:[79.5,22.8];};
+  const spread=(ids)=>{ // nodes that land on (almost) the same spot are fanned out on a small ring so none hide each other
+    const grp=new Map(); ids.forEach(id=>{const p=KN.get(id).p;const k=Math.round(p[0]/0.9)+"|"+Math.round(p[1]/0.9);(grp.get(k)||grp.set(k,[]).get(k)).push(id);});
+    grp.forEach(arr=>{ if(arr.length<2) return; const r=0.35+0.16*Math.sqrt(arr.length);
+      arr.forEach((id,i)=>{const a=i/arr.length*2*Math.PI, p=KN.get(id).p; KN.get(id).p=[p[0]+r*Math.cos(a),p[1]+r*Math.sin(a)];}); }); };
+  const IW={high:3,medium:2,low:1};
+  KG.nodes.forEach(n=>{ if(n.t==="State") n.p=CENT.get(n.id)||[79.5,22.8]; });
+  const fests=KG.nodes.filter(n=>n.t==="Festival");
+  fests.forEach(n=>{ n.p=avg((KOUT.get(n.id)||[]).filter(e=>e.r==="CELEBRATED_IN").map(e=>[KN.get(e.t).p,IW[e.i]||1])); n.imp=Math.max(0,...(KOUT.get(n.id)||[]).filter(e=>e.r==="CELEBRATED_IN").map(e=>IW[e.i]||1)); });
+  spread(fests.map(n=>n.id));
+  const items=KG.nodes.filter(n=>n.t==="Item");
+  items.forEach(n=>{ n.p=avg((KIN.get(n.id)||[]).filter(e=>e.r==="NEEDS").map(e=>[KN.get(e.s).p,1])); });
+  spread(items.map(n=>n.id));
+  KG.nodes.filter(n=>n.t==="Signal").forEach(n=>{ const st=(KOUT.get(n.id)||[]).filter(e=>e.r==="AFFECTS");
+    n.p=st.length?avg(st.map(e=>[KN.get(e.t).p,1])):[79.5,22.8]; });
+  spread(KG.nodes.filter(n=>n.t==="Signal").map(n=>n.id));
+}
+const kid=pid=>{ const d=byId.get(pid); if(!d) return null; if(d.type==="signal"){ const n=KG.nodes.find(x=>x.t==="Signal"&&x.n===d.label); return n?n.id:null; } return KN.has(pid)?pid:null; };
+const pidOf=n=>n.t==="Signal"?pageSigByName.get(n.n):n.id;
+// focus layout: two columns standing over what was clicked. Left = the reasons (festivals, signals), right = the products.
+// Every node gets its own height step, so on screen each label has its own line; left labels sit left of their dot, right labels right.
+let LP=new Map(), SIDE=new Map();
+let COLX=0.9, ZSTEP=105000, Z0=170000;
+const pos3=n=>LP.get(n.id)||[n.p[0],n.p[1],Z[n.t]];
+function column(ids,c,side,start=0){ ids.forEach((id,k)=>{ LP.set(id,[c[0]+(side==="L"?-COLX:COLX),c[1],Z0+(start+k)*ZSTEP]); SIDE.set(id,side); }); }
+const short=s=>{ s=String(s).replace(/\s*\([^)]*\)/g,"").trim(); return s.length>30?s.slice(0,29)+"\u2026":s; };
+// which part of the graph to draw: small, focused, never the whole hairball
+function mapModel(){
+  const show=new Set(), hot=new Set(), E2=[], text=new Map();
+  const IW={high:3,medium:2,low:1};
+  const inM=e=>!month||(e.m||[]).includes(month);
+  const add=(e)=>{ show.add(e.s); show.add(e.t); E2.push(e); };
+  const sel=selected?kid(selected):null, sn=sel?KN.get(sel):null;
+  KG.nodes.filter(n=>n.t==="State").forEach(n=>show.add(n.id));
+  let title="";
+  if(sn&&sn.t==="State"){
+    hot.add(sel);
+    const fe=(KIN.get(sel)||[]).filter(e=>e.r==="CELEBRATED_IN"&&inM(e)&&(month||e.i!=="low"));
+    fe.forEach(e=>{add(e);hot.add(e.s);});
+    // products: the planner's picks for that month, or the strongest festival products across the year
+    let picks;
+    if(month){ picks=monthPlan(sel,month).items.slice(0,8).map(x=>iid(x.i)); }
+    else { const sc=new Map(); fe.forEach(e=>(e.it||[]).forEach((i,k)=>{const id="i_"+i; if(KN.has(id)) sc.set(id,(sc.get(id)||0)+(IW[e.i]||1)*idf(i)/(1+.15*k));}));
+      picks=[...sc].sort((a,b)=>b[1]-a[1]).slice(0,10).map(x=>x[0]); }
+    picks=picks.filter(id=>KN.has(id));
+    // signals: first the ones that drive a picked product (heatwave -> AC), then the strongest others; at most 4
+    if(month){
+      const sg=(KIN.get(sel)||[]).filter(e=>e.r==="AFFECTS"&&(KN.get(e.s).m||[]).includes(month));
+      const drives=e=>(KOUT.get(e.s)||[]).some(x=>x.r.endsWith("_ITEM")&&picks.includes(x.t));
+      sg.sort((a,b)=>drives(b)-drives(a)||((KN.get(b.s).s==="high")-(KN.get(a.s).s==="high"))).slice(0,4).forEach(e=>{add(e);hot.add(e.s);});
+    }
+    picks.forEach(id=>{ hot.add(id); show.add(id);
+      (KIN.get(id)||[]).filter(e=>(e.r==="NEEDS"&&hot.has(e.s)&&(e.st||[]).includes(sel))||(e.r!=="NEEDS"&&hot.has(e.s))).forEach(e=>add(e)); });
+    title=`${sn.n}${month?" in "+MON[month-1]:""}: festivals \u2192 products`;
+  } else if(sn&&sn.t==="Festival"){
+    hot.add(sel);
+    (KOUT.get(sel)||[]).filter(e=>e.r==="CELEBRATED_IN").forEach(e=>{add(e);hot.add(e.t);});
+    const its=(KOUT.get(sel)||[]).filter(e=>e.r==="NEEDS").map(e=>[e,(e.st||[]).length*idf(e.t.slice(2))]).sort((a,b)=>b[1]-a[1]).slice(0,12);
+    its.forEach(([e])=>{add(e);hot.add(e.t);});
+    title=`${sn.n}: where it is celebrated and what people buy`;
+  } else if(sn&&sn.t==="Item"){
+    hot.add(sel);
+    // the 8 festivals that matter most for this product (impact x market size, only this month if one is picked)
+    const fe=(KIN.get(sel)||[]).filter(e=>e.r==="NEEDS").map(e=>{
+      const cel=(KOUT.get(e.s)||[]).filter(x=>x.r==="CELEBRATED_IN"&&(e.st||[]).includes(x.t)&&inM(x));
+      return {e,cel,v:d3.sum(cel,x=>(IW[x.i]||1)**2*Math.sqrt(pct(KN.get(x.t).sh)||0.6))}; }).filter(x=>x.cel.length).sort((a,b)=>b.v-a.v).slice(0,8);
+    fe.forEach(x=>{ add(x.e); hot.add(x.e.s); x.cel.forEach(c=>{add(c);hot.add(c.t);}); });
+    (KIN.get(sel)||[]).filter(e=>e.r!=="NEEDS"&&(!month||(KN.get(e.s).m||[]).includes(month))).sort((a,b)=>(KN.get(b.s).s==="high")-(KN.get(a.s).s==="high")).slice(0,3)
+      .forEach(e=>{add(e);hot.add(e.s);});
+    title=`${sn.n}: which festivals and states buy it`;
+  } else if(sn&&sn.t==="Signal"){
+    hot.add(sel);
+    (KOUT.get(sel)||[]).forEach(e=>{add(e);hot.add(e.t);});
+    title=`${sn.n}: states and products it moves`;
+  } else if(month){
+    // month: the top states and the festivals + products behind them
+    const b=board(month).slice(0,6);
+    b.forEach((p,k)=>{ hot.add(p.s.id);
+      (KIN.get(p.s.id)||[]).filter(e=>e.r==="CELEBRATED_IN"&&inM(e)&&e.i!=="low").forEach(e=>{add(e);hot.add(e.s);});
+      text.set(p.s.id,`${k+1}. ${p.s.label}: ${p.items.slice(0,2).map(x=>short(byId.get(iid(x.i)).label)).join(", ")}`); });
+    title=`${MON[month-1]}: top 6 states, their festivals and what to push`;
+  } else {
+    // start: every high-impact festival linked down to its states
+    KG.edges.filter(e=>e.r==="CELEBRATED_IN"&&e.i==="high").forEach(e=>add(e));
+    title="High-impact festivals over the states that celebrate them \u00b7 click anything";
+  }
+  LP=new Map(); SIDE=new Map();
+  const ofT=t=>[...hot].filter(id=>KN.get(id)&&KN.get(id).t===t&&id!==sel);
+  // spacing follows how far the camera will pull back (states spread across India = zoomed out = bigger steps)
+  const stP=ofT("State").concat(sn&&sn.t==="State"?[sel]:[]).map(id=>KN.get(id).p);
+  const spread=stP.length?Math.max(d3.max(stP,p=>p[0])-d3.min(stP,p=>p[0]),d3.max(stP,p=>p[1])-d3.min(stP,p=>p[1])):0;
+  const scale=spread>10?1.75:spread>5?1.35:1; ZSTEP=105000*scale; COLX=0.9*scale; Z0=170000*scale*scale;
+  let anchor=null;
+  if(sn&&sn.t==="State"){ anchor=sn.p; const L=[...ofT("Festival"),...ofT("Signal")], R=ofT("Item");
+    column(L,anchor,"L"); column(R,anchor,"R",Math.max(0,(L.length-R.length)/2)); }
+  else if(sn&&sn.t==="Festival"){ anchor=sn.p; column([sel],anchor,"L",1); column(ofT("Item"),anchor,"R"); }
+  else if(sn&&sn.t==="Item"){ const fs=ofT("Festival"); anchor=fs.length?[d3.mean(fs,id=>KN.get(id).p[0]),d3.mean(fs,id=>KN.get(id).p[1])]:sn.p;
+    column(fs,anchor,"L"); column([sel],anchor,"R",Math.max(0,(fs.length-1)/2)); column(ofT("Signal"),anchor,"L",fs.length); }
+  else if(sn&&sn.t==="Signal"){ anchor=sn.p; column([sel],anchor,"L",1); column(ofT("Item"),anchor,"R"); }
+  // edges inside the focus: drop festival -> product lines that would only duplicate a signal's, keep the rest
+  return {show,hot,edges:E2,title,focus:hot.size>0,anchor,cols:!!anchor,text};
+}
+function initMap(){
+  if(deckMap||!GEO||!KG) return;
+  if(typeof deck==="undefined"){ mapEl.innerHTML='<p class="empty" style="padding:24px">The 3D map library could not load. Check your internet connection.</p>'; return; }
+  deckMap=new deck.Deck({parent:mapEl, controller:true,
+    initialViewState:{longitude:81,latitude:19.5,zoom:3.7,pitch:52,bearing:-14},
+    getTooltip:({object})=>{ const n=object&&(object.properties?KN.get(object.properties.id):object.t?object:null); if(!n) return null;
+      const T={State:"State",Festival:"Festival",Item:"Product",Signal:"Demand signal"}[n.t];
+      return {html:`<b>${esc(n.n)}</b><br><span style="opacity:.7">${T}${n.sh?" \u00b7 "+esc(n.sh)+" of orders":""}</span>`,
+        style:{background:cssv("--panel"),color:cssv("--ink"),fontSize:"12px",borderRadius:"8px",border:"1px solid "+cssv("--line")}}; },
+    onClick:({object})=>{ const n=object&&(object.properties?KN.get(object.properties.id):object.t?object:null);
+      if(n){ const pid=pidOf(n); if(pid&&byId.has(pid)) select(pid,false); } else if(selected) clearSel(); },
+    layers:[]});
+  refreshMap();
+}
+const VIEW0={longitude:81,latitude:19.5,zoom:3.7,pitch:52,bearing:-14};
+let flyKey=null;
+function flyMap(m){
+  // camera follows the focus: frame the lit-up nodes (lifted toward the layers they float on), or all of India
+  const key=(selected||"")+"|"+(month||""); if(key===flyKey) return; flyKey=key;
+  const hot=[...m.hot].map(id=>KN.get(id)).filter(Boolean);
+  let vs=VIEW0;
+  if(m.cols){
+    const st=hot.filter(n=>n.t==="State").map(n=>n.p), xs=[m.anchor[0],...st.map(p=>p[0])], ys=[m.anchor[1],...st.map(p=>p[1])];
+    const w=Math.max(...xs)-Math.min(...xs), h=Math.max(...ys)-Math.min(...ys), top=d3.max([...LP.values()],p=>p[2])||Z0;
+    const zoom=w>10||h>10?3.75:w>5||h>5?4.2:4.75;
+    vs={longitude:(Math.min(...xs)+Math.max(...xs))/2,latitude:(Math.min(...ys)+Math.max(...ys))/2+top/1e6*(zoom>4.5?2.4:3.4),zoom,pitch:35,bearing:0};
+  } else if(m.focus&&hot.length){
+    const P=hot.map(n=>LP.get(n.id)||n.p), xs=P.map(p=>p[0]), ys=P.map(p=>p[1]);
+    const w=Math.max(4,Math.max(...xs)-Math.min(...xs)), h=Math.max(4,Math.max(...ys)-Math.min(...ys));
+    const zoom=Math.max(3.5,Math.min(4.5,Math.log2(300/Math.max(w*1.6,h*2.2))));
+    // the layers float up to ~860 km, which on a tilted camera reads as "further north": aim above the ground footprint
+    vs={longitude:(Math.min(...xs)+Math.max(...xs))/2,latitude:(Math.min(...ys)+Math.max(...ys))/2+3.6,zoom,pitch:45,bearing:-14};
+  }
+  deckMap.setProps({initialViewState:{...vs,transitionDuration:reduce?0:1100,transitionInterpolator:new deck.FlyToInterpolator()}});
+}
+function refreshMap(){
+  if(!deckMap||view!=="map") return;
+  const m=lastModel=mapModel();
+  flyMap(m);
+  document.getElementById("gmapTitle").textContent=m.title;
+  const COL={State:rgb("--t-state"),Festival:rgb("--t-festival"),Item:rgb("--t-item"),Signal:rgb("--t-signal")};
+  const ink=rgb("--ink"), panel=rgb("--panel"), line=rgb("--line"), acc=rgb("--accent"), land=rgb("--wheel");
+  const nodes=[...m.show].map(id=>KN.get(id)).filter(Boolean);
+  const isHot=id=>!m.focus||m.hot.has(id);
+  const labelled=nodes.filter(n=>m.cols?m.hot.has(n.id)&&(n.t!=="State"||n.id===kid(selected)||m.hot.size<30)
+    :m.focus?m.text.has(n.id):(n.t==="State"&&pct(n.sh)>=3));
+  const ePos=(id)=>pos3(KN.get(id));
+  deckMap.setProps({layers:[
+    new deck.GeoJsonLayer({id:"floor",data:GEO,extruded:false,pickable:true,
+      getFillColor:f=>f.properties.id===selected?[...acc,120]:m.hot.has(f.properties.id)?[...rgb("--t-state"),70]:[...land,255],
+      getLineColor:[...rgb("--muted"),140],lineWidthMinPixels:1,
+      updateTriggers:{getFillColor:[selected,month,m.title]},transitions:{getFillColor:{duration:reduce?0:500}}}),
+    new deck.LineLayer({id:"edges",data:m.edges,getSourcePosition:e=>ePos(e.s),getTargetPosition:e=>ePos(e.t),
+      getColor:e=>m.focus?(e.r==="CUTS_ITEM"?[...rgb("--t-category"),200]:[...acc,210]):[...rgb("--muted"),70],
+      getWidth:e=>m.focus?(e.r==="CELEBRATED_IN"?({high:2.6,medium:1.8,low:1.1}[e.i]||1.2):1.6):0.8,widthUnits:"pixels",
+      updateTriggers:{getColor:[m.title],getWidth:[m.title]}}),
+    new deck.ScatterplotLayer({id:"nodes",data:nodes,getPosition:pos3,billboard:true,radiusUnits:"pixels",pickable:true,
+      getRadius:n=>n.t==="State"?(4+Math.min(8,pct(n.sh)*.55)):n.t==="Festival"?(3+(n.imp||1)*1.6):4.5,
+      getFillColor:n=>[...COL[n.t],isHot(n.id)?255:110],stroked:true,getLineColor:n=>n.id===kid(selected)?[...ink,255]:[...panel,255],
+      lineWidthUnits:"pixels",getLineWidth:n=>n.id===kid(selected)?2.5:1,
+      updateTriggers:{getFillColor:[m.title,selected],getLineColor:[selected],getLineWidth:[selected]}}),
+    new deck.TextLayer({id:"labels",data:labelled.slice(0,60),getPosition:pos3,getText:n=>m.text&&m.text.get(n.id)||(m.cols&&n.t!=="State"?short(n.n):n.n),
+      getSize:n=>n.id===kid(selected)?14:12.5,
+      getTextAnchor:n=>SIDE.get(n.id)==="L"?"end":SIDE.get(n.id)==="R"?"start":"middle",
+      getAlignmentBaseline:n=>SIDE.has(n.id)?"center":"bottom",
+      getPixelOffset:n=>SIDE.get(n.id)==="L"?[-10,0]:SIDE.get(n.id)==="R"?[10,0]:[0,-10],getColor:n=>[...(n.t==="State"?ink:COL[n.t]),255],background:true,getBackgroundColor:[...panel,215],backgroundPadding:[4,1],
+      characterSet:"auto",fontFamily:"system-ui, sans-serif",fontWeight:600,
+      updateTriggers:{getSize:[selected],getText:[m.title],getTextAnchor:[m.title],getPixelOffset:[m.title],getAlignmentBaseline:[m.title]}})
+  ]});
+}
+/* festival dates from FalkorDB: "2026-11-08" or "2026-11-06..2026-11-08" -> "8 Nov 2026" / "6-8 Nov 2026" */
+function fmtD(s){ if(!s) return ""; const one=t=>{const [y,m,d]=t.split("-").map(Number);return {y,m,d};};
+  const [a,b]=String(s).split("..").map(one); if(!a||!a.m) return esc(String(s));
+  if(!b||!b.m) return `${a.d||""} ${MON[a.m-1]} ${a.y}`.trim();
+  return a.m===b.m&&a.y===b.y?`${a.d}&ndash;${b.d} ${MON[a.m-1]} ${a.y}`:`${a.d} ${MON[a.m-1]} &ndash; ${b.d} ${MON[b.m-1]} ${b.y}`; }
+function datesHTML(m){ if(!m||!(m.d26||m.d27)) return "";
+  return `<div class="fg-d">${m.d26?`<b>${fmtD(m.d26)}</b>`:""}${m.d26&&m.d27?" &middot; next: ":""}${m.d27?fmtD(m.d27):""}${m.cf&&m.cf!=="high"?` <span class="cf">${esc(m.cf)} confidence</span>`:""}</div>`; }
+/* =========================================================================
+   4. STATE: filters, selection, month, highlight
+   ========================================================================= */
+const hiddenTypes=new Set(["city","strategy","signal","item"]);   // signals appear when a month or selection calls for them
+const hiddenImpact=new Set([1]);                       // low-impact festivals start hidden to keep the map readable
+let selected=null, month=null, playing=null;
+function isShown(d){
+  if(d.id===selected) return true;
+  if(d.type==="signal"||d.type==="item") return nodeVisible(d)&&(!hiddenTypes.has(d.type)||!!(focusNow&&focusNow.has(d.id)));
+  return !hiddenTypes.has(d.type)&&nodeVisible(d)&&!(d.type==="festival"&&hiddenImpact.has(d.impact));
+}
+function linkShown(l){
+  const a=l.source,b=l.target;
+  if(!isShown(a)||!isShown(b)) return false;
+  if(!l.soft) return true;                                            // "people buy" lines appear only on focus
+  if(month&&focusNow) return focusNow.has(a.id)&&focusNow.has(b.id)&&(a.type==="festival"||a.type==="signal");
+  return !!(selected&&(a.id===selected||b.id===selected));
+}
+function applyVisibility(){
+  nodeSel.attr("display",d=>isShown(d)?null:"none");
+  linkSel.attr("display",l=>linkShown(l)?null:"none");
+}
+// Festivals, seasons and sales are tied to months; everything else (states, products, regions) is not.
+const TIMED=new Set(["festival","season","sale","signal"]);
+const inMonth=(d,m)=>!TIMED.has(d.type)||d.months.includes(m);
+let planLinks=[], focusNow=null;
+function focusFor(){
+  planLinks=[];
+  if(selected){
+    const d=byId.get(selected), nb=neighbours(selected);
+    if(!month) return nb;
+    const keep=new Set([...nb].filter(id=>id===selected||inMonth(byId.get(id),month)));   // only what happens that month
+    if(d.type==="state"){
+      const p=monthPlan(selected,month);
+      p.fs.forEach(x=>keep.add(x.f.id));
+      seasonsIn(month).forEach(se=>keep.add(se.id));
+      const used=new Set([...p.pushes,...p.holds].map(x=>x.c));
+      p.sigs.filter(g=>g.cats.some(c=>used.has(c))).forEach(g=>keep.add(g.id));
+      p.pushes.slice(0,4).forEach(x=>{keep.add(x.c);planLinks.push({s:d,t:byId.get(x.c),w:x.v});});
+      p.items.slice(0,8).forEach(x=>{keep.add(iid(x.i));planLinks.push({s:d,t:byId.get(iid(x.i)),w:x.v});});
+      p.holdItems.slice(0,3).forEach(x=>keep.add(iid(x.i)));
+      p.holds.slice(0,4).forEach(x=>{keep.add(x.c);planLinks.push({s:d,t:byId.get(x.c),w:x.v,hold:true});});
+    }
+    return keep;
+  }
+  if(month){   // month only: the top states to target and what to push in each
+    const keep=new Set(["india"]);
+    seasonsIn(month).forEach(se=>keep.add(se.id));
+    N.filter(d=>d.type==="sale"&&d.months.includes(month)).forEach(d=>keep.add(d.id));
+    N.filter(d=>d.type==="signal"&&d.national&&d.months.includes(month)&&d.str>=2).forEach(d=>keep.add(d.id));
+    board(month).slice(0,6).forEach(p=>{ keep.add(p.s.id); p.fs.forEach(x=>keep.add(x.f.id));
+      p.sigs.filter(g=>!g.national).forEach(g=>keep.add(g.id));
+      (p.items.length?p.items.slice(0,3).map(x=>iid(x.i)):p.pushes.slice(0,3).map(x=>x.c)).forEach(c=>{keep.add(c);planLinks.push({s:p.s,t:byId.get(c),w:3});}); });
+    return keep;
+  }
+  return null;
+}
+/* ---------- Flow diagram: clean "why -> push" view for a month (and a state) ---------- */
+const DRV_COLOR=t=>({festival:"--t-festival",season:"--t-season",academic:"--t-platform",vacation:"--t-platform",weather:"--t-signal",
+  health:"--t-city",agri_income:"--t-region",financial:"--t-region",wedding:"--t-festival",religious:"--t-festival",inauspicious:"--t-festival",
+  sale_event:"--t-sale",gifting_day:"--t-sale",sports:"--t-state",tourism:"--t-season",life_event:"--t-strategy"})[t]||"--t-signal";
+const drvType=d=>d.type==="signal"?d.stype:d.type;
+const drvGroup=d=>d.type==="festival"?"Festivals":d.type==="season"?"Seasons":(SIGTYPE[d.stype]||"Signals");
+let flowKey=null;
+function flowActive(){ return view==="net"&&!!month&&(!selected||byId.get(selected).type==="state"); }
+function drawFlow(){
+  const on=flowActive(); svg.classed("flowmode",on);
+  const key=on?(selected||"board")+"|"+month:null;
+  if(key===flowKey) return; flowKey=key;
+  flowG.selectAll("*").remove();
+  if(!on) return;
+  const X0=0,X1=520,ROW=30,GAP=16;
+  const rowsL=[],rowsR=[],links=[]; let title,sub;
+  if(selected){
+    const d=byId.get(selected), p=monthPlan(d.id,month), all=board(month), rank=all.findIndex(x=>x.s.id===d.id)+1;
+    title=`${d.label} \u00b7 ${MON[month-1]}`;
+    sub=`Rank ${rank} of ${all.length} states this month${d.share?` \u00b7 ${d.share} of orders`:""}${p.fs.length?"":" \u00b7 no local festival"}`;
+    const shownHolds=p.holds.slice(0,4), used=new Map();
+    [...p.pushes,...shownHolds].forEach(x=>x.from.slice(0,4).forEach(f=>used.set(f.id,(used.get(f.id)||0)+f.v)));
+    const drivers=[...used].map(([id,v])=>({n:byId.get(id),v})).filter(x=>x.n);
+    [...d3.group(drivers,x=>drvGroup(x.n))].sort((a,b)=>d3.sum(b[1],x=>x.v)-d3.sum(a[1],x=>x.v)).forEach(([gname,arr])=>{
+      rowsL.push({head:gname});
+      arr.sort((a,b)=>b.v-a.v).forEach(x=>rowsL.push({id:x.n.id,label:x.n.label,color:DRV_COLOR(drvType(x.n)),
+        sub:x.n.type==="festival"?"festival":x.n.dir<0?"hold period":x.n.national?"all India":"this state"}));
+    });
+    rowsR.push({head:"Push",col:true});
+    p.pushes.forEach((x,i)=>rowsR.push({id:x.c,label:`${i+1}. ${byId.get(x.c).label}`,color:"--t-category",item:x,
+      sub:x.watch?"watch: "+x.watch[0].replace(/ \(.*\)$/,""):""}));
+    if(shownHolds.length){ rowsR.push({head:"Hold back",col:true,hold:true});
+      shownHolds.forEach(x=>rowsR.push({id:x.c,label:byId.get(x.c).label,color:"--t-festival",item:x,hold:true})); }
+    rowsR.filter(r=>r.item).forEach(r=>r.item.from.slice(0,4).forEach(f=>links.push({a:f.id,b:r.id,v:f.v,hold:!!r.hold})));
+  }else{
+    const b=board(month).slice(0,8);
+    title=`${MON[month-1]}: where to sell, what to push`;
+    sub="Top 8 states by order share and this month's demand. Click a state for its plan.";
+    rowsL.push({head:"Target states"});
+    b.forEach((p,i)=>rowsL.push({id:p.s.id,label:`${i+1}. ${p.s.label}`,color:"--t-state",sub:p.known?`${p.s.share} of orders`:""}));
+    const tot=new Map(); b.forEach(p=>p.pushes.slice(0,3).forEach(x=>tot.set(x.c,(tot.get(x.c)||0)+x.v)));
+    rowsR.push({head:"Push",col:true});
+    [...tot].sort((a,b)=>b[1]-a[1]).forEach(([c])=>rowsR.push({id:c,label:byId.get(c).label,color:"--t-category"}));
+    b.forEach(p=>p.pushes.slice(0,3).forEach(x=>links.push({a:p.s.id,b:x.c,v:x.v,hold:false})));
+  }
+  // rows: no overlaps, each item gets its own line; both columns centred on each other
+  const place=rows=>{let y=0;rows.forEach((r,i)=>{ if(r.head){ y+=i?GAP:0; r.y=y; y+=24; } else { r.y=y; y+=ROW; } }); return y;};
+  const hL=place(rowsL), hR=place(rowsR), hh=Math.max(hL,hR);
+  rowsL.forEach(r=>r.y+=(hh-hL)/2); rowsR.forEach(r=>r.y+=(hh-hR)/2);
+  const top=Math.min(...rowsL.map(r=>r.y),...rowsR.map(r=>r.y));
+  const kR=r=>r.id+(r.hold?"#h":"");
+  const posL=new Map(rowsL.filter(r=>r.id).map(r=>[r.id,r])), posR=new Map(rowsR.filter(r=>r.id).map(r=>[kR(r),r]));
+  flowG.append("text").attr("class","f-title").attr("x",X0-260).attr("y",top-62).text(title);
+  flowG.append("text").attr("class","f-sub").attr("x",X0-260).attr("y",top-38).text(sub);
+  if(selected) flowG.append("text").attr("class","f-col").attr("x",X0-14).attr("y",top-14).attr("text-anchor","end").text("Why: demand drivers");
+  const vmax=d3.max(links,l=>l.v)||1;
+  const lsel=flowG.append("g").selectAll("path").data(links.filter(l=>posL.has(l.a)&&posR.has(l.b+(l.hold?"#h":"")))).join("path")
+    .attr("class",l=>"f-link"+(l.hold?" hold":""))
+    .attr("d",l=>{const y1=posL.get(l.a).y,y2=posR.get(l.b+(l.hold?"#h":"")).y;return `M${X0+10},${y1}C${X0+240},${y1} ${X1-240},${y2} ${X1-10},${y2}`;})
+    .style("stroke",l=>`var(${l.hold?"--t-festival":posL.get(l.a).color})`)
+    .style("stroke-width",l=>(1.4+3.6*l.v/vmax).toFixed(1));
+  const draw=(rows,right)=>{ const gN=flowG.append("g");
+    rows.forEach((r,i)=>{
+      if(r.head){ gN.append("text").attr("class","f-head").attr("x",right?X1+18:X0-14).attr("y",r.y+4).attr("text-anchor",right?"start":"end")
+          .style("fill",r.col?`var(${r.hold?"--t-festival":"--accent"})`:null).text(r.head); return; }
+      const nd=gN.append("g").attr("class","f-node").attr("transform",`translate(${right?X1:X0},${r.y})`)
+        .attr("tabindex",0).attr("role","button").attr("aria-label",r.label)
+        .on("click",ev=>{ev.stopPropagation();select(r.id,false);})
+        .on("keydown",ev=>{if(ev.key==="Enter"){ev.preventDefault();select(r.id,false);}})
+        .on("mouseenter",()=>lsel.classed("dimmed",l=>!(right?l.b===r.id:l.a===r.id)))
+        .on("mouseleave",()=>lsel.classed("dimmed",false));
+      nd.append("circle").attr("r",right?8:7).style("fill",`var(${r.color})`);
+      nd.append("text").attr("x",right?16:-14).attr("y",r.sub?0:4.5).attr("text-anchor",right?"start":"end").text(r.label);
+      if(r.sub) nd.append("text").attr("class","sub").attr("x",right?16:-14).attr("y",13).attr("text-anchor",right?"start":"end").text(r.sub);
+      if(!reduce) nd.style("opacity",0).transition().delay(i*30).duration(320).style("opacity",1);
+    }); };
+  draw(rowsL,false); draw(rowsR,true);
+  if(!reduce) lsel.each(function(){ const L=this.getTotalLength(), hold=this.classList.contains("hold");
+    d3.select(this).attr("stroke-dasharray",`${L} ${L}`).attr("stroke-dashoffset",L).transition().delay(180).duration(700)
+      .attr("stroke-dashoffset",0).on("end",function(){d3.select(this).attr("stroke-dasharray",hold?"4 5":null);}); });
+  fitFlow();
+}
+function fitFlow(){
+  const bb=flowG.node().getBBox(); W=stageEl.clientWidth; H=stageEl.clientHeight;
+  if(!W||!H||!bb.width){ setTimeout(fitFlow,300); return; }
+  const k=Math.min(1.5,.94*Math.min(W/(bb.width+40),H/(bb.height+40)));
+  const t=d3.zoomIdentity.translate(W/2-k*(bb.x+bb.width/2),H/2-k*(bb.y+bb.height/2)).scale(k);
+  if(reduce||document.hidden) svg.call(zoom.transform,t); else svg.transition().duration(600).call(zoom.transform,t);
+}
+function drawPlan(){
+  const sel=planG.selectAll("path").data(planLinks,d=>d.s.id+">"+d.t.id);
+  sel.exit().remove();
+  sel.enter().append("path").attr("class",d=>"planline"+(d.hold?" hold":""));
+  planG.selectAll("path").attr("d",planPath).style("stroke-width",d=>(1.2+Math.min(2.8,d.w/4)).toFixed(1));
+}
+function applyHighlight(){
+  const focusSet=focusFor(), hot=!selected&&month?focusSet:new Set();
+  focusNow=focusSet;
+  nodeSel.classed("sel",d=>d.id===selected)
+    .classed("nb",d=>!!(selected&&focusSet.has(d.id)&&d.id!==selected))
+    .classed("hot",d=>!selected&&hot.has(d.id)&&d.type!=="hub")
+    .classed("dim",d=>!!focusSet&&!focusSet.has(d.id));
+  linkSel.classed("hot",l=>{const a=sid(l.source),b=sid(l.target);
+      const both=focusSet&&focusSet.has(a)&&focusSet.has(b);
+      if(selected&&!month)return (a===selected||b===selected)&&both;
+      if(month)return both&&a!=="india"&&b!=="india"&&l.rel!=="is in";   // festival->state, festival->product, season->product
+      return false;})
+    .classed("dim",l=>{const a=sid(l.source),b=sid(l.target); if(!focusSet)return false; return !(focusSet.has(a)&&focusSet.has(b));});
+  drawPlan();
+  applyVisibility();
+  drawFlow();
+  refresh3d();
+  refreshMap();
+  syncStates();
+}
+
+/* =========================================================================
+   5. PANELS
+   ========================================================================= */
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const dot=t=>`<span class="dot" style="background:var(${TYPES[t][1]})"></span>`;
+const lnk=id=>`<button type="button" class="lnk" data-go="${id}">${esc(byId.get(id).label)}</button>`;
+const detail=document.getElementById("detail");
+function showDetail(){
+  if(!selected&&month){ detail.innerHTML=boardHTML(month); return; }
+  if(!selected){ detail.innerHTML=`<div class="d-type">Start here</div><div class="d-name">Pick anything</div>
+    <p class="empty">Click a dot, search a name, or press <b>Play the year</b> to watch the selling calendar light up month by month. Click a <b>state</b> for its sales brief.</p>
+    <p class="empty">Tip: switch to <b>Year wheel</b> to see festivals, seasons and products arranged around the 12 months.</p>`; return; }
+  const d=byId.get(selected);
+  const o=E.filter(l=>sid(l.source)===d.id),i=E.filter(l=>sid(l.target)===d.id);
+  let kpis="",brief="";
+  if(d.type==="state"){
+    const b=stateBrief(d.id),r=stateRegion(d.id);
+    kpis=`<div class="kpis">${d.share?`<div class="kpi"><b>${esc(d.share)}</b><span>of orders</span></div>`:""}
+      ${b.rank?`<div class="kpi"><b>#${b.rank}</b><span>of ${b.ofRanked} ranked</span></div>`:""}
+      ${r?`<div class="kpi"><b>${esc(r.share)}</b><span>${esc(r.label)}</span></div>`:""}</div>`;
+    const fl=E.filter(l=>sid(l.target)===d.id&&l.rel==="is big in").map(l=>({f:byId.get(sid(l.source)),m:l.meta,via:l.via||"notes"}))
+      .sort((x,y)=>(y.f.impact-x.f.impact)||(((x.f.months[0]||13)+3)%12-((y.f.months[0]||13)+3)%12));
+    const pill=v=>`<span class="pill p${v}">${["","low","medium","high"][v]} e-com</span>`;
+    brief=`${month?planBox(d,month):""}${d.web?`<div class="culture"><div><span class="k">Languages:</span> ${esc((d.lang||[]).join(", "))}</div>
+        <div><span class="k">Culture:</span> ${esc(d.culture||"")}</div>
+        <div><span class="k">Online:</span> ${esc(d.ecom||"")} ${d.esrc?`<a href="${esc(d.esrc)}" target="_blank" rel="noopener">source</a>`:""}</div></div>`:""}
+      <div class="brief"><h4>Sales brief</h4><ul>
+      ${b.weight?`<li><b>Budget weight:</b> about ${b.weight.toFixed(0)}% of a budget split across the ${b.ofRanked} states with a known share.</li>`:""}
+      ${b.plan.map(p=>`<li><b>${MON[p.m-1]}:</b> ${p.f.map(esc).join(", ")}${p.c.length?` &rarr; push ${p.c.map(esc).join(", ")}`:""}</li>`).join("")}
+      ${d.id==="delhi"?`<li><b>Premium play:</b> primary market for high-ticket products; pairs with Tata CLiQ's luxury focus.</li>`:""}
+      </ul><div class="note">Festival months are typical dates; Indian festivals follow the lunar calendar and shift each year.</div></div>
+      ${fl.length?`<div class="sec"><h2>Festival guide \u00b7 what people buy</h2>
+        ${month?`<div class="note" style="margin-bottom:6px">Bright: festivals in ${MON[month-1]}. Faded: other months.</div>`:""}
+        <div class="fguide">${fl.map(x=>`<div class="fg${month&&!x.f.months.includes(month)?" off":""}">
+        <div class="fg-h">${lnk(x.f.id)} <span class="mon">${x.f.months.length?x.f.months.map(m=>MON[m-1]).join("/"):"varies"}</span>${pill(x.m?({high:3,medium:2,low:1}[x.m.i]):x.f.impact)}</div>
+        ${x.m?`${datesHTML(x.m)}<div class="fg-b">${esc(x.m.b)}</div><div class="fg-n">${esc(x.m.o)}${x.m.u?` \u00b7 <a href="${esc(x.m.u)}" target="_blank" rel="noopener">source</a>`:""}</div>`:`<div class="fg-n">From your notes</div>`}
+      </div>`).join("")}</div></div>`:""}`;
+  }
+  if(d.type==="festival"){
+    const ss=E.filter(l=>sid(l.source)===d.id&&l.rel==="is big in").map(l=>({s:byId.get(sid(l.target)),m:l.meta}))
+      .sort((a,b)=>pct(b.s.share)-pct(a.s.share)||a.s.label.localeCompare(b.s.label));
+    const cats=E.filter(l=>sid(l.source)===d.id&&l.rel==="people buy"&&byId.get(sid(l.target)).type==="category").map(l=>sid(l.target));
+    const ev=WEB.evidence.festival.filter(x=>x.festival.toLowerCase()===d.label.toLowerCase()||(d.id==="sankranti"&&x.festival==="Sankranti"));
+    kpis=`<div class="kpis"><div class="kpi"><b>${ss.length}</b><span>states</span></div><div class="kpi"><b>${d.months.length?d.months.map(m=>MON[m-1]).join("/"):"varies"}</b><span>typical month</span></div>
+      <div class="kpi"><b>${["","Low","Medium","High"][d.impact]}</b><span>e-com impact</span></div></div>`;
+    const fItems=[...d3.rollup([...itemUse].flatMap(([i,us])=>us.filter(u=>u.f===d.id).map(u=>({i,w:IMPW[u.meta.i]||1}))).filter(x=>byId.has(iid(x.i))),
+        v=>d3.sum(v,x=>x.w)*idf(v[0].i),x=>x.i)].sort((a,b)=>b[1]-a[1]).slice(0,18);
+    brief=`${fItems.length?`<div class="sec"><h2>Specific products to push</h2><div class="chips">${fItems.map(([i])=>`<button type="button" class="chip" data-go="${iid(i)}"><span class="dot" style="background:var(--t-item)"></span>${esc(byId.get(iid(i)).label)}</button>`).join("")}</div></div>`:""}
+      ${cats.length?`<div class="sec"><h2>Product groups</h2><div class="chips">${cats.map(c=>`<button type="button" class="chip" data-go="${c}">${esc(byId.get(c).label)}</button>`).join("")}</div></div>`:""}
+      ${ev.map(x=>`<div class="brief"><h4>Market evidence</h4><div class="fg-b">${esc(x.fact)}</div><div class="note">${esc(x.date)} \u00b7 <a href="${esc(x.src)}" target="_blank" rel="noopener">source</a></div></div>`).join("")}
+      <div class="sec"><h2>Where and what</h2><div class="fguide">${ss.map(x=>`<div class="fg"><div class="fg-h">${lnk(x.s.id)}${x.s.share?` <span class="mon">${esc(x.s.share)} of orders</span>`:""}</div>
+        ${x.m?`${datesHTML(x.m)}<div class="fg-b">${esc(x.m.b)}</div><div class="fg-n">${esc(x.m.o)}${x.m.u?` \u00b7 <a href="${esc(x.m.u)}" target="_blank" rel="noopener">source</a>`:""}</div>`:`<div class="fg-n">From your notes</div>`}</div>`).join("")}</div></div>`;
+  }
+  if(d.type==="item"){
+    const key=d.id.slice(2), uses=itemUse.get(key)||[], it=ITEMS[key]||{};
+    const mw=new Array(13).fill(0); uses.forEach(u=>(u.meta.m||[]).forEach(m=>mw[m]+=IMPW[u.meta.i]||1));
+    const best=mw.map((v,m)=>({m,v})).filter(x=>x.m&&x.v).sort((a,b)=>b.v-a.v).slice(0,4).sort((a,b)=>a.m-b.m);
+    const st=d3.rollups(uses,v=>d3.sum(v,u=>(IMPW[u.meta.i]||1)**2),u=>u.s).map(([s,v])=>({s:byId.get(s),v:v*Math.sqrt(pct(byId.get(s).share)||0.6)}))
+      .sort((a,b)=>b.v-a.v).slice(0,10);
+    const byF=d3.groups(uses,u=>u.f).map(([f,us])=>({f:byId.get(f),us,w:d3.max(us,u=>IMPW[u.meta.i]||1)}))
+      .sort((a,b)=>b.w-a.w||b.us.length-a.us.length);
+    const sg=E.filter(l=>sid(l.target)===d.id&&byId.get(sid(l.source)).type==="signal").map(l=>({g:byId.get(sid(l.source)),cut:l.rel==="cuts demand for"}));
+    kpis=`<div class="kpis"><div class="kpi"><b>${byF.length}</b><span>festivals</span></div><div class="kpi"><b>${st.length}${st.length===10?"+":""}</b><span>states</span></div>
+      <div class="kpi"><b>${esc((it.o||"medium").replace(/^./,c=>c.toUpperCase()))}</b><span>sells online</span></div></div>`;
+    brief=`<div class="brief"><h4>When and where to push</h4><ul>
+        <li><b>Group:</b> ${lnk(it.c)}</li>
+        ${best.length?`<li><b>Best months:</b> ${best.map(x=>MON[x.m-1]).join(", ")}</li>`:""}
+        ${st.length?`<li><b>Top states:</b> ${st.map(x=>lnk(x.s.id)).join(", ")}</li>`:""}
+        ${sg.length?`<li><b>Other drivers:</b> ${sg.map(x=>`${lnk(x.g.id)}${x.cut?' <span class="pill hold">hold</span>':""}`).join(", ")}</li>`:""}
+      </ul><div class="note">Top states: how big the festival is there (counted strongly) times the state's share of online orders (counted mildly).</div></div>
+      <div class="sec"><h2>Bought for</h2><div class="fguide">${byF.slice(0,14).map(x=>`<div class="fg${month&&!x.f.months.includes(month)?" off":""}">
+        <div class="fg-h">${lnk(x.f.id)} <span class="mon">${x.us.map(u=>byId.get(u.s).label).slice(0,4).join(", ")}${x.us.length>4?` +${x.us.length-4}`:""}</span></div>
+        ${datesHTML(x.us[0].meta)}<div class="fg-n">${esc(x.us[0].meta.o||"")}${x.us[0].meta.u?` &middot; <a href="${esc(x.us[0].meta.u)}" target="_blank" rel="noopener">source</a>`:""}</div></div>`).join("")}</div></div>`;
+  }
+  if(d.type==="season"&&d.months.length){
+    const cs=catsOfSeason(d.id);
+    kpis=`<div class="kpis"><div class="kpi"><b>${MON[d.months[0]-1]}\u2013${MON[d.months[d.months.length-1]-1]}</b><span>months</span></div>${d.share?`<div class="kpi"><b>${esc(d.share)}</b><span>of yearly spend</span></div>`:""}${cs.length?`<div class="kpi"><b>${cs.length}</b><span>product groups</span></div>`:""}</div>`;
+  }
+  if(d.type==="region"){
+    const ss=E.filter(l=>sid(l.target)===d.id&&l.rel==="is in").map(l=>byId.get(sid(l.source)));
+    kpis=`<div class="kpis"><div class="kpi"><b>${esc(d.share)}</b><span>of market</span></div><div class="kpi"><b>${ss.length}</b><span>states in notes</span></div></div>`;
+  }
+  const skip=new Set(d.type==="state"||d.type==="festival"?["is big in","people buy"]:d.type==="item"?["people buy","is a","lifts demand for","cuts demand for"]:[]);   // already shown above
+  const sent=[...o.filter(l=>!skip.has(l.rel)).map(l=>`<div class="rel"><b>${esc(d.label)}</b> <span class="verb">${esc(l.rel)}</span> ${lnk(sid(l.target))}</div>`),
+              ...i.filter(l=>!skip.has(l.rel)).map(l=>`<div class="rel">${lnk(sid(l.source))} <span class="verb">${esc(l.rel)}</span> <b>${esc(d.label)}</b></div>`)];
+  const srcTxt=d.src==="web"?"Source: web research":d.src?"Source: "+SRC[d.src]+(d.web?" + web research":""):"Summary node";
+  detail.innerHTML=`<div class="d-type">${dot(d.type)}${TYPES[d.type][0]}</div><div class="d-name">${esc(d.label)}</div>${kpis}
+    ${d.info?`<p class="d-info">${esc(d.info)}</p>`:""}<div class="d-src">${srcTxt} \u00b7 ${o.length+i.length} connections</div>
+    ${brief}${sent.length?`<div class="sec"><h2>Other connections</h2><div class="rels">${sent.join("")}</div></div>`:""}`;
+}
+detail.addEventListener("click",ev=>{const b=ev.target.closest("[data-go]");if(b)select(b.dataset.go,true);});
+detail.addEventListener("click",ev=>{
+  if(!ev.target.closest("#copyCards"))return;
+  const txt=JSON.stringify(lastCards,null,2), box=document.getElementById("copyBox"), btn=document.getElementById("copyCards");
+  const fallback=()=>{box.hidden=false;box.value=txt;box.select();btn.textContent="Select-all and copy the text below";};
+  try{ navigator.clipboard.writeText(txt).then(()=>{btn.textContent="Copied "+lastCards.length+" signals";},fallback); }catch(_){ fallback(); }
+});
+
+const overlay=document.getElementById("overlay");
+const monList=ms=>ms.length?ms.map(m=>MON[m-1]).join("/"):"varies";
+function boardHTML(m){
+  const b=board(m), max=b[0].score||1, peak=byId.get("peak").months.includes(m);
+  const sales=N.filter(d=>d.type==="sale"&&d.months.includes(m)).map(d=>d.label);
+  const nat=N.filter(d=>d.type==="signal"&&d.national&&d.months.includes(m)).sort((a,b)=>b.str-a.str);
+  return `<div class="d-type">Opportunity board</div><div class="d-name">${MON[m-1]}: where to sell, what to push</div>
+    <p class="d-info">${peak?"Peak window: Aug to Dec brings 40 to 60% of the year's online spend. ":""}${sales.length?`Mega-sales running: ${sales.map(esc).join(", ")}. `:""}States are ranked by share of orders and how big their festivals are this month. Click a state for its plan.</p>
+    <div class="board">${b.slice(0,15).map((p,i)=>`<button type="button" class="bd" data-go="${p.s.id}">
+      <span class="rk">${i+1}</span><span class="bd-main"><span class="bd-top"><b>${esc(p.s.label)}</b><span class="mon">${p.known?esc(p.s.share)+" of orders":"share n/a"}</span></span>
+      <span class="bar"><i style="width:${Math.max(4,p.score/max*100).toFixed(0)}%"></i></span>
+      <span class="bd-why">${[...p.fs.map(x=>x.f.label),...p.sigs.filter(g=>!g.national&&g.dir>0).map(g=>g.label)].slice(0,4).map(esc).join(", ")||"No local festival or signal"}${p.items.length?` &rarr; push ${p.items.slice(0,4).map(x=>esc(byId.get(iid(x.i)).label)).join(", ")}`:p.pushes.length?` &rarr; push ${p.pushes.slice(0,3).map(x=>esc(byId.get(x.c).label)).join(", ")}`:""}</span></span></button>`).join("")}</div>
+    <div class="note" style="margin-top:8px">Score = share of orders &times; (1 + festival weight + state-specific signals), &times;1.3 in the Aug to Dec peak. Festival weight: high 3, medium 2, low 1. States with no known share count as 0.6%. Festival months are typical dates.</div>
+    ${nat.length?`<div class="sec" style="margin-top:12px"><h2>All-India signals this month</h2><div class="drivers">${[...d3.group(nat,x=>x.stype)].map(([t,arr])=>`<div><span class="k">${esc(SIGTYPE[t]||t)}:</span> ${arr.map(x=>`<button type="button" class="lnk" data-go="${x.id}">${esc(x.label)}</button>${x.dir<0?' <span class="pill hold">hold</span>':""}`).join(", ")}</div>`).join("")}</div></div>`:""}
+    <div class="sec" style="margin-top:12px"><h2>Signal feed for the app</h2>${cardsHTML(b.slice(0,6).flatMap(p=>cardsFor(p,m,2,1)))}</div>`;
+}
+const lvl=v=>v>=8?"high":v>=4?"medium":"low";
+function cardsFor(p,m,nFocus=4,nHold=3){
+  const src=[...p.fs.filter(x=>x.meta&&x.meta.u).map(x=>x.meta.u),...p.sigs.filter(g=>g.url).map(g=>g.url)];
+  const itemCards=p.items.slice(0,nFocus).map(x=>{const f=x.why.find(r=>r.d);return {action:"FOCUS",state:p.s.label,month:MON[m-1],
+            product:byId.get(iid(x.i)).label,category:byId.get(ITEMS[x.i].c).label,because:x.why.slice(0,3).map(r=>r.label).join(" + "),
+            date:f?f.d:null,strength:lvl(x.v)};});
+  return [...(itemCards.length?itemCards:p.pushes.slice(0,nFocus).map(x=>({action:"FOCUS",state:p.s.label,month:MON[m-1],category:byId.get(x.c).label,
+            because:x.why.slice(0,3).join(" + "),strength:lvl(x.v)}))),
+          ...p.holds.slice(0,nHold).map(x=>({action:"HOLD",state:p.s.label,month:MON[m-1],category:byId.get(x.c).label,
+            because:x.why.slice(0,2).join(" + "),strength:lvl(x.v)}))]
+    .map(c=>({...c,sources:[...new Set(src)].slice(0,4)}));
+}
+let lastCards=[];
+function cardsHTML(cards){
+  lastCards=cards;
+  return `<div class="cards">${cards.map(c=>`<div class="sigcard ${c.action==="HOLD"?"hold":"focus"}"><span class="act">${c.action}</span>
+      <span class="ct"><b>${esc(c.product||c.category)}</b>${c.product?` <span class="mon">${esc(c.category)}</span>`:""} &middot; ${esc(c.state)} &middot; ${esc(c.month)} <span class="pill p${({high:3,medium:2,low:1})[c.strength]}">${c.strength}</span></span>
+      <span class="cb">because ${esc(c.because)}${c.date?` &middot; ${fmtD(c.date)}`:""}</span></div>`).join("")}</div>
+    <button type="button" class="btn copy" id="copyCards">Copy ${cards.length} signals as JSON</button><textarea class="copybox" id="copyBox" hidden readonly></textarea>`;
+}
+function driversHTML(p){
+  const g=d3.group(p.sigs,x=>x.stype);
+  if(!p.sigs.length) return "";
+  return `<div class="drivers">${[...g].map(([t,arr])=>`<div><span class="k">${esc(SIGTYPE[t]||t)}:</span> ${arr.map(x=>
+    `<button type="button" class="lnk" data-go="${x.id}">${esc(x.label)}</button>${x.dir<0?' <span class="pill hold">hold</span>':""}${x.national?' <span class="mon">all India</span>':""}`).join(", ")}</div>`).join("")}</div>`;
+}
+function planBox(d,m){
+  const p=monthPlan(d.id,m), all=board(m), rank=all.findIndex(x=>x.s.id===d.id)+1;
+  const ev=WEB.evidence.festival.filter(x=>x.states.includes(d.id)&&p.fs.some(f=>f.f.label.toLowerCase()===x.festival.toLowerCase()));
+  return `<div class="brief plan"><h4>${MON[m-1]} plan &middot; rank ${rank} of ${all.length} states this month</h4>
+    <div class="fg-b"><b>Local festivals:</b> ${p.fs.length?p.fs.map(x=>x.lead?`${esc(x.f.label)} <span class="mon">starts ${fmtD(String(x.date).split("..")[0])}, pre-push</span>`:`${esc(x.f.label)}${x.date?` <span class="mon">${fmtD(x.date)}</span>`:""} <span class="pill p${x.w}">${["","low","medium","high"][x.w]}</span>`).join(" "):"none this month."}</div>
+    <div class="fg-b" style="margin-top:6px"><b>Other demand drivers this month</b></div>${driversHTML(p)||'<div class="fg-n">None recorded.</div>'}
+    ${p.items.length?`<div class="fg-b" style="margin-top:8px"><b>Put on the homepage (specific products):</b></div><ol class="push">${p.items.slice(0,8).map(x=>
+      `<li><button type="button" class="lnk" data-go="${iid(x.i)}">${esc(byId.get(iid(x.i)).label)}</button> <span class="why">for ${x.why.slice(0,3).map(r=>
+      `${esc(r.label)}${r.d?` (${fmtD(r.d)})`:""}${r.u?` <a href="${esc(r.u)}" target="_blank" rel="noopener">src</a>`:""}${r.cf&&r.cf!=="high"?` <span class="cf">${esc(r.cf)} conf.</span>`:""}`).join(" + ")}${x.watch?` &middot; <span class="watch">watch: ${x.watch.map(r=>esc(r.label)).join(", ")}</span>`:""}</span></li>`).join("")}</ol>`:""}
+    ${p.holdItems.length?`<div class="fg-b"><b>Hold these products:</b> ${p.holdItems.map(x=>`<button type="button" class="lnk" data-go="${iid(x.i)}">${esc(byId.get(iid(x.i)).label)}</button>`).join(", ")} <span class="why">because of ${[...new Set(p.holdItems.flatMap(x=>x.why.map(r=>r.label)))].map(esc).join(", ")}</span></div>`:""}
+    ${p.pushes.length?`<div class="fg-b" style="margin-top:8px"><b>Category budget, in order:</b></div><ol class="push">${p.pushes.map(x=>`<li><button type="button" class="lnk" data-go="${x.c}">${esc(byId.get(x.c).label)}</button> <span class="why">because of ${x.why.map(esc).join(" + ")}${x.watch?` &middot; <span class="watch">watch: ${x.watch.map(esc).join(", ")}</span>`:""}</span></li>`).join("")}</ol>`
+      :`<div class="fg-b" style="margin-top:6px">Quiet month: no signal in the data. Keep always-on campaigns only.</div>`}
+    ${p.holds.length?`<div class="fg-b"><b>Hold back:</b></div><ul class="push">${p.holds.slice(0,5).map(x=>`<li><b>${esc(byId.get(x.c).label)}</b> <span class="why">because of ${x.why.map(esc).join(" + ")}</span></li>`).join("")}</ul>`:""}
+    ${p.fs.filter(x=>x.meta).map(x=>`<div class="fg-n"><b>${esc(x.f.label)}:</b> people buy ${esc(x.meta.b)}${x.meta.u?` &middot; <a href="${esc(x.meta.u)}" target="_blank" rel="noopener">source</a>`:""}</div>`).join("")}
+    ${p.sigs.filter(g=>!g.national&&g.items).map(g=>`<div class="fg-n"><b>${esc(g.label)}:</b> ${esc(g.items)}${g.url?` &middot; <a href="${esc(g.url)}" target="_blank" rel="noopener">source</a>`:""}</div>`).join("")}
+    ${ev.map(x=>`<div class="fg-n"><b>Evidence:</b> ${esc(x.fact)} &middot; <a href="${esc(x.src)}" target="_blank" rel="noopener">source</a></div>`).join("")}
+    <div class="fg-b" style="margin-top:10px"><b>Signals for the app</b></div>${cardsHTML(cardsFor(p,m))}
+  </div>`;
+}
+function selectionMonthCard(d,m){
+  const seasons=seasonsIn(m).filter(s=>s.id!=="peak"), peak=byId.get("peak").months.includes(m);
+  const pushes=[...new Set(seasons.flatMap(s=>catsOfSeason(s.id)))].map(c=>byId.get(c).label);
+  if(d.type==="state"){
+    const fs=festsOfState(d.id), now=fs.filter(f=>f.months.includes(m)), later=fs.filter(f=>!f.months.includes(m));
+    const buys=now.map(f=>{const l=E.find(x=>sid(x.source)===f.id&&sid(x.target)===d.id&&x.rel==="is big in");return l&&l.meta?`${f.label}: ${l.meta.b}`:null;}).filter(Boolean);
+    return `<h3>${esc(d.label)} \u00b7 ${MON[m-1]}${peak?" \u00b7 peak window":""}</h3>
+      <div class="row"><span class="k">Festivals this month:</span> ${now.length?now.map(f=>esc(f.label)).join(", "):`none recorded for ${esc(d.label)}`}</div>
+      ${buys.map(b=>`<div class="row"><span class="k">People buy:</span> ${esc(b)}</div>`).join("")}
+      ${pushes.length?`<div class="row"><span class="k">National season pushes:</span> ${pushes.map(esc).join(", ")}</div>`:""}
+      ${later.length?`<div class="row"><span class="k">Other months:</span> ${later.map(f=>`${esc(f.label)} (${monList(f.months)})`).join(", ")}</div>`:""}`;
+  }
+  const timed=TIMED.has(d.type);
+  return `<h3>${esc(d.label)} \u00b7 ${MON[m-1]}</h3>
+    ${timed?`<div class="row">${d.months.includes(m)?"Falls in this month.":`Not in ${MON[m-1]}; typical month: ${monList(d.months)}.`}</div>`:""}
+    <div class="row"><span class="k">Showing only connections active in ${MON[m-1]}.</span> Click the month again to see everything.</div>`;
+}
+function showMonth(){
+  if(!month||flowActive()){overlay.hidden=true;return;}   // the flow diagram already says it
+  if(selected){ overlay.hidden=false; overlay.innerHTML=selectionMonthCard(byId.get(selected),month); return; }
+  const b=monthBrief(month);
+  overlay.hidden=false;
+  overlay.innerHTML=`<h3>${MON[month-1]}${b.peak?" \u00b7 peak window":""}</h3>
+    ${b.seasons.length?`<div class="row"><span class="k">Season:</span> ${b.seasons.map(s=>esc(s.label)).join(", ")}</div>`:""}
+    ${b.fests.length?`<div class="row"><span class="k">Big festivals:</span> ${b.fests.filter(f=>f.impact===3).map(f=>esc(f.label)).join(", ")||"none high-impact"}${b.fests.filter(f=>f.impact<3).length?` <span class="k">+${b.fests.filter(f=>f.impact<3).length} regional</span>`:""}</div>`:`<div class="row"><span class="k">Festivals:</span> none recorded</div>`}
+    ${b.cats.length?`<div class="row"><span class="k">Season pushes:</span> ${b.cats.map(esc).join(", ")}</div>`:""}
+    ${b.buys.length?`<div class="row"><span class="k">Festival buys:</span> ${b.buys.map(esc).join(", ")}</div>`:""}
+    ${b.sales.length?`<div class="row"><span class="k">Mega-sales:</span> ${b.sales.map(s=>esc(s.label)).join(", ")}</div>`:""}
+    ${b.states.length?`<div class="row"><span class="k">Hot states:</span> ${b.states.slice(0,6).map(s=>esc(s.label)+(s.share?` (${s.share})`:"")).join(", ")}${b.states.length>6?` +${b.states.length-6}`:""}</div>`:""}`;
+}
+
+/* =========================================================================
+   6. CONTROLS
+   ========================================================================= */
+function select(id,center){
+  if(!byId.has(id))return;
+  const d=byId.get(id);
+  if(hiddenTypes.has(d.type)&&d.type!=="signal"&&d.type!=="item"){hiddenTypes.delete(d.type);syncChips();applyVisibility();}
+  if(d.type==="festival"&&hiddenImpact.has(d.impact)){hiddenImpact.delete(d.impact);syncImp();}
+  if(!nodeVisible(d))setView("net");
+  selected=id; stopPlay(); applyHighlight(); showDetail(); showMonth();
+  if(view==="3d") fit(800);
+  if(view==="map"&&!["state","festival","item","signal"].includes(d.type)) setView("net");
+  if(center&&!flowActive()){const t=d3.zoomTransform(stageEl);const k=Math.max(t.k,1.2);
+    svg.transition().duration(reduce?0:600).call(zoom.transform,d3.zoomIdentity.translate(W/2-k*d.x,H/2-k*d.y).scale(k));}
+}
+function clearSel(){selected=null;applyHighlight();showDetail();showMonth();if(view==="3d")fit();}
+nodeSel.on("click",(ev,d)=>{ev.stopPropagation();select(d.id,false);})
+  .on("keydown",(ev,d)=>{if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();select(d.id,true);}});
+svg.on("click",()=>clearSel());
+
+const months=document.getElementById("months");
+MON.forEach((m,i)=>{const b=document.createElement("button");b.type="button";b.className="month";b.id="m"+(i+1);b.textContent=m;b.setAttribute("aria-pressed","false");
+  b.onclick=()=>{stopPlay();setMonth(month===i+1?null:i+1);};months.appendChild(b);});
+function setMonth(m){
+  month=m;   // keep the current selection: a state + a month shows that state's month
+  months.querySelectorAll(".month").forEach((b,i)=>b.setAttribute("aria-pressed",String(i+1===m)));
+  if(m&&view==="wheel")setHand(m); if(!m)wheelG.select("#hand").style("opacity",0);
+  applyHighlight(); showDetail(); showMonth();
+}
+const playBtn=document.getElementById("playBtn");
+function stopPlay(){if(playing){clearInterval(playing);playing=null;playBtn.innerHTML="&#9654; Play the year";}}
+playBtn.onclick=()=>{
+  if(playing){stopPlay();return;}
+  if(view==="net")setView("wheel");
+  let m=7; // start in August: the run-up to the peak
+  playBtn.innerHTML="&#10073;&#10073; Pause";
+  const step=()=>{m=m%12+1;setMonth(m);};
+  step(); playing=setInterval(step,reduce?2600:1900);
+};
+document.getElementById("v-net").onclick=()=>{stopPlay();setView("net");};
+document.getElementById("v-wheel").onclick=()=>setView("wheel");
+document.getElementById("v-3d").onclick=()=>{stopPlay();setView("3d");};
+document.getElementById("v-map").onclick=()=>{stopPlay();setView("map");};
+// open on the 3D map when WebGL + the map library are available; otherwise stay on the network
+setTimeout(()=>{ try{ if(GEO&&KG&&typeof deck!=="undefined"&&document.createElement("canvas").getContext("webgl2")) setView("map"); }catch(_){} },0);
+document.getElementById("fit").onclick=()=>flowActive()?fitFlow():fit();
+document.getElementById("clear").onclick=()=>{stopPlay();setMonth(null);clearSel();};
+
+/* ---------- State bar (all states, largest share first) ---------- */
+const stateBar=document.getElementById("states");
+N.filter(d=>d.type==="state").sort((a,b)=>pct(b.share)-pct(a.share)||a.label.localeCompare(b.label)).forEach(d=>{
+  const b=document.createElement("button");b.type="button";b.className="st";b.id="st-"+d.id;b.dataset.s=d.id;b.setAttribute("aria-pressed","false");
+  b.innerHTML=`${esc(d.label)}${d.share?`<span class="sh">${esc(d.share)}</span>`:""}`;
+  b.onclick=()=>{ if(selected===d.id) clearSel(); else select(d.id,true); };
+  stateBar.appendChild(b);
+});
+function syncStates(){
+  const lit=month&&!selected?monthActive(month):null;
+  stateBar.querySelectorAll(".st").forEach(b=>{b.setAttribute("aria-pressed",String(b.dataset.s===selected));b.classList.toggle("lit",!!(lit&&lit.has(b.dataset.s)));});
+  const on=stateBar.querySelector('.st[aria-pressed="true"]');
+  if(on) on.scrollIntoView({block:"nearest",inline:"center",behavior:reduce?"auto":"smooth"});
+}
+
+const chips=document.getElementById("chips");
+const counts=d3.rollup(N,v=>v.length,d=>d.type);
+Object.entries(TYPES).forEach(([k,[name,tok]])=>{const b=document.createElement("button");b.type="button";b.className="chip";b.id="chip-"+k;b.dataset.t=k;
+  b.innerHTML=`<span class="dot" style="background:var(${tok})"></span>${name}<span class="n">${counts.get(k)}</span>`;
+  b.onclick=()=>{hiddenTypes.has(k)?hiddenTypes.delete(k):hiddenTypes.add(k);syncChips();applyVisibility();if(selected&&hiddenTypes.has(byId.get(selected).type))clearSel();};
+  chips.appendChild(b);});
+function syncChips(){chips.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed",String(!hiddenTypes.has(b.dataset.t))));}
+syncChips();
+
+/* ---------- Festival impact filter ---------- */
+const impChips=document.getElementById("impChips");
+const impCounts=d3.rollup(N.filter(d=>d.type==="festival"),v=>v.length,d=>d.impact);
+[[3,"High"],[2,"Medium"],[1,"Low"]].forEach(([v,name])=>{const b=document.createElement("button");b.type="button";b.className="chip";b.id="imp-"+v;b.dataset.v=v;
+  b.innerHTML=`<span class="pill p${v}" style="margin:0">${name}</span><span class="n">${impCounts.get(v)||0}</span>`;
+  b.onclick=()=>{hiddenImpact.has(v)?hiddenImpact.delete(v):hiddenImpact.add(v);syncImp();
+    if(selected){const s=byId.get(selected);if(s.type==="festival"&&hiddenImpact.has(s.impact))clearSel();}};
+  impChips.appendChild(b);});
+function syncImp(){impChips.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed",String(!hiddenImpact.has(+b.dataset.v))));applyVisibility();}
+syncImp();
+
+/* ---------- Market evidence (web research, with sources) ---------- */
+document.getElementById("evidence").innerHTML=WEB.evidence.national.map(x=>`<div class="e">${esc(x.fact)}
+  <div class="who">${esc(x.who)} \u00b7 ${esc(x.date)} \u00b7 <a href="${esc(x.src)}" target="_blank" rel="noopener">source</a></div></div>`).join("");
+
+const dl=document.getElementById("names");
+[...N].sort((a,b)=>a.label.localeCompare(b.label)).forEach(d=>{const o=document.createElement("option");o.value=d.label;dl.appendChild(o);});
+const search=document.getElementById("search");
+const doSearch=()=>{const v=search.value.trim().toLowerCase();if(!v)return;const h=N.find(d=>d.label.toLowerCase()===v)||N.find(d=>d.label.toLowerCase().includes(v));if(h)select(h.id,true);};
+search.addEventListener("change",doSearch);search.addEventListener("keydown",ev=>{if(ev.key==="Enter")doSearch();});
+
+/* ---------- Insights (all computed from the data) ---------- */
+(function insights(){
+  const ranked=N.filter(d=>d.type==="state"&&d.share).sort((a,b)=>pct(b.share)-pct(a.share));
+  const top3=ranked.slice(0,3),top3sum=d3.sum(top3,d=>pct(d.share));
+  const diwaliN=statesOfFest("diwali").length;
+  const perMonth=MON.map((_,i)=>N.filter(d=>d.type==="festival"&&d.months.includes(i+1)).length);
+  const best=perMonth.indexOf(Math.max(...perMonth));
+  const local=N.filter(d=>d.type==="festival"&&d.impact===3&&statesOfFest(d.id).length<=2)
+    .map(d=>`${d.label} (${statesOfFest(d.id).map(s=>byId.get(s).label).join(", ")})`);
+  const stateN=N.filter(d=>d.type==="state").length, festN=N.filter(d=>d.type==="festival").length;
+  const cards=[
+    [`${top3sum}%`,`of orders come from ${top3.map(d=>d.label).join(", ")}. Start budget allocation here.`,"Computed from notes","maharashtra"],
+    ["40\u201360%","of yearly e-commerce spend lands in Aug\u2013Dec. Most of the year's budget belongs in this window.","From notes","peak"],
+    [`${diwaliN} of ${stateN}`,"states and UTs list Diwali as a key festival: the closest thing to a national moment.","Notes + web research","diwali"],
+    [`${local.length} local peaks`,`High-impact festivals that matter in only one or two states: ${local.slice(0,6).join("; ")}. A national calendar misses these.`,"Computed from web research","onam"],
+    [`${festN} festivals`,`mapped across ${stateN} states and UTs, each linked to what people buy. Use the impact filter to focus on the big ones.`,"Notes + web research","sankranti"],
+    [`${MON[best]}`,`has the most festivals (${perMonth[best]}). Expect the most competition for ads and the highest costs.`,"Computed, typical dates","main"],
+    ["Mar\u2013Apr","is the second window: Ugadi, Gudi Padwa, Vishu plus ACs and refrigerators before summer.","From notes","summer"]
+  ];
+  document.getElementById("insights").innerHTML=cards.map(([b,t,tag,go])=>`<div class="card"><div class="big">${esc(b)}</div><div class="txt">${esc(t)}</div>
+    <div class="tag">${esc(tag)} \u00b7 <button type="button" class="lnk" data-go="${go}">show</button></div></div>`).join("");
+  document.getElementById("insights").addEventListener("click",ev=>{const b=ev.target.closest("[data-go]");if(b)select(b.dataset.go,true);});
+})();
+
+document.getElementById("meta").textContent=`${N.length} things \u00b7 ${E.length} links`;
+applyVisibility(); applyHighlight(); showDetail();
+// The full graph takes a few seconds to spread out: keep re-framing it until the viewer takes over.
+let userMoved=false;
+zoom.on("start.user",ev=>{ if(ev.sourceEvent) userMoved=true; });
+const autoFit=()=>{ if(!userMoved&&!selected&&!month&&view==="net") fit(900); };
+[1800,4500,8000].forEach(t=>setTimeout(autoFit,reduce?50:t));
+sim.on("end.fit",autoFit);
+addEventListener("resize",()=>{W=stageEl.clientWidth;H=stageEl.clientHeight;});
+</script>
